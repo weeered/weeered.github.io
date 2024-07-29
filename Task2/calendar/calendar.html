@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.calendar {
+				font-family: Arial, Helvetica, sans-serif;
+				margin: 50vh auto;
+				transform: translateY(-50%);
+				border-spacing: 10px;
+				border: 2px solid #696969;
+				border-radius: 1rem;
+			}
+			.calendar > thead > tr > th {
+				padding: 0.5rem 1rem;
+				border: 1px solid #a9a9a9;
+				background-color: #ffb9ff;
+				font-weight: 700;
+			}
+			.calendar > tbody > tr > .thismon {
+				text-align: center;
+				border: 1px solid #a9a9a9;
+				background-color: #93f2ff;
+			}
+			.calendar > tbody > tr > .greyedout {
+				text-align: center;
+				border: 1px solid #a9a9a9;
+				background-color: #dffcff;
+				color: #a9a9a9;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="blank"></div>
+		<script>
+			function createCalendar(year, month) {
+				blankDiv = document.getElementById("blank");
+				const clndScope = new Date(year, month - 1);
+
+				clndScopemon = clndScope.getMonth();
+				clndScopeyr = clndScope.getFullYear();
+				prevMon = new Date(year, clndScopemon, 0);
+				nextMon = new Date(year, clndScopemon + 1, 1);
+				monName = clndScope.toLocaleString("ru-RU", { month: "long" });
+
+				let tableStr = `<caption>${
+					monName.charAt(0).toUpperCase() +
+					monName.slice(1) +
+					" " +
+					clndScope.getFullYear()
+				} года</caption><thead><tr><th>ПН</th><th>ВТ</th><th>СР</th><th>ЧТ</th><th>ПТ</th><th>СБ</th><th>ВС</th></tr></thead>`;
+
+				for (let i = 0; i < Mstartmonday(clndScope); i++) {
+					tableStr += `<td class = "greyedout">${
+						prevMon.getDate() - Mstartmonday(clndScope) + 1 + i
+					}</td>`;
+				}
+
+				while (clndScope.getMonth() === clndScopemon) {
+					tableStr += `<td class = "thismon">${clndScope.getDate()}</td>`;
+
+					if (Mstartmonday(clndScope) === 6) {
+						tableStr += "</tr><tr>";
+					}
+
+					clndScope.setDate(clndScope.getDate() + 1);
+				}
+
+				if (Mstartmonday(clndScope) != 0) {
+					let d = 0;
+					for (let i = Mstartmonday(clndScope); i < 7; i++) {
+						tableStr += `<td class = "greyedout">${nextMon.getDate() + d}</td>`;
+						d++;
+					}
+				}
+
+				const clndTable = document.createElement("table");
+				clndTable.innerHTML = tableStr;
+				clndTable.className = "calendar";
+				document.body.insertBefore(clndTable, blankDiv);
+			}
+
+			function Mstartmonday(d) {
+				day = d.getDay();
+				day === 0 ? (day = 7) : true;
+				return day - 1;
+			}
+			createCalendar(prompt("Год"), prompt("Месяц(числом)"));
+			//createCalendar(-100000, -1000000);
+		</script>
+	</body>
+</html>

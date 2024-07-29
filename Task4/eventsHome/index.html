@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Index</title>
+		<style>
+			.mouseoverlnk {
+				margin-right: 3rem;
+			}
+			.clickp {
+				padding: 20px;
+				background-color: #ff9fcf;
+
+				border-radius: 1rem;
+				border: 5px solid #ff70c0;
+			}
+		</style>
+	</head>
+	<body>
+		<br />
+
+		<a class="mouseoverlnk" title="Pupa" href="11111.com">1</a>
+		<a class="mouseoverlnk" title="Lupa" href="22222.com">2</a>
+		<a class="mouseoverlnk" title="Abraham Lincoln" href="33333.com">3</a>
+
+		<br />
+		<br />
+		<br />
+
+		<input class="focusoutinp" type="color" value="#ff0000" />
+		<input class="focusoutinp" type="color" value="#00ff00" />
+		<input class="focusoutinp" type="color" value="#0000ff" />
+
+		<br />
+		<br />
+		<br />
+
+		<p class="clickp">10</p>
+		<p class="clickp">100</p>
+		<p class="clickp">10000</p>
+
+		<br />
+		<br />
+		<br />
+
+		<input
+			class="datalengthinp"
+			type="text"
+			data-length="2"
+			placeholder="= 2"
+		/>
+		<input
+			class="datalengthinp"
+			type="text"
+			data-length="4"
+			placeholder="= 4"
+		/>
+		<input
+			class="datalengthinp"
+			type="text"
+			data-length="8"
+			placeholder="= 8"
+		/>
+
+		<script>
+			const molinks = document.querySelectorAll(".mouseoverlnk");
+			const foinputs = document.querySelectorAll(".focusoutinp");
+			const clickps = document.querySelectorAll(".clickp");
+			const dlinps = document.querySelectorAll(".datalengthinp");
+
+			for (i = 0; i < molinks.length; i++) {
+				molinks[i].addEventListener("mouseenter", linkMouseoverHandler);
+			}
+
+			for (i = 0; i < foinputs.length; i++) {
+				foinputs[i].addEventListener("focusout", inputFocusoutHandler, {
+					once: true,
+				});
+			}
+
+			for (i = 0; i < clickps.length; i++) {
+				clickps[i].addEventListener("click", pClickHandler, {
+					once: true,
+				});
+			}
+
+			for (i = 0; i < dlinps.length; i++) {
+				dlinps[i].addEventListener("focusout", inputDatalengthHandler);
+			}
+
+			function linkMouseoverHandler() {
+				this.innerText =
+					this.getAttribute("title") + `(${this.getAttribute("href")})`;
+				this.setAttribute(
+					"title",
+					this.getAttribute("title") + `(${this.getAttribute("href")})`
+				);
+				this.removeEventListener("mouseenter", linkMouseoverHandler);
+			}
+
+			function inputFocusoutHandler() {
+				console.log(this.value);
+			}
+
+			function pClickHandler() {
+				this.innerText = this.innerText * this.innerText;
+			}
+
+			function inputDatalengthHandler() {
+				this.getAttribute("data-length") == this.value
+					? (this.style.border = "3px solid #00ff00")
+					: (this.style.border = "3px solid #ff0000");
+			}
+		</script>
+	</body>
+</html>

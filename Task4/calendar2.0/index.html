@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Calendar2</title>
+		<style>
+			.header {
+				display: flex;
+				gap: 20px;
+			}
+			.header > .CreateBtn {
+				border: 1px solid #696969;
+				background-color: #a5ff7b;
+			}
+			.header > .CreateBtn:active {
+				border: 1px solid #696969;
+				scale: 0.95;
+			}
+			.header > .DeleteBtn {
+				border: 1px solid #696969;
+				background-color: #ff8a7b;
+			}
+			.header > .DeleteBtn:active {
+				border: 1px solid #696969;
+				scale: 0.95;
+			}
+			.header > .CreateBtnInactive {
+				border: 1px solid #696969;
+				background-color: #a5ff7b;
+				filter: opacity(50%);
+			}
+			.header > .CreateBtnInactive:active {
+				border: 1px solid #696969;
+			}
+			.header > .DeleteBtnInactive {
+				border: 1px solid #696969;
+				background-color: #ff8a7b;
+				filter: opacity(50%);
+			}
+			.header > .CreateBtnInactive:active {
+				border: 1px solid #696969;
+			}
+			.calendar {
+				font-family: Arial, Helvetica, sans-serif;
+				margin: 100px auto;
+				border-spacing: 10px;
+				border: 2px solid #696969;
+				border-radius: 1rem;
+			}
+			.calendar > caption {
+				padding: 5px 0;
+			}
+			.calendar > caption > span {
+				display: inline-block;
+				width: 180px;
+			}
+			.calendar > caption > .navBtn {
+				margin: 0 5px;
+				font-weight: 600;
+				background-color: #7fffd4;
+				border: 1px solid #a9a9a9;
+				border-radius: 0.2rem;
+				cursor: pointer;
+			}
+			.calendar > thead > tr > th {
+				padding: 0.5rem 1rem;
+				border: 1px solid #a9a9a9;
+				background-color: #ffb9ff;
+				font-weight: 700;
+			}
+			.calendar > tbody > tr > .Thismon {
+				text-align: center;
+				border: 1px solid #a9a9a9;
+				background-color: #93f2ff;
+				cursor: pointer;
+				user-select: none;
+			}
+			.calendar > tbody > tr > .ThismonSelected {
+				text-align: center;
+				border: 1px solid #696969;
+				background-color: #ffff00;
+				cursor: pointer;
+				user-select: none;
+			}
+			.calendar > tbody > tr > .greyedout {
+				text-align: center;
+				border: 1px solid #a9a9a9;
+				background-color: #dffcff;
+				color: #a9a9a9;
+			}
+		</style>
+	</head>
+	<body>
+		<header class="header"></header>
+		<div id="blank"></div>
+		<script>
+			const header = document.querySelector(".header");
+			let selectYearstr = "<option value='placeholder'>Выберите год</option>";
+			let selectMonthstr =
+				"<option value='placeholder'>Выберите Месяц</option>";
+			let monthSetDate = new Date(1970, 0);
+			let idNum = 0;
+			let CheckYear = false;
+			let CheckMonth = false;
+
+			//let YearARR = [];
+			//let MonthArr = [];
+
+			for (i = 1980; i < 2025; i++) {
+				//YearArr.push(i);
+				selectYearstr += `<option value="${i}">${i}</option>`;
+			}
+
+			for (i = 0; i < 12; i++) {
+				monthSetDate.setMonth(i);
+				let monthNameStr = monthSetDate.toLocaleString("ru-RU", {
+					month: "long",
+				});
+				//MonthArr.push(monthSetDate.toLocaleString("ru-RU", { month: "long" }));
+				selectMonthstr += `<option value="${i}">${
+					monthNameStr.charAt(0).toUpperCase() + monthNameStr.slice(1)
+				}</option>`;
+			}
+
+			const selectYear = document.createElement("select");
+			selectYear.className = "selectYear";
+			selectYear.innerHTML = selectYearstr;
+			header.appendChild(selectYear);
+
+			const selectMonth = document.createElement("select");
+			selectMonth.className = "selectMonth";
+			selectMonth.innerHTML = selectMonthstr;
+			header.appendChild(selectMonth);
+
+			const CreateBtn = document.createElement("button");
+			CreateBtn.className = "CreateBtnInactive";
+			CreateBtn.innerText = "Создать";
+			header.appendChild(CreateBtn);
+
+			const DeleteBtn = document.createElement("button");
+			DeleteBtn.className = "DeleteBtnInactive";
+			DeleteBtn.innerText = "Удалить";
+			header.appendChild(DeleteBtn);
+
+			header.addEventListener("click", (event) => {
+				if (event.target.className == "selectYear") {
+					checkPlaceholderYear(event);
+					checkPlaceholderAll();
+				} else if (event.target.className == "selectMonth") {
+					checkPlaceholderMonth(event);
+					checkPlaceholderAll();
+				} else if (event.target.className == "CreateBtn") {
+					createClnd();
+				} else if (event.target.className == "DeleteBtn") {
+					deleteClnd();
+				}
+			});
+
+			function checkPlaceholderYear(event) {
+				if (event.target.value === "placeholder") {
+					CheckYear = false;
+				} else {
+					CheckYear = true;
+				}
+			}
+
+			function checkPlaceholderMonth(event) {
+				if (event.target.value === "placeholder") {
+					CheckMonth = false;
+				} else {
+					CheckMonth = true;
+				}
+			}
+
+			function checkPlaceholderAll() {
+				if (CheckMonth === true && CheckYear === true) {
+					CreateBtn.className = "CreateBtn";
+				} else {
+					CreateBtn.className = "CreateBtnInactive";
+				}
+			}
+
+			function createClnd() {
+				if (CreateBtn.className === "CreateBtnInactive") true;
+				else {
+					calendarHandler(selectYear.value, selectMonth.value, idNum);
+					DeleteBtn.className = "DeleteBtn";
+					idNum += 1;
+				}
+			}
+
+			function deleteClnd() {
+				if (DeleteBtn.className === "DeleteBtnInactive") true;
+				else {
+					const table = document.querySelector(".calendar");
+					table.remove();
+					if (document.querySelector(".calendar") == null)
+						DeleteBtn.className = "DeleteBtnInactive";
+					idNum -= 1;
+				}
+			}
+			//
+			//
+			//
+			//
+			function calendarHandler(ClndCreateYear, ClndCreateMonth, id) {
+				blankDiv = document.getElementById("blank");
+				let PrevTarget = blankDiv;
+				let ClndYear = parseInt(ClndCreateYear);
+				let ClndMonth = parseInt(ClndCreateMonth);
+
+				const ClndTable = document.createElement("table");
+				ClndTable.className = `calendar`;
+				ClndTable.id = `calendar${id}`;
+				ClndTable.innerHTML = createCalendar(ClndYear, ClndMonth, id);
+
+				document.body.insertBefore(ClndTable, blankDiv);
+
+				ClndTable.addEventListener("click", (event) => {
+					ClndBtnClickHandler(event), ClndNumberClickHandler(event);
+				});
+
+				function createCalendar(year, month, id) {
+					const ClndScope = new Date(year, month);
+
+					ClndScopemon = ClndScope.getMonth();
+					ClndScopeyr = ClndScope.getFullYear();
+					PrevMon = new Date(year, ClndScopemon, 0);
+					NextMon = new Date(year, ClndScopemon + 1, 1);
+					MonName = ClndScope.toLocaleString("ru-RU", { month: "long" });
+
+					let tableStr = `<caption id ="ClndCaption${id}"><button class="navBtn" id="ClndBtnBigL${id}"><<</button><button class="navBtn" id ="ClndBtnSmallL${id}"><</button> <span>${
+						MonName.charAt(0).toUpperCase() +
+						MonName.slice(1) +
+						" " +
+						ClndScope.getFullYear()
+					} года</span><button class="navBtn" id ="ClndBtnSmallR${id}">></button><button class="navBtn" id="ClndBtnBigR${id}">>></button></caption><thead><tr><th>ПН</th><th>ВТ</th><th>СР</th><th>ЧТ</th><th>ПТ</th><th>СБ</th><th>ВС</th></tr></thead>`;
+
+					for (let i = 0; i < startMonMonday(ClndScope); i++) {
+						tableStr += `<td class = "greyedout">${
+							PrevMon.getDate() - startMonMonday(ClndScope) + 1 + i
+						}</td>`;
+					}
+
+					while (ClndScope.getMonth() === ClndScopemon) {
+						tableStr += `<td class = "Thismon">${ClndScope.getDate()}</td>`;
+
+						if (startMonMonday(ClndScope) === 6) {
+							tableStr += "</tr><tr>";
+						}
+
+						ClndScope.setDate(ClndScope.getDate() + 1);
+					}
+
+					if (startMonMonday(ClndScope) != 0) {
+						let d = 0;
+						for (let i = startMonMonday(ClndScope); i < 7; i++) {
+							tableStr += `<td class = "greyedout">${
+								NextMon.getDate() + d
+							}</td>`;
+							d++;
+						}
+					}
+					return tableStr;
+				}
+
+				function startMonMonday(d) {
+					day = d.getDay();
+					day === 0 ? (day = 7) : true;
+					return day - 1;
+				}
+
+				function ClndBtnClickHandler(event) {
+					if (event.target.id === `ClndBtnBigR${id}`) {
+						ClndYear = ClndYear + 1;
+						ClndTable.innerHTML = createCalendar(ClndYear, ClndMonth, id);
+					} else if (event.target.id === `ClndBtnBigL${id}`) {
+						ClndYear = ClndYear - 1;
+						ClndTable.innerHTML = createCalendar(ClndYear, ClndMonth, id);
+					} else if (event.target.id === `ClndBtnSmallR${id}`) {
+						ClndMonth = ClndMonth + 1;
+						ClndTable.innerHTML = createCalendar(ClndYear, ClndMonth, id);
+					} else if (event.target.id === `ClndBtnSmallL${id}`) {
+						ClndMonth = ClndMonth - 1;
+						ClndTable.innerHTML = createCalendar(ClndYear, ClndMonth, id);
+					}
+				}
+
+				function ClndNumberClickHandler(event) {
+					if (event.target.className === `Thismon`) {
+						if (event.target != PrevTarget) {
+							event.target.className = `ThismonSelected`;
+							if (PrevTarget.className === `ThismonSelected`) {
+								PrevTarget.className = `Thismon`;
+							}
+							PrevTarget = event.target;
+						}
+					} else if (event.target.className === `ThismonSelected`) {
+						event.target.className = `Thismon`;
+						PrevTarget = blankDiv;
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

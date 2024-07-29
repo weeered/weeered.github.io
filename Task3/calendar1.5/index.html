@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			.calendar {
+				font-family: Arial, Helvetica, sans-serif;
+				margin: 30vh auto;
+				border-spacing: 10px;
+				border: 2px solid #696969;
+				border-radius: 1rem;
+			}
+			.calendar > caption {
+				padding: 5px 0;
+			}
+			.calendar > caption > span {
+				display: inline-block;
+				width: 180px;
+			}
+			.calendar > caption > .navBtn {
+				margin: 0 5px;
+				font-weight: 600;
+				background-color: #7fffd4;
+				border: 1px solid #a9a9a9;
+				border-radius: 0.2rem;
+				cursor: pointer;
+			}
+			.calendar > thead > tr > th {
+				padding: 0.5rem 1rem;
+				border: 1px solid #a9a9a9;
+				background-color: #ffb9ff;
+				font-weight: 700;
+			}
+			.calendar > tbody > tr > .thismon {
+				text-align: center;
+				border: 1px solid #a9a9a9;
+				background-color: #93f2ff;
+			}
+			.calendar > tbody > tr > .greyedout {
+				text-align: center;
+				border: 1px solid #a9a9a9;
+				background-color: #dffcff;
+				color: #a9a9a9;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="blank"></div>
+		<script>
+			function createCalendar(year, month) {
+				blankDiv = document.getElementById("blank");
+				const clndScope = new Date(year, month - 1);
+
+				clndScopemon = clndScope.getMonth();
+				clndScopeyr = clndScope.getFullYear();
+				prevMon = new Date(year, clndScopemon, 0);
+				nextMon = new Date(year, clndScopemon + 1, 1);
+				monName = clndScope.toLocaleString("ru-RU", { month: "long" });
+
+				let tableStr = `<caption><button class="navBtn" id="clndBtnBigL"><<</button><button class="navBtn" id ="clndBtnSmallL"><</button> <span>${
+					monName.charAt(0).toUpperCase() +
+					monName.slice(1) +
+					" " +
+					clndScope.getFullYear()
+				} года</span><button class="navBtn" id ="clndBtnSmallR">></button><button class="navBtn" id="clndBtnBigR">>></button></caption><thead><tr><th>ПН</th><th>ВТ</th><th>СР</th><th>ЧТ</th><th>ПТ</th><th>СБ</th><th>ВС</th></tr></thead>`;
+
+				for (let i = 0; i < Mstartmonday(clndScope); i++) {
+					tableStr += `<td class = "greyedout">${
+						prevMon.getDate() - Mstartmonday(clndScope) + 1 + i
+					}</td>`;
+				}
+
+				while (clndScope.getMonth() === clndScopemon) {
+					tableStr += `<td class = "thismon">${clndScope.getDate()}</td>`;
+
+					if (Mstartmonday(clndScope) === 6) {
+						tableStr += "</tr><tr>";
+					}
+
+					clndScope.setDate(clndScope.getDate() + 1);
+				}
+
+				if (Mstartmonday(clndScope) != 0) {
+					let d = 0;
+					for (let i = Mstartmonday(clndScope); i < 7; i++) {
+						tableStr += `<td class = "greyedout">${nextMon.getDate() + d}</td>`;
+						d++;
+					}
+				}
+
+				const clndTable = document.createElement("table");
+				clndTable.innerHTML = tableStr;
+				clndTable.className = "calendar";
+				document.body.insertBefore(clndTable, blankDiv);
+			}
+
+			function Mstartmonday(d) {
+				day = d.getDay();
+				day === 0 ? (day = 7) : true;
+				return day - 1;
+			}
+
+			let ClndYear = prompt("Год");
+			let ClndMonth = prompt("Месяц(числом)");
+
+			//let ClndYear = 2024;
+			//let ClndMonth = 8;
+			createCalendar(ClndYear, ClndMonth);
+
+			const RbigBtn = document.getElementById("clndBtnBigR");
+			const LbigBtn = document.getElementById("clndBtnBigL");
+			const RsmallBtn = document.getElementById("clndBtnSmallR");
+			const LsmallBtn = document.getElementById("clndBtnSmallL");
+
+			RbigBtn.addEventListener("click", clndBtnClickHandler);
+			LbigBtn.addEventListener("click", clndBtnClickHandler);
+			RsmallBtn.addEventListener("click", clndBtnClickHandler);
+			LsmallBtn.addEventListener("click", clndBtnClickHandler);
+
+			function clndBtnClickHandler(event) {
+				const prevTable = document.querySelector(".calendar");
+				prevTable.remove();
+				if (event.target.id === "clndBtnBigR") {
+					ClndYear = ClndYear + 1;
+					createCalendar(ClndYear, ClndMonth);
+				} else if (event.target.id === "clndBtnBigL") {
+					ClndYear = ClndYear - 1;
+					createCalendar(ClndYear, ClndMonth);
+				} else if (event.target.id === "clndBtnSmallR") {
+					ClndMonth = ClndMonth + 1;
+					createCalendar(ClndYear, ClndMonth);
+				} else if (event.target.id === "clndBtnSmallL") {
+					ClndMonth = ClndMonth - 1;
+					createCalendar(ClndYear, ClndMonth);
+				}
+				const RbigBtn = document.getElementById("clndBtnBigR");
+				const LbigBtn = document.getElementById("clndBtnBigL");
+				const RsmallBtn = document.getElementById("clndBtnSmallR");
+				const LsmallBtn = document.getElementById("clndBtnSmallL");
+
+				RbigBtn.addEventListener("click", clndBtnClickHandler);
+				LbigBtn.addEventListener("click", clndBtnClickHandler);
+				RsmallBtn.addEventListener("click", clndBtnClickHandler);
+				LsmallBtn.addEventListener("click", clndBtnClickHandler);
+			}
+		</script>
+	</body>
+</html>
