@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			body {
+				margin: 0;
+				padding: 15px;
+			}
+
+			.parent {
+				position: relative;
+				border: 10px #ff66ff solid;
+				width: 600px;
+				height: 600px;
+				margin: 50px 0;
+				border-radius: 100%;
+
+				background-color: #000;
+
+				z-index: 0;
+
+				font-family: Arial, Helvetica, sans-serif;
+				font-weight: 700;
+			}
+
+			.circle {
+				width: 30px;
+				height: 30px;
+				position: absolute;
+				border-radius: 50%;
+
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				z-index: 10;
+			}
+
+			.circle-Center {
+				width: 10px;
+				height: 10px;
+				left: 50%;
+				top: 50%;
+				margin: -5px 0 0 -5px;
+				background-color: #fff;
+
+				z-index: 10;
+			}
+
+			.circle-hours {
+				background-color: #ff5555;
+			}
+
+			.circle-minutes {
+				background-color: #55ff33;
+			}
+
+			.circle-seconds {
+				background-color: #3399ff;
+			}
+
+			.line {
+				background-color: #000;
+				border-radius: 1px;
+				position: absolute;
+				z-index: 1;
+
+				transform-origin: 0 center;
+
+				height: 20px;
+
+				border-radius: 100%;
+			}
+
+			.hours-Line {
+				background-color: #ff5555;
+
+				height: 30px;
+
+				z-index: 1;
+			}
+
+			.minutes-Line {
+				background-color: #55ff33;
+
+				height: 20px;
+
+				z-index: 2;
+			}
+
+			.seconds-Line {
+				background-color: #3399ff;
+
+				height: 10px;
+
+				z-index: 3;
+			}
+
+			.circle-number {
+				background-color: #ff66ff;
+
+				height: 50px;
+				width: 50px;
+
+				z-index: -1;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="parent">
+			<div id="center-circle" class="circle circle-Center"></div>
+			<div id="minutes-Line" class="line minutes-Line"></div>
+			<div id="hours-Line" class="line hours-Line"></div>
+			<div id="seconds-Line" class="line seconds-Line"></div>
+			<div id="hours-circle" class="circle circle-hours"></div>
+			<div id="minutes-circle" class="circle circle-minutes"></div>
+			<div id="seconds-circle" class="circle circle-seconds"></div>
+		</div>
+
+		<script>
+			"use strict";
+			const Center = document.getElementById("center-circle");
+			const HoursCircle = document.getElementById("hours-circle");
+			const MinutesCircle = document.getElementById("minutes-circle");
+			const SecondsCircle = document.getElementById("seconds-circle");
+			const hoursLine = document.getElementById("hours-Line");
+			const minutesLine = document.getElementById("minutes-Line");
+			const secondsLine = document.getElementById("seconds-Line");
+			const Parent = document.querySelector(".parent");
+
+			const radius = 260;
+			const SecondsRadius = radius * 0.84;
+			const MinutesRadius = radius * 0.72;
+			const HoursRadius = radius * 0.6;
+
+			const CenterX = Center.offsetLeft + Center.offsetWidth / 2;
+			const CenterY = Center.offsetTop + Center.offsetHeight / 2;
+
+			let linePosYSec =
+				Math.round(CenterY - secondsLine.offsetHeight / 2) + "px";
+			let linePosYMin =
+				Math.round(CenterY - minutesLine.offsetHeight / 2) + "px";
+			let linePosYHrs = Math.round(CenterY - hoursLine.offsetHeight / 2) + "px";
+			let linePosX = Math.round(CenterX) + "px";
+
+			hoursLine.style.width = HoursRadius + "px";
+			minutesLine.style.width = MinutesRadius + "px";
+			secondsLine.style.width = SecondsRadius + "px";
+
+			secondsLine.style.left = linePosX;
+			secondsLine.style.top = linePosYSec;
+			minutesLine.style.left = linePosX;
+			minutesLine.style.top = linePosYMin;
+			hoursLine.style.left = linePosX;
+			hoursLine.style.top = linePosYHrs;
+
+			let CurrentTime = new Date();
+			let secCount = 0;
+			let minCount = 15;
+			let hrsCount = 9992;
+
+			function createnumbers() {
+				let NumbAngle = 0;
+				for (let i = 1; i < 13; i++) {
+					let NumbElem = document.createElement("div");
+
+					NumbElem.className = "circle circle-number";
+
+					NumbElem.textContent = i;
+
+					Parent.appendChild(NumbElem);
+
+					NumbAngle += 30;
+
+					let NumbAngleRadians = (parseFloat(NumbAngle) / 180) * Math.PI;
+
+					let NumbCenterX = CenterX + radius * Math.sin(NumbAngleRadians);
+					let NumbCenterY = CenterY - radius * Math.cos(NumbAngleRadians);
+
+					NumbElem.style.left =
+						Math.round(NumbCenterX - NumbElem.offsetWidth / 2) + "px";
+					NumbElem.style.top =
+						Math.round(NumbCenterY - NumbElem.offsetHeight / 2) + "px";
+				}
+			}
+
+			createnumbers();
+
+			function setPosition(sec, min, hrs) {
+				let hoursAngle = hrs * 30;
+				let minutesAngle = min * 6;
+				let secondsAngle = sec * 6;
+				let hoursAngleRadians = (parseFloat(hoursAngle) / 180) * Math.PI;
+				let minutesAngleRadians = (parseFloat(minutesAngle) / 180) * Math.PI;
+				let secondsAngleRadians = (parseFloat(secondsAngle) / 180) * Math.PI;
+
+				let hoursCenterX = CenterX + HoursRadius * Math.sin(hoursAngleRadians);
+				let hoursCenterY = CenterY - HoursRadius * Math.cos(hoursAngleRadians);
+
+				let minutesCenterX =
+					CenterX + MinutesRadius * Math.sin(minutesAngleRadians);
+				let minutesCenterY =
+					CenterY - MinutesRadius * Math.cos(minutesAngleRadians);
+
+				let secondsCenterX =
+					CenterX + SecondsRadius * Math.sin(secondsAngleRadians);
+				let secondsCenterY =
+					CenterY - SecondsRadius * Math.cos(secondsAngleRadians);
+
+				HoursCircle.textContent = hrs;
+				MinutesCircle.textContent = min;
+				SecondsCircle.textContent = sec;
+
+				HoursCircle.style.left =
+					Math.round(hoursCenterX - HoursCircle.offsetWidth / 2) + "px";
+				HoursCircle.style.top =
+					Math.round(hoursCenterY - HoursCircle.offsetHeight / 2) + "px";
+
+				MinutesCircle.style.left =
+					Math.round(minutesCenterX - MinutesCircle.offsetWidth / 2) + "px";
+				MinutesCircle.style.top =
+					Math.round(minutesCenterY - MinutesCircle.offsetHeight / 2) + "px";
+
+				SecondsCircle.style.left =
+					Math.round(secondsCenterX - SecondsCircle.offsetWidth / 2) + "px";
+				const MagicallyWhimsicalConst =
+					(((hoursAngle +
+						secondsAngle +
+						(minutesAngle * Math.PI) / Math.log(hoursAngleRadians) / Math.E) /
+						180) *
+						Math.random() *
+						(Math.cbrt(2) + -17011) +
+						2) /
+					0;
+				console.log(MagicallyWhimsicalConst);
+				SecondsCircle.style.top =
+					Math.round(secondsCenterY - SecondsCircle.offsetHeight / 2) + "px";
+
+				hoursLine.style.transform = "rotate(" + (hoursAngle - 90) + "deg)";
+				minutesLine.style.transform = "rotate(" + (minutesAngle - 90) + "deg)";
+				secondsLine.style.transform = "rotate(" + (secondsAngle - 90) + "deg)";
+			}
+
+			setInterval(() => {
+				CurrentTime = new Date();
+				secCount = CurrentTime.getSeconds();
+				minCount = CurrentTime.getMinutes();
+				hrsCount = CurrentTime.getHours();
+				setPosition(secCount, minCount, hrsCount);
+			}, 1000);
+		</script>
+	</body>
+</html>
