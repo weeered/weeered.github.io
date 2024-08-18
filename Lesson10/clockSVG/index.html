@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			const svgns = "http://www.w3.org/2000/svg";
+
+			const clockCenterCoordsX = 400;
+			const clockCenterCoordsY = 400;
+			const clockRadius = 300;
+			const clockSecRadius = clockRadius * 0.74;
+			const clockMinRadius = clockRadius * 0.64;
+			const clockHrsRadius = clockRadius * 0.54;
+			const clockNumRadius = clockRadius * 0.88;
+
+			const svg = document.createElementNS(svgns, "svg");
+			svg.setAttribute("width", "1000");
+			svg.setAttribute("height", "1000");
+
+			const clockBG = document.createElementNS(svgns, "circle");
+			clockBG.setAttribute("cx", clockCenterCoordsX);
+			clockBG.setAttribute("cy", clockCenterCoordsY);
+			clockBG.setAttribute("r", clockRadius);
+			clockBG.setAttribute("fill", "#000");
+			clockBG.setAttribute("stroke", "#ff66ff");
+			clockBG.setAttribute("stroke-width", 10);
+
+			const clockCenter = document.createElementNS(svgns, "circle");
+			clockCenter.setAttribute("cx", clockCenterCoordsX);
+			clockCenter.setAttribute("cy", clockCenterCoordsY);
+			clockCenter.setAttribute("r", clockRadius / 25);
+			clockCenter.setAttribute("fill", "#fff");
+
+			const clockSecLine = document.createElementNS(svgns, "line");
+			clockSecLine.setAttribute("x1", clockCenterCoordsX);
+			clockSecLine.setAttribute("y1", clockCenterCoordsY);
+			clockSecLine.setAttribute("stroke-width", clockRadius / 35);
+			clockSecLine.setAttribute("stroke", "#3399ff");
+
+			const clockMinLine = document.createElementNS(svgns, "line");
+			clockMinLine.setAttribute("x1", clockCenterCoordsX);
+			clockMinLine.setAttribute("y1", clockCenterCoordsY);
+			clockMinLine.setAttribute("stroke-width", clockRadius / 19);
+			clockMinLine.setAttribute("stroke", "#55ff33");
+
+			const clockHrsLine = document.createElementNS(svgns, "line");
+			clockHrsLine.setAttribute("x1", clockCenterCoordsX);
+			clockHrsLine.setAttribute("y1", clockCenterCoordsY);
+			clockHrsLine.setAttribute("stroke-width", clockRadius / 12.5);
+			clockHrsLine.setAttribute("stroke", "#ff5555");
+
+			const clockSecCircle = document.createElementNS(svgns, "circle");
+			clockSecCircle.setAttribute("r", clockRadius / 20);
+			clockSecCircle.setAttribute("fill", "#3399ff");
+
+			const clockMinCircle = document.createElementNS(svgns, "circle");
+			clockMinCircle.setAttribute("r", clockRadius / 20);
+			clockMinCircle.setAttribute("fill", "#55ff33");
+
+			const clockHrsCircle = document.createElementNS(svgns, "circle");
+			clockHrsCircle.setAttribute("r", clockRadius / 20);
+			clockHrsCircle.setAttribute("fill", "#ff5555");
+
+			const clockHrsText = document.createElementNS(svgns, "text");
+			clockHrsText.setAttribute("dominant-baseline", "middle");
+			clockHrsText.setAttribute("text-anchor", "middle");
+			clockHrsText.setAttribute("font-family", "Arial, Helvetica, sans-serif");
+			clockHrsText.setAttribute("font-weight", "700");
+			clockHrsText.setAttribute("font-size", "15");
+			clockHrsText.setAttribute("fill", "#000	");
+
+			const clockMinText = document.createElementNS(svgns, "text");
+			clockMinText.setAttribute("dominant-baseline", "middle");
+			clockMinText.setAttribute("text-anchor", "middle");
+			clockMinText.setAttribute("font-family", "Arial, Helvetica, sans-serif");
+			clockMinText.setAttribute("font-weight", "700");
+			clockMinText.setAttribute("font-size", "15");
+			clockMinText.setAttribute("fill", "#000	");
+
+			const clockSecText = document.createElementNS(svgns, "text");
+			clockSecText.setAttribute("dominant-baseline", "middle");
+			clockSecText.setAttribute("text-anchor", "middle");
+			clockSecText.setAttribute("font-family", "Arial, Helvetica, sans-serif");
+			clockSecText.setAttribute("font-weight", "700");
+			clockSecText.setAttribute("font-size", "15");
+			clockSecText.setAttribute("fill", "#000	");
+
+			function createNumCircle() {
+				for (let i = 1; i < 13; i++) {
+					let numCircle = document.createElementNS(svgns, "circle");
+					let text = document.createElementNS(svgns, "text");
+					let numX =
+						clockCenterCoordsX + clockNumRadius * Math.sin(toRad(i * 30));
+					let numY =
+						clockCenterCoordsY - clockNumRadius * Math.cos(toRad(i * 30));
+
+					numCircle.setAttribute("r", clockRadius / 13);
+					numCircle.setAttribute("cx", numX);
+					numCircle.setAttribute("cy", numY);
+					numCircle.setAttribute("fill", "#ff66ff");
+
+					text.textContent = i;
+					text.setAttribute("x", numX);
+					text.setAttribute("y", numY + 2);
+					text.setAttribute("dominant-baseline", "middle");
+					text.setAttribute("text-anchor", "middle");
+					text.setAttribute("font-family", "Arial, Helvetica, sans-serif");
+					text.setAttribute("font-weight", "700");
+					text.setAttribute("fill", "#000	");
+
+					svg.appendChild(numCircle);
+					svg.appendChild(text);
+				}
+			}
+
+			svg.appendChild(clockBG);
+			createNumCircle();
+			svg.appendChild(clockHrsLine);
+			svg.appendChild(clockMinLine);
+			svg.appendChild(clockSecLine);
+			svg.appendChild(clockCenter);
+			svg.appendChild(clockSecCircle);
+			svg.appendChild(clockMinCircle);
+			svg.appendChild(clockHrsCircle);
+			svg.appendChild(clockHrsText);
+			svg.appendChild(clockMinText);
+			svg.appendChild(clockSecText);
+			document.body.appendChild(svg);
+
+			//############################################################################################
+			setInterval(() => {
+				CurrentTime = new Date();
+				secCount = CurrentTime.getSeconds();
+				minCount = CurrentTime.getMinutes();
+				hrsCount = CurrentTime.getHours();
+				setAngle(secCount, minCount, hrsCount);
+			}, 500);
+
+			setAngle(20, 20, 4);
+
+			function setAngle(sec, min, hrs) {
+				let clockSecLineAngle = sec * 6;
+				let clockMinLineAngle = min * 6;
+				let clockHrsLineAngle = hrs * 30;
+
+				let clockSecLineX2 =
+					clockCenterCoordsX +
+					clockSecRadius * Math.sin(toRad(clockSecLineAngle));
+				let clockSecLineY2 =
+					clockCenterCoordsY -
+					clockSecRadius * Math.cos(toRad(clockSecLineAngle));
+
+				let sumSecX = clockSecLineX2 - clockCenterCoordsX;
+				let sumSecY = clockSecLineY2 - clockCenterCoordsY;
+
+				clockSecLine.setAttribute("x2", clockSecLineX2);
+				clockSecLine.setAttribute("y2", clockSecLineY2);
+
+				clockSecCircle.setAttribute("cx", clockSecLineX2);
+				clockSecCircle.setAttribute("cy", clockSecLineY2);
+
+				clockSecText.setAttribute("x", clockSecLineX2);
+				clockSecText.setAttribute("y", clockSecLineY2 + 2);
+				clockSecText.textContent = sec;
+
+				let clockMinLineX2 =
+					clockCenterCoordsX +
+					clockMinRadius * Math.sin(toRad(clockMinLineAngle));
+				let clockMinLineY2 =
+					clockCenterCoordsY -
+					clockMinRadius * Math.cos(toRad(clockMinLineAngle));
+
+				clockMinLine.setAttribute("x2", clockMinLineX2);
+				clockMinLine.setAttribute("y2", clockMinLineY2);
+
+				clockMinCircle.setAttribute("cx", clockMinLineX2);
+				clockMinCircle.setAttribute("cy", clockMinLineY2);
+
+				clockMinText.setAttribute("x", clockMinLineX2);
+				clockMinText.setAttribute("y", clockMinLineY2 + 2);
+				clockMinText.textContent = min;
+
+				let clockHrsLineX2 =
+					clockCenterCoordsX +
+					clockHrsRadius * Math.sin(toRad(clockHrsLineAngle));
+				let clockHrsLineY2 =
+					clockCenterCoordsY -
+					clockHrsRadius * Math.cos(toRad(clockHrsLineAngle));
+
+				clockHrsLine.setAttribute("x2", clockHrsLineX2);
+				clockHrsLine.setAttribute("y2", clockHrsLineY2);
+
+				clockHrsCircle.setAttribute("cx", clockHrsLineX2);
+				clockHrsCircle.setAttribute("cy", clockHrsLineY2);
+
+				clockHrsText.setAttribute("x", clockHrsLineX2);
+				clockHrsText.setAttribute("y", clockHrsLineY2 + 2);
+				clockHrsText.textContent = hrs;
+			}
+
+			function toRad(angle) {
+				return (parseFloat(angle) / 180) * Math.PI;
+			}
+		</script>
+	</body>
+</html>

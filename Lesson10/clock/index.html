@@ -64,15 +64,14 @@
 
 			.line {
 				background-color: #000;
-				border-radius: 1px;
+				border-radius: 100%;
+
 				position: absolute;
 				z-index: 1;
 
 				transform-origin: 0 center;
 
 				height: 20px;
-
-				border-radius: 100%;
 			}
 
 			.hours-Line {
@@ -250,7 +249,7 @@
 				minCount = CurrentTime.getMinutes();
 				hrsCount = CurrentTime.getHours();
 				setPosition(secCount, minCount, hrsCount);
-			}, 1000);
+			}, 500);
 		</script>
 	</body>
 </html>
