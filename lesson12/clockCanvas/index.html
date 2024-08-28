@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<canvas id="clock" width="1000" height="1000"></canvas>
+		<script>
+			const clockCanvas = document.getElementById("clock");
+			const ctx = clockCanvas.getContext("2d");
+			const clockCenterCoordsX = 400;
+			const clockCenterCoordsY = 400;
+			const clockRadius = 300;
+			const clockSecRadius = clockRadius * 0.74;
+			const clockMinRadius = clockRadius * 0.64;
+			const clockHrsRadius = clockRadius * 0.54;
+			const clockNumRadius = clockRadius * 0.88;
+
+			function toRad(angle) {
+				return (parseFloat(angle) / 180) * Math.PI;
+			}
+
+			ctx.textBaseline = "middle";
+			ctx.textAlign = "center";
+
+			setInterval(() => {
+				CurrentTime = new Date();
+				secCount = CurrentTime.getSeconds();
+				minCount = CurrentTime.getMinutes();
+				hrsCount = CurrentTime.getHours();
+				settheFUCKINGANGLEJIMMY(secCount, minCount, hrsCount);
+			}, 100);
+
+			function settheFUCKINGANGLEJIMMY(sec, min, hrs) {
+				ctx.clearRect(0, 0, ctx.width, ctx.height);
+
+				ctx.beginPath();
+				ctx.lineWidth = 10;
+				ctx.strokeStyle = "#ff66ff";
+				ctx.fillStyle = "#000";
+				ctx.arc(
+					clockCenterCoordsX,
+					clockCenterCoordsY,
+					clockRadius,
+					false,
+					2 * Math.PI
+				);
+				ctx.fill();
+				ctx.stroke();
+
+				//######################################################
+
+				ctx.font = "bold 16px Arial";
+
+				for (i = 1; i < 13; i++) {
+					numX = clockCenterCoordsX + clockNumRadius * Math.sin(toRad(i * 30));
+					numY = clockCenterCoordsY - clockNumRadius * Math.cos(toRad(i * 30));
+					ctx.beginPath();
+					ctx.lineWidth = 1;
+					ctx.strokeStyle = "transparent";
+					ctx.fillStyle = "#ff66ff";
+					ctx.arc(numX, numY, clockRadius / 13, false, 2 * Math.PI);
+					ctx.fill();
+					ctx.stroke();
+
+					ctx.fillStyle = "#000";
+					ctx.fillText(i, numX, numY + 2);
+				}
+
+				//######################################################
+
+				let clockSecLineAngle = sec * 6;
+				let clockMinLineAngle = min * 6;
+				let clockHrsLineAngle = hrs * 30;
+
+				ctx.font = "bold 15px Arial";
+
+				//######################################################
+
+				let clockHrsLineX2 =
+					clockCenterCoordsX +
+					clockHrsRadius * Math.sin(toRad(clockHrsLineAngle));
+				let clockHrsLineY2 =
+					clockCenterCoordsY -
+					clockHrsRadius * Math.cos(toRad(clockHrsLineAngle));
+
+				ctx.beginPath();
+				ctx.moveTo(clockCenterCoordsX, clockCenterCoordsY);
+				ctx.lineWidth = clockRadius / 12.5;
+				ctx.strokeStyle = "#ff5555";
+				ctx.lineTo(clockHrsLineX2, clockHrsLineY2);
+				ctx.stroke();
+
+				//######################################################
+
+				let clockMinLineX2 =
+					clockCenterCoordsX +
+					clockMinRadius * Math.sin(toRad(clockMinLineAngle));
+				let clockMinLineY2 =
+					clockCenterCoordsY -
+					clockMinRadius * Math.cos(toRad(clockMinLineAngle));
+
+				ctx.beginPath();
+				ctx.moveTo(clockCenterCoordsX, clockCenterCoordsY);
+				ctx.lineWidth = clockRadius / 19;
+				ctx.strokeStyle = "#55ff33";
+				ctx.lineTo(clockMinLineX2, clockMinLineY2);
+				ctx.stroke();
+
+				//######################################################
+
+				let clockSecLineX2 =
+					clockCenterCoordsX +
+					clockSecRadius * Math.sin(toRad(clockSecLineAngle));
+				let clockSecLineY2 =
+					clockCenterCoordsY -
+					clockSecRadius * Math.cos(toRad(clockSecLineAngle));
+
+				ctx.beginPath();
+				ctx.moveTo(clockCenterCoordsX, clockCenterCoordsY);
+				ctx.lineWidth = clockRadius / 35;
+				ctx.strokeStyle = "#3399ff";
+				ctx.lineTo(clockSecLineX2, clockSecLineY2);
+				ctx.stroke();
+
+				//######################################################
+
+				ctx.beginPath();
+				ctx.lineWidth = 1;
+				ctx.strokeStyle = "transparent";
+				ctx.fillStyle = "#ff5555";
+				ctx.arc(
+					clockHrsLineX2,
+					clockHrsLineY2,
+					clockRadius / 20,
+					false,
+					2 * Math.PI
+				);
+				ctx.fill();
+				ctx.stroke();
+
+				ctx.fillStyle = "#000";
+				ctx.fillText(hrs, clockHrsLineX2, clockHrsLineY2 + 2);
+
+				//######################################################
+
+				ctx.beginPath();
+				ctx.lineWidth = 1;
+				ctx.strokeStyle = "transparent";
+				ctx.fillStyle = "#55ff33";
+				ctx.arc(
+					clockMinLineX2,
+					clockMinLineY2,
+					clockRadius / 20,
+					false,
+					2 * Math.PI
+				);
+				ctx.fill();
+				ctx.stroke();
+
+				ctx.fillStyle = "#000";
+				ctx.fillText(min, clockMinLineX2, clockMinLineY2 + 2);
+
+				//######################################################
+
+				ctx.beginPath();
+				ctx.lineWidth = 1;
+				ctx.strokeStyle = "transparent";
+				ctx.fillStyle = "#3399ff";
+				ctx.arc(
+					clockSecLineX2,
+					clockSecLineY2,
+					clockRadius / 20,
+					false,
+					2 * Math.PI
+				);
+				ctx.fill();
+				ctx.stroke();
+
+				ctx.fillStyle = "#000";
+				ctx.fillText(sec, clockSecLineX2, clockSecLineY2 + 2);
+
+				//######################################################
+
+				ctx.beginPath();
+				ctx.lineWidth = 1;
+				ctx.strokeStyle = "transparent";
+				ctx.fillStyle = "#fff";
+				ctx.arc(
+					clockCenterCoordsX,
+					clockCenterCoordsY,
+					clockRadius / 25,
+					false,
+					2 * Math.PI
+				);
+				ctx.fill();
+				ctx.stroke();
+			}
+		</script>
+	</body>
+</html>
