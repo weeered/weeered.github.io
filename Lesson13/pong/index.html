@@ -10,7 +10,7 @@
 		/>
 		<style>
 			.a321 {
-				font-family: blippo-black;
+				font: 100;
 			}
 		</style>
 	</head>
@@ -51,7 +51,8 @@
 			theMachine.style.justifyContent = "center";
 			theMachine.style.backgroundColor = "#efcf00";
 
-			theName.innerText = "pong";
+			theName.innerText = "PONG";
+			theName.style.font = `bold 80px "blippo-black"`;
 			theName.style.position = "absolute";
 			theName.style.left =
 				theMachine.offsetLeft +
@@ -59,8 +60,7 @@
 				theName.offsetWidth / 2 +
 				"px";
 			theName.style.top =
-				theMachine.offsetTop + theMachine.offsetHeight * 0.07 + "px";
-			theName.style.fontFamily = "blippo-black";
+				theMachine.offsetTop + theMachine.offsetHeight * 0.03 + "px";
 
 			playField.style.width = "768px";
 			playField.style.height = "480px";

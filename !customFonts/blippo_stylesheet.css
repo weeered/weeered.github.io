@@ -9,3 +9,12 @@
 	font-weight: normal;
 	font-style: normal;
 }
+
+@font-face {
+    font-family: 'blippo_light_sfregular';
+    src: url('https://weeered.github.io/!customFonts/blippolightsf-webfont.woff2') format('woff2'),
+         url('https://weeered.github.io/!customFonts/blippolightsf-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
