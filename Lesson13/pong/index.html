@@ -4,13 +4,13 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
+		<link
+			rel="stylesheet"
+			href="https://weeered.github.io/!customFonts/blippo_stylesheet.css"
+		/>
 		<style>
-			@font-face {
-				font-family: "blippo-black_cy_rus_by_meRg";
-				src: url("blippo_blackcyrusbyme-webfont.woff2") format("woff2"),
-					url("blippo_blackcyrusbyme-webfont.woff") format("woff");
-				font-weight: normal;
-				font-style: normal;
+			.a321 {
+				font-family: blippo-black;
 			}
 		</style>
 	</head>
@@ -24,6 +24,14 @@
 			const startBtn = document.createElement("button");
 			const scoreBoard = document.createElement("div");
 
+			document.body.appendChild(startBtn);
+			document.body.appendChild(scoreBoard);
+			document.body.appendChild(theMachine);
+			theMachine.appendChild(theName);
+			theMachine.appendChild(playField);
+			playField.appendChild(player1);
+			playField.appendChild(player2);
+
 			theName.className = "theNameroo";
 			theMachine.className = "theMachinderoo";
 			playField.className = "pField";
@@ -31,8 +39,6 @@
 			player2.className = "p2";
 			startBtn.className = "sBtn";
 			scoreBoard.className = "scBoard";
-
-			theName.innerText = "pong";
 
 			startBtn.style.width = "100px";
 			startBtn.style.height = "50px";
@@ -45,16 +51,20 @@
 			theMachine.style.justifyContent = "center";
 			theMachine.style.backgroundColor = "#efcf00";
 
+			theName.innerText = "pong";
+			theName.style.position = "absolute";
+			theName.style.left =
+				theMachine.offsetLeft +
+				theMachine.offsetWidth / 2 -
+				theName.offsetWidth / 2 +
+				"px";
+			theName.style.top =
+				theMachine.offsetTop + theMachine.offsetHeight * 0.07 + "px";
+			theName.style.fontFamily = "blippo-black";
+
 			playField.style.width = "768px";
 			playField.style.height = "480px";
 			playField.style.backgroundColor = "#222";
-
-			document.body.appendChild(startBtn);
-			document.body.appendChild(scoreBoard);
-			document.body.appendChild(theMachine);
-			theMachine.appendChild(playField);
-			playField.appendChild(player1);
-			playField.appendChild(player2);
 		</script>
 	</body>
 </html>
