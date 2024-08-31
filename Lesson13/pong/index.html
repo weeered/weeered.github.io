@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			@font-face {
+				font-family: "blippo-black_cy_rus_by_meRg";
+				src: url("blippo_blackcyrusbyme-webfont.woff2") format("woff2"),
+					url("blippo_blackcyrusbyme-webfont.woff") format("woff");
+				font-weight: normal;
+				font-style: normal;
+			}
+		</style>
+	</head>
+	<body>
+		<script>
+			const theMachine = document.createElement("div");
+			const theName = document.createElement("div");
+			const playField = document.createElement("div");
+			const player1 = document.createElement("div");
+			const player2 = document.createElement("div");
+			const startBtn = document.createElement("button");
+			const scoreBoard = document.createElement("div");
+
+			theName.className = "theNameroo";
+			theMachine.className = "theMachinderoo";
+			playField.className = "pField";
+			player1.className = "p1";
+			player2.className = "p2";
+			startBtn.className = "sBtn";
+			scoreBoard.className = "scBoard";
+
+			theName.innerText = "pong";
+
+			startBtn.style.width = "100px";
+			startBtn.style.height = "50px";
+			startBtn.innerText = "START";
+
+			theMachine.style.width = "1000px";
+			theMachine.style.height = "700px";
+			theMachine.style.display = "flex";
+			theMachine.style.alignItems = "center";
+			theMachine.style.justifyContent = "center";
+			theMachine.style.backgroundColor = "#efcf00";
+
+			playField.style.width = "768px";
+			playField.style.height = "480px";
+			playField.style.backgroundColor = "#222";
+
+			document.body.appendChild(startBtn);
+			document.body.appendChild(scoreBoard);
+			document.body.appendChild(theMachine);
+			theMachine.appendChild(playField);
+			playField.appendChild(player1);
+			playField.appendChild(player2);
+		</script>
+	</body>
+</html>
