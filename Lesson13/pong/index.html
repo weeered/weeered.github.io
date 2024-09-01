@@ -6,31 +6,39 @@
 		<title>Document</title>
 		<link
 			rel="stylesheet"
-			href="https://weeered.github.io/!customFonts/blippo_stylesheet.css"
+			href="https://weeered.github.io/!customFonts/pong_stylesheet.css"
 		/>
 		<style>
 			.a321 {
 				font: 100;
+				display: flex;
 			}
 		</style>
 	</head>
 	<body>
 		<script>
+			const xRes = 1000;
+			const yRes = 800;
+
 			const theMachine = document.createElement("div");
 			const theName = document.createElement("div");
+			const theHole = document.createElement("div");
 			const playField = document.createElement("div");
+			const divisiveLine = document.createElement("div");
 			const player1 = document.createElement("div");
 			const player2 = document.createElement("div");
 			const startBtn = document.createElement("button");
 			const scoreBoard = document.createElement("div");
 
-			document.body.appendChild(startBtn);
-			document.body.appendChild(scoreBoard);
 			document.body.appendChild(theMachine);
 			theMachine.appendChild(theName);
-			theMachine.appendChild(playField);
+			theMachine.appendChild(theHole);
+			theMachine.appendChild(startBtn);
+			theHole.appendChild(playField);
 			playField.appendChild(player1);
 			playField.appendChild(player2);
+			playField.appendChild(divisiveLine);
+			playField.appendChild(scoreBoard);
 
 			theName.className = "theNameroo";
 			theMachine.className = "theMachinderoo";
@@ -40,31 +48,78 @@
 			startBtn.className = "sBtn";
 			scoreBoard.className = "scBoard";
 
-			startBtn.style.width = "100px";
-			startBtn.style.height = "50px";
-			startBtn.innerText = "START";
+			playField.style.width = xRes + "px";
+			playField.style.height = yRes + "px";
+			playField.style.backgroundColor = "#222";
+			playField.style.borderRadius = " 100% / 20%";
+			playField.style.overflow = "hidden";
 
-			theMachine.style.width = "1000px";
-			theMachine.style.height = "700px";
+			theHole.style.width = xRes + yRes * 0.3 + "px";
+			theHole.style.height = yRes + yRes * 0.3 + "px";
+			theHole.style.display = "flex";
+			theHole.style.alignItems = "center";
+			theHole.style.justifyContent = "center";
+			theHole.style.backgroundColor = "#000";
+			theHole.style.borderRadius = "1%";
+
+			theMachine.style.width =
+				theHole.offsetWidth + theHole.offsetWidth * 0.3 + "px";
+			theMachine.style.height =
+				theHole.offsetHeight + theHole.offsetHeight * 0.5 + "px";
+			theMachine.style.margin = "0 auto";
 			theMachine.style.display = "flex";
+			theMachine.style.flexDirection = "column";
 			theMachine.style.alignItems = "center";
 			theMachine.style.justifyContent = "center";
-			theMachine.style.backgroundColor = "#efcf00";
+			theMachine.style.backgroundColor = "#efc000";
 
 			theName.innerText = "PONG";
-			theName.style.font = `bold 80px "blippo-black"`;
-			theName.style.position = "absolute";
-			theName.style.left =
-				theMachine.offsetLeft +
-				theMachine.offsetWidth / 2 -
-				theName.offsetWidth / 2 +
-				"px";
-			theName.style.top =
-				theMachine.offsetTop + theMachine.offsetHeight * 0.03 + "px";
+			theName.style.font = `${yRes / 4}px "blippo-black"`;
+			theName.style.position = "relative";
+			theName.style.left = -theName.offsetWidth / 2 + "px";
+			theName.style.top = theHole.offsetTop / 15 + "px";
+			theName.style.margin = `${-theName.offsetHeight}px ${-theName.offsetWidth}px 0 0`;
 
-			playField.style.width = "768px";
-			playField.style.height = "480px";
-			playField.style.backgroundColor = "#222";
+			startBtn.innerText = "START";
+			startBtn.style.width = xRes * 0.2 + "px";
+			startBtn.style.height = yRes * 0.1 + "px";
+			startBtn.style.position = "relative";
+			startBtn.style.left = -startBtn.offsetWidth / 2 + "px";
+			startBtn.style.top = theHole.offsetTop / 1.5 + "px";
+			startBtn.style.margin = `${-startBtn.offsetHeight}px ${-startBtn.offsetWidth}px 0 0`;
+
+			player1.style.width = 15 + "px";
+			player1.style.height = xRes / 11 + "px";
+			player1.style.backgroundColor = "#fff";
+			player1.style.position = "relative";
+			player1.style.top = yRes / 2 + player1.offsetHeight / 2 + "px";
+			player1.style.left = 15 + "px";
+			player1.style.margin = `${-player1.offsetHeight}px ${-player1.offsetWidth}px 0 0`;
+
+			player2.style.width = 15 + "px";
+			player2.style.height = xRes / 11 + "px";
+			player2.style.backgroundColor = "#fff";
+			player2.style.position = "relative";
+			player2.style.top = yRes / 2 + player2.offsetHeight / 2 + "px";
+			player2.style.left = xRes - 30 + "px";
+			player2.style.margin = `${-player2.offsetHeight}px ${-player2.offsetWidth}px 0 0`;
+
+			divisiveLine.style.height = "100%";
+			divisiveLine.style.width = "0px";
+			divisiveLine.style.border = "3px dotted #fff";
+			divisiveLine.style.position = "relative";
+			divisiveLine.style.left = xRes / 2 + "px";
+			divisiveLine.style.top = yRes / 2 + divisiveLine.offsetHeight / 2 + "px";
+			divisiveLine.style.margin = `${-divisiveLine.offsetHeight}px ${-divisiveLine.offsetWidth}px 0 0`;
+
+			scoreBoard.innerText = 9;
+			scoreBoard.style.width = "fit-content";
+			scoreBoard.style.font = `bold ${yRes / 10}px pong-score`;
+			scoreBoard.style.color = "#fff";
+			scoreBoard.style.position = "relative";
+			scoreBoard.style.top = yRes / 6 - scoreBoard.offsetHeight / 2 + "px";
+			scoreBoard.style.left = xRes / 3 - scoreBoard.offsetWidth / 2 + "px";
+			scoreBoard.style.margin = `${-scoreBoard.offsetHeight}px ${-scoreBoard.offsetWidth}px 0 0`;
 		</script>
 	</body>
 </html>
