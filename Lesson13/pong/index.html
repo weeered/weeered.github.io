@@ -9,17 +9,61 @@
 			href="https://weeered.github.io/!customFonts/pong_stylesheet.css"
 		/>
 		<style>
-			.a321 {
-				font: 100;
-				display: flex;
+			.glow {
+				animation: glow 3s ease-in-out infinite alternate;
+			}
+			.glowTXT {
+				animation: glowTXT 3s ease-in-out infinite alternate;
+			}
+
+			.glowLINE {
+				animation: glowLINE 3s ease-in-out infinite alternate;
+			}
+
+			@keyframes glow {
+				from {
+					box-shadow: 0 0 50px 1px #fff;
+					background-color: #fff;
+				}
+				to {
+					box-shadow: 0 0 60px 0.5px #ddf;
+					background-color: #fefeff;
+				}
+			}
+			@keyframes glowTXT {
+				from {
+					text-shadow: 0 0 50px #fff;
+					color: #fff;
+				}
+				to {
+					text-shadow: 0 0 60px #ddf;
+					color: #fefeff;
+				}
+			}
+
+			@keyframes glowLINE {
+				from {
+					box-shadow: 0 0 50px #fff;
+					border: 3px dotted #fff;
+				}
+				to {
+					box-shadow: 0 0 60px #ddf;
+					border: 3px dotted #fefeff;
+				}
 			}
 		</style>
 	</head>
 	<body>
 		<script>
-			const xRes = 1000;
-			const yRes = 800;
-
+			"use strict";
+			const xRes = 800;
+			const yRes = 600;
+			const playerWidth = 12;
+			const playerHeight = xRes / 13;
+			const player1Left = 15;
+			const player2Left = xRes - player1Left - playerWidth;
+			const ballWidth = xRes / 70;
+			const ballHeight = xRes / 70;
 			const theMachine = document.createElement("div");
 			const theName = document.createElement("div");
 			const theHole = document.createElement("div");
@@ -28,7 +72,24 @@
 			const player1 = document.createElement("div");
 			const player2 = document.createElement("div");
 			const startBtn = document.createElement("button");
-			const scoreBoard = document.createElement("div");
+			const scoreBoard1 = document.createElement("div");
+			const scoreBoard2 = document.createElement("div");
+			const ball = document.createElement("div");
+
+			const ballPhys = {
+				posX: 0,
+				posY: 0,
+				speedX: 0,
+				speedY: 0,
+
+				determineSpeed: function () {
+					this.speedX = 7 * determineDirection();
+					this.speedY = determineSpeed(3, 2, determineDirection());
+				},
+				update: function () {
+					ball.style.transform = `translate(${this.posX}px, ${this.posY}px)`;
+				},
+			};
 
 			document.body.appendChild(theMachine);
 			theMachine.appendChild(theName);
@@ -38,20 +99,26 @@
 			playField.appendChild(player1);
 			playField.appendChild(player2);
 			playField.appendChild(divisiveLine);
-			playField.appendChild(scoreBoard);
+			playField.appendChild(scoreBoard1);
+			playField.appendChild(scoreBoard2);
+			playField.appendChild(ball);
 
-			theName.className = "theNameroo";
-			theMachine.className = "theMachinderoo";
+			theName.className = "theNameroo ";
+			theMachine.className = "theMachinderoo ";
+			theHole.className = "TheHOLE";
 			playField.className = "pField";
-			player1.className = "p1";
-			player2.className = "p2";
+			player1.className = "p1 glow";
+			player2.className = "p2 glow";
 			startBtn.className = "sBtn";
-			scoreBoard.className = "scBoard";
+			scoreBoard1.className = "sc1 glowTXT";
+			scoreBoard2.className = "sc2 glowTXT";
+			ball.className = "ball glow";
+			divisiveLine.className = "annoying glowLINE";
 
 			playField.style.width = xRes + "px";
 			playField.style.height = yRes + "px";
 			playField.style.backgroundColor = "#222";
-			playField.style.borderRadius = " 100% / 20%";
+			playField.style.borderRadius = " 100% / 15%";
 			playField.style.overflow = "hidden";
 
 			theHole.style.width = xRes + yRes * 0.3 + "px";
@@ -88,38 +155,256 @@
 			startBtn.style.top = theHole.offsetTop / 1.5 + "px";
 			startBtn.style.margin = `${-startBtn.offsetHeight}px ${-startBtn.offsetWidth}px 0 0`;
 
-			player1.style.width = 15 + "px";
-			player1.style.height = xRes / 11 + "px";
+			player1.style.width = playerWidth + "px";
+			player1.style.height = playerHeight + "px";
 			player1.style.backgroundColor = "#fff";
 			player1.style.position = "relative";
-			player1.style.top = yRes / 2 + player1.offsetHeight / 2 + "px";
-			player1.style.left = 15 + "px";
-			player1.style.margin = `${-player1.offsetHeight}px ${-player1.offsetWidth}px 0 0`;
+			player1.style.top = yRes / 2 + playerHeight / 2 + "px";
+			player1.style.left = player1Left + "px";
+			player1.style.margin = `${-playerHeight}px ${-playerWidth}px 0 0`;
+			player1.style.boxShadow = "0px 0px 50px 1px #fff";
+			//player1.style.transition = "all 0.1s";
 
-			player2.style.width = 15 + "px";
-			player2.style.height = xRes / 11 + "px";
+			player2.style.width = playerWidth + "px";
+			player2.style.height = playerHeight + "px";
 			player2.style.backgroundColor = "#fff";
 			player2.style.position = "relative";
-			player2.style.top = yRes / 2 + player2.offsetHeight / 2 + "px";
-			player2.style.left = xRes - 30 + "px";
-			player2.style.margin = `${-player2.offsetHeight}px ${-player2.offsetWidth}px 0 0`;
+			player2.style.top = yRes / 2 + playerHeight / 2 + "px";
+			player2.style.left = player2Left + "px";
+			player2.style.margin = `${-playerHeight}px ${-playerWidth}px 0 0`;
+			player2.style.boxShadow = "0px 0px 50px 1px #fff";
+			//player2.style.transition = "all 0.1s";
 
 			divisiveLine.style.height = "100%";
 			divisiveLine.style.width = "0px";
 			divisiveLine.style.border = "3px dotted #fff";
 			divisiveLine.style.position = "relative";
-			divisiveLine.style.left = xRes / 2 + "px";
+			divisiveLine.style.left = xRes / 2 - divisiveLine.offsetWidth / 2 + "px";
 			divisiveLine.style.top = yRes / 2 + divisiveLine.offsetHeight / 2 + "px";
 			divisiveLine.style.margin = `${-divisiveLine.offsetHeight}px ${-divisiveLine.offsetWidth}px 0 0`;
+			divisiveLine.style.boxShadow = "0px 0px 50px 1px #fff";
 
-			scoreBoard.innerText = 9;
-			scoreBoard.style.width = "fit-content";
-			scoreBoard.style.font = `bold ${yRes / 10}px pong-score`;
-			scoreBoard.style.color = "#fff";
-			scoreBoard.style.position = "relative";
-			scoreBoard.style.top = yRes / 6 - scoreBoard.offsetHeight / 2 + "px";
-			scoreBoard.style.left = xRes / 3 - scoreBoard.offsetWidth / 2 + "px";
-			scoreBoard.style.margin = `${-scoreBoard.offsetHeight}px ${-scoreBoard.offsetWidth}px 0 0`;
+			scoreBoard1.innerText = 0;
+			scoreBoard1.style.width = "fit-content";
+			scoreBoard1.style.font = `bold ${yRes / 10}px pong_score`;
+			scoreBoard1.style.color = "#fff";
+			scoreBoard1.style.position = "relative";
+			scoreBoard1.style.top = yRes / 4 - scoreBoard1.offsetHeight / 2 + "px";
+			scoreBoard1.style.left = xRes / 3 - scoreBoard1.offsetWidth / 2 + "px";
+			scoreBoard1.style.margin = `${-scoreBoard1.offsetHeight}px ${-scoreBoard1.offsetWidth}px 0 0`;
+			scoreBoard1.style.textShadow = "0px 0px 40px #fff";
+
+			scoreBoard2.innerText = 0;
+			scoreBoard2.style.width = "fit-content";
+			scoreBoard2.style.font = `bold ${yRes / 10}px pong_score`;
+			scoreBoard2.style.color = "#fff";
+			scoreBoard2.style.position = "relative";
+			scoreBoard2.style.top = yRes / 4 - scoreBoard1.offsetHeight / 2 + "px";
+			scoreBoard2.style.left = xRes / 1.5 - scoreBoard1.offsetWidth / 2 + "px";
+			scoreBoard2.style.margin = `${-scoreBoard1.offsetHeight}px ${-scoreBoard1.offsetWidth}px 0 0`;
+			scoreBoard2.style.textShadow = "0px 0px 40px #fff";
+
+			ball.style.width = ballWidth + "px";
+			ball.style.height = ballHeight + "px";
+			ball.style.backgroundColor = "#fff";
+			ball.style.position = "relative";
+			ball.style.top = yRes / 2 + ballHeight / 2 + "px";
+			ball.style.left = xRes / 2 - ballWidth / 2 + "px";
+			ball.style.margin = `${-ballHeight}px ${-ballWidth}px 0 0`;
+			ball.style.boxShadow = "0px 0px 50px 1px #fff";
+
+			let P1YTrack = 0;
+			let P2YTrack = 0;
+			let P1UpKeyPressed;
+			let P1DownKeyPressed;
+			let P2UpKeyPressed;
+			let P2DownKeyPressed;
+			let Direction;
+			let RIGHTpong = false;
+			let LEFTpong = false;
+			let finish = true;
+			let round = true;
+
+			document.addEventListener("keydown", (event) => {
+				if (event.key === "w") P1UpKeyPressed = true;
+				if (event.key === "s") P1DownKeyPressed = true;
+				if (event.key === "ArrowUp") {
+					event.preventDefault();
+					P2UpKeyPressed = true;
+				}
+				if (event.key === "ArrowDown") {
+					event.preventDefault();
+					P2DownKeyPressed = true;
+				}
+			});
+
+			document.addEventListener("keyup", (event) => {
+				if (event.key === "w") P1UpKeyPressed = false;
+				if (event.key === "s") P1DownKeyPressed = false;
+				if (event.key === "ArrowUp") P2UpKeyPressed = false;
+				if (event.key === "ArrowDown") P2DownKeyPressed = false;
+			});
+
+			startBtn.addEventListener("click", () => {
+				scoreBoard1.innerText = 0;
+				scoreBoard2.innerText = 0;
+				finish = !finish;
+				start(0, 0);
+			});
+
+			function start(scr1, scr2, delay) {
+				RIGHTpong = false;
+				LEFTpong = false;
+				P1YTrack = 0;
+				P2YTrack = 0;
+				ballPhys.posX = 0;
+				ballPhys.posY = 0;
+				ballPhys.speedX = 0;
+				ballPhys.speedY = 0;
+				P1YTrack = 0;
+				P2YTrack = 0;
+				scoreBoard1.innerText = scr1;
+				scoreBoard2.innerText = scr2;
+				ballPhys.update();
+				player2.style.transform = `translateY(${P2YTrack}px)`;
+				player1.style.transform = `translateY(${P1YTrack}px)`;
+				if (!finish) {
+					ballPhys.determineSpeed();
+					setTimeout(runAll, delay);
+				}
+			}
+			function runAll() {
+				runScript();
+			}
+
+			function runScript() {
+				round = false;
+				ballPhys.posX += ballPhys.speedX;
+				ballPhys.posY += ballPhys.speedY;
+				player2.style.transform = `translateY(${P2YTrack}px)`;
+				player1.style.transform = `translateY(${P1YTrack}px)`;
+				ballPhys.update();
+
+				if (P1UpKeyPressed != P1DownKeyPressed) {
+					if (P1UpKeyPressed && -P1YTrack < yRes / 2 - playerHeight) {
+						P1YTrack = P1YTrack - 15;
+					}
+
+					if (P1DownKeyPressed && P1YTrack < yRes / 2 - playerHeight) {
+						P1YTrack = P1YTrack + 15;
+					}
+				}
+				if (P2UpKeyPressed != P2DownKeyPressed) {
+					if (P2UpKeyPressed && -P2YTrack < yRes / 2 - playerHeight) {
+						P2YTrack = P2YTrack - 15;
+					}
+					if (P2DownKeyPressed && P2YTrack < yRes / 2 - playerHeight) {
+						P2YTrack = P2YTrack + 15;
+					}
+				}
+				if (
+					ballPhys.posY < P1YTrack + playerHeight / 2 + ballHeight / 2 &&
+					ballPhys.posY > P1YTrack - playerHeight / 2 - ballHeight / 2 &&
+					RIGHTpong == false &&
+					-ballPhys.posX < xRes - player1Left - ballWidth &&
+					-ballPhys.posX > xRes / 2 - player1Left - playerWidth - ballWidth / 2
+				) {
+					RIGHTpong = !RIGHTpong;
+					LEFTpong = false;
+					ballPhys.speedX = -ballPhys.speedX;
+					if (P1UpKeyPressed != P1DownKeyPressed) {
+						if (P1UpKeyPressed && -P1YTrack < yRes / 2 - playerHeight) {
+							ballPhys.speedY = ballPhys.speedY - 1;
+							console.log("BOOST UP " + ballPhys.speedY);
+						}
+						if (P1DownKeyPressed && P1YTrack < yRes / 2 - playerHeight) {
+							ballPhys.speedY = ballPhys.speedY + 1;
+							console.log("BOOST DOWN " + ballPhys.speedY);
+						}
+					}
+				}
+				if (
+					ballPhys.posY < P2YTrack + playerHeight / 2 + ballHeight / 2 &&
+					ballPhys.posY > P2YTrack - playerHeight / 2 - ballHeight / 2 &&
+					LEFTpong == false &&
+					ballPhys.posX < xRes - player1Left - ballWidth &&
+					ballPhys.posX > xRes / 2 - player1Left - playerWidth - ballWidth / 2
+				) {
+					LEFTpong = !LEFTpong;
+					RIGHTpong = false;
+					ballPhys.speedX = -ballPhys.speedX;
+					if (P2UpKeyPressed != P2DownKeyPressed) {
+						if (P2UpKeyPressed && -P2YTrack < yRes / 2 - playerHeight) {
+							ballPhys.speedY = ballPhys.speedY - 1;
+							console.log("BOOST UP " + ballPhys.speedY);
+						}
+						if (P2DownKeyPressed && P2YTrack < yRes / 2 - playerHeight) {
+							ballPhys.speedY = ballPhys.speedY + 1;
+							console.log("BOOST DOWN " + ballPhys.speedY);
+						}
+					}
+				}
+
+				if (-ballPhys.posX >= xRes / 2 - ballWidth / 2) {
+					RIGHTpong = !RIGHTpong;
+					LEFTpong == true ? (LEFTpong = false) : true;
+					ballPhys.speedX = -ballPhys.speedX;
+					scoreBoard2.innerText = parseInt(scoreBoard2.innerText) + 1;
+					if (parseInt(scoreBoard2.innerText) > 4) {
+						finish = true;
+						start(scoreBoard1.innerText, scoreBoard2.innerText);
+					} else {
+						round = true;
+						start(scoreBoard1.innerText, scoreBoard2.innerText, 2000);
+					}
+				}
+
+				if (ballPhys.posX >= xRes / 2 - ballWidth / 2) {
+					LEFTpong = !LEFTpong;
+					RIGHTpong == true ? (RIGHTpong = false) : true;
+
+					ballPhys.speedX = -ballPhys.speedX;
+					scoreBoard1.innerText = parseInt(scoreBoard1.innerText) + 1;
+					if (parseInt(scoreBoard1.innerText) > 4) {
+						finish = true;
+						start(scoreBoard1.innerText, scoreBoard2.innerText);
+					} else {
+						round = true;
+						start(scoreBoard1.innerText, scoreBoard2.innerText, 2000);
+					}
+				}
+
+				if (ballPhys.posY >= yRes / 2 - ballHeight / 2 - 20) {
+					ballPhys.speedY = -ballPhys.speedY;
+				}
+
+				if (-ballPhys.posY >= yRes / 2 - ballHeight / 2 - 20) {
+					ballPhys.speedY = -ballPhys.speedY;
+				}
+
+				if (!finish && !round) {
+					setTimeout(runScript, 1000 / 40);
+				}
+			}
+
+			function determineSpeed(range, min, direction) {
+				let speed = ((Math.random() * range + min) * direction).toFixed(1);
+				speed = Number.parseInt(speed);
+				console.log("Determined speed: " + speed);
+				return speed;
+			}
+
+			function determineDirection() {
+				const RandomBool = Boolean(Math.round(Math.random()));
+				let ballDir = 0;
+				if (RandomBool === true) {
+					ballDir = 1;
+				}
+				if (RandomBool === false) {
+					ballDir = -1;
+				}
+				return ballDir;
+			}
 		</script>
 	</body>
 </html>
