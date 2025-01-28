@@ -71,7 +71,7 @@ const sections = [
 ];
 
 //#342e8cbf
-
+console.log(burgerMenu);
 if (window.getComputedStyle(burgerButtons[0], null).display != "none") {
 	if (burgerMenu.classList.length > 1) {
 		theBurgering(false);

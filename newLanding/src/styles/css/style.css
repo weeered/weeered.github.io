@@ -712,6 +712,11 @@ a {
     margin-bottom: 4.7rem;
   }
 }
+@media screen and (max-aspect-ratio: 1) {
+  .title__button {
+    padding: 0.5rem 1rem 0.5rem 0.6rem;
+  }
+}
 .title__button::before {
   content: "";
   position: absolute;
@@ -1081,8 +1086,7 @@ a {
   -webkit-background-clip: text;
           background-clip: text;
   color: #475569;
-  font-size: 2rem;
-  line-height: 0;
+  font-size: 1.4rem;
 }
 
 .section-KO25 {
@@ -1717,8 +1721,7 @@ a {
 }
 .section-programm__event-topic-dot {
   position: relative;
-  font-size: 2.2rem;
-  line-height: 1px !important;
+  font-size: 1.5rem;
   -webkit-background-clip: text;
           background-clip: text;
 }
