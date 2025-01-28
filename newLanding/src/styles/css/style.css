@@ -907,7 +907,6 @@ a {
 
 .burgerAnimLayer1_active {
   border-radius: 0;
-  height: calc(100vh - 5rem);
   transform: translateY(0);
   background-color: transparent;
   transition: transform 0.35s 0s ease-in-out, border-radius 0.35s 0s ease-in-out, background-color 0s 0.37s linear;
@@ -915,7 +914,6 @@ a {
 
 .burgerAnimLayer2_active {
   border-radius: 0;
-  height: calc(100vh - 5rem);
   transform: translateY(0);
   background-color: transparent;
   transition: transform 0.35s 0.02s ease-in-out, border-radius 0.35s 0.02s ease-in-out, background-color 0s 0.37s linear;
@@ -923,7 +921,6 @@ a {
 
 .burgerAnimLayer3_active {
   border-radius: 0;
-  height: calc(100vh - 5rem);
   transform: translateY(0);
   background-color: transparent;
   transition: transform 0.35s 0.04s ease-in-out, border-radius 0.35s 0.04s ease-in-out, background-color 0s 0.37s linear;
@@ -2327,35 +2324,18 @@ a {
   font-size: 1.8rem;
   font-weight: 450;
 }
-.footer__left-block-container {
+.footer__map-container {
   height: 100%;
-  display: flex;
-  flex-direction: column;
   box-shadow: 2.5px 5px 5px rgba(0, 0, 0, 0.0823529412), 0px 0px 5px rgba(0, 0, 0, 0.0823529412);
   border-radius: 1rem;
   overflow: hidden;
 }
 @media screen and (max-aspect-ratio: 4/3) {
-  .footer__left-block-container {
+  .footer__map-container {
     border-radius: 0;
-    height: 40rem;
     width: 100%;
+    height: 40rem;
   }
-}
-.footer__left-block-info-container {
-  flex-grow: 0;
-  display: flex;
-  align-items: center;
-  border-top: none;
-  padding: 0.5rem;
-  background-color: #fff;
-}
-.footer__map-container {
-  width: 100%;
-  flex-grow: 1;
-  border-bottom: none;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
 }
 .footer__countdown {
   width: 100% !important;
