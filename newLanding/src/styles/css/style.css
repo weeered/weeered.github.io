@@ -780,7 +780,7 @@ a {
 .burger-menu {
   position: fixed;
   left: 0;
-  top: -5rem;
+  top: 5rem;
   width: 100%;
   height: calc(100vh - 5rem);
   background-color: #fff;
@@ -869,7 +869,7 @@ a {
 .burgerAnimLayer1 {
   position: fixed;
   right: 0;
-  top: -5rem;
+  top: 5rem;
   width: 100%;
   height: calc(100vh - 5rem);
   border-radius: 40%;
@@ -882,7 +882,7 @@ a {
 .burgerAnimLayer2 {
   position: fixed;
   right: 0;
-  top: -5rem;
+  top: 5rem;
   width: 100%;
   height: calc(100vh - 5rem);
   border-radius: 40%;
@@ -895,7 +895,7 @@ a {
 .burgerAnimLayer3 {
   position: fixed;
   right: 0;
-  top: -5rem;
+  top: 5rem;
   width: 100%;
   height: calc(100vh - 5rem);
   border-radius: 40%;
