@@ -482,7 +482,9 @@ a {
 .header__burger-button-line::before {
   content: "";
   position: absolute;
-  top: -1.2rem;
+  top: 0;
+  left: 0;
+  transform: translateY(1.2rem);
   width: 100%;
   height: 2px;
   background-color: #fff;
@@ -491,7 +493,9 @@ a {
 .header__burger-button-line::after {
   content: "";
   position: absolute;
-  bottom: -1.2rem;
+  top: 0;
+  left: 0;
+  transform: translateY(-1.2rem);
   width: 100%;
   height: 2px;
   background-color: #fff;
@@ -845,12 +849,12 @@ a {
   background-color: transparent;
 }
 .burger-button_active div::before {
-  top: 0;
-  transform: rotate(-45deg);
+  transform: translateY(0);
+  transform: rotate(45deg);
 }
 .burger-button_active div::after {
-  bottom: 0;
-  transform: rotate(45deg);
+  transform: translateY(0);
+  transform: rotate(-45deg);
 }
 
 .header_burgered {

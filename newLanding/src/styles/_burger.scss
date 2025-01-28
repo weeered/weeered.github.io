@@ -93,13 +93,13 @@
 	background-color: transparent;
 
 	&::before {
-		top: 0;
-		transform: rotate(-45deg);
+		transform: translateY(0);
+		transform: rotate(45deg);
 	}
 
 	&::after {
-		bottom: 0;
-		transform: rotate(45deg);
+		transform: translateY(0);
+		transform: rotate(-45deg);
 	}
 }
 
