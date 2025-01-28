@@ -782,7 +782,7 @@ a {
   left: 0;
   top: 5rem;
   width: 100%;
-  height: calc(100vh - 5rem);
+  height: calc(100% - 5rem);
   background-color: #fff;
   -webkit-backdrop-filter: blur(0.4rem);
           backdrop-filter: blur(0.4rem);
@@ -795,7 +795,7 @@ a {
   align-items: center;
   justify-content: space-between;
   transform: translateX(100%);
-  gap: 2%;
+  gap: 4rem;
   flex-direction: column;
   padding: 5vh 0;
 }
@@ -871,7 +871,7 @@ a {
   right: 0;
   top: 5rem;
   width: 100%;
-  height: calc(100vh - 5rem);
+  height: calc(100% - 5rem);
   border-radius: 40%;
   z-index: 17;
   transform: translateX(100%);
@@ -884,7 +884,7 @@ a {
   right: 0;
   top: 5rem;
   width: 100%;
-  height: calc(100vh - 5rem);
+  height: calc(100% - 5rem);
   border-radius: 40%;
   z-index: 18;
   transform: translateX(100%);
@@ -897,12 +897,33 @@ a {
   right: 0;
   top: 5rem;
   width: 100%;
-  height: calc(100vh - 5rem);
+  height: calc(100% - 5rem);
   border-radius: 40%;
   z-index: 19;
   transform: translateX(100%);
   background-color: #342e8c;
   transition: transform 0.3s 0.02s ease-in-out, border-radius 0.3s 0.02s ease-in-out, background-color 0s 0.02s linear;
+}
+
+.burgerAnimLayer1_active {
+  border-radius: 0;
+  transform: translateX(0);
+  background-color: transparent;
+  transition: transform 0.35s 0s ease-in-out, border-radius 0.35s 0s ease-in-out, background-color 0s 0.37s linear;
+}
+
+.burgerAnimLayer2_active {
+  border-radius: 0;
+  transform: translateX(0);
+  background-color: transparent;
+  transition: transform 0.35s 0.02s ease-in-out, border-radius 0.35s 0.02s ease-in-out, background-color 0s 0.37s linear;
+}
+
+.burgerAnimLayer3_active {
+  border-radius: 0;
+  transform: translateX(0);
+  background-color: transparent;
+  transition: transform 0.35s 0.04s ease-in-out, border-radius 0.35s 0.04s ease-in-out, background-color 0s 0.37s linear;
 }
 
 .countdown {
