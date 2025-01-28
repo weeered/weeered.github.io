@@ -72,7 +72,7 @@ const sections = [
 
 //#342e8cbf
 
-if (burgerButtons[0].style.display != "none") {
+if (window.getComputedStyle(burgerButtons[0], null).display != "none") {
 	document.addEventListener("scroll", () => {
 		if (scrollY > titleButton.offsetHeight + titleButton.offsetTop) {
 			headerAnimationLayer1.style.transition =
