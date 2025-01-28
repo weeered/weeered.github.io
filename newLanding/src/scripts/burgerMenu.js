@@ -20,7 +20,6 @@ function theBurgering(isItTop) {
 	header.classList.toggle("header_burgered");
 	headerDynamic.classList.toggle("header_burgered");
 	countdownBurger.classList.toggle("countdown_active");
-	console.log(countdownBurger);
 
 	burgerMenu.classList.toggle("burger-menu_active");
 	burgerAnimationLayer1.classList.toggle("burgerAnimLayer1_active");
