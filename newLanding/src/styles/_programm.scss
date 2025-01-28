@@ -218,13 +218,20 @@
 		}
 
 		&-topic {
+			position: relative;
 			font-size: 1.5rem;
 			font-weight: 450;
 
 			&-dot {
-				position: relative;
-				font-size: 1.5rem;
+				color: transparent;
+
 				background-clip: text;
+
+				font-size: 2rem;
+
+				line-height: 1.5rem;
+
+				background-color: $textBlackLessTrans;
 			}
 		}
 		&-participants {

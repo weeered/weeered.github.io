@@ -160,9 +160,15 @@
 		}
 
 		&-dot {
+			color: transparent;
+
 			background-clip: text;
-			color: $textBlackish;
-			font-size: 1.4rem;
+
+			font-size: 2rem;
+
+			line-height: 1.4rem;
+
+			background-color: $textBlackLessTrans;
 		}
 
 		//! Colorful Borders

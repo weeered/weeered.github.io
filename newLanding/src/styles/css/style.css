@@ -1083,10 +1083,12 @@ a {
   color: #475569;
 }
 .section-themes__list-dot {
+  color: transparent;
   -webkit-background-clip: text;
           background-clip: text;
-  color: #475569;
-  font-size: 1.4rem;
+  font-size: 2rem;
+  line-height: 1.4rem;
+  background-color: rgba(100, 116, 139, 0.6666666667);
 }
 
 .section-KO25 {
@@ -1716,14 +1718,17 @@ a {
   font-weight: 100;
 }
 .section-programm__event-topic {
+  position: relative;
   font-size: 1.5rem;
   font-weight: 450;
 }
 .section-programm__event-topic-dot {
-  position: relative;
-  font-size: 1.5rem;
+  color: transparent;
   -webkit-background-clip: text;
           background-clip: text;
+  font-size: 2rem;
+  line-height: 1.5rem;
+  background-color: rgba(100, 116, 139, 0.6666666667);
 }
 .section-programm__event-participants {
   display: flex;
