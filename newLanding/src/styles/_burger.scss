@@ -24,7 +24,7 @@
 	align-items: center;
 	justify-content: space-between;
 
-	transform: translateY(100%);
+	transform: translateX(100%);
 
 	gap: 4rem;
 
@@ -34,7 +34,7 @@
 
 	&_active {
 		//border-radius: 0;
-		transform: translateY(0);
+		transform: translateX(0);
 		background-color: #ffffffff;
 		transition: transform 0.35s 0.06s ease-in-out,
 			border-radius 0.35s 0.06s ease-in-out,
@@ -93,12 +93,12 @@
 	background-color: transparent;
 
 	&::before {
-		transform: translateY(0);
+		transform: translateX(0);
 		transform: rotate(45deg);
 	}
 
 	&::after {
-		transform: translateY(0);
+		transform: translateX(0);
 		transform: rotate(-45deg);
 	}
 }
@@ -128,7 +128,7 @@
 
 	z-index: 17;
 
-	transform: translateY(100%);
+	transform: translateX(100%);
 
 	background-color: $yellow;
 	transition: transform 0.3s 0.06s ease-in-out,
@@ -146,7 +146,7 @@
 
 	z-index: 18;
 
-	transform: translateY(100%);
+	transform: translateX(100%);
 
 	background-color: $red;
 	transition: transform 0.3s 0.04s ease-in-out,
@@ -164,7 +164,7 @@
 
 	z-index: 19;
 
-	transform: translateY(100%);
+	transform: translateX(100%);
 
 	background-color: $blue;
 	transition: transform 0.3s 0.02s ease-in-out,
@@ -174,7 +174,7 @@
 .burgerAnimLayer1_active {
 	//border-radius: 0;
 
-	transform: translateY(0);
+	transform: translateX(0);
 
 	background-color: transparent;
 	transition: transform 0.35s 0s ease-in-out, border-radius 0.35s 0s ease-in-out,
@@ -184,7 +184,7 @@
 .burgerAnimLayer2_active {
 	//border-radius: 0;
 
-	transform: translateY(0);
+	transform: translateX(0);
 
 	background-color: transparent;
 	transition: transform 0.35s 0.02s ease-in-out,
@@ -194,7 +194,7 @@
 .burgerAnimLayer3_active {
 	//border-radius: 0;
 
-	transform: translateY(0);
+	transform: translateX(0);
 
 	background-color: transparent;
 	transition: transform 0.35s 0.04s ease-in-out,
