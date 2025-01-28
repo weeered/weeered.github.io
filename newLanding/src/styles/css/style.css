@@ -794,14 +794,14 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  transform: translateY(100%);
+  transform: translateX(100%);
   gap: 2%;
   flex-direction: column;
   padding: 5vh 0;
 }
 .burger-menu_active {
   border-radius: 0;
-  transform: translateY(0);
+  transform: translateX(0);
   background-color: white;
   transition: transform 0.35s 0.06s ease-in-out, border-radius 0.35s 0.06s ease-in-out, background-color 0.5s 0.37s ease-in-out;
 }
@@ -874,7 +874,7 @@ a {
   height: calc(100vh - 5rem);
   border-radius: 40%;
   z-index: 17;
-  transform: translateY(100%);
+  transform: translateX(100%);
   background-color: #f19001;
   transition: transform 0.3s 0.06s ease-in-out, border-radius 0.3s 0.06s ease-in-out, background-color 0s 0.06s linear;
 }
@@ -887,7 +887,7 @@ a {
   height: calc(100vh - 5rem);
   border-radius: 40%;
   z-index: 18;
-  transform: translateY(100%);
+  transform: translateX(100%);
   background-color: #d3281d;
   transition: transform 0.3s 0.04s ease-in-out, border-radius 0.3s 0.04s ease-in-out, background-color 0s 0.04s linear;
 }
@@ -900,28 +900,28 @@ a {
   height: calc(100vh - 5rem);
   border-radius: 40%;
   z-index: 19;
-  transform: translateY(100%);
+  transform: translateX(100%);
   background-color: #342e8c;
   transition: transform 0.3s 0.02s ease-in-out, border-radius 0.3s 0.02s ease-in-out, background-color 0s 0.02s linear;
 }
 
 .burgerAnimLayer1_active {
   border-radius: 0;
-  transform: translateY(0);
+  transform: translateX(0);
   background-color: transparent;
   transition: transform 0.35s 0s ease-in-out, border-radius 0.35s 0s ease-in-out, background-color 0s 0.37s linear;
 }
 
 .burgerAnimLayer2_active {
   border-radius: 0;
-  transform: translateY(0);
+  transform: translateX(0);
   background-color: transparent;
   transition: transform 0.35s 0.02s ease-in-out, border-radius 0.35s 0.02s ease-in-out, background-color 0s 0.37s linear;
 }
 
 .burgerAnimLayer3_active {
   border-radius: 0;
-  transform: translateY(0);
+  transform: translateX(0);
   background-color: transparent;
   transition: transform 0.35s 0.04s ease-in-out, border-radius 0.35s 0.04s ease-in-out, background-color 0s 0.37s linear;
 }
