@@ -707,16 +707,6 @@ a {
   text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.0823529412);
   color: #fff;
 }
-@media screen and (max-width: 900px) {
-  .title__button {
-    font-size: 1.4rem;
-  }
-}
-@media screen and (max-aspect-ratio: 30/23) {
-  .title__button {
-    font-size: 1.4rem;
-  }
-}
 @media screen and (max-height: 600px) {
   .title__button {
     margin-bottom: 4.7rem;
@@ -795,7 +785,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  transform: translateX(100%);
+  transform: translateX(-100%);
   gap: 4rem;
   flex-direction: column;
   padding: 5vh 0;
@@ -873,7 +863,7 @@ a {
   width: 100%;
   height: calc(100% - 5rem);
   z-index: 17;
-  transform: translateX(100%);
+  transform: translateX(-100%);
   background-color: #f19001;
   transition: transform 0.3s 0.06s ease-in-out, border-radius 0.3s 0.06s ease-in-out, background-color 0s 0.06s linear;
 }
@@ -885,7 +875,7 @@ a {
   width: 100%;
   height: calc(100% - 5rem);
   z-index: 18;
-  transform: translateX(100%);
+  transform: translateX(-100%);
   background-color: #d3281d;
   transition: transform 0.3s 0.04s ease-in-out, border-radius 0.3s 0.04s ease-in-out, background-color 0s 0.04s linear;
 }
@@ -897,7 +887,7 @@ a {
   width: 100%;
   height: calc(100% - 5rem);
   z-index: 19;
-  transform: translateX(100%);
+  transform: translateX(-100%);
   background-color: #342e8c;
   transition: transform 0.3s 0.02s ease-in-out, border-radius 0.3s 0.02s ease-in-out, background-color 0s 0.02s linear;
 }
@@ -1092,7 +1082,7 @@ a {
           background-clip: text;
   color: #475569;
   font-size: 2rem;
-  line-height: 0rem;
+  line-height: 0;
 }
 
 .section-KO25 {
@@ -1728,7 +1718,7 @@ a {
 .section-programm__event-topic-dot {
   position: relative;
   font-size: 2.2rem;
-  line-height: 0rem;
+  line-height: 1px !important;
   -webkit-background-clip: text;
           background-clip: text;
 }
@@ -2134,10 +2124,9 @@ a {
   align-items: center;
   justify-content: start;
   width: calc(20% - 1.6rem);
-  height: 100%;
   min-height: -moz-fit-content;
   min-height: fit-content;
-  height: 18.5rem;
+  height: 20rem;
   padding: 1rem;
   transition: transform 0.2s ease-in-out, box-shadow 0.1s ease-in-out;
 }

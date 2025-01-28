@@ -43,14 +43,6 @@
 	}
 
 	&__button {
-		@media screen and (max-width: 900px) {
-			font-size: 1.4rem;
-		}
-
-		@media screen and (max-aspect-ratio: 30/23) {
-			font-size: 1.4rem;
-		}
-
 		@media screen and (max-height: 600px) {
 			margin-bottom: 4.7rem;
 		}

@@ -73,6 +73,11 @@ const sections = [
 //#342e8cbf
 
 if (window.getComputedStyle(burgerButtons[0], null).display != "none") {
+	if (burgerMenu.classList.length > 1) {
+		theBurgering(false);
+		console.log(1);
+	}
+
 	document.addEventListener("scroll", () => {
 		if (scrollY > titleButton.offsetHeight + titleButton.offsetTop) {
 			headerAnimationLayer1.style.transition =
@@ -116,6 +121,10 @@ if (window.getComputedStyle(burgerButtons[0], null).display != "none") {
 	});
 } else {
 	document.addEventListener("scroll", () => {
+		if (burgerMenu.classList.length > 1) {
+			theBurgering(false);
+			console.log(1);
+		}
 		setHighlightNav();
 
 		if (scrollY > titleButton.offsetHeight + titleButton.offsetTop) {
