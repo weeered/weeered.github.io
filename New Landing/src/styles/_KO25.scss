@@ -1,0 +1,524 @@
+.section-KO25 {
+	@media screen and (max-aspect-ratio: 4/3) {
+		flex-direction: column;
+		text-align: center;
+	}
+	@media screen and (max-width: 750px) {
+		flex-direction: column;
+		text-align: center;
+	}
+	width: 100%;
+	display: flex;
+	gap: 3vh;
+	justify-content: space-between;
+	text-align: center;
+
+	&__banner {
+		@media screen and (max-aspect-ratio: 4/3) {
+			width: 100%;
+
+			&_top {
+				display: none;
+			}
+
+			&_bottom {
+				display: flex !important;
+			}
+		}
+
+		@media screen and (max-width: 750px) {
+			width: 100%;
+
+			&_top {
+				display: none;
+			}
+
+			&_bottom {
+				display: flex !important;
+			}
+		}
+
+		&_bottom {
+			display: none;
+		}
+
+		width: 20%;
+		display: flex;
+		flex-direction: column;
+		justify-content: start;
+		align-items: center;
+		gap: 2.5vh;
+
+		&-logo {
+			@media screen and (max-aspect-ratio: 4/3) {
+				width: 40%;
+			}
+			@media screen and (max-width: 750px) {
+				width: 40%;
+			}
+
+			height: fit-content;
+
+			width: 100%;
+		}
+
+		&-results {
+			position: relative;
+			font-size: 1.2rem;
+			text-align: center;
+			font-weight: 450;
+
+			display: flex;
+
+			justify-content: center;
+			align-items: center;
+
+			height: 100%;
+
+			padding: 1rem;
+			margin: 0.5rem;
+
+			background-color: $indigo;
+			border-radius: 1rem;
+
+			&::before {
+				content: "";
+				position: absolute;
+				width: calc(100% + 1rem);
+				height: calc(100% + 1rem);
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+
+				border-radius: 1.5rem;
+				background: linear-gradient(
+					90deg,
+					$goldBright,
+					$goldBright,
+					$goldDim,
+					$goldDim,
+					$goldBright,
+					$goldBright
+				);
+
+				background-size: 200% 100%;
+				animation: XmoveRYB200 7s linear infinite;
+
+				box-shadow: 2.5px 5px 5px #00000015, 0px 0px 5px #00000015;
+
+				z-index: -1;
+			}
+
+			&-text {
+				font-size: 1.4rem;
+				text-align: center;
+				font-weight: 500;
+				color: transparent;
+				background: linear-gradient(
+					90deg,
+					$goldBright,
+					$goldBright,
+					$goldDim,
+					$goldDim,
+					$goldBright,
+					$goldBright
+				);
+				background-size: 200% 100%;
+				animation: XmoveRYB200 7s linear infinite;
+				background-clip: text;
+			}
+		}
+	}
+
+	&__description {
+		@media screen and (max-aspect-ratio: 4/3) {
+			width: 100%;
+			text-align: inherit;
+		}
+		@media screen and (max-width: 750px) {
+			width: 100%;
+			text-align: inherit;
+		}
+		width: 80%;
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+		text-align: center;
+
+		&-top-title {
+			text-align: inherit;
+		}
+
+		&-bot-title {
+			text-align: inherit;
+			color: $indigo;
+			word-wrap: normal;
+
+			& span {
+				font-size: inherit;
+				font-weight: 700;
+				color: transparent;
+				background: linear-gradient(
+					90deg,
+					$goldBright,
+					$goldBright,
+					$goldDim,
+					$goldDim,
+					$goldBright,
+					$goldBright
+				);
+				background-size: 200% 100%;
+				animation: XmoveRYB200 7s linear infinite;
+				background-clip: text;
+			}
+		}
+
+		&-info {
+			position: relative;
+			text-align: center;
+
+			width: 100%;
+			height: max-content;
+
+			border-radius: 1rem;
+			padding: 1rem;
+			box-shadow: 2.5px 5px 5px #00000015, 0px 0px 5px #00000015;
+			background: linear-gradient(
+				60deg,
+				$goldDim,
+				$goldDim,
+				$goldBright,
+				$goldBright,
+				$goldDim,
+				$goldDim
+			);
+			&-span {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+
+				font-size: 1.2rem;
+				font-weight: 450;
+				color: $textBlack;
+			}
+
+			&-bolden {
+				font-size: 1.4rem;
+				font-weight: 600;
+				color: $textBlack;
+				// color: transparent;
+				// width: fit-content;
+				// background: linear-gradient(
+				// 	90deg,
+				// 	$goldBright,
+				// 	$goldBright,
+				// 	$goldDim,
+				// 	$goldDim,
+				// 	$goldBright,
+				// 	$goldBright
+				// );
+				// background-size: 200% 100%;
+				// animation: XmoveRYB200 6.1s linear infinite;
+				// background-clip: text;
+			}
+		}
+
+		&-nominations {
+			@media screen and (max-aspect-ratio: 4/3) {
+				flex-direction: column;
+			}
+
+			@media screen and (max-width: 750px) {
+				flex-direction: column;
+			}
+
+			margin: 0.5rem auto 0 auto;
+			height: fit-content;
+			min-height: 40rem;
+			display: flex;
+			justify-items: center;
+			align-items: center;
+			gap: 1.5rem;
+
+			max-width: fit-content;
+
+			&-1 {
+				@media screen and (max-aspect-ratio: 4/3) {
+					width: 100%;
+					max-height: fit-content;
+				}
+
+				@media screen and (max-width: 750px) {
+					width: 100%;
+					max-height: fit-content;
+				}
+
+				width: calc(100% / 3);
+				height: 100%;
+
+				border-radius: 1rem;
+
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 0.8rem;
+
+				overflow: hidden;
+
+				padding: 1rem 1.5rem 1.5rem 1.5rem;
+
+				&-title {
+					position: relative;
+					text-align: center;
+					width: 100%;
+					font-weight: 600;
+					color: transparent;
+					background: linear-gradient(
+						90deg,
+						$goldBright,
+						$goldBright,
+						$goldDim,
+						$goldDim,
+						$goldBright,
+						$goldBright
+					);
+					background-size: 200% 100%;
+					animation: XmoveRYB200 6s linear infinite;
+					background-clip: text;
+					margin-bottom: 1.2rem;
+
+					&::after {
+						content: "";
+						position: absolute;
+						bottom: calc(-1rem + 1px);
+						left: -10%;
+						width: 120%;
+						height: 1000%;
+						background-color: $indigo;
+						z-index: -1;
+
+						box-shadow: 0 5px 5px #00000020;
+					}
+
+					&::before {
+						content: "";
+						position: absolute;
+						bottom: -1rem;
+						left: -10%;
+						width: 120%;
+						height: 4px;
+						background: linear-gradient(
+							90deg,
+							$goldBright,
+							$goldBright,
+							$goldDim,
+							$goldDim,
+							$goldBright,
+							$goldBright
+						);
+						background-size: 200% 100%;
+						animation: XmoveRYB200 6s linear infinite;
+					}
+				}
+
+				&-item {
+					width: 100%;
+					text-align: left;
+					font-size: 1.2rem;
+					font-weight: 500;
+					color: #fff;
+				}
+			}
+
+			&-2 {
+				@media screen and (max-aspect-ratio: 4/3) {
+					width: 100%;
+					max-height: fit-content;
+				}
+
+				@media screen and (max-width: 750px) {
+					width: 100%;
+					max-height: fit-content;
+				}
+
+				width: calc(100% / 3);
+				height: 100%;
+
+				border-radius: 1rem;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 0.8rem;
+
+				overflow: hidden;
+
+				padding: 1rem 1.5rem 1.5rem 1.5rem;
+
+				& span {
+					font-size: inherit;
+					font-weight: inherit;
+					color: inherit;
+					white-space: nowrap;
+				}
+				// &::after {
+				// 	content: "";
+				// 	position: absolute;
+				// 	bottom: calc(-1rem + 2px);
+				// 	left: -50%;
+				// 	width: 1000%;
+				// 	height: 1000%;
+				// 	background-color: $indigo;
+				// 	z-index: -1;
+				// }
+				&-title {
+					position: relative;
+					text-align: center;
+					width: 100%;
+					font-weight: 600;
+					font-size: 1.38rem;
+					color: transparent;
+					background: linear-gradient(
+						90deg,
+						$goldBright,
+						$goldBright,
+						$goldDim,
+						$goldDim,
+						$goldBright,
+						$goldBright
+					);
+					background-size: 200% 100%;
+					animation: XmoveRYB200 6.5s linear infinite;
+					background-clip: text;
+					margin-bottom: 1.2rem;
+
+					&::after {
+						content: "";
+						position: absolute;
+						bottom: calc(-1rem + 1px);
+						left: -10%;
+						width: 120%;
+						height: 1000%;
+						background-color: $indigo;
+						z-index: -1;
+
+						box-shadow: 0 5px 5px #00000020;
+					}
+
+					&::before {
+						content: "";
+						position: absolute;
+						bottom: -1rem;
+						left: -10%;
+						width: 120%;
+						height: 4px;
+						background: linear-gradient(
+							90deg,
+							$goldBright,
+							$goldBright,
+							$goldDim,
+							$goldDim,
+							$goldBright,
+							$goldBright
+						);
+						background-size: 200% 100%;
+						animation: XmoveRYB200 6.5s linear infinite;
+					}
+				}
+
+				&-item {
+					width: 100%;
+					text-align: left;
+					font-size: 1.2rem;
+					font-weight: 450;
+					color: #fff;
+				}
+			}
+			&-3 {
+				@media screen and (max-aspect-ratio: 4/3) {
+					width: 100%;
+					max-height: fit-content;
+				}
+
+				@media screen and (max-width: 750px) {
+					width: 100%;
+					max-height: fit-content;
+				}
+
+				width: calc(100% / 3);
+				height: 100%;
+
+				border-radius: 1rem;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 0.8rem;
+
+				overflow: hidden;
+
+				padding: 1rem 1.5rem 1.5rem 1.5rem;
+
+				&-title {
+					position: relative;
+					text-align: center;
+					width: 100%;
+					font-weight: 600;
+					color: transparent;
+					background: linear-gradient(
+						90deg,
+						$goldBright,
+						$goldBright,
+						$goldDim,
+						$goldDim,
+						$goldBright,
+						$goldBright
+					);
+					background-size: 200% 100%;
+					animation: XmoveRYB200 7s linear infinite;
+					background-clip: text;
+					margin-bottom: 1.2rem;
+
+					&::after {
+						content: "";
+						position: absolute;
+						bottom: calc(-1rem + 1px);
+						left: -10%;
+						width: 120%;
+						height: 1000%;
+						background-color: $indigo;
+						z-index: -1;
+
+						box-shadow: 0 5px 5px #00000020;
+					}
+
+					&::before {
+						content: "";
+						position: absolute;
+						bottom: -1rem;
+						left: -10%;
+						width: 120%;
+						height: 4px;
+						background: linear-gradient(
+							90deg,
+							$goldBright,
+							$goldBright,
+							$goldDim,
+							$goldDim,
+							$goldBright,
+							$goldBright
+						);
+						background-size: 200% 100%;
+						animation: XmoveRYB200 7s linear infinite;
+					}
+				}
+
+				&-item {
+					width: 100%;
+					text-align: left;
+					font-size: 1.2rem;
+					font-weight: 450;
+					color: #fff;
+				}
+			}
+		}
+	}
+}

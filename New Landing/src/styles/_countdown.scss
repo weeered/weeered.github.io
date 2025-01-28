@@ -1,0 +1,68 @@
+.countdown {
+	position: relative;
+	width: 100% !important;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	gap: 1rem;
+	background-clip: text;
+
+	animation: background-color-shift 10s ease-in-out infinite;
+	animation-play-state: paused;
+
+	// &::before {
+	// 	content: "";
+	// 	position: absolute;
+	// 	top: calc(-0.5rem);
+	// 	left: 0;
+
+	// 	height: 2px;
+	// 	width: 100%;
+
+	// 	border-radius: 1rem;
+
+	// 	background-color: $textBlackish;
+
+	// 	//animation: background-color-shift 10s ease-in-out infinite;
+	// 	animation-play-state: paused;
+	// }
+
+	&_active {
+		animation-play-state: running;
+
+		&::before {
+			animation-play-state: running;
+		}
+	}
+
+	&__box {
+		color: transparent;
+		text-align: center;
+		font-size: calc(2.5vh + 1.5vw);
+		font-weight: 450;
+	}
+
+	&__time {
+		color: transparent;
+		text-wrap: nowrap;
+		font-size: calc(2.5vh + 1.5vw);
+		font-weight: 500;
+
+		&-name {
+			color: transparent;
+			font-size: inherit;
+			font-weight: 350;
+		}
+	}
+
+	&__text {
+		width: 100% !important;
+		color: transparent;
+		text-align: center;
+		font-size: calc(2.5vh + 1.5vw);
+		font-weight: 450;
+	}
+}

@@ -1,0 +1,291 @@
+.shine {
+	transition: filter 0.5s;
+	position: relative;
+	overflow: hidden;
+
+	&::before {
+		background: linear-gradient(
+			to right,
+			fade_out(#fff, 1) 0%,
+			fade_out(#fff, 0.7) 100%
+		);
+		content: "";
+		display: block;
+		height: 100%;
+		left: -75%;
+		position: absolute;
+		top: 0;
+		transform: skewX(-25deg);
+		width: 50%;
+		z-index: 2;
+	}
+
+	&:hover {
+		filter: brightness(1.1);
+		&::before {
+			animation: shine 0.85s;
+		}
+	}
+
+	@keyframes shine {
+		100% {
+			left: 125%;
+		}
+	}
+}
+
+@keyframes XYmoveRYB300 {
+	0% {
+		background-position: 0% 0%;
+	}
+
+	100% {
+		background-position: 300% 300%;
+	}
+}
+
+@keyframes XYmoveRYB200 {
+	0% {
+		background-position: 0% 0%;
+	}
+
+	100% {
+		background-position: 200% 200%;
+	}
+}
+
+@keyframes YmoveRYB300 {
+	0% {
+		background-position: 100% 300%;
+	}
+
+	100% {
+		background-position: 100% 0%;
+	}
+}
+
+@keyframes YmoveRYB200 {
+	0% {
+		background-position: 100% 200%;
+	}
+
+	100% {
+		background-position: 100% 0%;
+	}
+}
+
+@keyframes XmoveRYB300 {
+	0% {
+		background-position: 300% 100%;
+	}
+
+	100% {
+		background-position: 0% 100%;
+	}
+}
+
+@keyframes XmoveRYB200 {
+	0% {
+		background-position: 200% 100%;
+	}
+
+	100% {
+		background-position: 0% 100%;
+	}
+}
+
+.burger-gradient-highlight {
+	position: relative;
+
+	font-weight: 500 !important;
+	color: transparent !important;
+	background: linear-gradient(
+		90deg,
+		$blue,
+		$blue 15%,
+		$red,
+		$red,
+		$yellow,
+		$yellow,
+		$blue
+	);
+	background-size: 300% 100%;
+	background-clip: text;
+
+	animation: XYmoveRYB300 15s infinite linear;
+
+	&::before {
+		content: "| ";
+	}
+
+	&::after {
+		content: " |";
+	}
+}
+
+@keyframes background-color-shift {
+	0%,
+	100% {
+		color: transparent;
+		background-color: $yellow;
+	}
+
+	33% {
+		color: transparent;
+		background-color: $red;
+	}
+
+	66% {
+		color: transparent;
+		background-color: $blue;
+	}
+}
+
+@keyframes background-color-shift-no-text-change {
+	0%,
+	100% {
+		background-color: $yellow;
+	}
+
+	33% {
+		background-color: $red;
+	}
+
+	66% {
+		background-color: $blue;
+	}
+}
+
+@keyframes background-color-shift-no-text-change-trans {
+	0%,
+	100% {
+		background-color: $yellowTrans;
+	}
+
+	33% {
+		background-color: $redTrans;
+	}
+
+	66% {
+		background-color: $blueTrans;
+	}
+}
+
+.hover-brighten {
+	transition: filter 0.3s;
+	&:hover {
+		filter: contrast(75%) brightness(1.1);
+	}
+}
+
+.hover-scale {
+	transition: scale 0.3s;
+	@media screen and (min-width: 1000px) {
+		&:hover {
+			scale: 1.03;
+		}
+	}
+
+	&:active {
+		scale: 0.97;
+	}
+}
+
+.background-color-shift {
+	position: relative;
+	&:hover::before {
+		background-position: 100% 100%;
+		height: 400%;
+		transform: translateX(-50%) rotate(270deg);
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		left: 50%;
+		top: -200%;
+
+		transform: translateX(-50%);
+
+		width: 1000%;
+		height: 1000%;
+
+		z-index: -1;
+
+		background: linear-gradient(
+			0deg,
+			$yellow 0% 33%,
+			$blue 33% 66%,
+			$red 66% 100%
+		);
+
+		background-position: 100% 0px;
+
+		transition: all 1s ease-in-out;
+	}
+}
+
+// $red 15.5% 38.5%,
+// $yellow 38.5% 61.5%,
+// $blue 61.5% 84.5%,
+.background-gradient-shine {
+	background: linear-gradient(
+		60deg,
+		#fff 0% 15.5%,
+		$red,
+		$yellow,
+		$blue,
+		#fff 84.5% 100%
+	);
+	background-position: 100% 100%;
+	background-size: 650% 100%;
+
+	animation: gradient-shine 3s linear 1;
+
+	@keyframes gradient-shine {
+		from {
+			background-position: 100% 1005;
+		}
+
+		to {
+			background-position: 0% 100%;
+		}
+	}
+}
+
+.reverse-animation {
+	animation-direction: reverse;
+}
+
+.text-shine {
+	color: transparent;
+	background: linear-gradient(
+		60deg,
+		#fff 0% 35%,
+		$red 35% 45%,
+		#fff 45% 55%,
+		$yellow 55% 65%,
+		#ffffffee 65% 100%
+	);
+	//animation: textShine 0.4s reverse	 linear;
+	background-clip: text;
+	background-size: 300% 100%;
+	background-repeat: no-repeat;
+	background-position: 100% 100%;
+	transition: background 0.3s linear, text-shadow 0.1s 0.1s linear;
+
+	&:hover {
+		//background-position: 0% 100%;
+		transition: background 0.3s linear, text-shadow 0.1s 0s linear;
+		text-shadow: 0 0 5px #ffffffbf;
+	}
+
+	@keyframes textShine {
+		from {
+			background-position: 100% 100%;
+		}
+		to {
+			background-position: 0 100%;
+		}
+	}
+}

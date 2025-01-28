@@ -1,0 +1,194 @@
+.burger-menu {
+	position: fixed;
+	left: 0;
+	bottom: -100%;
+	width: 100%;
+	height: calc(100vh - 5rem);
+
+	background-color: #fff;
+
+	backdrop-filter: blur(0.4rem);
+
+	border-radius: 40%;
+
+	z-index: 20;
+
+	overflow-y: scroll;
+	overflow-x: hidden;
+
+	transition: bottom 0.3s 0s ease-in-out, border-radius 0.3s 0s ease-in-out,
+		background-color 0.02s 0s ease-in;
+
+	display: flex;
+
+	align-items: center;
+	justify-content: space-between;
+
+	gap: 2%;
+
+	flex-direction: column;
+
+	padding: 5vh 0;
+
+	&_active {
+		border-radius: 0;
+		bottom: 0;
+		background-color: #ffffffff;
+		transition: bottom 0.35s 0.06s ease-in-out,
+			border-radius 0.35s 0.06s ease-in-out,
+			background-color 0.5s 0.37s ease-in-out;
+	}
+
+	&__logo-container {
+		width: calc(1vw + 20vh);
+		max-width: 70%;
+	}
+
+	// &__logo {
+	// }
+
+	&__list-container {
+		width: 100%;
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+
+		width: 100%;
+		font-size: calc(1.7vh + 1.6vw);
+		font-weight: 350;
+		color: $textBlackish;
+
+		&-item {
+			&:last-child {
+				margin-bottom: 0;
+			}
+			font-size: inherit;
+			font-weight: inherit;
+
+			width: 100%;
+			height: fit-content;
+
+			margin-bottom: 4vh;
+
+			text-align: center;
+
+			animation-play-state: paused;
+
+			color: inherit;
+		}
+	}
+}
+
+.list-item_active {
+	animation-play-state: running;
+}
+
+.burger-button_active div {
+	background-color: transparent;
+
+	&::before {
+		top: 0;
+		transform: rotate(-45deg);
+	}
+
+	&::after {
+		bottom: 0;
+		transform: rotate(45deg);
+	}
+}
+
+.header_burgered {
+	background-color: transparent !important;
+
+	&::before {
+		animation-play-state: running;
+		opacity: 1;
+		transition: all 0.2s 0.25s ease-in-out !important;
+	}
+}
+
+.header_fixed {
+	position: fixed;
+}
+
+.burgerAnimLayer1 {
+	position: fixed;
+	right: 0%;
+	bottom: -100%;
+	width: 100%;
+	height: calc(100vh - 5rem);
+
+	border-radius: 40%;
+
+	z-index: 17;
+
+	background-color: $yellow;
+	transition: bottom 0.3s 0.06s ease-in-out,
+		border-radius 0.3s 0.06s ease-in-out, background-color 0s 0.06s linear;
+}
+
+.burgerAnimLayer2 {
+	position: fixed;
+	left: 0%;
+	bottom: -100%;
+	width: 100%;
+	height: calc(100vh - 5rem);
+
+	border-radius: 40%;
+
+	z-index: 18;
+
+	background-color: $red;
+	transition: bottom 0.3s 0.04s ease-in-out,
+		border-radius 0.3s 0.04s ease-in-out, background-color 0s 0.04s linear;
+}
+
+.burgerAnimLayer3 {
+	position: fixed;
+	left: 0%;
+	bottom: -100%;
+	width: 100%;
+	height: calc(100vh - 5rem);
+
+	border-radius: 40%;
+
+	z-index: 19;
+
+	background-color: $blue;
+	transition: bottom 0.3s 0.02s ease-in-out,
+		border-radius 0.3s 0.02s ease-in-out, background-color 0s 0.02s linear;
+}
+
+.burgerAnimLayer1_active {
+	border-radius: 0;
+
+	right: 0;
+	bottom: 0;
+	background-color: transparent;
+	transition: bottom 0.35s 0s ease-in-out, border-radius 0.35s 0s ease-in-out,
+		background-color 0s 0.37s linear;
+}
+
+.burgerAnimLayer2_active {
+	border-radius: 0;
+
+	left: 0;
+	bottom: 0;
+	background-color: transparent;
+	transition: bottom 0.35s 0.02s ease-in-out,
+		border-radius 0.35s 0.02s ease-in-out, background-color 0s 0.37s linear;
+}
+
+.burgerAnimLayer3_active {
+	border-radius: 0;
+
+	left: 0;
+	bottom: 0;
+	background-color: transparent;
+	transition: bottom 0.35s 0.04s ease-in-out,
+		border-radius 0.35s 0.04s ease-in-out, background-color 0s 0.37s linear;
+}

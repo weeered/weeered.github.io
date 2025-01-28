@@ -1,0 +1,390 @@
+.section-programm {
+	display: flex;
+	gap: 2rem;
+	flex-direction: column;
+
+	&__swiper-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 2rem;
+		--swiper-navigation-size: 5rem;
+	}
+
+	&__date {
+		position: relative;
+		font-size: 2rem;
+		width: fit-content;
+
+		background: linear-gradient(-45deg, $blue 0% 33%, $red 33% 67%, $yellow 67%);
+
+		padding: 0.5rem 1rem;
+		border-radius: 1rem;
+		box-shadow: 2.5px 5px 5px #00000015, 0px 0px 5px #00000015;
+		text-shadow: 0px 0px 5px #00000015;
+		color: #fff;
+
+		// background: linear-gradient(
+		// 	90deg,
+		// 	$blue,
+		// 	$blue 15%,
+		// 	$red,
+		// 	$red,
+		// 	$yellow,
+		// 	$yellow,
+		// 	$blue
+		// );
+		// background-clip: text;
+
+		// background-size: 200% 100%;
+
+		// background-repeat: repeat;
+
+		// animation: XmoveRYB200 5s infinite linear;
+
+		//color: transparent;
+
+		&::before {
+			content: "• ";
+		}
+
+		// &::after {
+		// 	content: "";
+		// 	position: absolute;
+		// 	left: 0;
+		// 	top: -1rem;
+
+		// 	transform: translateY(-50%);
+
+		// 	width: 90vw;
+		// 	height: 2px;
+		// 	background-color: $boxBorder;
+		// }
+	}
+
+	&__swiper {
+		width: 100%;
+		height: fit-content;
+
+		&-slide {
+			padding-bottom: 2rem;
+			display: flex !important;
+			flex-direction: column;
+			gap: 0.5rem;
+
+			&-event-container {
+				display: flex;
+				flex-direction: column;
+				gap: 2rem;
+
+				padding: 1rem;
+				background-color: $boxBG;
+				border: 2px solid $boxBorder;
+				border-radius: 1rem;
+
+				& .section-programm__event {
+					&:first-child {
+						&::before {
+							width: 0;
+							height: 0;
+						}
+					}
+				}
+			}
+
+			&-title {
+				position: relative;
+				padding: 1rem;
+				background-color: $boxBG;
+				border: 2px solid $boxBorder;
+				border-radius: 1rem;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+
+				&-maintext {
+					font-size: 1.6rem;
+					font-weight: 400;
+
+					&-location {
+						font-size: 1.6rem;
+						font-weight: 350;
+						color: $textBlackish;
+
+						&::before {
+							content: " | ";
+							font-size: 1.6rem;
+							font-weight: 100;
+						}
+					}
+				}
+
+				&-aftertext-container {
+					display: flex;
+					align-items: center;
+				}
+
+				&-aftertext {
+					text-align: right;
+					font-size: 1.4rem;
+					font-weight: 400;
+					color: $textBlackLess;
+
+					&-location {
+						font-size: 1.4rem;
+						font-weight: 350;
+						color: $textBlackLessTrans;
+
+						&::before {
+							content: " | ";
+							font-size: 1.4rem;
+							font-weight: 100;
+						}
+					}
+
+					&-icon {
+						display: inline;
+						height: 3rem;
+					}
+				}
+			}
+		}
+	}
+
+	&__swiper-scrollbar-container {
+		position: relative;
+		width: 100%;
+		height: 0.5rem;
+	}
+
+	&__event-container {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+
+		&-plenar {
+			position: relative;
+			display: flex;
+			gap: 1rem;
+			flex-direction: column;
+
+			&::before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: -1rem;
+
+				transform: translateY(-50%);
+
+				width: 100%;
+				height: 2px;
+				background-color: $boxBorder;
+			}
+		}
+	}
+
+	&__event {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+
+		&-time {
+			font-size: 1.6rem;
+			font-weight: 400;
+			white-space: nowrap;
+		}
+
+		&-location-container {
+			display: flex;
+			flex-direction: column;
+		}
+
+		&-location {
+			font-size: 1.6rem;
+			font-weight: 350;
+			color: $textBlackLess;
+
+			&::before {
+				content: "# ";
+				font-size: 1.6rem;
+				font-weight: 100;
+			}
+		}
+
+		&-topic {
+			font-size: 1.5rem;
+			font-weight: 450;
+
+			&-dot {
+				position: relative;
+				font-size: 2.2rem;
+				line-height: 0rem;
+				background-clip: text;
+			}
+		}
+		&-participants {
+			display: flex;
+			flex-direction: column;
+			gap: 0.25rem;
+			&-item {
+				font-size: 1.2rem;
+				font-weight: 350;
+				color: $textBlackLess;
+				&-name {
+					font-size: 1.2rem;
+					font-weight: 350;
+					color: $textBlack;
+					&::before {
+						content: "- ";
+					}
+				}
+			}
+		}
+		&-bolden {
+			font-size: 1.3rem;
+			font-weight: 400;
+			color: $textBlack;
+		}
+
+		&:first-child {
+			&::before {
+				width: 0;
+				height: 0;
+			}
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: -1rem;
+
+			transform: translateY(-50%);
+
+			width: 100%;
+			height: 2px;
+			background-color: $boxBorder;
+		}
+
+		&:last-child {
+			&::after {
+				content: "";
+				position: absolute;
+				left: 0;
+				bottom: -1rem;
+
+				transform: translateY(50%);
+
+				width: 100%;
+				height: 2px;
+				background-color: $boxBorder;
+			}
+		}
+	}
+}
+
+#programm-swiper {
+	overflow: hidden;
+}
+
+#programm-swiper-next {
+	position: sticky;
+	top: 50%;
+	left: 0;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	@media screen and (max-aspect-ratio: 3/4) {
+		display: none;
+	}
+	color: transparent;
+	background: linear-gradient(
+		90deg,
+		$blue,
+		$blue 15%,
+		$red,
+		$red,
+		$yellow,
+		$yellow,
+		$blue
+	);
+	background-size: 200% 100%;
+	background-clip: text;
+
+	transition: transform 0.1s linear;
+
+	background-repeat: repeat;
+
+	animation: XmoveRYB200 5s infinite linear reverse;
+
+	text-shadow: 1px 1px 3px #00000020;
+}
+
+#programm-swiper-prev {
+	position: sticky;
+	top: 50%;
+	left: 0;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	@media screen and (max-aspect-ratio: 3/4) {
+		display: none;
+	}
+	color: transparent;
+	background: linear-gradient(
+		90deg,
+		$blue,
+		$blue 15%,
+		$red,
+		$red,
+		$yellow,
+		$yellow,
+		$blue
+	);
+	background-size: 200% 100%;
+	background-clip: text;
+
+	transition: transform 0.1s linear;
+
+	background-repeat: repeat;
+
+	animation: XmoveRYB200 5s infinite linear;
+
+	text-shadow: 1px 1px 3px #00000020;
+}
+
+#programm-pagination {
+	bottom: 0rem;
+	& .swiper-pagination-bullet {
+		background-color: $blue;
+	}
+}
+
+#programm-scrollbar {
+	--swiper-scrollbar-size: 100%;
+	--swiper-scrollbar-sides-offset: 0px;
+	top: 50%;
+	bottom: 0;
+	z-index: 1;
+	transform: translateY(-50%);
+	& .swiper-scrollbar-drag {
+		background: linear-gradient(
+			90deg,
+			$blue,
+			$blue 15%,
+			$red,
+			$red,
+			$yellow,
+			$yellow,
+			$blue
+		);
+		background-size: 200% 100%;
+		animation: XmoveRYB200 5s infinite linear;
+	}
+}
+
+#programm-swiper {
+	scroll-margin-top: 5rem;
+	&:target {
+		scroll-margin-top: 5rem;
+	}
+}

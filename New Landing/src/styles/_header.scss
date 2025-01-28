@@ -1,0 +1,278 @@
+.header {
+	@media screen and (max-width: 900px) {
+		height: 5rem;
+	}
+
+	@media screen and (max-aspect-ratio: 30/23) {
+		height: 5rem;
+	}
+
+	width: calc(100%);
+	height: 4.5rem;
+
+	position: absolute;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	z-index: 10;
+
+	backdrop-filter: blur(0.2rem);
+
+	background-color: #00000010;
+
+	overflow-y: hidden;
+
+	transition: transform 0.25s ease-in-out, border-radius 0.25s ease-in-out,
+		background-color 0.5s ease-in-out;
+
+	&__logo {
+		@media screen and (max-width: 900px) {
+			height: 5.05rem;
+			width: 5.05rem;
+		}
+
+		@media screen and (max-aspect-ratio: 30/23) {
+			height: 5.05rem;
+			width: 5.05rem;
+		}
+		height: 4.55rem;
+		width: 4.55rem;
+		z-index: 11;
+
+		&-img {
+			@media screen and (max-width: 900px) {
+				height: 5.05rem;
+				width: 5.05rem;
+			}
+
+			@media screen and (max-aspect-ratio: 30/23) {
+				height: 5.05rem;
+				width: 5.05rem;
+			}
+			height: 4.55rem;
+			width: 4.55rem;
+		}
+	}
+
+	&__burger-button {
+		@media screen and (max-width: 900px) {
+			display: flex;
+		}
+
+		@media screen and (max-aspect-ratio: 30/23) {
+			display: flex;
+		}
+
+		@media screen and (max-width: 500px) {
+			left: auto;
+			right: 5%;
+		}
+
+		position: absolute;
+		left: 6.5rem;
+		display: none;
+		height: 100%;
+		width: 4rem;
+
+		justify-content: center;
+		align-items: center;
+
+		transition: all 0.3s ease-in-out;
+
+		cursor: pointer;
+
+		&-line {
+			position: relative;
+			width: 100%;
+			height: 2px;
+			background-color: #fff;
+			transition: inherit;
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: -1.2rem;
+				width: 100%;
+				height: 2px;
+				background-color: #fff;
+				transition: inherit;
+			}
+
+			&::after {
+				content: "";
+				position: absolute;
+				bottom: -1.2rem;
+				width: 100%;
+				height: 2px;
+				background-color: #fff;
+				transition: inherit;
+			}
+		}
+	}
+
+	&__nav {
+		@media screen and (max-width: 900px) {
+			display: none;
+		}
+
+		@media screen and (max-aspect-ratio: 30/23) {
+			display: none;
+		}
+		width: fit-content;
+		height: 100%;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: calc(2vw - 1.4vh);
+
+		font-size: 1.3rem;
+		font-weight: 450;
+
+		z-index: 11;
+
+		&-item {
+			width: fit-content;
+			height: fit-content;
+
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			text-wrap: nowrap;
+
+			font-size: inherit;
+			font-weight: inherit;
+		}
+	}
+
+	&__info {
+		@media screen and (max-width: 900px) {
+			padding-right: 0.8rem;
+
+			&-link {
+				font-size: 1.2rem !important;
+				line-height: 1.3rem !important;
+				text-decoration: none !important;
+			}
+			&-title {
+				font-size: 1.4rem !important;
+				line-height: 1.7rem !important;
+			}
+		}
+
+		@media screen and (max-aspect-ratio: 30/23) {
+			padding-right: 0.8rem;
+
+			&-link {
+				font-size: 1.2rem !important;
+				line-height: 1.3rem !important;
+				text-decoration: none !important;
+			}
+			&-title {
+				font-size: 1.4rem !important;
+				line-height: 1.7rem !important;
+			}
+		}
+
+		@media screen and (max-width: 500px) {
+			//display: none;
+			position: absolute;
+
+			left: 5.5rem;
+		}
+
+		width: fit-content;
+		height: fit-content;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: start;
+
+		padding-right: calc(1.5vw - 1vh);
+
+		white-space: nowrap;
+		color: #fff;
+
+		z-index: 11;
+
+		&-link {
+			font-size: 0.9rem;
+			line-height: 1.1rem;
+			text-decoration: underline;
+		}
+
+		&-title {
+			font-size: 1.2rem;
+			color: inherit;
+			line-height: 1.4rem;
+		}
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		transition: all 1s ease-in-out;
+
+		animation: background-color-shift-no-text-change-trans 10s ease-in-out
+			infinite;
+
+		animation-play-state: paused;
+	}
+}
+
+.headerAnimLayer1 {
+	@media screen and (max-width: 900px) {
+		height: 5rem;
+	}
+
+	@media screen and (max-aspect-ratio: 30/23) {
+		height: 5rem;
+	}
+	width: 100%;
+	height: 4.5rem;
+
+	position: fixed;
+	top: 0;
+	border-radius: 0 0 100% 100%;
+
+	background-color: $yellow;
+
+	transform: translate(0, calc(-100% - 3px));
+
+	transition: transform 0.25s ease-in-out, border-radius 0.25s ease-in-out;
+
+	z-index: 12;
+}
+
+.headerAnimLayer2 {
+	@media screen and (max-width: 900px) {
+		height: 5rem;
+	}
+
+	@media screen and (max-aspect-ratio: 30/23) {
+		height: 5rem;
+	}
+	width: 100%;
+	height: 4.5rem;
+
+	position: fixed;
+	top: 0;
+	border-radius: 0 0 100% 100%;
+
+	background-color: $red;
+
+	transform: translate(0, calc(-100% - 3px));
+
+	transition: top 0.25s ease-in-out, border-radius 0.25s ease-in-out;
+
+	z-index: 12;
+}
