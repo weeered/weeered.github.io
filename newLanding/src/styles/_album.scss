@@ -197,20 +197,8 @@
 	}
 
 	&__swiper {
-		@media screen and (max-aspect-ratio: 3/2) {
-			height: 40rem;
-		}
-		@media screen and (max-aspect-ratio: 1/1) {
-			height: 40rem;
-		}
-		@media screen and (max-aspect-ratio: 3/4) {
-			height: 40rem;
-		}
-		@media screen and (max-aspect-ratio: 9/16) {
-			height: 25rem;
-		}
-
-		height: 65vh;
+		width: 100%;
+		max-width: 65rem;
 		aspect-ratio: 16/10;
 		margin: 0 !important;
 		border-radius: 1rem;
@@ -267,13 +255,13 @@
 
 #album-swiper-prev {
 	text-shadow: 1px 1px 3px #00000020;
-	@media screen and (max-aspect-ratio: 9/16) {
+	@media screen and (max-aspect-ratio: 1) {
 		display: none;
 	}
 }
 #album-swiper-next {
 	text-shadow: 1px 1px 3px #00000020;
-	@media screen and (max-aspect-ratio: 9/16) {
+	@media screen and (max-aspect-ratio: 1) {
 		display: none;
 	}
 }
