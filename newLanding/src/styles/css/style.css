@@ -1602,6 +1602,7 @@ a {
   position: relative;
   font-size: 2rem;
   width: 100%;
+  margin-bottom: 1rem;
   background: linear-gradient(-45deg, #342e8c 0% 33%, #d3281d 33% 67%, #f19001 67%);
   padding: 0.5rem 1rem;
   border-radius: 1rem;
