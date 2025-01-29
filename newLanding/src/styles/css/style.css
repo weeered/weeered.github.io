@@ -1599,7 +1599,8 @@ a {
 }
 @media screen and (max-aspect-ratio: 9/16) {
   .section-programm__date {
-    font-size: 1.9rem;
+    padding: 0.5rem;
+    text-align: center;
   }
 }
 .section-programm__date::before {
