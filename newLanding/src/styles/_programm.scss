@@ -12,9 +12,10 @@
 	}
 
 	&__date {
-		@media screen and (max-aspect-ratio: 9/16) {
+		@media screen and (max-aspect-ratio: 2/3) {
 			padding: 0.5rem;
 			text-align: center;
+			font-size: 1.9rem;
 		}
 		position: relative;
 		font-size: 2rem;

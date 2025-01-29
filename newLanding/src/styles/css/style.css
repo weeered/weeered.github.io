@@ -1597,10 +1597,11 @@ a {
   text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.0823529412);
   color: #fff;
 }
-@media screen and (max-aspect-ratio: 9/16) {
+@media screen and (max-aspect-ratio: 2/3) {
   .section-programm__date {
     padding: 0.5rem;
     text-align: center;
+    font-size: 1.9rem;
   }
 }
 .section-programm__date::before {
