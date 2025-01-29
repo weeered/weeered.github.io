@@ -168,7 +168,7 @@
 			transition: transform 0.2s ease-in-out, width 0.1s linear,
 				height 0.1s linear;
 			transform: translate(-50%, calc(-50% + 1rem));
-			width: 100%;
+			width: calc(100% - 1px);
 			height: 100%;
 
 			opacity: 1;
@@ -181,7 +181,7 @@
 			transition: transform 0.2s ease-in-out, width 0.1s linear,
 				height 0.1s linear;
 			transform: translate(-50%, calc(-50% + 0.7rem));
-			width: 100%;
+			width: calc(100% - 1px);
 			height: 100%;
 
 			opacity: 1;
