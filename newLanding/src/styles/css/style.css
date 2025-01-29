@@ -1635,8 +1635,14 @@ a {
   border-radius: 0;
   border: none;
 }
+.section-programm__swiper-slide-event-container .section-programm__event:first-child {
+  padding-top: 0rem;
+}
 .section-programm__swiper-slide-event-container .section-programm__event:first-child::after {
   display: none;
+}
+.section-programm__swiper-slide-event-container .section-programm__event:last-child {
+  padding-bottom: 0rem;
 }
 .section-programm__swiper-slide-event-container .section-programm__event::before {
   display: none;
@@ -1655,7 +1661,6 @@ a {
   position: relative;
   padding: 1rem;
   margin: 1rem 0.5rem;
-  margin-bottom: 0.5rem;
   background-color: #fff;
   border-radius: 1rem;
   box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.0823529412), 0 0 4px rgba(0, 0, 0, 0.0823529412);
