@@ -2,10 +2,10 @@ const swiper = new Swiper(".section-programm__swiper", {
 	// Optional parameters
 	direction: "horizontal",
 	spaceBetween: 30,
-	hashNavigation: {
-		enabled: true,
-		watchState: true,
-	},
+	// hashNavigation: {
+	// 	enabled: true,
+	// 	watchState: true,
+	// },
 	loop: false,
 	grabCursor: true,
 
