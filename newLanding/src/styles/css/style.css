@@ -1502,7 +1502,7 @@ a {
 }
 .section-speakers__card {
   width: calc(20% - 1.6rem);
-  height: 30rem;
+  height: 33rem;
   background-color: #fbfbfe;
   border: 2px solid #f0f0f3;
   border-radius: 1rem;
@@ -1525,6 +1525,7 @@ a {
 }
 @media screen and (max-width: 600px) {
   .section-speakers__card {
+    height: 30rem;
     width: calc(50% - 1rem);
   }
 }
@@ -1532,17 +1533,28 @@ a {
   position: relative;
   height: -moz-fit-content;
   height: fit-content;
-  min-height: 20rem;
+  min-height: 23rem;
   width: 105%;
   overflow: hidden;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.0823529412);
 }
+@media screen and (max-width: 600px) {
+  .section-speakers__card-imgContainer {
+    min-height: 20rem;
+  }
+}
 .section-speakers__card-img {
   width: 100%;
-  height: 20rem;
-  max-height: 20rem;
+  height: 23rem;
+  max-height: 23rem;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media screen and (max-width: 600px) {
+  .section-speakers__card-img {
+    height: 20rem;
+    max-height: 20rem;
+  }
 }
 .section-speakers__card-textContainer {
   height: 10rem;
