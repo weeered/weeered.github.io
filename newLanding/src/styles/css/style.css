@@ -1620,6 +1620,9 @@ a {
   border-radius: 1rem;
   box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.0823529412), 0 0 4px rgba(0, 0, 0, 0.0823529412);
 }
+.section-programm__swiper-slide-event-container .section-programm__event {
+  padding: 1rem 0;
+}
 .section-programm__swiper-slide-event-container .section-programm__event:nth-child(odd) {
   background-color: #fff;
   padding: 1rem 0;
