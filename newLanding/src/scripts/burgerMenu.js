@@ -7,7 +7,7 @@ burgerButtons[1].addEventListener("click", () => {
 });
 
 function theBurgering(isItTop) {
-	if (isItTop && header.classList.length != 2) {
+	if (isItTop && header.classList.length > 2) {
 		header.classList.toggle("header_fixed");
 	}
 

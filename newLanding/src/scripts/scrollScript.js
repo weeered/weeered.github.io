@@ -69,16 +69,14 @@ const sections = [
 	organizersSection,
 	footer,
 ];
-
+console.log(burgerMenu.classList.length);
 //#342e8cbf
 console.log(burgerMenu);
 if (window.getComputedStyle(burgerButtons[0], null).display != "none") {
-	if (burgerMenu.classList.length > 1) {
-		theBurgering(false);
-		console.log(1);
-	}
-
 	document.addEventListener("scroll", () => {
+		if (burgerMenu.classList.length > 1) {
+			theBurgering(false);
+		}
 		if (scrollY > titleButton.offsetHeight + titleButton.offsetTop) {
 			headerAnimationLayer1.style.transition =
 				"transform 0.25s ease-in-out, border-radius 0.25s ease-in-out, background-color 0s 0.5s";
@@ -123,7 +121,6 @@ if (window.getComputedStyle(burgerButtons[0], null).display != "none") {
 	document.addEventListener("scroll", () => {
 		if (burgerMenu.classList.length > 1) {
 			theBurgering(false);
-			console.log(1);
 		}
 		setHighlightNav();
 
