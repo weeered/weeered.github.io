@@ -96,12 +96,16 @@
 					}
 
 					&:first-child {
-						&::before {
+						&::after {
 							display: none;
 						}
 					}
 
 					&::before {
+						display: none;
+					}
+
+					&::after {
 						content: "";
 						position: absolute;
 						left: 0;
@@ -132,6 +136,8 @@
 				&-maintext {
 					font-size: 1.6rem;
 					font-weight: 400;
+					display: flex;
+					flex-direction: column;
 
 					&-location {
 						font-size: 1.6rem;
@@ -139,7 +145,7 @@
 						color: $textBlackish;
 
 						&::before {
-							content: " | ";
+							content: " # ";
 							font-size: 1.6rem;
 							font-weight: 100;
 						}
@@ -156,6 +162,8 @@
 					font-size: 1.4rem;
 					font-weight: 400;
 					color: $textBlackLess;
+					display: flex;
+					flex-direction: column;
 
 					&-location {
 						font-size: 1.4rem;
@@ -163,7 +171,7 @@
 						color: $textBlackLessTrans;
 
 						&::before {
-							content: " | ";
+							content: " # ";
 							font-size: 1.4rem;
 							font-weight: 100;
 						}
@@ -216,12 +224,26 @@
 
 		padding: 1rem 1rem;
 
+		&::before {
+			content: "";
+			position: absolute;
+			top: 1rem;
+			left: 0;
+			height: calc(100% - 2rem);
+			width: 2px;
+			background-color: $boxBorder;
+		}
+
 		&:nth-child(odd) {
 			background-color: $boxBG;
 			border: 2px solid $boxBorder;
 
 			padding: 1rem 1rem;
 			border-radius: 1rem;
+
+			&::before {
+				display: none;
+			}
 		}
 
 		&-time {
@@ -257,9 +279,7 @@
 
 				background-clip: text;
 
-				font-size: 2rem;
-
-				line-height: 1.5rem;
+				font-size: 1.5rem;
 
 				background-color: $textBlackLessTrans;
 			}

@@ -1087,8 +1087,7 @@ a {
   color: transparent;
   -webkit-background-clip: text;
           background-clip: text;
-  font-size: 2rem;
-  line-height: 1.4rem;
+  font-size: 1.4rem;
   background-color: rgba(100, 116, 139, 0.6666666667);
 }
 
@@ -1629,10 +1628,13 @@ a {
   border-radius: 0;
   border: none;
 }
-.section-programm__swiper-slide-event-container .section-programm__event:first-child::before {
+.section-programm__swiper-slide-event-container .section-programm__event:first-child::after {
   display: none;
 }
 .section-programm__swiper-slide-event-container .section-programm__event::before {
+  display: none;
+}
+.section-programm__swiper-slide-event-container .section-programm__event::after {
   content: "";
   position: absolute;
   left: 0;
@@ -1657,6 +1659,8 @@ a {
 .section-programm__swiper-slide-title-maintext {
   font-size: 1.6rem;
   font-weight: 400;
+  display: flex;
+  flex-direction: column;
 }
 .section-programm__swiper-slide-title-maintext-location {
   font-size: 1.6rem;
@@ -1664,7 +1668,7 @@ a {
   color: #475569;
 }
 .section-programm__swiper-slide-title-maintext-location::before {
-  content: " | ";
+  content: " # ";
   font-size: 1.6rem;
   font-weight: 100;
 }
@@ -1677,6 +1681,8 @@ a {
   font-size: 1.4rem;
   font-weight: 400;
   color: #64748b;
+  display: flex;
+  flex-direction: column;
 }
 .section-programm__swiper-slide-title-aftertext-location {
   font-size: 1.4rem;
@@ -1684,7 +1690,7 @@ a {
   color: rgba(100, 116, 139, 0.6666666667);
 }
 .section-programm__swiper-slide-title-aftertext-location::before {
-  content: " | ";
+  content: " # ";
   font-size: 1.4rem;
   font-weight: 100;
 }
@@ -1723,11 +1729,23 @@ a {
   gap: 0.5rem;
   padding: 1rem 1rem;
 }
+.section-programm__event::before {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  height: calc(100% - 2rem);
+  width: 2px;
+  background-color: #f0f0f3;
+}
 .section-programm__event:nth-child(odd) {
   background-color: #fbfbfe;
   border: 2px solid #f0f0f3;
   padding: 1rem 1rem;
   border-radius: 1rem;
+}
+.section-programm__event:nth-child(odd)::before {
+  display: none;
 }
 .section-programm__event-time {
   font-size: 1.6rem;
@@ -1757,8 +1775,7 @@ a {
   color: transparent;
   -webkit-background-clip: text;
           background-clip: text;
-  font-size: 2rem;
-  line-height: 1.5rem;
+  font-size: 1.5rem;
   background-color: rgba(100, 116, 139, 0.6666666667);
 }
 .section-programm__event-participants {
