@@ -132,6 +132,14 @@
 			}
 
 			&-title {
+				@media screen and (max-aspect-ratio: 9/16) {
+					flex-direction: column;
+					background-color: transparent;
+					border: none;
+					box-shadow: none;
+					padding: 0rem;
+					gap: 1rem;
+				}
 				position: relative;
 				padding: 1rem;
 				margin: 1rem 0.5rem;
@@ -141,10 +149,19 @@
 				border-radius: 1rem;
 				box-shadow: 2px 4px 4px #00000015, 0 0 4px #00000015;
 				display: flex;
+
 				justify-content: space-between;
 				align-items: center;
 
 				&-maintext {
+					@media screen and (max-aspect-ratio: 9/16) {
+						width: 100%;
+						background-color: #fff;
+						padding: 1rem;
+						border-radius: 1rem;
+						box-shadow: 2px 4px 4px #00000015, 0 0 4px #00000015;
+					}
+
 					font-size: 1.6rem;
 					font-weight: 400;
 					display: flex;
@@ -164,7 +181,16 @@
 				}
 
 				&-aftertext-container {
+					@media screen and (max-aspect-ratio: 9/16) {
+						width: 100%;
+						background-color: #fff;
+						padding: 1rem;
+						border-radius: 1rem;
+						box-shadow: 2px 4px 4px #00000015, 0 0 4px #00000015;
+					}
+
 					display: flex;
+					justify-content: end;
 					align-items: center;
 				}
 
