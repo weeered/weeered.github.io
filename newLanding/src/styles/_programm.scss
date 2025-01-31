@@ -132,7 +132,7 @@
 			}
 
 			&-title {
-				@media screen and (max-aspect-ratio: 9/16) {
+				@media screen and (max-aspect-ratio: 2/3) {
 					flex-direction: column;
 					background-color: transparent;
 					border: none;
@@ -154,7 +154,7 @@
 				align-items: center;
 
 				&-maintext {
-					@media screen and (max-aspect-ratio: 9/16) {
+					@media screen and (max-aspect-ratio: 2/3) {
 						width: 100%;
 						background-color: #fff;
 						padding: 1rem;
@@ -181,7 +181,7 @@
 				}
 
 				&-aftertext-container {
-					@media screen and (max-aspect-ratio: 9/16) {
+					@media screen and (max-aspect-ratio: 2/3) {
 						width: 100%;
 						background-color: #fff;
 						padding: 1rem;
