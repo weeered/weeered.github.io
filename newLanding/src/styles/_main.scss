@@ -6,7 +6,10 @@
 	// @media screen and (max-aspect-ratio: 30/23) and (max-width: 900px) {
 	// 	width: 90%;
 	// }
-	width: 90vw;
+	@media screen and (max-aspect-ratio: 3/4) {
+		width: 95%;
+	}
+	width: 90%;
 	margin: 4rem auto;
 	margin-bottom: 8rem;
 	display: flex;

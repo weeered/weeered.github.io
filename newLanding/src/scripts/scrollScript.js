@@ -69,9 +69,7 @@ const sections = [
 	organizersSection,
 	footer,
 ];
-console.log(burgerMenu.classList.length);
-//#342e8cbf
-console.log(burgerMenu);
+
 if (window.getComputedStyle(burgerButtons[0], null).display != "none") {
 	document.addEventListener("scroll", () => {
 		if (burgerMenu.classList.length > 1) {

@@ -363,13 +363,13 @@
 
 			&-img-block {
 				height: 5rem;
+				width: fit-content;
 				min-width: fit-content;
 
-				display: flex;
-
 				& img {
-					max-width: 100%;
-					height: auto;
+					width: fit-content;
+					min-width: fit-content;
+					height: 100%;
 				}
 			}
 
