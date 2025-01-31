@@ -1773,7 +1773,7 @@ a {
   display: none;
 }
 .section-programm__event-time {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 400;
   white-space: nowrap;
 }
@@ -1793,14 +1793,14 @@ a {
 }
 .section-programm__event-topic {
   position: relative;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 450;
 }
 .section-programm__event-topic-dot {
   color: transparent;
   -webkit-background-clip: text;
           background-clip: text;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   background-color: rgba(100, 116, 139, 0.6666666667);
 }
 .section-programm__event-participants {
