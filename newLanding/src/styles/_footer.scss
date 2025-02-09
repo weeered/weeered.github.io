@@ -362,6 +362,33 @@
 				color: #fff;
 			}
 
+			&.garni {
+				background-color: #480505;
+				color: #fff;
+				& img {
+					filter: brightness(0) invert(1);
+				}
+			}
+
+			&.sputnik {
+				background-color: #11396f;
+				color: #fff;
+			}
+
+			&.voyage {
+				background-color: #fff;
+			}
+
+			&.minsk {
+				background-color: #d62434;
+				color: #fff;
+			}
+
+			&.crowne {
+				background-color: #9e1d70;
+				color: #fff;
+			}
+
 			&-img-block {
 				height: 5rem;
 				width: fit-content;

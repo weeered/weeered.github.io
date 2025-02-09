@@ -1644,7 +1644,7 @@ a {
   box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.0823529412), 0 0 4px rgba(0, 0, 0, 0.0823529412);
   font-size: 1.2rem;
   font-weight: 350;
-  color: #475569;
+  color: #64748b;
 }
 .section-programm__swiper-slide-event-container {
   display: flex;
@@ -2618,6 +2618,28 @@ a {
 }
 .footer__right-block-item.europe {
   background-color: #4e1720;
+  color: #fff;
+}
+.footer__right-block-item.garni {
+  background-color: #480505;
+  color: #fff;
+}
+.footer__right-block-item.garni img {
+  filter: brightness(0) invert(1);
+}
+.footer__right-block-item.sputnik {
+  background-color: #11396f;
+  color: #fff;
+}
+.footer__right-block-item.voyage {
+  background-color: #fff;
+}
+.footer__right-block-item.minsk {
+  background-color: #d62434;
+  color: #fff;
+}
+.footer__right-block-item.crowne {
+  background-color: #9e1d70;
   color: #fff;
 }
 .footer__right-block-item-img-block {
