@@ -2638,6 +2638,9 @@ a {
   background-color: #d62434;
   color: #fff;
 }
+.footer__right-block-item.minsk img {
+  filter: brightness(0) invert(1);
+}
 .footer__right-block-item.crowne {
   background-color: #9e1d70;
   color: #fff;

@@ -382,6 +382,9 @@
 			&.minsk {
 				background-color: #d62434;
 				color: #fff;
+				& img {
+					filter: brightness(0) invert(1);
+				}
 			}
 
 			&.crowne {
