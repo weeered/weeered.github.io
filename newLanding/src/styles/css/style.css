@@ -1599,7 +1599,7 @@ a {
 .section-programm__swiper-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   gap: 2rem;
   --swiper-navigation-size: 5rem;
 }
@@ -1880,7 +1880,7 @@ a {
   position: sticky;
   top: 50%;
   left: 0;
-  margin-top: 5%;
+  margin-top: 10%;
   margin-bottom: 5%;
   color: transparent;
   background: linear-gradient(90deg, #342e8c, #342e8c 15%, #d3281d, #d3281d, #f19001, #f19001, #342e8c);
@@ -1902,7 +1902,7 @@ a {
   position: sticky;
   top: 50%;
   left: 0;
-  margin-top: 5%;
+  margin-top: 10%;
   margin-bottom: 5%;
   color: transparent;
   background: linear-gradient(90deg, #342e8c, #342e8c 15%, #d3281d, #d3281d, #f19001, #f19001, #342e8c);

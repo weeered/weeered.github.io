@@ -6,7 +6,7 @@
 	&__swiper-container {
 		display: flex;
 		justify-content: center;
-		align-items: center;
+		align-items: start;
 		gap: 2rem;
 		--swiper-navigation-size: 5rem;
 	}
@@ -92,7 +92,7 @@
 
 				font-size: 1.2rem;
 				font-weight: 350;
-				color: $textBlackLess
+				color: $textBlackLess;
 			}
 
 			&-event-container {
@@ -368,7 +368,7 @@
 	position: sticky;
 	top: 50%;
 	left: 0;
-	margin-top: 5%;
+	margin-top: 10%;
 	margin-bottom: 5%;
 	@media screen and (max-aspect-ratio: 1/1) {
 		display: none;
@@ -400,7 +400,7 @@
 	position: sticky;
 	top: 50%;
 	left: 0;
-	margin-top: 5%;
+	margin-top: 10%;
 	margin-bottom: 5%;
 	@media screen and (max-aspect-ratio: 1/1) {
 		display: none;
