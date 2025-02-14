@@ -95,10 +95,21 @@ html {
     font-size: calc(8px + 0.1vw + 0.2vh);
   }
 }
+@media screen and (min-aspect-ratio: 20/9) {
+  * {
+    font-size: 16px;
+  }
+}
 
 body {
   max-width: 100vw;
   margin: auto;
+}
+
+@media screen and (min-aspect-ratio: 20/9) {
+  .main {
+    max-width: 60vw;
+  }
 }
 
 h1 {
@@ -1518,17 +1529,17 @@ a {
   justify-content: space-between;
   gap: 0.5rem;
 }
-@media screen and (max-width: 1400px) {
+@media screen and (max-aspect-ratio: 4/3) {
   .section-speakers__card {
     width: calc(25% - 1.5rem);
   }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-aspect-ratio: 1) {
   .section-speakers__card {
     width: calc(33.3333333333% - 1.34rem);
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-aspect-ratio: 9/16) {
   .section-speakers__card {
     height: 30rem;
     width: calc(50% - 1rem);
@@ -2320,17 +2331,32 @@ a {
   width: 100%;
   background-color: #fbfbfe;
   padding: 2rem 2rem;
-  display: flex;
-  justify-content: space-between;
   border-radius: 5%/2%;
-  gap: 6rem;
+  display: flex;
+  justify-content: center;
 }
 @media screen and (max-aspect-ratio: 4/3) {
   .footer {
+    padding: 2rem 0;
+  }
+}
+.footer__container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 6rem;
+}
+@media screen and (max-aspect-ratio: 4/3) {
+  .footer__container {
     flex-direction: column;
     align-items: center;
     gap: 3rem;
-    padding: 2rem 0;
+  }
+}
+@media screen and (min-aspect-ratio: 20/9) {
+  .footer__container {
+    max-width: 70vw;
   }
 }
 .footer::before {
@@ -2614,7 +2640,7 @@ a {
      -moz-user-select: none;
           user-select: none;
   font-family: "DIN Condensed";
-  font-size: 2.5rem;
+  font-size: 2.5rem !important;
   display: flex;
   align-items: center;
   color: #fff;
