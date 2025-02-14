@@ -1539,7 +1539,7 @@ a {
     width: calc(33.3333333333% - 1.34rem);
   }
 }
-@media screen and (max-aspect-ratio: 9/16) {
+@media screen and (max-aspect-ratio: 3/4) {
   .section-speakers__card {
     height: 30rem;
     width: calc(50% - 1rem);
