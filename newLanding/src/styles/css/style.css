@@ -2678,6 +2678,7 @@ a {
   color: #fff;
 }
 .footer__right-block-item.discounts {
+  padding: 1.2rem;
   color: #fff;
   font-weight: 450;
   text-decoration: underline;
