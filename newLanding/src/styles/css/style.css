@@ -106,12 +106,6 @@ body {
   margin: auto;
 }
 
-@media screen and (min-aspect-ratio: 20/9) {
-  .main {
-    max-width: 60vw;
-  }
-}
-
 h1 {
   font-weight: 800;
   font-size: 4.5rem;
@@ -986,6 +980,11 @@ a {
 @media screen and (max-aspect-ratio: 3/4) {
   .main {
     width: 95%;
+  }
+}
+@media screen and (min-aspect-ratio: 20/9) {
+  .main {
+    max-width: 60vw;
   }
 }
 

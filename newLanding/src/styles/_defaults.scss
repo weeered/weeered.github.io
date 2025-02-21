@@ -44,12 +44,6 @@ body {
 	margin: auto;
 }
 
-.main {
-	@media screen and (min-aspect-ratio: 20/9) {
-		max-width: 60vw;
-	}
-}
-
 h1 {
 	font-weight: 800;
 	font-size: 4.5rem;
