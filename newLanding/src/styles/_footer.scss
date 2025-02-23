@@ -440,8 +440,7 @@
 			&.discounts {
 				padding: 1.2rem;
 				color: #fff;
-				font-weight: 450;
-				text-decoration: underline;
+				font-weight: 500;
 				text-shadow: 0px 0px 5px #00000015;
 				background: linear-gradient(
 					-45deg,
@@ -449,6 +448,14 @@
 					$red 33% 67%,
 					$yellow 67%
 				);
+				//background-color: $textBlackLessTrans;
+
+				& span {
+					font-size: 1.5rem;
+					color: #fff;
+					text-decoration: underline;
+					font-weight: 350;
+				}
 			}
 
 			&-img-block {
@@ -471,6 +478,9 @@
 				color: inherit;
 				font-size: inherit;
 				font-weight: inherit;
+
+				display: flex;
+				flex-direction: column;
 			}
 		}
 	}
