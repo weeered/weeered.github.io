@@ -281,7 +281,8 @@
 			top: 1rem;
 			left: 0;
 			height: calc(100% - 2rem);
-			width: 2px;
+			border-radius: 1rem;
+			width: 5px;
 			background-color: $boxBorder;
 		}
 
