@@ -1,0 +1,24 @@
+@media screen and (min-width: 1024px) {
+	.textScale {
+		max-width: 1000px;
+	}
+	.programmScale {
+		max-width: 1000px;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.textScale {
+		padding: 0 20%;
+	}
+
+	.programmScale {
+		margin: 0 20%;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.textScale {
+		padding: 0 30px;
+	}
+}

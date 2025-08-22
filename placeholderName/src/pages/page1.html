@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Page1</title>
+
+		<link
+			rel="stylesheet"
+			fetchpriority="high"
+			href="../styles/css/style.min.css"
+		/>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Chiron+Hei+HK:ital,wght@0,200..900;1,200..900&family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<div class="hero">
+			<h1 class="hero__title">МЕЖДУНАРОДНЫЙ КУЛИНАРНЫЙ КУБОК 2025</h1>
+			<h3 class="hero__date">Минск 11-13 ноября 2025</h3>
+			<div class="hero__textbox textScale">
+				Кулинарный Кубок - феерическое шоу, где креативность, мастерство и
+				инновации сливаются воедино, создавая неповторимую атмосферу
+				вдохновения!
+			</div>
+			<div class="wave"></div>
+		</div>
+
+		<main class="main">
+			<div class="main__desc">
+				<div class="main__desc_textbox textScale">
+					Международный Кулинарный Кубок проводится ежегодно в Минске на
+					площадке Международной специализированной оптовой выставки-ярмарки
+					«ПРОДЭКСПО» и собирает лучших кулинаров Беларуси и зарубежья.
+				</div>
+
+				<!-- <div class="main__desc_video"></div> -->
+
+				<div class="main__desc_bottom">
+					<div class="main__desc_dropdown">
+						<div
+							class="main__desc_dropdown-button"
+							id="choomButton"
+							onclick="dropdownToggle(this)"
+						>
+							Участникам
+							<img
+								src="../media/icons/chevron-up.svg"
+								name="dropdownChevron"
+								alt="chevron"
+							/>
+						</div>
+					</div>
+
+					<div class="main__desc_dropdown">
+						<div
+							class="main__desc_dropdown-button"
+							id="corpoButton"
+							onclick="dropdownToggle(this)"
+						>
+							Партнерам
+							<img
+								src="../media/icons/chevron-up.svg"
+								name="dropdownChevron"
+								alt="chevron"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="main__programm">
+				<h2 class="main__programm_title textScale">В программе Кубка:</h2>
+				<ul class="main__programm_list programmScale">
+					<li class="main__programm_list-item">
+						<h3>Кулинарный конкурс «БАТЛ ШЕФОВ»</h3>
+						<p>
+							Соревнования шефов и су-шефов ведущих ресторанов страны, в том
+							числе заведений, вошедших в топ 50 по версии национальной премии
+							WHERETOEAT и шефов и су-шефов 4-5 звездных отелей с присуждением
+							звания «ГРАНД-ШЕФ» и «ГРАНД-ШЕФ ОТЕЛЯ»
+						</p>
+						<div>
+							<a href="#">О конкурсе </a><a href="#">Положение </a
+							><a href="#">Договор-заявка на участие РБ </a>
+							<a href="#">Договор-заявка на участие РФ </a>
+						</div>
+					</li>
+
+					<li class="main__programm_list-item">
+						<h3>Конкурс ресторанного сервиса «ФОРМУЛА ГОСТЕПРИИМСТВА»</h3>
+						<p>Выступление официантов</p>
+						<div>
+							<a href="#">О конкурсе</a><a href="#">Положение</a
+							><a href="#">Договор-заявка на участие РБ</a>
+							<a href="#">Договор-заявка на участие РФ</a>
+						</div>
+					</li>
+
+					<li class="main__programm_list-item">
+						<h3>Шоу-презентация «Беларусь Вкусная»</h3>
+						<p>Презентация лучших заведений общественного питания страны.</p>
+						<div>
+							<a href="#">О шоу-презентации</a><a href="#">Участники</a>
+						</div>
+					</li>
+
+					<li class="main__programm_list-item">
+						<h3>
+							МАСТЕР-КЛАССЫ от шефов и судей Международного Кулинарного Кубка
+						</h3>
+						<p>Презентация лучших заведений общественного питания страны.</p>
+						<div>
+							<a href="#">Программа мастер-классов</a>
+						</div>
+					</li>
+
+					<li class="main__programm_list-item">
+						<h3>Закрытый круглый стол «ВЕРШИНА КУЛИНАРНОГО ИСКУССТВА»</h3>
+						<p>
+							C участием приглашенных шеф-поваров и рестораторов. Тема
+							заседания: «Развитие региональной гастрономии и авторских методик»
+						</p>
+						<div>
+							<a href="#">О мероприятии</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<!-- <div class="main__results"></div> -->
+
+			<h2 class="main__programm_title textScale">Cудья Кубка :</h2>
+
+			<div class="main__judges">
+				<div class="main__judges_juryBoard">
+					<div class="main__judges_juryBoard-card">
+						<h3>Сопредседатель жюри</h3>
+						<img src="../media/judges/MakovkaPavel.jpg" alt="Photo" />
+						<div>
+							<span>Павел Маковка</span>
+							<span
+								>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								Adipisci veniam voluptate error optio possimus eligendi harum
+								atque et repellendus voluptatibus?</span
+							>
+						</div>
+					</div>
+
+					<div class="main__judges_juryBoard-card">
+						<h3>Сопредседатель жюри</h3>
+						<img src="../media/judges/MakovkaPavel.jpg" alt="Photo" />
+						<div>
+							<span>Павел Маковка</span>
+							<span
+								>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								Adipisci veniam voluptate error optio possimus eligendi harum
+								atque et repellendus voluptatibus?</span
+							>
+						</div>
+					</div>
+
+					<div class="main__judges_juryBoard-card">
+						<h3>Сопредседатель жюри</h3>
+						<img src="../media/judges/MakovkaPavel.jpg" alt="Photo" />
+						<div>
+							<span>Павел Маковка</span>
+							<span
+								>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+								Adipisci veniam voluptate error optio possimus eligendi harum
+								atque et repellendus voluptatibus?</span
+							>
+						</div>
+					</div>
+				</div>
+				<div class="main__judges_card"></div>
+				<div class="main__judges_card"></div>
+				<div class="main__judges_card"></div>
+			</div>
+		</main>
+		<footer class="footer"></footer>
+		<script src="../scripts/countdown.js"></script>
+		<script src="../scripts/dropdown.js"></script>
+	</body>
+</html>

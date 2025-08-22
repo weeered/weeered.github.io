@@ -1,0 +1,50 @@
+@use "./variables" as v;
+
+.main {
+	&__judges {
+		&_juryBoard {
+			display: flex;
+			gap: 20px;
+			flex-wrap: wrap;
+			justify-content: center;
+			&-card {
+				max-width: 200px;
+				display: flex;
+				flex-direction: column;
+
+				box-shadow: 0 0 10px v.$shadowgray;
+
+				border-radius: 10px;
+
+				& h3 {
+					padding: 0 10px;
+					padding-top: 10px;
+
+					text-wrap: nowrap;
+					font-size: 0.8rem;
+					text-align: center;
+				}
+				& img {
+				}
+				& div {
+					display: flex;
+					flex-direction: column;
+
+					margin: 0 10px;
+
+					& span {
+						&:first-of-type {
+							font-size: 1.2rem;
+						}
+						&:last-of-type {
+							max-height: 100px;
+							overflow-y: scroll;
+							overflow-x: hidden;
+							padding-bottom: 10px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,42 @@
+@use "./variables" as v;
+
+.hero {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	height: fit-content;
+	position: relative;
+	background: v.$red;
+	color: #fff;
+
+	padding-top: 30px;
+	padding-bottom: 60px;
+
+	text-align: center;
+
+	&__title {
+		margin: 0 20px;
+	}
+	&__date {
+		margin: 20px 0;
+	}
+	&__textbox {
+		display: flex;
+	}
+}
+
+.wave {
+	position: absolute;
+	bottom: -1px;
+	left: 0;
+	width: 100%;
+	height: 40px;
+	background: url('data:image/svg+xml;utf8,\
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" preserveAspectRatio="none">\
+      <path d="M0 20 Q15 0 30 20 T60 20 T90 20 T120 20 V40 H0 Z" fill="%23fff"/>\
+    </svg>')
+		repeat-x;
+	background-size: cover;
+}
