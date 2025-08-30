@@ -20,7 +20,7 @@ function timer() {
 
 	for (let i = 0; i < countdownElems.length; i++) {
 		countdownElems[i].innerHTML =
-			days + ":" + hours + ":" + minutes + ":" + seconds;
+			days +"дн " + hours + "ч " + minutes + "мин ";
 	}
 
 	// If the count down is finished, write some text

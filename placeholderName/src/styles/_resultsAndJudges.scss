@@ -2,13 +2,18 @@
 
 .main {
 	&__judges {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
 		&_juryBoard {
 			display: flex;
 			gap: 20px;
 			flex-wrap: wrap;
 			justify-content: center;
+
+			margin: 0 auto;
+			max-width: 1000px;
 			&-card {
-				max-width: 200px;
 				display: flex;
 				flex-direction: column;
 
@@ -16,31 +21,95 @@
 
 				border-radius: 10px;
 
-				& h3 {
-					padding: 0 10px;
-					padding-top: 10px;
+
+				overflow: hidden;
+
+				& h4 {
+					padding: 5px 10px;
 
 					text-wrap: nowrap;
-					font-size: 0.8rem;
 					text-align: center;
+					font-weight: 600;
+
+
+					background-color: v.$red;
+
+					color: #fff;
 				}
 				& img {
+					object-fit: cover;
 				}
 				& div {
 					display: flex;
 					flex-direction: column;
+					gap: 3px;
 
-					margin: 0 10px;
+					height: 150px;
+
+					padding: 0 10px;
 
 					& span {
 						&:first-of-type {
 							font-size: 1.2rem;
 						}
 						&:last-of-type {
-							max-height: 100px;
+							height: 100%;
 							overflow-y: scroll;
 							overflow-x: hidden;
-							padding-bottom: 10px;
+						}
+					}
+				}
+			}
+		}
+
+		&_judgeBoard {
+			display: flex;
+			gap: 20px;
+			flex-wrap: wrap;
+			justify-content: center;
+
+			margin: 0 auto;
+			max-width: 1000px;
+			&-card {
+				display: flex;
+				flex-direction: column;
+
+				box-shadow: 0 0 10px v.$shadowgray;
+
+				border-radius: 10px;
+
+				overflow: hidden;
+
+				& h4 {
+					padding: 5px 10px;
+					text-wrap: nowrap;
+					text-align: center;
+					font-weight: 600;
+
+					background-color: v.$beige;
+				}
+				& img {
+					min-height: 300px;
+					object-fit: cover;
+				}
+				& div {
+					display: flex;
+					flex-direction: column;
+					gap: 3px;
+
+					height: 150px;
+
+					padding: 0 10px;
+
+
+					& span {
+						&:first-of-type {
+							font-size: 1.2rem;
+						}
+						&:last-of-type {
+							height: 100%;
+							overflow-y: scroll;
+							overflow-x: hidden;
 						}
 					}
 				}

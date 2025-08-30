@@ -1,5 +1,64 @@
 @use "./variables" as v;
 
 .footer {
-	height: 1000px;
+	display: flex;
+
+	position: relative;
+
+	padding: 0px 20px;
+	padding-top: 30px;
+	padding-bottom: 40px;
+	margin-top: 120px;
+
+	color: #fff;
+
+	background-color: v.$red;
+
+	&__mapouter{
+		overflow: hidden;
+		border-radius: 10px;
+	}
+
+	&__gmap_canvas{
+		height: 300px;
+		width: 100%;
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	&__title {
+		padding-top: 20px;
+		&:first-of-type {
+			padding-top: 0;
+		}
+	}
+
+	&__location {
+	}
+
+	&__contacts {
+		display: flex;
+		flex-direction: column;
+		gap: 2px;
+		&_elem {
+			display: flex;
+			gap: 10px;
+			& img {
+				width: 25px;
+			}
+			& a {
+				color: #fff;
+			}
+		}
+	}
+
+	&__timer {
+		&_elem {
+			font-size: 30px;
+		}
+	}
 }

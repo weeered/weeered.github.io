@@ -1,37 +1,37 @@
 @use "./variables" as v;
 
 .main {
-	display: flex;
-	flex-direction: column;
-	gap: 40px;
-
-	margin-top: 30px;
-
 	&__desc {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 
-		gap: 30px;
+		gap: 50px;
+
+		&_img {
+			height: 300px;
+		}
 
 		&_textbox {
+			font-size: 1.1rem;
 			display: flex;
+
+			text-align: center;
 		}
 
 		&_bottom {
 			display: flex;
-			justify-content: center;
-			gap: 10%;
+			justify-content: space-between;
+
 			width: 100%;
 
-			background-color: v.$red;
+			// background-color: v.$red;
 		}
 
 		&_dropdown {
 			position: relative;
 
 			display: flex;
-			justify-content: space-between;
 
 			&-button {
 				cursor: pointer;
@@ -48,6 +48,8 @@
 				font-weight: 600;
 
 				background-color: v.$red;
+
+				border: 5px solid v.$beige;
 				border-radius: 15px;
 
 				user-select: none;
@@ -76,7 +78,7 @@
 				overflow: hidden;
 
 				border-radius: 10px;
-				border: 1px solid v.$gray;
+				border: 2px solid v.$linkgray;
 
 				transition: opacity ease-in-out 0.4s, transform ease-in-out 0.3s;
 
@@ -88,7 +90,7 @@
 					text-decoration: none;
 					color: #000;
 
-					border-bottom: 1px solid v.$gray;
+					border-bottom: 1px solid v.$linkgray;
 
 					&:last-of-type {
 						border-bottom: none;
@@ -116,8 +118,8 @@
 			box-shadow: 0 0 8px v.$shadowgray;
 
 			&-item {
-				background-color: v.$beige;
-				padding: 10px 30px;
+				background-color: v.$beigeLighter;
+				padding: 10px 25px;
 
 				border-top: 2px solid v.$brown;
 
@@ -126,7 +128,7 @@
 				}
 
 				&:nth-of-type(even) {
-					background-color: v.$beigeLighter;
+					background-color: v.$beige;
 				}
 				& h3 {
 					color: v.$red;
@@ -144,7 +146,7 @@
 					flex-direction: row;
 					flex-wrap: wrap;
 					& a {
-						color: v.$gray;
+						color: v.$linkgray;
 						margin-right: 0.5rem;
 						text-wrap: nowrap;
 					}
