@@ -6,7 +6,7 @@
 		flex-direction: column;
 		align-items: center;
 
-		gap: 50px;
+		gap: 30px;
 
 		&_img {
 			height: 300px;
@@ -21,7 +21,6 @@
 
 		&_bottom {
 			display: flex;
-			justify-content: space-between;
 
 			width: 100%;
 
@@ -80,10 +79,11 @@
 				border-radius: 10px;
 				border: 2px solid v.$linkgray;
 
+
 				transition: opacity ease-in-out 0.4s, transform ease-in-out 0.3s;
 
 				& a {
-					background-color: #fff;
+					background-color: v.$backgroundgray;
 					padding: 10px 10px;
 					display: block;
 

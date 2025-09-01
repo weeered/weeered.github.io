@@ -21,7 +21,6 @@
 
 				border-radius: 10px;
 
-
 				overflow: hidden;
 
 				& h4 {
@@ -30,7 +29,6 @@
 					text-wrap: nowrap;
 					text-align: center;
 					font-weight: 600;
-
 
 					background-color: v.$red;
 
@@ -44,9 +42,11 @@
 					flex-direction: column;
 					gap: 3px;
 
-					height: 150px;
+					height: 100px;
 
 					padding: 0 10px;
+
+					background-color: v.$backgroundgray;
 
 					& span {
 						&:first-of-type {
@@ -86,7 +86,9 @@
 					text-align: center;
 					font-weight: 600;
 
-					background-color: v.$beige;
+					background-color: v.$red;
+
+					color: #fff;
 				}
 				& img {
 					min-height: 300px;
@@ -97,10 +99,11 @@
 					flex-direction: column;
 					gap: 3px;
 
-					height: 150px;
+					height: 100px;
 
 					padding: 0 10px;
 
+					background-color: v.$backgroundgray;
 
 					& span {
 						&:first-of-type {
@@ -110,6 +113,7 @@
 							height: 100%;
 							overflow-y: scroll;
 							overflow-x: hidden;
+							scrollbar-color: auto red;
 						}
 					}
 				}

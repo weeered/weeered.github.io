@@ -1,4 +1,8 @@
 @media screen and (min-width: 1024px) {
+	* {
+		font-size: 20px;
+	}
+
 	.titleScale {
 		max-width: 1000px;
 		margin: 0 auto;
@@ -10,7 +14,7 @@
 		max-width: 1000px;
 	}
 	.dropdownScale {
-		justify-content: center !important;
+		justify-content: center;
 		gap: 100px;
 	}
 	.cardScale {
@@ -39,13 +43,19 @@
 	}
 
 	.footer {
-		flex-direction: row;
-		gap: 60px;
-		justify-content: center;
+		&__container {
+			flex-direction: row;
+			gap: 60px;
+			justify-content: center;
+		}
 	}
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+	* {
+		font-size: 18px;
+	}
+
 	.titleScale {
 		padding: 0 20%;
 	}
@@ -62,7 +72,8 @@
 	}
 
 	.dropdownScale {
-		padding: 0 20%;
+		justify-content: center;
+		gap: 80px;
 	}
 	.cardScale {
 		width: 250px;
@@ -91,12 +102,17 @@
 	}
 
 	.footer {
-		flex-direction: column;
-		gap: 15px;
+		&__container {
+			flex-direction: column;
+			gap: 15px;
+		}
 	}
 }
 
 @media screen and (max-width: 767px) {
+	* {
+		font-size: 16px;
+	}
 	.titleScale {
 		padding: 0 30px;
 	}
@@ -111,13 +127,14 @@
 	}
 
 	.dropdownScale {
-		padding: 0 30px;
+		justify-content: center;
+		gap: 15px;
 	}
 	.cardScale {
-		width: 200px;
+		width: 300px;
 
 		& img {
-			height: 300px;
+			height: 370px;
 		}
 	}
 	.organizersScale {
@@ -139,7 +156,9 @@
 	}
 
 	.footer {
-		flex-direction: column;
-		gap: 15px;
+		&__container {
+			flex-direction: column;
+			gap: 15px;
+		}
 	}
 }

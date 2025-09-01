@@ -2,6 +2,8 @@
 
 .footer {
 	display: flex;
+	flex-direction: column;
+	gap: 30px;
 
 	position: relative;
 
@@ -14,12 +16,17 @@
 
 	background-color: v.$red;
 
-	&__mapouter{
-		overflow: hidden;
-		border-radius: 10px;
+	&__container {
+		display: flex;
 	}
 
-	&__gmap_canvas{
+	&__mapouter {
+		overflow: hidden;
+		border-radius: 10px;
+		border: 5px solid v.$beige;
+	}
+
+	&__gmap_canvas {
 		height: 300px;
 		width: 100%;
 	}
