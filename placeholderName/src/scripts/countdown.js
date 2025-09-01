@@ -19,8 +19,28 @@ function timer() {
 	// Display the result in the element with id="demo"
 
 	for (let i = 0; i < countdownElems.length; i++) {
-		countdownElems[i].innerHTML =
-			days +"дн " + hours + "ч " + minutes + "мин " + seconds + "сек";
+		if (seconds >= 10) {
+			countdownElems[i].innerHTML =
+				days +
+				"<span class='footer__timer_elem-span'>дн</span> " +
+				hours +
+				"<span class='footer__timer_elem-span'>час</span> " +
+				minutes +
+				"<span class='footer__timer_elem-span'>мин</span> " +
+				seconds +
+				"<span class='footer__timer_elem-span'>сек</span>";
+		} else {
+			countdownElems[i].innerHTML =
+				days +
+				"<span class='footer__timer_elem-span'>дн</span> " +
+				hours +
+				"<span class='footer__timer_elem-span'>час</span> " +
+				minutes +
+				"<span class='footer__timer_elem-span'>мин</span> " +
+				"0" +
+				seconds +
+				"<span class='footer__timer_elem-span'>сек</span>";
+		}
 	}
 
 	// If the count down is finished, write some text

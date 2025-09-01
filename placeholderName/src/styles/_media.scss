@@ -160,5 +160,13 @@
 			flex-direction: column;
 			gap: 15px;
 		}
+
+		&__contacts{
+			&_elem{
+				a{
+					font-size: 18px;
+				}
+			}
+		}
 	}
 }

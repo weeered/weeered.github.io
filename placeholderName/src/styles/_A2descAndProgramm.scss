@@ -51,6 +51,8 @@
 				border: 5px solid v.$beige;
 				border-radius: 15px;
 
+				box-shadow: 0 0 8px v.$shadowgray;
+
 				user-select: none;
 
 				outline: none;
@@ -77,20 +79,22 @@
 				overflow: hidden;
 
 				border-radius: 10px;
-				border: 2px solid v.$linkgray;
+				border: 1px solid v.$linkgray;
 
 
 				transition: opacity ease-in-out 0.4s, transform ease-in-out 0.3s;
 
 				& a {
-					background-color: v.$backgroundgray;
-					padding: 10px 10px;
+					background-color: #fff;
+					padding: 15px 10px;
 					display: block;
 
 					text-decoration: none;
 					color: #000;
 
 					border-bottom: 1px solid v.$linkgray;
+
+
 
 					&:last-of-type {
 						border-bottom: none;
@@ -105,6 +109,7 @@
 		flex-direction: column;
 		gap: 20px;
 		align-items: center;
+
 		&_list {
 			display: flex;
 			flex-direction: column;
@@ -118,8 +123,12 @@
 			box-shadow: 0 0 8px v.$shadowgray;
 
 			&-item {
+				display: flex;
+				flex-direction: column;
+				gap: 5px;
+
 				background-color: v.$beigeLighter;
-				padding: 10px 25px;
+				padding: 15px 25px;
 
 				border-top: 2px solid v.$brown;
 

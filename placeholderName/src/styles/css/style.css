@@ -132,6 +132,9 @@
     flex-direction: column;
     gap: 15px;
   }
+  .footer__contacts_elem a {
+    font-size: 18px;
+  }
 }
 /*
   Josh's Custom CSS Reset
@@ -331,6 +334,7 @@ h3 {
   background-color: #bf1e2e;
   border: 5px solid #f2d6a6;
   border-radius: 15px;
+  box-shadow: 0 0 8px #e0e0e0;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
@@ -352,12 +356,12 @@ h3 {
   opacity: 0;
   overflow: hidden;
   border-radius: 10px;
-  border: 2px solid #686879;
+  border: 1px solid #686879;
   transition: opacity ease-in-out 0.4s, transform ease-in-out 0.3s;
 }
 .main__desc_dropdown-menu a {
-  background-color: #efeff4;
-  padding: 10px 10px;
+  background-color: #fff;
+  padding: 15px 10px;
   display: block;
   text-decoration: none;
   color: #000;
@@ -381,8 +385,11 @@ h3 {
   box-shadow: 0 0 8px #e0e0e0;
 }
 .main__programm_list-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   background-color: #ffe4b5;
-  padding: 10px 25px;
+  padding: 15px 25px;
   border-top: 2px solid #a48e67;
 }
 .main__programm_list-item:first-of-type {
@@ -426,6 +433,7 @@ h3 {
   max-width: 1000px;
 }
 .main__judges_juryBoard-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   box-shadow: 0 0 10px #e0e0e0;
@@ -445,20 +453,28 @@ h3 {
      object-fit: cover;
 }
 .main__judges_juryBoard-card div {
+  position: absolute;
+  bottom: 0;
   display: flex;
   flex-direction: column;
   gap: 3px;
   height: 100px;
+  width: 100%;
   padding: 0 10px;
-  background-color: #efeff4;
+  background-color: rgba(0, 0, 0, 0.5098039216);
+  color: #fff;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
 }
 .main__judges_juryBoard-card div span:first-of-type {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 .main__judges_juryBoard-card div span:last-of-type {
   height: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
+  scrollbar-color: #fff transparent;
+  padding-right: 5px;
 }
 .main__judges_judgeBoard {
   display: flex;
@@ -469,6 +485,7 @@ h3 {
   max-width: 1000px;
 }
 .main__judges_judgeBoard-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   box-shadow: 0 0 10px #e0e0e0;
@@ -489,21 +506,28 @@ h3 {
      object-fit: cover;
 }
 .main__judges_judgeBoard-card div {
+  position: absolute;
+  bottom: 0;
   display: flex;
   flex-direction: column;
   gap: 3px;
   height: 100px;
+  width: 100%;
   padding: 0 10px;
-  background-color: #efeff4;
+  background-color: rgba(0, 0, 0, 0.5098039216);
+  color: #fff;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
 }
 .main__judges_judgeBoard-card div span:first-of-type {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 .main__judges_judgeBoard-card div span:last-of-type {
   height: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
-  scrollbar-color: auto red;
+  scrollbar-color: #fff transparent;
+  padding-right: 5px;
 }
 
 .main__organizers {
@@ -599,16 +623,24 @@ h3 {
 }
 .footer__contacts_elem {
   display: flex;
-  gap: 10px;
+  align-items: center;
+  gap: 5px;
 }
 .footer__contacts_elem img {
-  width: 25px;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 25px;
 }
 .footer__contacts_elem a {
   color: #fff;
+  text-decoration: none;
 }
 .footer__timer_elem {
   font-size: 30px;
+}
+.footer__timer_elem-span {
+  color: #f2d6a6;
+  font-size: 25px;
 }
 
 .showDropdown {
