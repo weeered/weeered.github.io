@@ -51,7 +51,7 @@
     padding: 0 20%;
   }
   .textScale {
-    padding: 0 20%;
+    margin: 0 20%;
   }
   .textScale br {
     display: none;
@@ -96,7 +96,7 @@
     padding: 0 30px;
   }
   .textScale {
-    padding: 0 30px;
+    margin: 0 30px;
   }
   .textScale br {
     display: none;
@@ -227,48 +227,6 @@ h3 {
   font-size: 1.2rem;
 }
 
-.wave {
-  position: absolute;
-  bottom: -40px;
-  left: 0;
-  width: 100%;
-  height: 40px;
-  background: url('data:image/svg+xml;utf8,    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" preserveAspectRatio="none">      <path d="M0 20 Q15 0 30 20 T60 20 T90 20 T120 20 V0 H0 Z" fill="%23bf1e2e" />    </svg>') repeat-x;
-  background-size: cover;
-  z-index: 1;
-}
-
-.wave2 {
-  position: absolute;
-  bottom: -60px;
-  left: 0;
-  width: 100%;
-  height: 50px;
-  background: url('data:image/svg+xml;utf8,    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" preserveAspectRatio="none">      <path d="M0 20 Q15 0 30 20 T60 20 T90 20 T120 20 V0 H0 Z" fill="%23f2d6a6" />    </svg>') repeat-x;
-  background-size: cover;
-}
-
-.wave3 {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  width: 100%;
-  height: 40px;
-  background: url('data:image/svg+xml;utf8,    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" preserveAspectRatio="none">      <path d="M0 20 Q15 0 30 20 T60 20 T90 20 T120 20 V40 H0 Z" fill="%23bf1e2e" />    </svg>') repeat-x;
-  background-size: cover;
-  z-index: 1;
-}
-
-.wave4 {
-  position: absolute;
-  top: -60px;
-  left: 0;
-  width: 100%;
-  height: 50px;
-  background: url('data:image/svg+xml;utf8,    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" preserveAspectRatio="none">      <path d="M0 20 Q15 0 30 20 T60 20 T90 20 T120 20 V40 H0 Z" fill="%23f2d6a6" />    </svg>') repeat-x;
-  background-size: cover;
-}
-
 .hero {
   display: flex;
   flex-direction: column;
@@ -304,6 +262,10 @@ h3 {
   flex-direction: column;
   align-items: center;
   gap: 30px;
+}
+.main__desc_video {
+  border-radius: 10px;
+  overflow: hidden;
 }
 .main__desc_img {
   height: 300px;
@@ -356,16 +318,17 @@ h3 {
   opacity: 0;
   overflow: hidden;
   border-radius: 10px;
-  border: 1px solid #686879;
   transition: opacity ease-in-out 0.4s, transform ease-in-out 0.3s;
 }
 .main__desc_dropdown-menu a {
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, 0.6274509804);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
   padding: 15px 10px;
   display: block;
   text-decoration: none;
-  color: #000;
-  border-bottom: 1px solid #686879;
+  color: #fff;
+  border-bottom: 1px solid #000;
 }
 .main__desc_dropdown-menu a:last-of-type {
   border-bottom: none;
@@ -385,38 +348,49 @@ h3 {
   box-shadow: 0 0 8px #e0e0e0;
 }
 .main__programm_list-item {
+  position: relative;
+  border-top: 2px solid #000;
+}
+.main__programm_list-itemCnt {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  background-color: #ffe4b5;
+  background-color: rgba(0, 0, 0, 0.6274509804);
   padding: 15px 25px;
-  border-top: 2px solid #a48e67;
 }
-.main__programm_list-item:first-of-type {
-  border-top: none;
-}
-.main__programm_list-item:nth-of-type(even) {
-  background-color: #f2d6a6;
-}
-.main__programm_list-item h3 {
-  color: #bf1e2e;
+.main__programm_list-itemCnt h3 {
+  color: #ff0019;
   font-weight: 500;
 }
-.main__programm_list-item h3::before {
+.main__programm_list-itemCnt h3::before {
   content: "• ";
 }
-.main__programm_list-item p {
+.main__programm_list-itemCnt p {
+  color: #fff;
   font-style: italic;
 }
-.main__programm_list-item div {
+.main__programm_list-itemCnt div {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
-.main__programm_list-item div a {
-  color: #686879;
+.main__programm_list-itemCnt div a {
+  color: #ffe2b0;
   margin-right: 0.5rem;
   text-wrap: nowrap;
+}
+.main__programm_list-itemBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  z-index: -1;
+}
+.main__programm_list-item:first-of-type {
+  border-top: none;
 }
 
 .main__judges {
@@ -461,7 +435,8 @@ h3 {
   height: 100px;
   width: 100%;
   padding: 0 10px;
-  background-color: rgba(0, 0, 0, 0.5098039216);
+  padding-top: 2px;
+  background-color: rgba(0, 0, 0, 0.6274509804);
   color: #fff;
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
@@ -514,7 +489,8 @@ h3 {
   height: 100px;
   width: 100%;
   padding: 0 10px;
-  background-color: rgba(0, 0, 0, 0.5098039216);
+  padding-top: 2px;
+  background-color: rgba(0, 0, 0, 0.6274509804);
   color: #fff;
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
@@ -650,4 +626,46 @@ h3 {
 
 .chevronRotate {
   transform: rotate(180deg);
+}
+
+.wave {
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: url('data:image/svg+xml;utf8,    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" preserveAspectRatio="none">      <path d="M0 20 Q15 0 30 20 T60 20 T90 20 T120 20 V0 H0 Z" fill="%23bf1e2e" />    </svg>') repeat-x;
+  background-size: cover;
+  z-index: 1;
+}
+
+.wave2 {
+  position: absolute;
+  bottom: -60px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: url('data:image/svg+xml;utf8,    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" preserveAspectRatio="none">      <path d="M0 20 Q15 0 30 20 T60 20 T90 20 T120 20 V0 H0 Z" fill="%23f2d6a6" />    </svg>') repeat-x;
+  background-size: cover;
+}
+
+.wave3 {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: url('data:image/svg+xml;utf8,    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" preserveAspectRatio="none">      <path d="M0 20 Q15 0 30 20 T60 20 T90 20 T120 20 V40 H0 Z" fill="%23bf1e2e" />    </svg>') repeat-x;
+  background-size: cover;
+  z-index: 1;
+}
+
+.wave4 {
+  position: absolute;
+  top: -60px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: url('data:image/svg+xml;utf8,    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" preserveAspectRatio="none">      <path d="M0 20 Q15 0 30 20 T60 20 T90 20 T120 20 V40 H0 Z" fill="%23f2d6a6" />    </svg>') repeat-x;
+  background-size: cover;
 }/*# sourceMappingURL=style.css.map */
