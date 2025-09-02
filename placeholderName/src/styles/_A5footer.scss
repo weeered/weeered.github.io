@@ -23,7 +23,8 @@
 	&__mapouter {
 		overflow: hidden;
 		border-radius: 10px;
-		border: 5px solid v.$beige;
+		//border: 5px solid v.$beige;
+		box-shadow: 0 0 8px v.$shadowgray;
 	}
 
 	&__gmap_canvas {

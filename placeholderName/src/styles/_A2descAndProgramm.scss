@@ -11,6 +11,7 @@
 		&_video {
 			border-radius: 10px;
 			overflow: hidden;
+			box-shadow: 0 0 8px v.$shadowgray;
 		}
 
 		&_img {
@@ -85,18 +86,19 @@
 
 				border-radius: 10px;
 				//border: 1px solid v.$linkgray;
+				box-shadow: 0 0 8px v.$shadowgray;
+				backdrop-filter: blur(2px);
 
 				transition: opacity ease-in-out 0.4s, transform ease-in-out 0.3s;
 
 				& a {
-					background-color: v.$transblack;
-					backdrop-filter: blur(2px);
+					background-color: v.$transwhite;
 
 					padding: 15px 10px;
 					display: block;
 
 					text-decoration: none;
-					color: #fff;
+					color: #000;
 
 					border-bottom: 1px solid #000;
 
