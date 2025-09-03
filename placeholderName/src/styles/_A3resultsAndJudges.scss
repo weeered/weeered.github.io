@@ -5,6 +5,8 @@
 		display: flex;
 		flex-direction: column;
 		gap: 30px;
+		padding: 0 20px;
+
 		&_juryBoard {
 			display: flex;
 			gap: 20px;
@@ -23,35 +25,46 @@
 
 				border-radius: 10px;
 
-				overflow: hidden;
-
 				& h4 {
 					padding: 5px 10px;
-
 					text-wrap: nowrap;
 					text-align: center;
 					font-weight: 600;
+
+					border-top-left-radius: 10px;
+					border-top-right-radius: 10px;
 
 					background-color: v.$red;
 
 					color: #fff;
 				}
 				& img {
+					min-height: 300px;
 					object-fit: cover;
+
+					border-bottom-left-radius: 10px;
+					border-bottom-right-radius: 10px;
 				}
 				& div {
-					position: absolute;
-					bottom: 0;
 					display: flex;
 					flex-direction: column;
+					align-items: center;
 					gap: 3px;
 
-					height: 100px;
 					width: 100%;
 
-					padding: 0 10px;
 					padding-top: 2px;
 
+					border-bottom-left-radius: 10px;
+					border-bottom-right-radius: 10px;
+
+					overflow: hidden;
+
+					background: linear-gradient(
+						50deg,
+						v.$transblack 40%,
+						v.$transgray 90%
+					);
 					background-color: v.$transblack;
 					color: #fff;
 
@@ -63,12 +76,8 @@
 						}
 						&:last-of-type {
 							height: 100%;
-							overflow-y: scroll;
-							overflow-x: hidden;
-
+							padding-left: 10px;
 							scrollbar-color: #fff transparent;
-
-							padding-right: 5px;
 						}
 					}
 				}
@@ -93,13 +102,14 @@
 
 				border-radius: 10px;
 
-				overflow: hidden;
-
 				& h4 {
 					padding: 5px 10px;
 					text-wrap: nowrap;
 					text-align: center;
 					font-weight: 600;
+
+					border-top-left-radius: 10px;
+					border-top-right-radius: 10px;
 
 					background-color: v.$red;
 
@@ -108,20 +118,30 @@
 				& img {
 					min-height: 300px;
 					object-fit: cover;
+
+					border-bottom-left-radius: 10px;
+					border-bottom-right-radius: 10px;
 				}
 				& div {
-					position: absolute;
-					bottom: 0;
 					display: flex;
 					flex-direction: column;
+					align-items: center;
 					gap: 3px;
 
-					height: 100px;
 					width: 100%;
 
-					padding: 0 10px;
 					padding-top: 2px;
 
+					border-bottom-left-radius: 10px;
+					border-bottom-right-radius: 10px;
+
+					overflow: hidden;
+
+					background: linear-gradient(
+						50deg,
+						v.$transblack 40%,
+						v.$transgray 90%
+					);
 					background-color: v.$transblack;
 					color: #fff;
 
@@ -133,12 +153,8 @@
 						}
 						&:last-of-type {
 							height: 100%;
-							overflow-y: scroll;
-							overflow-x: hidden;
-
+							padding-left: 10px;
 							scrollbar-color: #fff transparent;
-
-							padding-right: 5px;
 						}
 					}
 				}

@@ -18,10 +18,50 @@
     gap: 100px;
   }
   .cardScale {
-    width: 300px;
+    position: relative;
+    width: 320px;
   }
   .cardScale img {
-    height: 400px;
+    height: 500px;
+  }
+  .cardScale div {
+    position: absolute;
+    top: calc(100% - 100px);
+    left: 0;
+    height: 100px;
+    min-height: 100px;
+    transition: width ease-in-out 0.1s, max-height ease-in-out 0.1s, left ease-in-out 0.1s, border-radius ease-in-out 0.1s, background-color ease-in-out 0.1s;
+    z-index: 10;
+  }
+  .cardScale div:hover {
+    left: -20px;
+    width: calc(100% + 40px);
+    height: auto;
+    border-radius: 10px;
+    padding-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.9333333333);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2666666667);
+    z-index: 11;
+  }
+  .cardScale div:hover::before {
+    content: "...";
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+  }
+  .cardScale div:hover span:last-of-type {
+    padding-right: 10px;
+  }
+  .cardScale div::before {
+    content: "...";
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+  }
+  .cardScale span:last-of-type {
+    line-height: 29px;
+    padding-right: 20px;
+    font-size: calc(1rem - 2px);
   }
   .organizersScale {
     gap: 80px;
@@ -67,7 +107,47 @@
     width: 250px;
   }
   .cardScale img {
-    height: 350px;
+    height: 380px;
+  }
+  .cardScale div {
+    position: absolute;
+    top: calc(100% - 90px);
+    left: 0;
+    height: 90px;
+    min-height: 90px;
+    transition: width ease-in-out 0.1s, left ease-in-out 0.1s, border-radius ease-in-out 0.1s, background-color ease-in-out 0.1s;
+    z-index: 10;
+    overflow: hidden;
+  }
+  .cardScale div:hover {
+    left: -20px;
+    width: calc(100% + 40px);
+    height: auto;
+    border-radius: 10px;
+    padding-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.9333333333);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2666666667);
+    z-index: 11;
+  }
+  .cardScale div:hover::before {
+    content: "...";
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+  }
+  .cardScale div:hover span:last-of-type {
+    padding-right: 10px;
+  }
+  .cardScale div::before {
+    content: "...";
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+  }
+  .cardScale span:last-of-type {
+    line-height: 25px;
+    padding-right: 26px;
+    font-size: calc(1rem - 2px);
   }
   .organizersScale {
     gap: 40px;
@@ -114,9 +194,49 @@
   .cardScale img {
     height: 370px;
   }
+  .cardScale div {
+    position: absolute;
+    top: calc(100% - 80px);
+    left: 0;
+    height: 80px;
+    min-height: 80px;
+    transition: width ease-in-out 0.1s, max-height ease-in-out 0.1s, left ease-in-out 0.1s, border-radius ease-in-out 0.1s, background-color ease-in-out 0.1s;
+    z-index: 10;
+  }
+  .cardScale div:hover {
+    left: -20px;
+    width: calc(100% + 40px);
+    height: auto;
+    border-radius: 10px;
+    padding-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.9333333333);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2666666667);
+    z-index: 11;
+  }
+  .cardScale div:hover::before {
+    content: "...";
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+  }
+  .cardScale div:hover span:last-of-type {
+    padding-right: 10px;
+  }
+  .cardScale div::before {
+    content: "...";
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+  }
+  .cardScale span:last-of-type {
+    line-height: 22.5px;
+    padding-right: 20px;
+    font-size: calc(1rem - 2px);
+  }
   .organizersScale {
     gap: 40px;
     justify-content: center;
+    padding: 0 30px;
   }
   .organizersScale .main__organizers_container-card {
     height: 100px;
@@ -124,9 +244,10 @@
   .partnersScale {
     gap: 40px;
     justify-content: center;
+    padding: 0 30px;
   }
   .partnersScale .main__partners_container-card {
-    height: 100px;
+    width: 100%;
   }
   .footer__container {
     flex-direction: column;
@@ -279,6 +400,7 @@ h3 {
 .main__desc_bottom {
   display: flex;
   width: 100%;
+  background-color: #bf1e2e;
 }
 .main__desc_dropdown {
   position: relative;
@@ -294,10 +416,8 @@ h3 {
   color: #fff;
   font-size: 22px;
   font-weight: 600;
-  background-color: #bf1e2e;
-  border: 5px solid #f2d6a6;
+  border: 5px solid transparent;
   border-radius: 15px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2352941176);
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
@@ -338,14 +458,13 @@ h3 {
 .main__programm {
   display: flex;
   flex-direction: column;
-  gap: 20px;
   align-items: center;
 }
 .main__programm_list {
   display: flex;
   flex-direction: column;
   list-style-type: none;
-  border-radius: 1rem;
+  border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.2352941176);
 }
@@ -358,11 +477,12 @@ h3 {
   flex-direction: column;
   gap: 5px;
   background-color: rgba(0, 0, 0, 0.6274509804);
-  padding: 15px 25px;
+  padding: 30px 25px;
 }
 .main__programm_list-itemCnt h3 {
   color: #ff0019;
   font-weight: 500;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.6274509804);
 }
 .main__programm_list-itemCnt h3::before {
   content: "• ";
@@ -399,6 +519,7 @@ h3 {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  padding: 0 20px;
 }
 .main__judges_juryBoard {
   display: flex;
@@ -414,30 +535,35 @@ h3 {
   flex-direction: column;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2352941176);
   border-radius: 10px;
-  overflow: hidden;
 }
 .main__judges_juryBoard-card h4 {
   padding: 5px 10px;
   text-wrap: nowrap;
   text-align: center;
   font-weight: 600;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   background-color: #bf1e2e;
   color: #fff;
 }
 .main__judges_juryBoard-card img {
+  min-height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 .main__judges_juryBoard-card div {
-  position: absolute;
-  bottom: 0;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 3px;
-  height: 100px;
   width: 100%;
-  padding: 0 10px;
   padding-top: 2px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  overflow: hidden;
+  background: linear-gradient(50deg, rgba(0, 0, 0, 0.6274509804) 40%, rgba(152, 152, 152, 0.2156862745) 90%);
   background-color: rgba(0, 0, 0, 0.6274509804);
   color: #fff;
   -webkit-backdrop-filter: blur(2px);
@@ -448,10 +574,8 @@ h3 {
 }
 .main__judges_juryBoard-card div span:last-of-type {
   height: 100%;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  padding-left: 10px;
   scrollbar-color: #fff transparent;
-  padding-right: 5px;
 }
 .main__judges_judgeBoard {
   display: flex;
@@ -467,13 +591,14 @@ h3 {
   flex-direction: column;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2352941176);
   border-radius: 10px;
-  overflow: hidden;
 }
 .main__judges_judgeBoard-card h4 {
   padding: 5px 10px;
   text-wrap: nowrap;
   text-align: center;
   font-weight: 600;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   background-color: #bf1e2e;
   color: #fff;
 }
@@ -481,17 +606,20 @@ h3 {
   min-height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 .main__judges_judgeBoard-card div {
-  position: absolute;
-  bottom: 0;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 3px;
-  height: 100px;
   width: 100%;
-  padding: 0 10px;
   padding-top: 2px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  overflow: hidden;
+  background: linear-gradient(50deg, rgba(0, 0, 0, 0.6274509804) 40%, rgba(152, 152, 152, 0.2156862745) 90%);
   background-color: rgba(0, 0, 0, 0.6274509804);
   color: #fff;
   -webkit-backdrop-filter: blur(2px);
@@ -502,16 +630,14 @@ h3 {
 }
 .main__judges_judgeBoard-card div span:last-of-type {
   height: 100%;
-  overflow-y: scroll;
-  overflow-x: hidden;
+  padding-left: 10px;
   scrollbar-color: #fff transparent;
-  padding-right: 5px;
 }
 
 .main__organizers {
   width: 100%;
   padding: 20px 0;
-  background-color: #efeff4;
+  background-color: #f1f0f0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2352941176);
 }
 .main__organizers_container {
@@ -536,7 +662,7 @@ h3 {
 .main__partners {
   width: 100%;
   padding: 20px 0;
-  background-color: #efeff4;
+  background-color: #f1f0f0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2352941176);
 }
 .main__partners_container {

@@ -30,7 +30,9 @@
 
 			width: 100%;
 
-			// background-color: v.$red;
+			background-color: v.$red;
+
+			
 		}
 
 		&_dropdown {
@@ -52,12 +54,12 @@
 				font-size: 22px;
 				font-weight: 600;
 
-				background-color: v.$red;
+				//background-color: v.$red;
 
-				border: 5px solid v.$beige;
+				border: 5px solid transparent;
 				border-radius: 15px;
 
-				box-shadow: 0 0 8px v.$shadowgray;
+				//box-shadow: 0 0 8px v.$shadowgray;
 
 				user-select: none;
 
@@ -113,7 +115,6 @@
 	&__programm {
 		display: flex;
 		flex-direction: column;
-		gap: 20px;
 		align-items: center;
 
 		&_list {
@@ -122,7 +123,7 @@
 
 			list-style-type: none;
 
-			border-radius: 1rem;
+			border-radius: 10px;
 
 			overflow: hidden;
 
@@ -140,11 +141,12 @@
 
 					background-color: v.$transblack;
 
-					//backdrop-filter: blur(2px);
-					padding: 15px 25px;
+					//backdrop-filter: blur(10px);
+					padding: 30px 25px;
 					& h3 {
 						color: v.$redlighter;
 						font-weight: 500;
+						text-shadow: 0 0 5px v.$transblack;
 
 						&::before {
 							content: "• ";

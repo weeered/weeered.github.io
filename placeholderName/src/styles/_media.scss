@@ -1,3 +1,5 @@
+@use "./variables" as v;
+
 @media screen and (min-width: 1024px) {
 	* {
 		font-size: 20px;
@@ -7,20 +9,85 @@
 		max-width: 1000px;
 		margin: 0 auto;
 	}
+
 	.textScale {
 		max-width: 1000px;
 	}
+
 	.wrapperScale {
 		max-width: 1000px;
 	}
+
 	.dropdownScale {
 		justify-content: center;
 		gap: 100px;
 	}
+
 	.cardScale {
-		width: 300px;
+		position: relative;
+		width: 320px;
 		& img {
-			height: 400px;
+			height: 500px;
+		}
+
+		& div {
+			position: absolute;
+			top: calc(100% - 100px);
+			left: 0;
+
+			height: 100px;
+			min-height: 100px;
+
+			transition: width ease-in-out 0.1s, max-height ease-in-out 0.1s,
+				left ease-in-out 0.1s, border-radius ease-in-out 0.1s,
+				background-color ease-in-out 0.1s;
+
+			z-index: 10;
+
+			&:hover {
+				left: -20px;
+
+				width: calc(100% + 40px);
+				height: auto;
+
+				border-radius: 10px;
+
+				padding-bottom: 20px;
+
+				background-color: #000000ee;
+
+				box-shadow: 0 0 8px v.$shadowblack;
+
+				z-index: 11;
+
+				&::before {
+					content: "...";
+					position: absolute;
+					bottom: 5px;
+					right: 10px;
+				}
+
+				& span {
+					&:last-of-type {
+						padding-right: 10px;
+					}
+				}
+			}
+
+			&::before {
+				content: "...";
+				position: absolute;
+				bottom: 5px;
+				right: 10px;
+			}
+		}
+
+		& span {
+			&:last-of-type {
+				line-height: 29px;
+				padding-right: 20px;
+				font-size: calc(1rem - 2px);
+			}
 		}
 	}
 
@@ -79,7 +146,68 @@
 		width: 250px;
 
 		& img {
-			height: 350px;
+			height: 380px;
+		}
+
+		& div {
+			position: absolute;
+			top: calc(100% - 90px);
+			left: 0;
+
+			height: 90px;
+			min-height: 90px;
+
+			transition: width ease-in-out 0.1s, left ease-in-out 0.1s,
+				border-radius ease-in-out 0.1s, background-color ease-in-out 0.1s;
+
+			z-index: 10;
+
+			overflow: hidden;
+
+			&:hover {
+				left: -20px;
+
+				width: calc(100% + 40px);
+				height: auto;
+
+				border-radius: 10px;
+
+				padding-bottom: 20px;
+
+				background-color: #000000ee;
+
+				box-shadow: 0 0 8px v.$shadowblack;
+
+				z-index: 11;
+
+				&::before {
+					content: "...";
+					position: absolute;
+					bottom: 5px;
+					right: 10px;
+				}
+
+				& span {
+					&:last-of-type {
+						padding-right: 10px;
+					}
+				}
+			}
+
+			&::before {
+				content: "...";
+				position: absolute;
+				bottom: 5px;
+				right: 10px;
+			}
+		}
+
+		& span {
+			&:last-of-type {
+				line-height: 25px;
+				padding-right: 26px;
+				font-size: calc(1rem - 2px);
+			}
 		}
 	}
 
@@ -113,9 +241,11 @@
 	* {
 		font-size: 16px;
 	}
+
 	.titleScale {
 		padding: 0 30px;
 	}
+
 	.textScale {
 		margin: 0 30px;
 		& br {
@@ -130,16 +260,78 @@
 		justify-content: center;
 		gap: 15px;
 	}
+
 	.cardScale {
 		width: 300px;
 
 		& img {
 			height: 370px;
 		}
+
+		& div {
+			position: absolute;
+			top: calc(100% - 80px);
+			left: 0;
+
+			height: 80px;
+			min-height: 80px;
+
+			transition: width ease-in-out 0.1s, max-height ease-in-out 0.1s,
+				left ease-in-out 0.1s, border-radius ease-in-out 0.1s,
+				background-color ease-in-out 0.1s;
+
+			z-index: 10;
+
+			&:hover {
+				left: -20px;
+
+				width: calc(100% + 40px);
+				height: auto;
+
+				border-radius: 10px;
+
+				padding-bottom: 20px;
+
+				background-color: #000000ee;
+
+				box-shadow: 0 0 8px v.$shadowblack;
+
+				z-index: 11;
+				&::before {
+					content: "...";
+					position: absolute;
+					bottom: 5px;
+					right: 10px;
+				}
+
+				& span {
+					&:last-of-type {
+						padding-right: 10px;
+					}
+				}
+			}
+
+			&::before {
+				content: "...";
+				position: absolute;
+				bottom: 5px;
+				right: 10px;
+			}
+		}
+
+		& span {
+			&:last-of-type {
+				line-height: 22.5px;
+				padding-right: 20px;
+				font-size: calc(1rem - 2px);
+			}
+		}
 	}
+
 	.organizersScale {
 		gap: 40px;
 		justify-content: center;
+		padding: 0 30px;
 
 		& .main__organizers_container-card {
 			height: 100px;
@@ -149,9 +341,10 @@
 	.partnersScale {
 		gap: 40px;
 		justify-content: center;
+		padding: 0 30px;
 
 		& .main__partners_container-card {
-			height: 100px;
+			width: 100%;
 		}
 	}
 
@@ -161,9 +354,9 @@
 			gap: 15px;
 		}
 
-		&__contacts{
-			&_elem{
-				a{
+		&__contacts {
+			&_elem {
+				a {
 					font-size: 18px;
 				}
 			}
