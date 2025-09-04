@@ -24,8 +24,46 @@
 			rel="stylesheet"
 		/>
 	</head>
+
 	<body>
-		<div class="hero">
+		<header class="header">
+			<div class="header__container">
+				<a href="#hero" class="header__container_up">
+					<img src="../media/icons/chevron-up.svg" alt="up" />
+				</a>
+				<!-- <div class="header__container_elem">
+					<a
+						href="#desc"
+						onclick="dropdownToggle(document.getElementById('choomButton'))"
+						class="header__container_elem-link"
+						>Участникам</a
+					>
+					/
+					<a
+						href="#desc"
+						onclick="dropdownToggle(document.getElementById('corpoButton'))"
+						class="header__container_elem-link"
+						>Партнерам</a
+					>
+				</div> -->
+				<div class="header__container_elem">
+					<a href="#prog" class="header__container_elem-link">Программа</a>
+				</div>
+				<div class="header__container_elem">
+					<a href="#judge" class="header__container_elem-link">Судьи</a>
+				</div>
+				<div class="header__container_elem">
+					<a href="#org" class="header__container_elem-link"
+						>Организаторы и партнеры</a
+					>
+				</div>
+				<div class="header__container_elem">
+					<a href="#foot" class="header__container_elem-link">Контакты</a>
+				</div>
+			</div>
+		</header>
+
+		<div class="hero" id="hero">
 			<img
 				class="hero__img"
 				src="../media/logos/kul-cup_logo_w1.png"
@@ -43,7 +81,7 @@
 		</div>
 
 		<main class="main">
-			<div class="main__desc">
+			<div class="main__desc" id="desc">
 				<div class="main__desc_video textScale">
 					<video width="100%" height="100%" controls autoplay muted loop>
 						<source src="../media/video/0831.mp4" type="video/mp4" />
@@ -53,10 +91,36 @@
 				</div>
 
 				<div class="main__desc_textbox textScale">
-					Международный Кулинарный Кубок проводится ежегодно в Минске на
-					площадке Международной специализированной оптовой выставки-ярмарки
-					«PRODEXPO» и собирает лучших кулинаров <br />
-					Беларуси и зарубежья.
+					<div class="main__desc_textbox-wrapper">
+						<span class="main__desc_textbox-large"
+							>Международный Кулинарный Кубок</span
+						>
+						- ежегодное событие, признанное на мировой гастрономической арене,
+						проводится в Минске на площадке Международной специализированной
+						оптовой выставки-ярмарки
+						<span class="main__desc_textbox-large">«PRODEXPO»</span> и собирает
+						лучших кулинаров Беларуси и зарубежья.
+					</div>
+
+					<div class="main__desc_textbox-wrapper">
+						Формат Кубка сочетает в себе
+						<span class="main__desc_textbox-bold"
+							>конкурсную программу для кулинаров, шеф-поваров и экспертов, а
+							также деловую и образовательную части.</span
+						>
+						Мероприятие служит ведущей платформой в стране для профессионального
+						диалога и местом для установления деловых контактов между лидерами
+						международного кулинарного сообщества.
+					</div>
+
+					<div class="main__desc_textbox-wrapper">
+						В рамках Кубка проходят
+						<span class="main__desc_textbox-bold"
+							>захватывающие мастер-классы, дегустаций, интерактивные
+							презентаций и, конечно же, напряженная борьба за звание лучшего
+							кулинара!</span
+						>
+					</div>
 				</div>
 
 				<div class="main__desc_bottom dropdownScale">
@@ -92,7 +156,9 @@
 				</div>
 			</div>
 
-			<h2 class="main__programm_title titleScale">В программе Кубка:</h2>
+			<h2 class="main__programm_title titleScale" id="prog">
+				В программе Кубка:
+			</h2>
 
 			<div class="main__programm">
 				<ul class="main__programm_list wrapperScale">
@@ -205,7 +271,7 @@
 
 			<!-- <div class="main__results"></div> -->
 
-			<h2 class="main__programm_title titleScale">Cудьи Кубка:</h2>
+			<h2 class="main__programm_title titleScale" id="judge">Cудьи Кубка:</h2>
 
 			<div class="main__judges">
 				<div class="main__judges_juryBoard">
@@ -284,7 +350,9 @@
 						<div>
 							<span>Денис Светов</span>
 							<span
-								>Шеф-повар с более чем 20-летним стажем, победитель и призёр международных и отечественных кулинарных соревнований, НПОГ «Президент-Отель»</span
+								>Шеф-повар с более чем 20-летним стажем, победитель и призёр
+								международных и отечественных кулинарных соревнований, НПОГ
+								«Президент-Отель»</span
 							>
 						</div>
 					</div>
@@ -294,7 +362,10 @@
 						<img src="../media/judges/IlyaKarpaev.jpg" alt="Photo" />
 						<div>
 							<span>Илья Карпаев</span>
-							<span>Бренд-шеф ресторана «Малевич» в Минске и шеф-повар московского ресторана «Kislovsky Taste&Place»</span>
+							<span
+								>Бренд-шеф ресторана «Малевич» в Минске и шеф-повар московского
+								ресторана «Kislovsky Taste&Place»</span
+							>
 						</div>
 					</div>
 
@@ -303,7 +374,10 @@
 						<img src="../media/judges/IgnazioRosso.jpg" alt="Photo" />
 						<div>
 							<span>Иньяцио Россо</span>
-							<span>Знаменитый мировой шеф, совладелец ресторана «La Scala Trattoria Ignazio»</span>
+							<span
+								>Знаменитый мировой шеф, совладелец ресторана «La Scala
+								Trattoria Ignazio»</span
+							>
 						</div>
 					</div>
 
@@ -312,7 +386,10 @@
 						<img src="../media/judges/EvgeniyEreshkin.jpg" alt="Photo" />
 						<div>
 							<span>Евгений Иришкин</span>
-							<span>Международный эксперт компетенции «Поварское дело» World Skills Russia</span>
+							<span
+								>Международный эксперт компетенции «Поварское дело» World Skills
+								Russia</span
+							>
 						</div>
 					</div>
 
@@ -321,7 +398,10 @@
 						<img src="../media/judges/AlenaPolesova.jpg" alt="Photo" />
 						<div>
 							<span>Алена Полесова</span>
-							<span>Победитель и призер многочисленных международных конкурсов профессионального мастерства</span>
+							<span
+								>Победитель и призер многочисленных международных конкурсов
+								профессионального мастерства</span
+							>
 						</div>
 					</div>
 
@@ -330,13 +410,16 @@
 						<img src="../media/judges/AntonVolkov.jpg" alt="Photo" />
 						<div>
 							<span>Антон Волков</span>
-							<span>Шеф-повар, многократный победитель международных кулинарных соревнований</span>
+							<span
+								>Шеф-повар, многократный победитель международных кулинарных
+								соревнований</span
+							>
 						</div>
 					</div>
 				</div>
 			</div>
 
-			<h2 class="main__programm_title titleScale">Организаторы:</h2>
+			<h2 class="main__programm_title titleScale" id="org">Организаторы:</h2>
 
 			<div class="main__organizers">
 				<div class="main__organizers_container organizersScale">
@@ -475,7 +558,8 @@
 				</div>
 			</div>
 		</main>
-		<footer class="footer">
+
+		<footer class="footer" id="foot">
 			<div class="wave3"></div>
 			<div class="wave4"></div>
 

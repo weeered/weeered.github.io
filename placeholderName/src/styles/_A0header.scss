@@ -1,0 +1,200 @@
+@use "./variables" as v;
+
+@media screen and (min-width: 1024px) {
+	.header {
+		&__container {
+			position: fixed;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+
+			width: 100%;
+			max-width: 1000px;
+			height: fit-content;
+
+			display: flex;
+			justify-content: space-between;
+
+			padding: 10px 100px;
+			z-index: 20;
+
+			box-shadow: 0 0 8px v.$shadowblack;
+
+			overflow: hidden;
+
+			background: linear-gradient(
+				177deg,
+				v.$transblack 40%,
+				v.$transblackAlt 90%
+			);
+
+			backdrop-filter: blur(3px);
+
+			border-bottom-right-radius: 10px;
+			border-bottom-left-radius: 10px;
+
+			&_up {
+				position: absolute;
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				padding: 0 5px;
+
+				height: 100%;
+
+				background-color: v.$transdim;
+
+				& img {
+					width: 30px;
+					height: 30px;
+				}
+
+				@media (pointer: fine) {
+					&:hover {
+						background-color: v.$transgray;
+					}
+				}
+
+				transition: background-color ease-in-out 0.1s;
+			}
+
+			&_elem {
+				color: #fff;
+
+				&-link {
+					position: relative;
+					color: #fff;
+					text-decoration: none;
+
+					@media (pointer: fine) {
+						&:hover {
+							color: v.$beigeLighter;
+							&::after {
+								width: 100%;
+								left: 0;
+							}
+						}
+					}
+
+					&::after {
+						content: "";
+						position: absolute;
+						bottom: -3px;
+						left: 50%;
+						width: 0;
+						height: 1px;
+
+						background-color: v.$beigeLighter;
+						transition: width ease-in-out 0.15s, left ease-in-out 0.15s;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.header {
+		&__container {
+			position: fixed;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+
+			width: 100%;
+			max-width: 1000px;
+			height: fit-content;
+
+			display: flex;
+			justify-content: space-between;
+
+			padding: 10px 100px;
+			z-index: 20;
+
+			box-shadow: 0 0 8px v.$shadowblack;
+
+			overflow: hidden;
+
+			background: linear-gradient(
+				177deg,
+				v.$transblack 40%,
+				v.$transblackAlt 90%
+			);
+
+			backdrop-filter: blur(3px);
+
+			border-bottom-right-radius: 10px;
+			border-bottom-left-radius: 10px;
+
+			&_up {
+				position: absolute;
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				padding: 0 5px;
+
+				height: 100%;
+
+				background-color: v.$transdim;
+
+				& img {
+					width: 30px;
+					height: 30px;
+				}
+
+				@media (pointer: fine) {
+					&:hover {
+						background-color: v.$transgray;
+					}
+				}
+
+				transition: background-color ease-in-out 0.1s;
+			}
+
+			&_elem {
+				color: #fff;
+
+				&-link {
+					position: relative;
+					color: #fff;
+					text-decoration: none;
+
+					@media (pointer: fine) {
+						&:hover {
+							color: v.$beigeLighter;
+							&::after {
+								width: 100%;
+								left: 0;
+							}
+						}
+					}
+
+					&::after {
+						content: "";
+						position: absolute;
+						bottom: -3px;
+						left: 50%;
+						width: 0;
+						height: 1px;
+
+						background-color: v.$beigeLighter;
+						transition: width ease-in-out 0.15s, left ease-in-out 0.15s;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+}

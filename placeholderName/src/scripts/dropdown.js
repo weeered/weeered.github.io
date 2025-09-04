@@ -30,7 +30,8 @@ function dropdownToggle(e) {
 window.onclick = function (event) {
 	if (
 		!event.target.matches(".main__desc_dropdown-button") &&
-		!event.target.matches(".main__desc_dropdown-menuLink")
+		!event.target.matches(".main__desc_dropdown-menuLink") &&
+		!event.target.matches(".header__container_elem-link")
 	) {
 		const menuList = document.querySelectorAll(".main__desc_dropdown-menu");
 		for (i = 0; i < menuList.length; i++) {

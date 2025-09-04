@@ -96,7 +96,10 @@
 		justify-content: center;
 
 		& .main__organizers_container-card {
-			height: 135px;
+			& img {
+				height: fit-content;
+				max-width: 250px;
+			}
 		}
 	}
 
@@ -105,15 +108,10 @@
 		justify-content: center;
 
 		& .main__partners_container-card {
-			height: 135px;
-		}
-	}
-
-	.footer {
-		&__container {
-			flex-direction: row;
-			gap: 60px;
-			justify-content: center;
+			& img {
+				height: fit-content;
+				max-width: 250px;
+			}
 		}
 	}
 }
@@ -216,7 +214,10 @@
 		justify-content: center;
 
 		& .main__organizers_container-card {
-			height: 100px;
+			& img {
+				height: fit-content;
+				max-width: 200px;
+			}
 		}
 	}
 
@@ -225,14 +226,10 @@
 		justify-content: center;
 
 		& .main__partners_container-card {
-			height: 100px;
-		}
-	}
-
-	.footer {
-		&__container {
-			flex-direction: column;
-			gap: 15px;
+			& img {
+				height: fit-content;
+				max-width: 200px;
+			}
 		}
 	}
 }
@@ -329,36 +326,25 @@
 	}
 
 	.organizersScale {
-		gap: 40px;
+		gap: 60px;
 		justify-content: center;
 		padding: 0 30px;
 
 		& .main__organizers_container-card {
-			height: 100px;
+			& img {
+				max-height: 120px;
+			}
 		}
 	}
 
 	.partnersScale {
-		gap: 40px;
+		gap: 60px;
 		justify-content: center;
 		padding: 0 30px;
 
 		& .main__partners_container-card {
-			width: 100%;
-		}
-	}
-
-	.footer {
-		&__container {
-			flex-direction: column;
-			gap: 15px;
-		}
-
-		&__contacts {
-			&_elem {
-				a {
-					font-size: 18px;
-				}
+			& img {
+				max-height: 120px;
 			}
 		}
 	}

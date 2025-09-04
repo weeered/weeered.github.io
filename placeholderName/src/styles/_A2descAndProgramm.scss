@@ -19,10 +19,26 @@
 		}
 
 		&_textbox {
-			font-size: 1.1rem;
 			display: flex;
+			flex-direction: column;
+			gap: 15px;
 
-			text-align: center;
+			&-wrapper {
+				font-size: 1.1rem;
+
+				text-align: justify;
+			}
+
+			&-large {
+				font-size: 1.2rem;
+				font-weight: 600;
+				color: v.$red;
+			}
+
+			&-bold {
+				font-size: 1.1rem;
+				font-weight: 600;
+			}
 		}
 
 		&_bottom {
@@ -31,8 +47,6 @@
 			width: 100%;
 
 			background-color: v.$red;
-
-			
 		}
 
 		&_dropdown {

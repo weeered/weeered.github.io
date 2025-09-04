@@ -1,5 +1,41 @@
 @use "./variables" as v;
 
+@media screen and (min-width: 1024px) {
+	.footer {
+		&__container {
+			flex-direction: row;
+			gap: 60px;
+			justify-content: center;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.footer {
+		&__container {
+			flex-direction: column;
+			gap: 15px;
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.footer {
+		&__container {
+			flex-direction: column;
+			gap: 15px;
+		}
+
+		&__contacts {
+			&_elem {
+				a {
+					font-size: 18px;
+				}
+			}
+		}
+	}
+}
+
 .footer {
 	display: flex;
 	flex-direction: column;
@@ -63,6 +99,10 @@
 			& a {
 				color: #fff;
 				text-decoration: none;
+
+				&:hover {
+					color: v.$beige;
+				}
 			}
 		}
 	}
