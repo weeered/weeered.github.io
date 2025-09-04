@@ -217,8 +217,14 @@
 
 		&__burger {
 			padding: 15px;
-			background: linear-gradient(120deg, v.$transblack, v.$transblackAlt);
-			border-bottom-right-radius: 10px;
+			
+      background: linear-gradient(120deg, v.$transblack, v.$transblackAlt);
+      backdrop-filter: blur(2px);
+
+      box-shadow: 0 0 8px v.$shadowblack;
+
+      border-bottom-right-radius: 10px;
+      
 
 			&_button {
 				display: flex;
