@@ -414,6 +414,9 @@ h3 {
     background-color: #ffe2b0;
     transition: width ease-in-out 0.15s, left ease-in-out 0.15s;
   }
+  .header__container_burger-button {
+    display: none;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .header__container {
@@ -490,6 +493,78 @@ h3 {
     background-color: #ffe2b0;
     transition: width ease-in-out 0.15s, left ease-in-out 0.15s;
   }
+  .header__container_burger-button {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 30;
+  }
+  .header__burger {
+    padding: 15px;
+    background: linear-gradient(120deg, rgba(0, 0, 0, 0.6274509804), rgba(0, 0, 0, 0.4392156863));
+    border-bottom-right-radius: 10px;
+  }
+  .header__burger_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: 29px;
+  }
+  .header__burger_button-elem {
+    position: relative;
+    width: 50px;
+    height: 3px;
+    background-color: #fff;
+  }
+  .header__burger_button-elem::before {
+    content: "";
+    position: absolute;
+    top: -13px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #fff;
+  }
+  .header__burger_button-elem::after {
+    content: "";
+    position: absolute;
+    top: 13px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #fff;
+  }
+  .header__container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+  }
+  .header__container_up {
+    display: none;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .hero {
+    padding-top: 80px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .hero {
+    padding-top: 80px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .hero {
+    padding-top: 30px;
+  }
 }
 .hero {
   display: flex;
@@ -501,7 +576,6 @@ h3 {
   position: relative;
   background: #bf1e2e;
   color: #fff;
-  padding-top: 80px;
   padding-bottom: 30px;
   margin-bottom: 100px;
   text-align: center;
@@ -911,6 +985,9 @@ h3 {
 }
 .footer__title:first-of-type {
   padding-top: 0;
+}
+.footer__location_elem {
+  font-size: 1.1rem;
 }
 .footer__contacts {
   display: flex;
