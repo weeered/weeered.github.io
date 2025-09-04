@@ -175,10 +175,7 @@
     padding: 0 30px;
   }
   .textScale {
-    margin: 0 30px;
-  }
-  .textScale br {
-    display: none;
+    margin: 0 10px;
   }
   .wrapperScale {
     margin: 0 10px;
@@ -524,6 +521,21 @@ h3 {
   font-size: 1.1rem;
 }
 
+@media screen and (min-width: 1024px) {
+  .main__desc_textbox-wrapper {
+    text-align: justify;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .main__desc_textbox-wrapper {
+    text-align: left;
+  }
+}
+@media screen and (max-width: 767px) {
+  .main__desc_textbox-wrapper {
+    text-align: left;
+  }
+}
 .main__desc {
   display: flex;
   flex-direction: column;
@@ -545,7 +557,6 @@ h3 {
 }
 .main__desc_textbox-wrapper {
   font-size: 1.1rem;
-  text-align: justify;
 }
 .main__desc_textbox-large {
   font-size: 1.2rem;

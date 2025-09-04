@@ -1,5 +1,41 @@
 @use "./variables" as v;
 
+@media screen and (min-width: 1024px) {
+	.main {
+		&__desc {
+			&_textbox {
+				&-wrapper {
+					text-align: justify;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.main {
+		&__desc {
+			&_textbox {
+				&-wrapper {
+					text-align: left;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.main {
+		&__desc {
+			&_textbox {
+				&-wrapper {
+					text-align: left;
+				}
+			}
+		}
+	}
+}
+
 .main {
 	&__desc {
 		display: flex;
@@ -25,8 +61,6 @@
 
 			&-wrapper {
 				font-size: 1.1rem;
-
-				text-align: justify;
 			}
 
 			&-large {
