@@ -579,9 +579,11 @@ h3 {
   position: relative;
   background: #bf1e2e;
   color: #fff;
-  padding-bottom: 30px;
+  padding-bottom: 60px;
   margin-bottom: 100px;
   text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2666666667);
+  z-index: 10;
 }
 .hero__img {
   width: 150px;
@@ -596,6 +598,20 @@ h3 {
 .hero__textbox {
   display: flex;
   font-size: 1.1rem;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2666666667);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  background: linear-gradient(177deg, rgba(0, 0, 0, 0.6274509804) 40%, rgba(0, 0, 0, 0.4392156863) 90%);
 }
 
 @media screen and (min-width: 1024px) {
@@ -883,8 +899,10 @@ h3 {
 
 .main__organizers {
   width: 100%;
-  padding: 20px 0;
-  background-color: #f1f0f0;
+  padding: 60px 0;
+  background: linear-gradient(170deg, rgba(0, 0, 0, 0.6274509804) 40%, rgba(0, 0, 0, 0.4392156863) 90%);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2352941176);
 }
 .main__organizers_container {
@@ -894,17 +912,45 @@ h3 {
   margin: 0 auto;
 }
 .main__organizers_container-card {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: linear-gradient(170deg, rgba(255, 255, 255, 0.9176470588) 40%, rgba(255, 255, 255, 0.9176470588) 90%);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2666666667);
+  transition: scale ease-in-out 0.2s;
+  overflow: hidden;
+}
+.main__organizers_container-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -30px;
+  width: 80px;
+  height: 20px;
+  background-color: #f2d6a6;
+  transform: rotate(-45deg);
+}
+.main__organizers_container-card::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: -20px;
+  width: 80px;
+  height: 15px;
+  background-color: #bf1e2e;
+  transform: rotate(-45deg);
+  z-index: 10;
+}
+.main__organizers_container-card:hover {
+  scale: 1.05;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2666666667);
 }
 .main__organizers_container-card img {
   width: 100%;
   height: 100%;
-  transition: scale ease-in-out 0.2s;
-}
-.main__organizers_container-card img:hover {
-  scale: 1.05;
 }
 .main__partners {
   width: 100%;

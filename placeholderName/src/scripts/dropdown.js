@@ -10,10 +10,10 @@ function dropdownToggle(e) {
 		menu.classList.add("main__desc_dropdown-menu");
 		if (e.id == "choomButton") {
 			menu.innerHTML =
-				"<a href='#' target='blank'>📄O Кубке</a><a href='#' target='blank'>📄Регистрация на Кубок</a><a href='#' target='blank'>📄Контакты Организатора</a>";
+				"<a href='../media/documents/УЧАСТНИКАМ_сайт_Кулинарный_Кубок_2025.pdf' target='blank'>📄O Кубке</a><a href='#' target='blank'>📄Регистрация на Кубок</a>";
 		} else if (e.id == "corpoButton") {
 			menu.innerHTML =
-				"<a href='#' target='blank'>📄O Кубке</a><a href='#' target='blank'>📄Партнерское Предложение</a><a href='#' target='blank'>📄Контакты Организатора</a>";
+				"<a href='../media/documents/ПАРТНЕРАМ_сайт_Кулинарный Кубок.pdf' target='blank'>📄Партнерская программа</a><a href='#' target='blank'>📄Контакты Организатора</a>";
 		}
 		setTimeout(() => {
 			playFadeInAnimation(menu);
