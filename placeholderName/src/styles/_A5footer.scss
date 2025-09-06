@@ -2,6 +2,7 @@
 
 @media screen and (min-width: 1024px) {
 	.footer {
+		margin-top: 200px;
 		&__container {
 			flex-direction: row;
 			gap: 60px;
@@ -12,6 +13,7 @@
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
 	.footer {
+		margin-top: 200px;
 		&__container {
 			flex-direction: column;
 			gap: 15px;
@@ -21,6 +23,7 @@
 
 @media screen and (max-width: 767px) {
 	.footer {
+		margin-top: 150px;
 		&__container {
 			flex-direction: column;
 			gap: 15px;
@@ -46,7 +49,6 @@
 	padding: 0px 20px;
 	padding-top: 30px;
 	padding-bottom: 40px;
-	margin-top: 120px;
 
 	color: #fff;
 
