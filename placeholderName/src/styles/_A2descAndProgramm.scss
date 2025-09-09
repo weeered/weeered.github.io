@@ -88,7 +88,10 @@
 
 			background-color: v.$red;
 
-			box-shadow: 0 0 10px v.$shadowblack;
+			//box-shadow: 0 0 10px v.$shadowblack;
+
+			border-bottom: 6px solid v.$beige;
+			border-top: 6px solid v.$beige;
 
 			margin-bottom: 30px;
 		}
@@ -154,11 +157,15 @@
 				& a {
 					background-color: v.$transwhite;
 
+					//background: linear-gradient(120deg, v.$transblack, v.$transblackAlt);
+
 					padding: 15px 10px;
 					display: block;
 
 					text-decoration: none;
 					color: #000;
+
+					//color: #fff;
 
 					border-bottom: 1px solid #000;
 

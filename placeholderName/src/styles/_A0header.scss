@@ -6,7 +6,7 @@
 			position: fixed;
 			top: 0;
 			left: 50%;
-			transform: translateX(-50%);
+			transform: translate(-50%, -100%);
 
 			width: 100%;
 			max-width: 1000px;
@@ -20,8 +20,6 @@
 
 			box-shadow: 0 0 8px v.$shadowblack;
 
-			overflow: hidden;
-
 			background: linear-gradient(
 				177deg,
 				v.$transblack 40%,
@@ -33,11 +31,12 @@
 			border-bottom-right-radius: 10px;
 			border-bottom-left-radius: 10px;
 
+			transition: transform ease-in-out 0.1s;
+
 			&_up {
 				position: absolute;
-				left: 0;
-				top: 50%;
-				transform: translateY(-50%);
+				right: 0;
+				top: 0;
 
 				display: flex;
 				align-items: center;
@@ -49,18 +48,55 @@
 
 				background-color: v.$transdim;
 
+				border-bottom-right-radius: 10px;
+
+				transition: background-color ease-in-out 0.1s;
+
+				&:hover {
+					background-color: v.$transgray;
+				}
+
+				& img {
+					height: 30px;
+					width: fit-content;
+				}
+			}
+
+			&_toggle {
+				position: absolute;
+				left: 0;
+				top: 100%;
+
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				padding: 0 5px;
+
+				height: 100%;
+
+				border-bottom-left-radius: 10px;
+				border-bottom-right-radius: 10px;
+
+				background-color: v.$transblack;
+
+				transition: top ease-in-out 0.1s, background-color ease-in-out 0.1s;
+
+				cursor: pointer;
+
 				& img {
 					width: 30px;
 					height: 30px;
+					transform: rotate(180deg);
+
+					transition: transform ease-in-out 0.2s;
 				}
 
 				@media (pointer: fine) {
 					&:hover {
-						background-color: v.$transgray;
+						background-color: v.$transblackAlt;
 					}
 				}
-
-				transition: background-color ease-in-out 0.1s;
 			}
 
 			&_elem {
@@ -110,7 +146,7 @@
 			position: fixed;
 			top: 0;
 			left: 50%;
-			transform: translateX(-50%);
+			transform: translate(-50%, -100%);
 
 			width: 100%;
 			max-width: 1000px;
@@ -124,8 +160,6 @@
 
 			box-shadow: 0 0 8px v.$shadowblack;
 
-			overflow: hidden;
-
 			background: linear-gradient(
 				177deg,
 				v.$transblack 40%,
@@ -137,11 +171,12 @@
 			border-bottom-right-radius: 10px;
 			border-bottom-left-radius: 10px;
 
-			&_up {
+			transition: transform ease-in-out 0.1s;
+
+			&_toggle {
 				position: absolute;
 				left: 0;
-				top: 50%;
-				transform: translateY(-50%);
+				top: 100%;
 
 				display: flex;
 				align-items: center;
@@ -151,20 +186,28 @@
 
 				height: 100%;
 
-				background-color: v.$transdim;
+				border-bottom-left-radius: 10px;
+				border-bottom-right-radius: 10px;
+
+				background-color: v.$transblack;
+
+				transition: top ease-in-out 0.1s, background-color ease-in-out 0.1s;
+
+				cursor: pointer;
 
 				& img {
 					width: 30px;
 					height: 30px;
+					transform: rotate(180deg);
+
+					transition: transform ease-in-out 0.2s;
 				}
 
 				@media (pointer: fine) {
 					&:hover {
-						background-color: v.$transgray;
+						background-color: v.$transblackAlt;
 					}
 				}
-
-				transition: background-color ease-in-out 0.1s;
 			}
 
 			&_elem {
@@ -198,6 +241,7 @@
 					}
 				}
 			}
+
 			&_burger {
 				&-button {
 					display: none;
@@ -217,14 +261,13 @@
 
 		&__burger {
 			padding: 15px;
-			
-      background: linear-gradient(120deg, v.$transblack, v.$transblackAlt);
-      backdrop-filter: blur(2px);
 
-      box-shadow: 0 0 8px v.$shadowblack;
+			background: linear-gradient(120deg, v.$transblack, v.$transblackAlt);
+			backdrop-filter: blur(2px);
 
-      border-bottom-right-radius: 10px;
-      
+			box-shadow: 0 0 8px v.$shadowblack;
+
+			border-bottom-right-radius: 10px;
 
 			&_button {
 				display: flex;
@@ -271,7 +314,7 @@
 			left: 0;
 
 			transform: translateX(-100%);
-			&_up {
+			&_toggle {
 				display: none;
 			}
 		}

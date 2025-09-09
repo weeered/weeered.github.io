@@ -1,3 +1,5 @@
+@use "./variables" as v;
+
 .showDropdown {
 	transform: translateY(2.5%);
 	opacity: 1;
@@ -5,6 +7,25 @@
 
 .chevronRotate {
 	transform: rotate(180deg);
+}
+
+.headerDown {
+	transform: translate(-50%, 0);
+
+	& .header__container_toggle {
+		top: 0;
+		background-color: v.$transdim;
+
+		@media (pointer: fine) {
+			&:hover {
+				background-color: v.$transgray;
+			}
+		}
+
+		& img {
+			transform: rotate(0);
+		}
+	}
 }
 
 .wave {
