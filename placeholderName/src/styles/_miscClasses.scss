@@ -16,6 +16,8 @@
 		top: 0;
 		background-color: v.$transdim;
 
+		border-bottom-right-radius: 0;
+
 		@media (pointer: fine) {
 			&:hover {
 				background-color: v.$transgray;

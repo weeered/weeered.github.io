@@ -52,13 +52,17 @@
 
 				transition: background-color ease-in-out 0.1s;
 
-				&:hover {
-					background-color: v.$transgray;
+				@media (pointer: fine) {
+					&:hover {
+						background-color: v.$transgray;
+					}
 				}
 
 				& img {
 					height: 30px;
 					width: fit-content;
+
+					user-select: none;
 				}
 			}
 
@@ -80,7 +84,8 @@
 
 				background-color: v.$transblack;
 
-				transition: top ease-in-out 0.1s, background-color ease-in-out 0.1s;
+				transition: top ease-in-out 0.1s, background-color ease-in-out 0.1s,
+					border-radius ease-in-out 0.1s;
 
 				cursor: pointer;
 
@@ -90,6 +95,8 @@
 					transform: rotate(180deg);
 
 					transition: transform ease-in-out 0.2s;
+
+					user-select: none;
 				}
 
 				@media (pointer: fine) {
@@ -173,6 +180,39 @@
 
 			transition: transform ease-in-out 0.1s;
 
+			&_up {
+				position: absolute;
+				right: 0;
+				top: 0;
+
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				padding: 0 5px;
+
+				height: 100%;
+
+				background-color: v.$transdim;
+
+				border-bottom-right-radius: 10px;
+
+				transition: background-color ease-in-out 0.1s;
+
+				@media (pointer: fine) {
+					&:hover {
+						background-color: v.$transgray;
+					}
+				}
+
+				& img {
+					height: 30px;
+					width: fit-content;
+
+					user-select: none;
+				}
+			}
+
 			&_toggle {
 				position: absolute;
 				left: 0;
@@ -191,7 +231,8 @@
 
 				background-color: v.$transblack;
 
-				transition: top ease-in-out 0.1s, background-color ease-in-out 0.1s;
+				transition: top ease-in-out 0.1s, background-color ease-in-out 0.1s,
+					border-radius ease-in-out 0.1s;
 
 				cursor: pointer;
 
@@ -201,6 +242,8 @@
 					transform: rotate(180deg);
 
 					transition: transform ease-in-out 0.2s;
+
+					user-select: none;
 				}
 
 				@media (pointer: fine) {
