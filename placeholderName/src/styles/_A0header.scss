@@ -137,10 +137,10 @@
 					}
 				}
 			}
+		}
 
-			&_burger {
-				display: none;
-			}
+		&__burger {
+			display: none;
 		}
 	}
 }
@@ -282,10 +282,9 @@
 					}
 				}
 			}
-
-			&_burger {
-				display: none;
-			}
+		}
+		&__burger {
+			display: none;
 		}
 	}
 }

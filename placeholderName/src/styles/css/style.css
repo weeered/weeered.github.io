@@ -449,7 +449,7 @@ h3 {
     background-color: #ffe2b0;
     transition: width ease-in-out 0.15s, left ease-in-out 0.15s;
   }
-  .header__container_burger {
+  .header__burger {
     display: none;
   }
 }
@@ -563,7 +563,7 @@ h3 {
     background-color: #ffe2b0;
     transition: width ease-in-out 0.15s, left ease-in-out 0.15s;
   }
-  .header__container_burger {
+  .header__burger {
     display: none;
   }
 }
