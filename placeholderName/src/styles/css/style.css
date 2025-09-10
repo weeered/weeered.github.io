@@ -664,12 +664,6 @@ h3 {
     transition: transform ease-in 0.08s, top ease-in-out 0.3s;
   }
   .header__container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translateX(-100%);
-  }
-  .header__container_toggle {
     display: none;
   }
 }

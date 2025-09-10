@@ -418,14 +418,7 @@
 		}
 
 		&__container {
-			position: absolute;
-			top: 0;
-			left: 0;
-
-			transform: translateX(-100%);
-			&_toggle {
-				display: none;
-			}
+			display: none;
 		}
 	}
 }
