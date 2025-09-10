@@ -27,8 +27,30 @@
 
 	<body>
 		<header class="header">
-			<div class="header__burger">
-				<div class="header__burger_button">
+			<div class="header__burger burgerActive">
+				<div class="header__burger_container">
+					<div class="header__burger_container-elem">
+						<a href="#prog">Программа</a>
+					</div>
+					<div class="header__burger_container-elem">
+						<a href="#judge">Судьи</a>
+					</div>
+					<div class="header__burger_container-elem">
+						<a href="#org">Организаторы и партнеры</a>
+					</div>
+					<div class="header__burger_container-elem">
+						<a href="#foot">Контакты</a>
+					</div>
+					<div class="header__burger_container-elem">
+						<a href="#hero"
+							><img
+								src="../media/icons/double-chevron-up-s-svgrepo-com.svg"
+								alt="up"
+						/></a>
+					</div>
+				</div>
+
+				<div class="header__burger_button" onclick="burgerToggle(this)">
 					<div class="header__burger_button-elem"></div>
 				</div>
 			</div>
@@ -38,7 +60,10 @@
 					<img src="../media/icons/chevron-up.svg" alt="toggle" />
 				</div>
 				<a href="#hero" class="header__container_up">
-					<img src="../media/icons/double-chevron-up-s-svgrepo-com.svg" alt="up" />
+					<img
+						src="../media/icons/double-chevron-up-s-svgrepo-com.svg"
+						alt="up"
+					/>
 				</a>
 				<!-- <div class="header__container_elem">
 					<a

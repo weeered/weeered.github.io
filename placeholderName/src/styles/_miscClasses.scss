@@ -30,6 +30,46 @@
 	}
 }
 
+.burgerActive {
+	left: 100%;
+
+	transform: translate(-100%, 0);
+
+	& .header__burger_container {
+		transform: translate(0, 0);
+	}
+
+	& .header__burger_button {
+		transform: translate(-100%, 0);
+
+		left: 100%;
+
+		border-bottom-right-radius: 0;
+
+		background: none;
+		box-shadow: none;
+		backdrop-filter: none;
+
+		&-elem {
+			background-color: transparent;
+
+			&::after {
+				top: 0;
+				transform: translate(-50%, 0) rotate(45deg);
+
+				transition: transform ease-in-out 0.3s, top ease-in 0.08s;
+			}
+
+			&::before {
+				top: 0;
+				transform: translate(-50%, 0) rotate(-45deg);
+
+				transition: transform ease-in-out 0.3s, top ease-in 0.08s;
+			}
+		}
+	}
+}
+
 .wave {
 	position: absolute;
 	bottom: -40px;
