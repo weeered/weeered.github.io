@@ -1002,8 +1002,6 @@ h3 {
   width: 100%;
   padding: 30px 0;
   background: linear-gradient(170deg, rgba(0, 0, 0, 0.6274509804) 40%, rgba(0, 0, 0, 0.4392156863) 90%);
-  -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2352941176);
 }
 .main__organizers_container {
@@ -1050,8 +1048,6 @@ h3 {
   margin: 0 auto;
   background: linear-gradient(170deg, rgba(0, 0, 0, 0.6274509804) 40%, rgba(0, 0, 0, 0.4392156863) 90%);
   border-radius: 10px;
-  -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2352941176);
 }
 .main__partners_container {
