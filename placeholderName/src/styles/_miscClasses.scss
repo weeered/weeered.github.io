@@ -31,18 +31,12 @@
 }
 
 .burgerActive {
-	left: 100%;
-
-	transform: translate(-100%, 0);
-
 	& .header__burger_container {
 		transform: translate(0, 0);
 	}
 
 	& .header__burger_button {
-		transform: translate(-100%, 0);
-
-		left: 100%;
+		transform: translate(calc(100vw - 100%), 0);
 
 		border-bottom-right-radius: 0;
 

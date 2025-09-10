@@ -599,7 +599,7 @@ h3 {
     overflow: hidden;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    transition: all ease-in-out 0.3s;
+    transition: transform ease-in-out 0.3s;
   }
   .header__burger_container-elem {
     padding: 5px 20px;
@@ -632,7 +632,7 @@ h3 {
     width: -moz-fit-content;
     width: fit-content;
     height: 29px;
-    transition: all ease-in-out 0.3s;
+    transition: transform ease-in-out 0.3s;
   }
   .header__burger_button-elem {
     position: relative;
@@ -1224,16 +1224,11 @@ h3 {
   transform: rotate(0);
 }
 
-.burgerActive {
-  left: 100%;
-  transform: translate(-100%, 0);
-}
 .burgerActive .header__burger_container {
   transform: translate(0, 0);
 }
 .burgerActive .header__burger_button {
-  transform: translate(-100%, 0);
-  left: 100%;
+  transform: translate(calc(100vw - 100%), 0);
   border-bottom-right-radius: 0;
   background: none;
   box-shadow: none;
