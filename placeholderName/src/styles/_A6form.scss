@@ -1,0 +1,138 @@
+@use "./variables" as v;
+
+@media screen and (min-width: 1024px) {
+  .main {
+    &__form {
+      border-radius: 10px;
+      width: fit-content;
+      &_clue {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+
+      &_elem {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .main {
+    &__form {
+      border-radius: 10px;
+      width: fit-content;
+      &_clue {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+
+      &_elem {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main {
+    &__form {
+      border-radius: 0;
+      width: 100%;
+      &_clue {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
+
+      &_elem {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+  }
+}
+
+.main {
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 auto;
+
+    box-shadow: 0 0 5px v.$shadowblack;
+
+    &_clue {
+      font-size: 1.2rem;
+
+      color: #fff;
+
+      background-color: v.$red;
+
+      padding: 5px 15px;
+
+      width: 100%;
+
+      text-align: center;
+    }
+
+    &_elem {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      width: 100%;
+
+      padding-top: 20px;
+
+      background: linear-gradient(
+        170deg,
+        v.$transblack 40%,
+        v.$transblackAlt 90%
+      );
+
+      &-inputFrame {
+        display: flex;
+        flex-direction: column;
+
+        padding: 0 20px;
+
+        & label {
+          color: #fff;
+        }
+
+        & input {
+          padding: 10px;
+
+          border: v.$transgray solid 1px;
+          border-radius: 10px;
+
+          background-color: v.$transwhite;
+        }
+      }
+
+      &-submit {
+        margin: 20px;
+
+        background-color: v.$red;
+
+        color: #fff;
+
+        box-shadow: 0 0 5px v.$shadowblack;
+
+        padding: 5px;
+
+        border: none;
+
+        cursor: pointer;
+
+        border: 2px solid v.$beigeLighter;
+
+        border-radius: 10px;
+      }
+    }
+  }
+}
