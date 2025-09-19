@@ -631,7 +631,7 @@
           Заполните эту форму и мы ответим вам в ближайшее время
         </div>
 
-        <form class="main__form_elem" action="" method="post">
+        <form class="main__form_elem" action="mailInfo.php" method="POST">
           <div class="main__form_elem-inputFrame">
             <label for="">Ваше имя:</label>
             <input type="text" placeholder="Иван Иванов" name="name" required />
@@ -657,18 +657,22 @@
             />
           </div>
 
-          <div class="main__form_elem-inputFrame">
+          <div class="main__form_elem-textareaFrame">
             <label for="">Сообщение:</label>
-            <input
-              type="text"
-              placeholder="Ваше сообщение"
-              name="message"
-              required
-            />
+            <div class="main__form_elem-textareaFrameContainer">
+              <textarea
+                type="text"
+                placeholder="Ваше сообщение"
+                name="message"
+                spellcheck="false"
+                required
+              ></textarea>
+            </div>
           </div>
 
           <input
             type="submit"
+            name="submit"
             class="main__form_elem-submit"
             value="Отправить"
           />

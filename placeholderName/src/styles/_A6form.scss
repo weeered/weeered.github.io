@@ -65,6 +65,8 @@
 
     box-shadow: 0 0 5px v.$shadowblack;
 
+    max-width: 100%;
+
     &_clue {
       font-size: 1.2rem;
 
@@ -132,6 +134,39 @@
         border: 2px solid v.$beigeLighter;
 
         border-radius: 10px;
+      }
+
+      &-textareaFrame {
+        display: flex;
+        flex-direction: column;
+
+        padding: 0 20px;
+
+        & label {
+          color: #fff;
+        }
+        &Container {
+          padding: 10px;
+          border: v.$transgray solid 1px;
+          border-radius: 10px;
+
+          background-color: v.$transwhite;
+          & textarea {
+            width: 100%;
+            max-width: 100%;
+            min-height: 3rem;
+            min-width: fit-content;
+            field-sizing: content;
+            resize: none;
+
+            border: none;
+            outline: none;
+
+            background-color: transparent;
+
+            scrollbar-color: v.$transblack transparent;
+          }
+        }
       }
     }
   }
