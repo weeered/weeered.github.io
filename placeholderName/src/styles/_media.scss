@@ -1,348 +1,294 @@
 @use "./variables" as v;
 
 @media screen and (min-width: 1024px) {
-	* {
-		font-size: 20px;
-	}
+  * {
+    font-size: 20px;
+  }
 
-	.titleScale {
-		max-width: 1000px;
-		margin: 0 auto;
-	}
+  .titleScale {
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
 
-	.textScale {
-		max-width: 1000px;
-	}
+  .textScale {
+    max-width: 1000px;
+  }
 
-	.wrapperScale {
-		max-width: 1000px;
-	}
+  .wrapperScale {
+    max-width: 1000px;
+  }
 
-	.dropdownScale {
-		justify-content: center;
-		gap: 100px;
-	}
+  .dropdownScale {
+    justify-content: center;
+    gap: 100px;
+  }
 
-	.cardScale {
-		position: relative;
-		width: 320px;
-		& img {
-			height: 500px;
-		}
+  .cardScale {
+    position: relative;
+    width: 320px;
+    & img {
+      height: 500px;
+    }
 
-		& div {
-			position: absolute;
-			top: calc(100% - 100px);
-			left: 0;
+    & div {
+      position: absolute;
+      top: calc(100% - 100px);
+      left: 0;
 
-			height: 100px;
-			min-height: 100px;
+      height: 100px;
+      min-height: 100px;
 
-			transition: width ease-in-out 0.1s, max-height ease-in-out 0.1s,
-				left ease-in-out 0.1s, border-radius ease-in-out 0.1s,
-				background-color ease-in-out 0.1s;
+      transition:
+        width ease-in-out 0.1s,
+        max-height ease-in-out 0.1s,
+        left ease-in-out 0.1s,
+        border-radius ease-in-out 0.1s,
+        background-color ease-in-out 0.1s;
 
-			z-index: 10;
+      z-index: 10;
 
-			&:hover {
-				left: -20px;
+      &:hover {
+        left: -20px;
 
-				width: calc(100% + 40px);
-				height: auto;
+        width: calc(100% + 40px);
+        height: auto;
 
-				border-radius: 10px;
+        border-radius: 10px;
 
-				padding-bottom: 20px;
+        padding-bottom: 20px;
 
-				background-color: #000000ee;
+        background-color: #000000ee;
 
-				box-shadow: 0 0 8px v.$shadowblack;
+        box-shadow: 0 0 8px v.$shadowblack;
 
-				z-index: 11;
+        z-index: 11;
 
-				&::before {
-					content: "...";
-					position: absolute;
-					bottom: 5px;
-					right: 10px;
-				}
+        &::before {
+          content: "...";
+          position: absolute;
+          bottom: 5px;
+          right: 10px;
+        }
 
-				& span {
-					&:last-of-type {
-						padding-right: 10px;
-					}
-				}
-			}
+        & span {
+          &:last-of-type {
+            padding-right: 10px;
+          }
+        }
+      }
 
-			&::before {
-				content: "...";
-				position: absolute;
-				bottom: 5px;
-				right: 10px;
-			}
-		}
+      &::before {
+        content: "...";
+        position: absolute;
+        bottom: 5px;
+        right: 10px;
+      }
+    }
 
-		& span {
-			&:last-of-type {
-				line-height: 29px;
-				padding-right: 20px;
-				font-size: calc(1rem - 2px);
-			}
-		}
-	}
-
-	.organizersScale {
-		gap: 80px;
-		justify-content: center;
-
-		& .main__organizers_container-card {
-			& img {
-				height: fit-content;
-				max-width: 250px;
-			}
-		}
-	}
-
-	.partnersScale {
-		gap: 80px;
-		justify-content: center;
-
-		& .main__partners_container-card {
-			& img {
-				height: fit-content;
-				max-width: 250px;
-			}
-		}
-	}
+    & span {
+      &:last-of-type {
+        line-height: 29px;
+        padding-right: 20px;
+        font-size: calc(1rem - 2px);
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-	* {
-		font-size: 18px;
-	}
+  * {
+    font-size: 18px;
+  }
 
-	.titleScale {
-		padding: 0 20%;
-	}
-	.textScale {
-		margin: 0 20%;
+  .titleScale {
+    padding: 0 20%;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .textScale {
+    margin: 0 20%;
 
-		& br {
-			display: none;
-		}
-	}
+    & br {
+      display: none;
+    }
+  }
 
-	.wrapperScale {
-		margin: 0 20%;
-	}
+  .wrapperScale {
+    margin: 0 20%;
+  }
 
-	.dropdownScale {
-		justify-content: center;
-		gap: 80px;
-	}
-	.cardScale {
-		width: 250px;
+  .dropdownScale {
+    justify-content: center;
+    gap: 80px;
+  }
+  .cardScale {
+    width: 250px;
 
-		& img {
-			height: 380px;
-		}
+    & img {
+      height: 380px;
+    }
 
-		& div {
-			position: absolute;
-			top: calc(100% - 90px);
-			left: 0;
+    & div {
+      position: absolute;
+      top: calc(100% - 90px);
+      left: 0;
 
-			height: 90px;
-			min-height: 90px;
+      height: 90px;
+      min-height: 90px;
 
-			transition: width ease-in-out 0.1s, left ease-in-out 0.1s,
-				border-radius ease-in-out 0.1s, background-color ease-in-out 0.1s;
+      transition:
+        width ease-in-out 0.1s,
+        left ease-in-out 0.1s,
+        border-radius ease-in-out 0.1s,
+        background-color ease-in-out 0.1s;
 
-			z-index: 10;
+      z-index: 10;
 
-			overflow: hidden;
+      overflow: hidden;
 
-			&:hover {
-				left: -20px;
+      &:hover {
+        left: -20px;
 
-				width: calc(100% + 40px);
-				height: auto;
+        width: calc(100% + 40px);
+        height: auto;
 
-				border-radius: 10px;
+        border-radius: 10px;
 
-				padding-bottom: 20px;
+        padding-bottom: 20px;
 
-				background-color: #000000ee;
+        background-color: #000000ee;
 
-				box-shadow: 0 0 8px v.$shadowblack;
+        box-shadow: 0 0 8px v.$shadowblack;
 
-				z-index: 11;
+        z-index: 11;
 
-				&::before {
-					content: "...";
-					position: absolute;
-					bottom: 5px;
-					right: 10px;
-				}
+        &::before {
+          content: "...";
+          position: absolute;
+          bottom: 5px;
+          right: 10px;
+        }
 
-				& span {
-					&:last-of-type {
-						padding-right: 10px;
-					}
-				}
-			}
+        & span {
+          &:last-of-type {
+            padding-right: 10px;
+          }
+        }
+      }
 
-			&::before {
-				content: "...";
-				position: absolute;
-				bottom: 5px;
-				right: 10px;
-			}
-		}
+      &::before {
+        content: "...";
+        position: absolute;
+        bottom: 5px;
+        right: 10px;
+      }
+    }
 
-		& span {
-			&:last-of-type {
-				line-height: 25px;
-				padding-right: 26px;
-				font-size: calc(1rem - 2px);
-			}
-		}
-	}
-
-	.organizersScale {
-		gap: 40px;
-		justify-content: center;
-
-		& .main__organizers_container-card {
-			& img {
-				height: fit-content;
-				max-width: 200px;
-			}
-		}
-	}
-
-	.partnersScale {
-		gap: 40px;
-		justify-content: center;
-
-		& .main__partners_container-card {
-			& img {
-				height: fit-content;
-				max-width: 200px;
-			}
-		}
-	}
+    & span {
+      &:last-of-type {
+        line-height: 25px;
+        padding-right: 26px;
+        font-size: calc(1rem - 2px);
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 767px) {
-	* {
-		font-size: 16px;
-	}
+  * {
+    font-size: 16px;
+  }
 
-	.titleScale {
-		padding: 0 30px;
-	}
+  .titleScale {
+    padding: 0 30px;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
 
-	.textScale {
-		margin: 0 10px;
-	}
-	.wrapperScale {
-		margin: 0 10px;
-	}
+  .textScale {
+    margin: 0 10px;
+  }
+  .wrapperScale {
+    margin: 0 10px;
+  }
 
-	.dropdownScale {
-		justify-content: center;
-		gap: 15px;
-	}
+  .dropdownScale {
+    justify-content: center;
+    gap: 15px;
+  }
 
-	.cardScale {
-		width: 300px;
+  .cardScale {
+    width: 300px;
 
-		& img {
-			height: 370px;
-		}
+    & img {
+      height: 370px;
+    }
 
-		& div {
-			position: absolute;
-			top: calc(100% - 80px);
-			left: 0;
+    & div {
+      position: absolute;
+      top: calc(100% - 80px);
+      left: 0;
 
-			height: 80px;
-			min-height: 80px;
+      height: 80px;
+      min-height: 80px;
 
-			transition: width ease-in-out 0.1s, max-height ease-in-out 0.1s,
-				left ease-in-out 0.1s, border-radius ease-in-out 0.1s,
-				background-color ease-in-out 0.1s;
+      transition:
+        width ease-in-out 0.1s,
+        max-height ease-in-out 0.1s,
+        left ease-in-out 0.1s,
+        border-radius ease-in-out 0.1s,
+        background-color ease-in-out 0.1s;
 
-			z-index: 10;
+      z-index: 10;
 
-			&:hover {
-				left: -20px;
+      &:hover {
+        left: -20px;
 
-				width: calc(100% + 40px);
-				height: auto;
+        width: calc(100% + 40px);
+        height: auto;
 
-				border-radius: 10px;
+        border-radius: 10px;
 
-				padding-bottom: 20px;
+        padding-bottom: 20px;
 
-				background-color: #000000ee;
+        background-color: #000000ee;
 
-				box-shadow: 0 0 8px v.$shadowblack;
+        box-shadow: 0 0 8px v.$shadowblack;
 
-				z-index: 11;
-				&::before {
-					content: "...";
-					position: absolute;
-					bottom: 5px;
-					right: 10px;
-				}
+        z-index: 11;
+        &::before {
+          content: "...";
+          position: absolute;
+          bottom: 5px;
+          right: 10px;
+        }
 
-				& span {
-					&:last-of-type {
-						padding-right: 10px;
-					}
-				}
-			}
+        & span {
+          &:last-of-type {
+            padding-right: 10px;
+          }
+        }
+      }
 
-			&::before {
-				content: "...";
-				position: absolute;
-				bottom: 5px;
-				right: 10px;
-			}
-		}
+      &::before {
+        content: "...";
+        position: absolute;
+        bottom: 5px;
+        right: 10px;
+      }
+    }
 
-		& span {
-			&:last-of-type {
-				line-height: 22.5px;
-				padding-right: 20px;
-				font-size: calc(1rem - 2px);
-			}
-		}
-	}
-
-	.organizersScale {
-		gap: 60px;
-		justify-content: center;
-		padding: 0 30px;
-
-		& .main__organizers_container-card {
-			& img {
-				max-height: 120px;
-			}
-		}
-	}
-
-	.partnersScale {
-		gap: 60px;
-		justify-content: center;
-		padding: 0 30px;
-
-		& .main__partners_container-card {
-			& img {
-				max-height: 120px;
-			}
-		}
-	}
+    & span {
+      &:last-of-type {
+        line-height: 22.5px;
+        padding-right: 20px;
+        font-size: calc(1rem - 2px);
+      }
+    }
+  }
 }

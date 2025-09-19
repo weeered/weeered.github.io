@@ -113,6 +113,10 @@
           border-radius: 10px;
 
           background-color: v.$transwhite;
+
+          &::placeholder {
+            overflow: visible;
+          }
         }
       }
 
