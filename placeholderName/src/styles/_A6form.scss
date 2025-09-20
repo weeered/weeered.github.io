@@ -91,12 +91,13 @@
 
       padding-top: 20px;
 
+      border-top: none;
+
       background: linear-gradient(
         170deg,
-        v.$transblack 40%,
-        v.$transblackAlt 90%
+        v.$transblackDark 40%,
+        v.$transblack 90%
       );
-
 
       &-inputFrame {
         display: flex;

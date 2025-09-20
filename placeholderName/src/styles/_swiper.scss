@@ -6,6 +6,12 @@
       &_swiper {
         height: 450px;
         max-width: 1000px;
+
+        & .swiper-slide {
+          max-width: 85%;
+
+          margin: 0 7.5%;
+        }
       }
     }
   }
@@ -15,8 +21,16 @@
   .main {
     &__desc {
       &_swiper {
-        height: 450px;
-        max-width: calc(100vh - 20px);
+        height: 325px;
+        max-width: calc(100vw - 20%);
+
+        & .swiper-button-prev {
+          display: none;
+        }
+
+        & .swiper-button-next {
+          display: none;
+        }
       }
     }
   }
@@ -54,6 +68,7 @@
       & .swiper-slide {
         display: flex;
         align-items: center;
+        justify-content: center;
 
         user-select: none;
 
@@ -72,12 +87,12 @@
       & .swiper-button-prev {
         height: 70px;
 
-        padding: 15px 10px;
+        padding: 15px 12px;
 
-        background-color: v.$red;
-        color: v.$beige;
+        background-color: v.$transblack;
+        backdrop-filter: blur(2px);
+        color: #fff;
 
-        border: 3px solid v.$beige;
         border-radius: 10px;
 
         box-shadow: 0 0 10px v.$shadowblack;
@@ -96,12 +111,12 @@
       & .swiper-button-next {
         height: 70px;
 
-        padding: 15px 10px;
+        padding: 15px 12px;
 
-        background-color: v.$red;
-        color: v.$beige;
+        background-color: v.$transblack;
+        backdrop-filter: blur(2px);
+        color: #fff;
 
-        border: 3px solid v.$beige;
         border-radius: 10px;
 
         box-shadow: 0 0 6px v.$shadowblack;
