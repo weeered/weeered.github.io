@@ -1116,7 +1116,11 @@ h3 {
   background-color: #bf1e2e;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2352941176);
 }
+.main__partners_container.hotelContainer {
+  padding-top: 100px;
+}
 .main__partners_container {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -1127,6 +1131,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
   background-color: #fff;
   padding: 30px;
   border-radius: 10px;
@@ -1154,6 +1159,82 @@ h3 {
   width: 100%;
   height: 100%;
   transition: scale ease-in-out 0.2s;
+}
+.main__partners_container-hotelDesc {
+  position: absolute;
+  top: 20px;
+  color: #ffe2b0;
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 0 10px;
+}
+.main__partners_container-card.hotelCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 5px solid #fff;
+  padding: 0;
+}
+.main__partners_container-card.hotelCard img {
+  padding: 30px;
+}
+.main__partners_container-card.hotelCard .hotelDesc {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: #000;
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.9176470588);
+}
+.main__partners_container-card.hotelCard::after {
+  display: none;
+}
+.main__partners_container-card.crowne {
+  background-color: #9e1d70;
+}
+.main__partners_container-card.zalkind {
+  background-color: #000;
+}
+.main__partners_container-card.zalkind .zalkindLogo {
+  font-family: "DIN Condensed";
+  font-size: 2.2rem;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  width: 100%;
+  height: 100%;
+}
+.main__partners_container-card.zalkind img {
+  filter: brightness(0) invert(1);
+}
+.main__partners_container-card.minsk {
+  background-color: #d62434;
+}
+.main__partners_container-card.minsk img {
+  padding: 10px;
+  filter: brightness(0) invert(1);
+}
+.main__partners_container-card.victoria {
+  background-color: #456175;
+}
+.main__partners_container-card.victoria img {
+  filter: brightness(0) invert(1);
+}
+.main__partners_container-card.belarus {
+  background-color: #10396f;
+}
+.main__partners_container-card.garni {
+  background-color: #480505;
+}
+.main__partners_container-card.garni img {
+  filter: brightness(0) invert(1);
 }
 
 @media screen and (min-width: 1024px) {

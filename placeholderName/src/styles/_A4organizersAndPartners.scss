@@ -216,7 +216,13 @@
 
     box-shadow: 0 0 10px v.$shadowgray;
 
+    &_container.hotelContainer {
+      padding-top: 100px;
+    }
+
     &_container {
+      position: relative;
+
       display: flex;
       flex-wrap: wrap;
 
@@ -229,6 +235,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        text-decoration: none;
 
         // background: linear-gradient(
         // 	170deg,
@@ -285,6 +293,116 @@
           height: 100%;
 
           transition: scale ease-in-out 0.2s;
+        }
+      }
+
+      &-hotelDesc {
+        position: absolute;
+        top: 20px;
+        color: v.$beigeLighter;
+        font-size: 1.1rem;
+
+        text-align: center;
+
+        padding: 0 10px;
+      }
+
+      &-card.hotelCard {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        border: 5px solid #fff;
+
+        padding: 0;
+
+        & img {
+          padding: 30px;
+        }
+
+        & .hotelDesc {
+          position: relative;
+          bottom: 0;
+          left: 0;
+
+          width: 100%;
+
+          display: flex;
+          flex-direction: column;
+
+          color: #000;
+          text-align: center;
+          padding: 10px;
+
+          // background: linear-gradient(
+          //   50deg,
+          //   v.$transblack 40%,
+          //   v.$transgray 90%
+          // );
+          background-color: v.$transwhite;
+        }
+
+        &::after {
+          display: none;
+        }
+      }
+
+      &-card.crowne {
+        background-color: #9e1d70;
+      }
+
+      &-card.zalkind {
+        background-color: #000;
+
+        & .zalkindLogo {
+          font-family: "DIN Condensed";
+          font-size: 2.2rem;
+          color: #fff;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          padding: 30px;
+
+          width: 100%;
+
+          height: 100%;
+        }
+
+        & img {
+          filter: brightness(0) invert(1);
+        }
+      }
+
+      &-card.minsk {
+        background-color: #d62434;
+
+        & img {
+          padding: 10px;
+          filter: brightness(0) invert(1);
+        }
+      }
+
+      &-card.victoria {
+        background-color: #456175;
+
+        & img {
+          filter: brightness(0) invert(1);
+        }
+      }
+
+      &-card.belarus {
+        background-color: #10396f;
+      }
+
+      &-card.garni {
+        background-color: #480505;
+
+        & img {
+          filter: brightness(0) invert(1);
         }
       }
     }
