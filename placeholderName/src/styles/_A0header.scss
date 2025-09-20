@@ -1,424 +1,443 @@
 @use "./variables" as v;
 
 @media screen and (min-width: 1024px) {
-	.header {
-		&__container {
-			position: fixed;
-			top: 0;
-			left: 50%;
-			transform: translate(-50%, -100%);
+  .header {
+    &__container {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -100%);
 
-			width: 100%;
-			max-width: 1000px;
-			height: fit-content;
+      width: 100%;
+      max-width: 1000px;
+      height: 50px;
 
-			display: flex;
-			justify-content: space-between;
+      display: flex;
+      justify-content: space-between;
 
-			padding: 10px 100px;
-			z-index: 20;
+      padding: 0 100px;
+      z-index: 20;
 
-			box-shadow: 0 0 8px v.$shadowblack;
+      box-shadow: 0 0 8px v.$shadowblack;
 
-			background: linear-gradient(
-				177deg,
-				v.$transblack 40%,
-				v.$transblackAlt 90%
-			);
+      background: linear-gradient(
+        177deg,
+        v.$transblack 40%,
+        v.$transblackAlt 90%
+      );
 
-			backdrop-filter: blur(3px);
+      backdrop-filter: blur(3px);
 
-			border-bottom-right-radius: 10px;
-			border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
 
-			transition: transform ease-in-out 0.1s;
+      transition: transform ease-in-out 0.1s;
 
-			&_up {
-				position: absolute;
-				right: 0;
-				top: 0;
+      &_up {
+        position: absolute;
+        right: 0;
+        top: 0;
 
-				display: flex;
-				align-items: center;
-				justify-content: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-				padding: 0 5px;
+        padding: 0 5px;
 
-				height: 100%;
+        height: 100%;
 
-				background-color: v.$transdim;
+        background-color: v.$transdim;
 
-				border-bottom-right-radius: 10px;
+        border-bottom-right-radius: 10px;
 
-				transition: background-color ease-in-out 0.1s;
+        transition: background-color ease-in-out 0.1s;
 
-				@media (pointer: fine) {
-					&:hover {
-						background-color: v.$transgray;
-					}
-				}
+        @media (pointer: fine) {
+          &:hover {
+            background-color: v.$transgray;
+          }
+        }
 
-				& img {
-					height: 30px;
-					width: fit-content;
+        & img {
+          height: 30px;
+          width: fit-content;
 
-					user-select: none;
-				}
-			}
+          user-select: none;
+        }
+      }
 
-			&_toggle {
-				position: absolute;
-				left: 0;
-				top: 100%;
+      &_toggle {
+        position: absolute;
+        left: 0;
+        top: 100%;
 
-				display: flex;
-				align-items: center;
-				justify-content: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-				padding: 0 5px;
+        padding: 0 5px;
 
-				height: 100%;
+        height: 100%;
 
-				border-bottom-left-radius: 10px;
-				border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
 
-				background-color: v.$transblack;
+        background-color: v.$transblack;
 
-				transition: top ease-in-out 0.1s, background-color ease-in-out 0.1s,
-					border-radius ease-in-out 0.1s;
+        transition:
+          top ease-in-out 0.1s,
+          background-color ease-in-out 0.1s,
+          border-radius ease-in-out 0.1s;
 
-				cursor: pointer;
+        cursor: pointer;
 
-				& img {
-					width: 30px;
-					height: 30px;
-					transform: rotate(180deg);
+        & img {
+          width: 30px;
+          height: 30px;
+          transform: rotate(180deg);
 
-					transition: transform ease-in-out 0.2s;
+          transition: transform ease-in-out 0.2s;
 
-					user-select: none;
-				}
+          user-select: none;
+        }
 
-				@media (pointer: fine) {
-					&:hover {
-						background-color: v.$transblackAlt;
-					}
-				}
-			}
+        @media (pointer: fine) {
+          &:hover {
+            background-color: v.$transblackAlt;
+          }
+        }
+      }
 
-			&_elem {
-				color: #fff;
+      &_elem {
+        height: 100%;
+        &-link {
+          position: relative;
 
-				&-link {
-					position: relative;
-					color: #fff;
-					text-decoration: none;
+          height: 100%;
+          display: flex;
+          align-items: center;
 
-					@media (pointer: fine) {
-						&:hover {
-							color: v.$beigeLighter;
-							&::after {
-								width: 100%;
-								left: 0;
-							}
-						}
-					}
+          color: #fff;
+          text-decoration: none;
 
-					&::after {
-						content: "";
-						position: absolute;
-						bottom: -3px;
-						left: 50%;
-						width: 0;
-						height: 1px;
+          @media (pointer: fine) {
+            &:hover {
+              color: v.$beigeLighter;
+              &::after {
+                width: 100%;
+                left: 0;
+              }
+            }
+          }
 
-						background-color: v.$beigeLighter;
-						transition: width ease-in-out 0.15s, left ease-in-out 0.15s;
-					}
-				}
-			}
-		}
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            width: 0;
+            height: 1px;
 
-		&__burger {
-			display: none;
-		}
-	}
+            background-color: v.$beigeLighter;
+            transition:
+              width ease-in-out 0.15s,
+              left ease-in-out 0.15s;
+          }
+        }
+      }
+    }
+
+    &__burger {
+      display: none;
+    }
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-	.header {
-		&__container {
-			position: fixed;
-			top: 0;
-			left: 50%;
-			transform: translate(-50%, -100%);
+  .header {
+    &__container {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -100%);
 
-			width: 100%;
-			max-width: 1000px;
-			height: fit-content;
+      width: 100%;
+      max-width: 1000px;
+      height: fit-content;
 
-			display: flex;
-			justify-content: space-between;
+      display: flex;
+      justify-content: space-between;
 
-			padding: 10px 100px;
-			z-index: 20;
+      padding: 10px 100px;
+      z-index: 20;
 
-			box-shadow: 0 0 8px v.$shadowblack;
+      box-shadow: 0 0 8px v.$shadowblack;
 
-			background: linear-gradient(
-				177deg,
-				v.$transblack 40%,
-				v.$transblackAlt 90%
-			);
+      background: linear-gradient(
+        177deg,
+        v.$transblack 40%,
+        v.$transblackAlt 90%
+      );
 
-			backdrop-filter: blur(3px);
+      backdrop-filter: blur(3px);
 
-			border-bottom-right-radius: 10px;
-			border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
 
-			transition: transform ease-in-out 0.1s;
+      transition: transform ease-in-out 0.1s;
 
-			&_up {
-				position: absolute;
-				right: 0;
-				top: 0;
+      &_up {
+        position: absolute;
+        right: 0;
+        top: 0;
 
-				display: flex;
-				align-items: center;
-				justify-content: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-				padding: 0 5px;
+        padding: 0 5px;
 
-				height: 100%;
+        height: 100%;
 
-				background-color: v.$transdim;
+        background-color: v.$transdim;
 
-				border-bottom-right-radius: 10px;
+        border-bottom-right-radius: 10px;
 
-				transition: background-color ease-in-out 0.1s;
+        transition: background-color ease-in-out 0.1s;
 
-				@media (pointer: fine) {
-					&:hover {
-						background-color: v.$transgray;
-					}
-				}
+        @media (pointer: fine) {
+          &:hover {
+            background-color: v.$transgray;
+          }
+        }
 
-				& img {
-					height: 30px;
-					width: fit-content;
+        & img {
+          height: 30px;
+          width: fit-content;
 
-					user-select: none;
-				}
-			}
+          user-select: none;
+        }
+      }
 
-			&_toggle {
-				position: absolute;
-				left: 0;
-				top: 100%;
+      &_toggle {
+        position: absolute;
+        left: 0;
+        top: 100%;
 
-				display: flex;
-				align-items: center;
-				justify-content: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-				padding: 0 5px;
+        padding: 0 5px;
 
-				height: 100%;
+        height: 100%;
 
-				border-bottom-left-radius: 10px;
-				border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
 
-				background-color: v.$transblack;
+        background-color: v.$transblack;
 
-				transition: top ease-in-out 0.1s, background-color ease-in-out 0.1s,
-					border-radius ease-in-out 0.1s;
+        transition:
+          top ease-in-out 0.1s,
+          background-color ease-in-out 0.1s,
+          border-radius ease-in-out 0.1s;
 
-				cursor: pointer;
+        cursor: pointer;
 
-				& img {
-					width: 30px;
-					height: 30px;
-					transform: rotate(180deg);
+        & img {
+          width: 30px;
+          height: 30px;
+          transform: rotate(180deg);
 
-					transition: transform ease-in-out 0.2s;
+          transition: transform ease-in-out 0.2s;
 
-					user-select: none;
-				}
+          user-select: none;
+        }
 
-				@media (pointer: fine) {
-					&:hover {
-						background-color: v.$transblackAlt;
-					}
-				}
-			}
+        @media (pointer: fine) {
+          &:hover {
+            background-color: v.$transblackAlt;
+          }
+        }
+      }
 
-			&_elem {
-				color: #fff;
+      &_elem {
+        color: #fff;
 
-				&-link {
-					position: relative;
-					color: #fff;
-					text-decoration: none;
+        &-link {
+          position: relative;
+          color: #fff;
+          text-decoration: none;
 
-					@media (pointer: fine) {
-						&:hover {
-							color: v.$beigeLighter;
-							&::after {
-								width: 100%;
-								left: 0;
-							}
-						}
-					}
+          @media (pointer: fine) {
+            &:hover {
+              color: v.$beigeLighter;
+              &::after {
+                width: 100%;
+                left: 0;
+              }
+            }
+          }
 
-					&::after {
-						content: "";
-						position: absolute;
-						bottom: -3px;
-						left: 50%;
-						width: 0;
-						height: 1px;
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: -3px;
+            left: 50%;
+            width: 0;
+            height: 1px;
 
-						background-color: v.$beigeLighter;
-						transition: width ease-in-out 0.15s, left ease-in-out 0.15s;
-					}
-				}
-			}
-		}
-		&__burger {
-			display: none;
-		}
-	}
+            background-color: v.$beigeLighter;
+            transition:
+              width ease-in-out 0.15s,
+              left ease-in-out 0.15s;
+          }
+        }
+      }
+    }
+    &__burger {
+      display: none;
+    }
+  }
 }
 
 @media screen and (max-width: 767px) {
-	.header {
-		position: fixed;
-		top: 0;
-		left: 0;
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
 
-		z-index: 30;
+    z-index: 30;
 
-		width: 100%;
+    width: 100%;
 
-		&__burger {
-			position: absolute;
-			left: 0;
-			top: 0;
+    &__burger {
+      position: absolute;
+      left: 0;
+      top: 0;
 
-			width: 100%;
+      width: 100%;
 
-			display: flex;
+      display: flex;
 
-			&_container {
-				position: absolute;
-				top: 0;
-				left: 0;
+      &_container {
+        position: absolute;
+        top: 0;
+        left: 0;
 
-				transform: translate(-100%, 0);
+        transform: translate(-100%, 0);
 
-				display: flex;
-				flex-direction: column;
-				gap: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
 
-				width: 100%;
+        width: 100%;
 
-				padding-top: 10px;
+        padding-top: 10px;
 
-				box-shadow: 0 0 8px v.$shadowblack;
+        box-shadow: 0 0 8px v.$shadowblack;
 
-				background: linear-gradient(120deg, v.$transblack, v.$transblackAlt);
-				backdrop-filter: blur(2px);
+        background: linear-gradient(120deg, v.$transblack, v.$transblackAlt);
+        backdrop-filter: blur(2px);
 
-				overflow: hidden;
+        overflow: hidden;
 
-				border-bottom-left-radius: 10px;
-				border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
 
-				transition: transform ease-in-out 0.3s;
+        transition: transform ease-in-out 0.3s;
 
-				&-elem {
-					padding: 5px 20px;
+        &-elem {
+          padding: 5px 20px;
 
-					&:last-of-type {
-						background-color: v.$transdim;
-					}
+          &:last-of-type {
+            background-color: v.$transdim;
+          }
 
-					& a {
-						font-size: 24px;
-						color: #fff;
-						text-decoration: none;
+          & a {
+            display: flex;
+            
+            font-size: 24px;
+            color: #fff;
+            text-decoration: none;
+            width: 100%;
 
-						& img {
-							margin: 0 auto;
-							width: 30px;
-						}
-					}
-				}
-			}
+            & img {
+              margin: 0 auto;
+              width: 30px;
+            }
+          }
+        }
+      }
 
-			&_button {
-				position: absolute;
-				left: 0;
-				top: 0;
+      &_button {
+        position: absolute;
+        left: 0;
+        top: 0;
 
-				display: flex;
-				justify-content: center;
-				align-items: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-				background: linear-gradient(120deg, v.$transblack, v.$transblackAlt);
-				backdrop-filter: blur(2px);
+        background: linear-gradient(120deg, v.$transblack, v.$transblackAlt);
+        backdrop-filter: blur(2px);
 
-				border-bottom-right-radius: 10px;
+        border-bottom-right-radius: 10px;
 
-				box-shadow: 0 0 8px v.$shadowblack;
+        box-shadow: 0 0 8px v.$shadowblack;
 
-				padding: 30px 15px;
+        padding: 30px 15px;
 
-				width: fit-content;
-				height: 29px;
+        width: fit-content;
+        height: 29px;
 
-				transition: transform ease-in-out 0.3s;
+        transition: transform ease-in-out 0.3s;
 
-				&-elem {
-					position: relative;
-					width: 50px;
-					height: 3px;
-					background-color: #fff;
+        &-elem {
+          position: relative;
+          width: 50px;
+          height: 3px;
+          background-color: #fff;
 
-					transition-delay: 0.1s;
+          transition-delay: 0.1s;
 
-					&::before {
-						content: "";
-						position: absolute;
-						top: 13px;
-						left: 50%;
-						transform: translate(-50%, 0);
+          &::before {
+            content: "";
+            position: absolute;
+            top: 13px;
+            left: 50%;
+            transform: translate(-50%, 0);
 
-						width: 50px;
-						height: 3px;
-						background-color: #fff;
+            width: 50px;
+            height: 3px;
+            background-color: #fff;
 
-						transition: transform ease-in 0.08s, top ease-in-out 0.3s;
-					}
+            transition:
+              transform ease-in 0.08s,
+              top ease-in-out 0.3s;
+          }
 
-					&::after {
-						content: "";
-						position: absolute;
-						top: -13px;
-						left: 50%;
-						transform: translate(-50%, 0);
+          &::after {
+            content: "";
+            position: absolute;
+            top: -13px;
+            left: 50%;
+            transform: translate(-50%, 0);
 
-						width: 50px;
-						height: 3px;
-						background-color: #fff;
+            width: 50px;
+            height: 3px;
+            background-color: #fff;
 
-						transition: transform ease-in 0.08s, top ease-in-out 0.3s;
-					}
-				}
-			}
-		}
+            transition:
+              transform ease-in 0.08s,
+              top ease-in-out 0.3s;
+          }
+        }
+      }
+    }
 
-		&__container {
-			display: none;
-		}
-	}
+    &__container {
+      display: none;
+    }
+  }
 }

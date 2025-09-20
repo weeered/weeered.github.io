@@ -23,6 +23,10 @@
       href="https://fonts.googleapis.com/css2?family=Chiron+Hei+HK:ital,wght@0,200..900;1,200..900&family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
   </head>
 
   <body>
@@ -65,21 +69,6 @@
             alt="up"
           />
         </a>
-        <!-- <div class="header__container_elem">
-					<a
-						href="#desc"
-						onclick="dropdownToggle(document.getElementById('choomButton'))"
-						class="header__container_elem-link"
-						>Участникам</a
-					>
-					/
-					<a
-						href="#desc"
-						onclick="dropdownToggle(document.getElementById('corpoButton'))"
-						class="header__container_elem-link"
-						>Партнерам</a
-					>
-				</div> -->
         <div class="header__container_elem">
           <a href="#prog" class="header__container_elem-link">Программа</a>
         </div>
@@ -116,11 +105,28 @@
 
     <main class="main">
       <div class="main__desc" id="desc">
-        <div class="main__desc_video textScale">
+        <!-- <div class="main__desc_video textScale">
           <video width="100%" height="100%" controls autoplay muted loop>
             <source src="./media/video/0831.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
+        </div> -->
+
+        <div class="swiper main__desc_swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./media/desc_gallery/1.jpg" alt="photo" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./" alt="photo">
+            </div>
+          </div>
+          <!-- <div class="swiper-pagination"></div> -->
+
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <div class="swiper-scrollbar"></div>
         </div>
 
         <div class="main__desc_textbox textScale">
@@ -653,12 +659,12 @@
 
         <form class="main__form_elem" action="mailInfo.php" method="POST">
           <div class="main__form_elem-inputFrame">
-            <label for="">Ваше имя:</label>
+            <label for="">Ваше имя*:</label>
             <input type="text" placeholder="Иван Иванов" name="name" required />
           </div>
 
           <div class="main__form_elem-inputFrame">
-            <label for="">Email:</label>
+            <label for="">Email*:</label>
             <input
               type="text"
               placeholder="GoodTimesWithHotguy@hotmail.com"
@@ -668,21 +674,16 @@
           </div>
 
           <div class="main__form_elem-inputFrame">
-            <label for="">Номер телефона:</label>
-            <input
-              type="tel"
-              placeholder="+375 (29) 123-45-67"
-              name="tel"
-              required
-            />
+            <label for="">Контактный телефон:</label>
+            <input type="tel" placeholder="+375 (29) 123-45-67" name="tel" />
           </div>
 
           <div class="main__form_elem-textareaFrame">
-            <label for="">Ваше сообщение:</label>
+            <label for="">Ваше сообщение*:</label>
             <div class="main__form_elem-textareaFrameContainer">
               <textarea
                 type="text"
-                placeholder="Ваше сообщение"
+                placeholder="Сообщение"
                 name="message"
                 spellcheck="false"
                 required
@@ -696,6 +697,8 @@
             class="main__form_elem-submit"
             value="Отправить"
           />
+
+          <div class="main__form_elem-legend">*Oбязательное поле</div>
         </form>
       </div>
     </main>
@@ -791,8 +794,10 @@
         </div>
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="./scripts/countdown.js"></script>
     <script src="./scripts/dropdown.js"></script>
     <script src="./scripts/header.js"></script>
+    <script src="./scripts/swiper.js"></script>
   </body>
 </html>

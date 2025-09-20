@@ -7,6 +7,10 @@ if (isset($_POST["submit"])) {
     $tel = $_POST["tel"];
     $message = $_POST["message"];
 
+    if ($tel == "") {
+        $tel = "не указан";
+    }
+
     $messageComposed =
         "От: $name" .
         "\r\n" .
@@ -27,7 +31,7 @@ if (isset($_POST["submit"])) {
     if (
         mail(
             "info@culinarycup.bcmagazine.by",
-            "Новая форма: culinarycup.bcmagazine.by",
+            "Формы culinarycup.bcmagazine.by",
             $messageHTML,
             $headers,
         )
