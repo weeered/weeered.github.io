@@ -9,12 +9,15 @@
         gap: 33px;
         justify-content: center;
         max-width: 1000px;
+        margin: 0 auto;
 
         &-card {
+          width: calc((1000px - 66px) / 3);
+          height: calc((((1000px - 66px) / 3) / 16) * 9);
+          padding: 30px;
           & img {
+            height: 100%;
             object-fit: contain;
-            height: fit-content;
-            max-width: 250px;
           }
         }
       }
@@ -27,12 +30,31 @@
         gap: 33px;
         justify-content: center;
         max-width: 1000px;
+        margin: 0 auto;
 
         &-card {
+          width: calc((1000px - 66px) / 3);
+          height: calc((((1000px - 66px) / 3) / 16) * 9);
+          padding: 30px;
           & img {
+            height: 100%;
             object-fit: contain;
-            height: fit-content;
-            max-width: 250px;
+          }
+        }
+
+        &-card.hotelCard {
+          height: 100%;
+          & img {
+            width: calc((1000px - 66px) / 3);
+            height: calc((((1000px - 66px) / 3) / 16) * 9);
+            padding: 30px;
+          }
+
+          & .zalkindLogo {
+            width: calc((1000px - 66px) / 3);
+            height: calc((((1000px - 66px) / 3) / 16) * 9);
+            padding: 30px;
+            font-size: 2.2rem;
           }
         }
       }
@@ -48,11 +70,16 @@
       &_container {
         gap: 30px;
         justify-content: center;
+
+        margin: 0 10vw;
+
         &-card {
+          width: calc((100vw - 20vw - 60px) / 3);
+          height: calc((((100vw - 20vw - 60px) / 3) / 16) * 9);
+          padding: 15px;
           & img {
+            height: 100%;
             object-fit: contain;
-            height: fit-content;
-            max-width: 200px;
           }
         }
       }
@@ -65,10 +92,34 @@
         gap: 30px;
         justify-content: center;
         &-card {
+          width: calc((100vw - 20vw - 60px) / 3);
+          height: calc((((100vw - 20vw - 60px) / 3) / 16) * 9);
+          padding: 15px;
           & img {
+            height: 100%;
             object-fit: contain;
-            height: fit-content;
-            max-width: 200px;
+          }
+        }
+
+        &-card.hotelCard {
+          height: 100%;
+          & img {
+            width: calc((100vw - 20vw - 60px) / 3);
+            height: calc((((100vw - 20vw - 60px) / 3) / 16) * 9);
+            padding: 15px;
+          }
+
+          & .zalkindLogo {
+            width: calc((100vw - 20vw - 60px) / 3);
+            height: calc((((100vw - 20vw - 60px) / 3) / 16) * 9);
+            padding: 15px;
+            font-size: 2rem;
+          }
+
+          & .hotelDesc {
+            height: 125px;
+            align-items: center;
+            justify-content: center;
           }
         }
       }
@@ -82,14 +133,17 @@
       margin: 30px 0;
 
       &_container {
-        gap: 30px;
+        gap: 15px;
         justify-content: center;
-        padding: 0 30px;
 
+        margin: 0 10px;
         &-card {
+          width: calc((100vw - 20px - 15px) / 2);
+          height: calc((((100vw - 20px - 30px) / 2) / 16) * 9);
+          padding: 15px;
           & img {
+            height: 100%;
             object-fit: contain;
-            max-height: 120px;
           }
         }
       }
@@ -99,14 +153,39 @@
       margin: 30px 0;
 
       &_container {
-        gap: 30px;
+        gap: 15px;
         justify-content: center;
-        padding: 0 30px;
 
+        margin: 0 10px;
         &-card {
+          width: calc((100vw - 20px - 15px) / 2);
+          height: calc((((100vw - 20px - 30px) / 2) / 16) * 9);
+          padding: 15px;
           & img {
+            height: 100%;
             object-fit: contain;
-            max-height: 120px;
+          }
+        }
+
+        &-card.hotelCard {
+          height: 100%;
+          & img {
+            width: calc((100vw - 20px - 15px) / 2);
+            height: calc((((100vw - 20px - 30px) / 2) / 16) * 9);
+            padding: 15px;
+          }
+
+          & .zalkindLogo {
+            width: calc((100vw - 20px - 15px) / 2);
+            height: calc((((100vw - 20px - 30px) / 2) / 16) * 9);
+            padding: 15px;
+            font-size: 2rem;
+          }
+
+          & .hotelDesc {
+            height: 120px;
+            align-items: center;
+            justify-content: center;
           }
         }
       }
@@ -134,9 +213,6 @@
       display: flex;
       flex-wrap: wrap;
 
-      width: 100%;
-      margin: 0 auto;
-
       &-card {
         position: relative;
 
@@ -152,7 +228,6 @@
 
         background-color: #fff;
 
-        padding: 30px;
         border-radius: 10px;
 
         box-shadow: 0 0 10px v.$shadowblack;
@@ -190,7 +265,7 @@
         }
 
         &:hover {
-          scale: 1.05;
+          scale: 1.025;
           box-shadow: 0 0 12px v.$shadowblack;
         }
 
@@ -216,18 +291,15 @@
 
     box-shadow: 0 0 10px v.$shadowgray;
 
-    &_container.hotelContainer {
-      padding-top: 100px;
-    }
+    // &_container.hotelContainer {
+      
+    // }
 
     &_container {
       position: relative;
 
       display: flex;
       flex-wrap: wrap;
-
-      width: 100%;
-      margin: 0 auto;
 
       &-card {
         position: relative;
@@ -246,7 +318,6 @@
 
         background-color: #fff;
 
-        padding: 30px;
         border-radius: 10px;
 
         box-shadow: 0 0 10px v.$shadowblack;
@@ -284,20 +355,16 @@
         }
 
         &:hover {
-          scale: 1.05;
+          scale: 1.025;
           box-shadow: 0 0 12px v.$shadowblack;
         }
 
         & img {
-          width: 100%;
-          height: 100%;
-
           transition: scale ease-in-out 0.2s;
         }
       }
 
       &-hotelDesc {
-        position: absolute;
         top: 20px;
         color: v.$beigeLighter;
         font-size: 1.1rem;
@@ -318,10 +385,6 @@
 
         padding: 0;
 
-        & img {
-          padding: 30px;
-        }
-
         & .hotelDesc {
           position: relative;
           bottom: 0;
@@ -341,6 +404,7 @@
           //   v.$transblack 40%,
           //   v.$transgray 90%
           // );
+
           background-color: v.$transwhite;
         }
 
@@ -358,7 +422,7 @@
 
         & .zalkindLogo {
           font-family: "DIN Condensed";
-          font-size: 2.2rem;
+
           color: #fff;
 
           display: flex;
@@ -366,10 +430,6 @@
           align-items: center;
 
           padding: 30px;
-
-          width: 100%;
-
-          height: 100%;
         }
 
         & img {

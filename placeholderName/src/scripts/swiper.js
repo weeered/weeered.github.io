@@ -1,22 +1,35 @@
-const swiper = new Swiper(".swiper", {
+const galleryThumbs = new Swiper(".galleryThumbs", {
   // Optional parameters
   direction: "horizontal",
 
   loop: true,
+  slidesPerView: 7,
+  freeMode: true,
+  watchSlidesVisibility: true,
+  watchSlidesProgress: true,
+});
 
-  // If we need pagination
-  pagination: {
-    el: ".swiper-pagination",
+const galleryBig = new Swiper(".galleryBig", {
+  // Optional parameters
+  direction: "horizontal",
+
+  loop: true,
+  grabCursor: true,
+  autoplay: {
+    delay: 2500,
+    pauseOnMouseEnter: true,
+  },
+  zoom: {
+    maxRatio: 3,
+  },
+
+  thumbs: {
+    swiper: galleryThumbs,
   },
 
   // Navigation arrows
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: ".swiper-scrollbar",
   },
 });

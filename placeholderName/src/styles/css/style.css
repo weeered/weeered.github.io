@@ -15,56 +15,11 @@
   }
   .wrapperScale {
     max-width: 1000px;
+    width: 100%;
   }
   .dropdownScale {
     justify-content: center;
     gap: 100px;
-  }
-  .cardScale {
-    position: relative;
-    width: 320px;
-  }
-  .cardScale img {
-    height: 500px;
-  }
-  .cardScale div {
-    position: absolute;
-    top: calc(100% - 100px);
-    left: 0;
-    height: 100px;
-    min-height: 100px;
-    transition: width ease-in-out 0.1s, max-height ease-in-out 0.1s, left ease-in-out 0.1s, border-radius ease-in-out 0.1s, background-color ease-in-out 0.1s;
-    z-index: 10;
-  }
-  .cardScale div:hover {
-    left: -20px;
-    width: calc(100% + 40px);
-    height: auto;
-    border-radius: 10px;
-    padding-bottom: 20px;
-    background-color: rgba(0, 0, 0, 0.9333333333);
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2666666667);
-    z-index: 11;
-  }
-  .cardScale div:hover::before {
-    content: "...";
-    position: absolute;
-    bottom: 5px;
-    right: 10px;
-  }
-  .cardScale div:hover span:last-of-type {
-    padding-right: 10px;
-  }
-  .cardScale div::before {
-    content: "...";
-    position: absolute;
-    bottom: 5px;
-    right: 10px;
-  }
-  .cardScale span:last-of-type {
-    line-height: 29px;
-    padding-right: 20px;
-    font-size: calc(1rem - 2px);
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -78,63 +33,17 @@
     text-align: center;
   }
   .textScale {
-    margin: 0 20%;
+    margin: 0 10%;
   }
   .textScale br {
     display: none;
   }
   .wrapperScale {
-    margin: 0 20%;
+    margin: 0 10%;
   }
   .dropdownScale {
     justify-content: center;
     gap: 80px;
-  }
-  .cardScale {
-    width: 250px;
-  }
-  .cardScale img {
-    height: 380px;
-  }
-  .cardScale div {
-    position: absolute;
-    top: calc(100% - 90px);
-    left: 0;
-    height: 90px;
-    min-height: 90px;
-    transition: width ease-in-out 0.1s, left ease-in-out 0.1s, border-radius ease-in-out 0.1s, background-color ease-in-out 0.1s;
-    z-index: 10;
-    overflow: hidden;
-  }
-  .cardScale div:hover {
-    left: -20px;
-    width: calc(100% + 40px);
-    height: auto;
-    border-radius: 10px;
-    padding-bottom: 20px;
-    background-color: rgba(0, 0, 0, 0.9333333333);
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2666666667);
-    z-index: 11;
-  }
-  .cardScale div:hover::before {
-    content: "...";
-    position: absolute;
-    bottom: 5px;
-    right: 10px;
-  }
-  .cardScale div:hover span:last-of-type {
-    padding-right: 10px;
-  }
-  .cardScale div::before {
-    content: "...";
-    position: absolute;
-    bottom: 5px;
-    right: 10px;
-  }
-  .cardScale span:last-of-type {
-    line-height: 25px;
-    padding-right: 26px;
-    font-size: calc(1rem - 2px);
   }
 }
 @media screen and (max-width: 767px) {
@@ -156,51 +65,6 @@
   .dropdownScale {
     justify-content: center;
     gap: 15px;
-  }
-  .cardScale {
-    width: 300px;
-  }
-  .cardScale img {
-    height: 370px;
-  }
-  .cardScale div {
-    position: absolute;
-    top: calc(100% - 80px);
-    left: 0;
-    height: 80px;
-    min-height: 80px;
-    transition: width ease-in-out 0.1s, max-height ease-in-out 0.1s, left ease-in-out 0.1s, border-radius ease-in-out 0.1s, background-color ease-in-out 0.1s;
-    z-index: 10;
-  }
-  .cardScale div:hover {
-    left: -20px;
-    width: calc(100% + 40px);
-    height: auto;
-    border-radius: 10px;
-    padding-bottom: 20px;
-    background-color: rgba(0, 0, 0, 0.7411764706);
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2666666667);
-    z-index: 11;
-  }
-  .cardScale div:hover::before {
-    content: "...";
-    position: absolute;
-    bottom: 5px;
-    right: 10px;
-  }
-  .cardScale div:hover span:last-of-type {
-    padding-right: 10px;
-  }
-  .cardScale div::before {
-    content: "...";
-    position: absolute;
-    bottom: 5px;
-    right: 10px;
-  }
-  .cardScale span:last-of-type {
-    line-height: 22.5px;
-    padding-right: 20px;
-    font-size: calc(1rem - 2px);
   }
 }
 /*
@@ -855,19 +719,179 @@ h3 {
   border-top: none;
 }
 
+@media screen and (min-width: 1024px) {
+  .main__judges {
+    gap: 20px;
+  }
+  .main__judges .boardScale {
+    gap: 20px;
+    margin: 0 auto;
+    max-width: 1000px;
+  }
+  .main__judges .cardScale {
+    position: relative;
+    width: 320px;
+  }
+  .main__judges .cardScale img {
+    height: 426.6666666667px;
+  }
+  .main__judges .cardScale div {
+    position: absolute;
+    top: calc(100% - 100px);
+    left: 0;
+    height: 100px;
+    min-height: 100px;
+    transition: width ease-in-out 0.1s, max-height ease-in-out 0.1s, left ease-in-out 0.1s, border-radius ease-in-out 0.1s, background-color ease-in-out 0.1s;
+    z-index: 10;
+  }
+  .main__judges .cardScale div:hover {
+    left: -20px;
+    width: calc(100% + 40px);
+    height: auto;
+    border-radius: 10px;
+    padding-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.9333333333);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2666666667);
+    z-index: 11;
+  }
+  .main__judges .cardScale div:hover::before {
+    content: "...";
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+  }
+  .main__judges .cardScale div:hover span:last-of-type {
+    padding-right: 10px;
+  }
+  .main__judges .cardScale div::before {
+    content: "...";
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+  }
+  .main__judges .cardScale span:last-of-type {
+    line-height: 29px;
+    padding-right: 20px;
+    font-size: calc(1rem - 2px);
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .main__judges {
+    gap: 20px;
+  }
+  .main__judges .boardScale {
+    gap: 20px;
+    margin: 0 10vw;
+  }
+  .main__judges .cardScale {
+    width: calc((80vw - 20px) / 2);
+  }
+  .main__judges .cardScale img {
+    height: calc((80vw - 20px) / 2 / 9 * 12);
+  }
+  .main__judges .cardScale div {
+    position: absolute;
+    top: calc(100% - 90px);
+    left: 0;
+    height: 90px;
+    min-height: 90px;
+    transition: width ease-in-out 0.1s, left ease-in-out 0.1s, border-radius ease-in-out 0.1s, background-color ease-in-out 0.1s;
+    z-index: 10;
+    overflow: hidden;
+  }
+  .main__judges .cardScale div:hover {
+    left: -20px;
+    width: calc(100% + 40px);
+    height: auto;
+    border-radius: 10px;
+    padding-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.9333333333);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2666666667);
+    z-index: 11;
+  }
+  .main__judges .cardScale div:hover::before {
+    content: "...";
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+  }
+  .main__judges .cardScale div:hover span:last-of-type {
+    padding-right: 10px;
+  }
+  .main__judges .cardScale div::before {
+    content: "...";
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+  }
+  .main__judges .cardScale span:last-of-type {
+    line-height: 25px;
+    padding-right: 26px;
+    font-size: calc(1rem - 2px);
+  }
+}
+@media screen and (max-width: 767px) {
+  .main__judges {
+    gap: 20px;
+  }
+  .main__judges .boardScale {
+    gap: 20px;
+    margin: 0 10px;
+  }
+  .main__judges .cardScale {
+    width: 300px;
+  }
+  .main__judges .cardScale img {
+    height: 370px;
+  }
+  .main__judges .cardScale div {
+    position: absolute;
+    top: calc(100% - 80px);
+    left: 0;
+    height: 80px;
+    min-height: 80px;
+    transition: width ease-in-out 0.1s, max-height ease-in-out 0.1s, left ease-in-out 0.1s, border-radius ease-in-out 0.1s, background-color ease-in-out 0.1s;
+    z-index: 10;
+  }
+  .main__judges .cardScale div:hover {
+    left: -20px;
+    width: calc(100% + 40px);
+    height: auto;
+    border-radius: 10px;
+    padding-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.7411764706);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2666666667);
+    z-index: 11;
+  }
+  .main__judges .cardScale div:hover::before {
+    content: "...";
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+  }
+  .main__judges .cardScale div:hover span:last-of-type {
+    padding-right: 10px;
+  }
+  .main__judges .cardScale div::before {
+    content: "...";
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+  }
+  .main__judges .cardScale span:last-of-type {
+    line-height: 22.5px;
+    padding-right: 20px;
+    font-size: calc(1rem - 2px);
+  }
+}
 .main__judges {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  padding: 0 20px;
 }
 .main__judges_juryBoard {
   display: flex;
-  gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 0 auto;
-  max-width: 1000px;
 }
 .main__judges_juryBoard-card {
   position: relative;
@@ -919,11 +943,8 @@ h3 {
 }
 .main__judges_judgeBoard {
   display: flex;
-  gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 0 auto;
-  max-width: 1000px;
 }
 .main__judges_judgeBoard-card {
   position: relative;
@@ -982,13 +1003,17 @@ h3 {
     gap: 33px;
     justify-content: center;
     max-width: 1000px;
+    margin: 0 auto;
+  }
+  .main__organizers_container-card {
+    width: 311.3333333333px;
+    height: 175.125px;
+    padding: 30px;
   }
   .main__organizers_container-card img {
+    height: 100%;
     -o-object-fit: contain;
        object-fit: contain;
-    height: -moz-fit-content;
-    height: fit-content;
-    max-width: 250px;
   }
   .main__partners {
     margin: 50px 0;
@@ -997,13 +1022,31 @@ h3 {
     gap: 33px;
     justify-content: center;
     max-width: 1000px;
+    margin: 0 auto;
+  }
+  .main__partners_container-card {
+    width: 311.3333333333px;
+    height: 175.125px;
+    padding: 30px;
   }
   .main__partners_container-card img {
+    height: 100%;
     -o-object-fit: contain;
        object-fit: contain;
-    height: -moz-fit-content;
-    height: fit-content;
-    max-width: 250px;
+  }
+  .main__partners_container-card.hotelCard {
+    height: 100%;
+  }
+  .main__partners_container-card.hotelCard img {
+    width: 311.3333333333px;
+    height: 175.125px;
+    padding: 30px;
+  }
+  .main__partners_container-card.hotelCard .zalkindLogo {
+    width: 311.3333333333px;
+    height: 175.125px;
+    padding: 30px;
+    font-size: 2.2rem;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -1013,13 +1056,17 @@ h3 {
   .main__organizers_container {
     gap: 30px;
     justify-content: center;
+    margin: 0 10vw;
+  }
+  .main__organizers_container-card {
+    width: calc((80vw - 60px) / 3);
+    height: calc((80vw - 60px) / 3 / 16 * 9);
+    padding: 15px;
   }
   .main__organizers_container-card img {
+    height: 100%;
     -o-object-fit: contain;
        object-fit: contain;
-    height: -moz-fit-content;
-    height: fit-content;
-    max-width: 200px;
   }
   .main__partners {
     margin: 40px 0;
@@ -1028,12 +1075,34 @@ h3 {
     gap: 30px;
     justify-content: center;
   }
+  .main__partners_container-card {
+    width: calc((80vw - 60px) / 3);
+    height: calc((80vw - 60px) / 3 / 16 * 9);
+    padding: 15px;
+  }
   .main__partners_container-card img {
+    height: 100%;
     -o-object-fit: contain;
        object-fit: contain;
-    height: -moz-fit-content;
-    height: fit-content;
-    max-width: 200px;
+  }
+  .main__partners_container-card.hotelCard {
+    height: 100%;
+  }
+  .main__partners_container-card.hotelCard img {
+    width: calc((80vw - 60px) / 3);
+    height: calc((80vw - 60px) / 3 / 16 * 9);
+    padding: 15px;
+  }
+  .main__partners_container-card.hotelCard .zalkindLogo {
+    width: calc((80vw - 60px) / 3);
+    height: calc((80vw - 60px) / 3 / 16 * 9);
+    padding: 15px;
+    font-size: 2rem;
+  }
+  .main__partners_container-card.hotelCard .hotelDesc {
+    height: 125px;
+    align-items: center;
+    justify-content: center;
   }
 }
 @media screen and (max-width: 767px) {
@@ -1041,27 +1110,56 @@ h3 {
     margin: 30px 0;
   }
   .main__organizers_container {
-    gap: 30px;
+    gap: 15px;
     justify-content: center;
-    padding: 0 30px;
+    margin: 0 10px;
+  }
+  .main__organizers_container-card {
+    width: calc((100vw - 20px - 15px) / 2);
+    height: calc((100vw - 20px - 30px) / 2 / 16 * 9);
+    padding: 15px;
   }
   .main__organizers_container-card img {
+    height: 100%;
     -o-object-fit: contain;
        object-fit: contain;
-    max-height: 120px;
   }
   .main__partners {
     margin: 30px 0;
   }
   .main__partners_container {
-    gap: 30px;
+    gap: 15px;
     justify-content: center;
-    padding: 0 30px;
+    margin: 0 10px;
+  }
+  .main__partners_container-card {
+    width: calc((100vw - 20px - 15px) / 2);
+    height: calc((100vw - 20px - 30px) / 2 / 16 * 9);
+    padding: 15px;
   }
   .main__partners_container-card img {
+    height: 100%;
     -o-object-fit: contain;
        object-fit: contain;
-    max-height: 120px;
+  }
+  .main__partners_container-card.hotelCard {
+    height: 100%;
+  }
+  .main__partners_container-card.hotelCard img {
+    width: calc((100vw - 20px - 15px) / 2);
+    height: calc((100vw - 20px - 30px) / 2 / 16 * 9);
+    padding: 15px;
+  }
+  .main__partners_container-card.hotelCard .zalkindLogo {
+    width: calc((100vw - 20px - 15px) / 2);
+    height: calc((100vw - 20px - 30px) / 2 / 16 * 9);
+    padding: 15px;
+    font-size: 2rem;
+  }
+  .main__partners_container-card.hotelCard .hotelDesc {
+    height: 120px;
+    align-items: center;
+    justify-content: center;
   }
 }
 .main__organizers {
@@ -1074,8 +1172,6 @@ h3 {
 .main__organizers_container {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
-  margin: 0 auto;
 }
 .main__organizers_container-card {
   position: relative;
@@ -1083,7 +1179,6 @@ h3 {
   align-items: center;
   justify-content: center;
   background-color: #fff;
-  padding: 30px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2666666667);
   transition: scale ease-in-out 0.2s;
@@ -1102,7 +1197,7 @@ h3 {
   box-shadow: 0 0 2.5px rgba(0, 0, 0, 0.2352941176);
 }
 .main__organizers_container-card:hover {
-  scale: 1.05;
+  scale: 1.025;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.2666666667);
 }
 .main__organizers_container-card img {
@@ -1116,15 +1211,10 @@ h3 {
   background-color: #bf1e2e;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2352941176);
 }
-.main__partners_container.hotelContainer {
-  padding-top: 100px;
-}
 .main__partners_container {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
-  margin: 0 auto;
 }
 .main__partners_container-card {
   position: relative;
@@ -1133,7 +1223,6 @@ h3 {
   justify-content: center;
   text-decoration: none;
   background-color: #fff;
-  padding: 30px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2666666667);
   transition: scale ease-in-out 0.2s;
@@ -1152,16 +1241,13 @@ h3 {
   box-shadow: 0 0 2.5px rgba(0, 0, 0, 0.2352941176);
 }
 .main__partners_container-card:hover {
-  scale: 1.05;
+  scale: 1.025;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.2666666667);
 }
 .main__partners_container-card img {
-  width: 100%;
-  height: 100%;
   transition: scale ease-in-out 0.2s;
 }
 .main__partners_container-hotelDesc {
-  position: absolute;
   top: 20px;
   color: #ffe2b0;
   font-size: 1.1rem;
@@ -1175,9 +1261,6 @@ h3 {
   justify-content: space-between;
   border: 5px solid #fff;
   padding: 0;
-}
-.main__partners_container-card.hotelCard img {
-  padding: 30px;
 }
 .main__partners_container-card.hotelCard .hotelDesc {
   position: relative;
@@ -1202,14 +1285,11 @@ h3 {
 }
 .main__partners_container-card.zalkind .zalkindLogo {
   font-family: "DIN Condensed";
-  font-size: 2.2rem;
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 30px;
-  width: 100%;
-  height: 100%;
 }
 .main__partners_container-card.zalkind img {
   filter: brightness(0) invert(1);
@@ -1239,7 +1319,7 @@ h3 {
 
 @media screen and (min-width: 1024px) {
   .footer {
-    margin-top: 200px;
+    margin-top: 150px;
   }
   .footer__container {
     flex-direction: row;
@@ -1249,7 +1329,7 @@ h3 {
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .footer {
-    margin-top: 200px;
+    margin-top: 150px;
   }
   .footer__container {
     flex-direction: column;
@@ -1337,62 +1417,24 @@ h3 {
 
 @media screen and (min-width: 1024px) {
   .main__form {
-    border-radius: 10px;
-    width: -moz-fit-content;
-    width: fit-content;
-  }
-  .main__form_clue {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-  }
-  .main__form_elem {
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .main__form {
-    border-radius: 10px;
-    width: -moz-fit-content;
-    width: fit-content;
-  }
-  .main__form_clue {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-  }
-  .main__form_elem {
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-  }
-}
-@media screen and (max-width: 767px) {
-  .main__form {
-    border-radius: 0;
-    width: 100%;
-  }
-  .main__form_clue {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-  }
-  .main__form_elem {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+    margin: 0 auto;
   }
 }
 .main__form {
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2666666667);
-  max-width: 100%;
 }
 .main__form_clue {
   font-size: 1.2rem;
   color: #fff;
   background-color: #bf1e2e;
   padding: 15px 15px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   width: 100%;
   text-align: center;
 }
@@ -1404,6 +1446,8 @@ h3 {
   width: 100%;
   padding-top: 20px;
   border-top: none;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   background: linear-gradient(170deg, rgba(0, 0, 0, 0.7411764706) 40%, rgba(0, 0, 0, 0.6274509804) 90%);
 }
 .main__form_elem-inputFrame {
@@ -1594,65 +1638,119 @@ h3 {
 }
 
 @media screen and (min-width: 1024px) {
-  .main__desc_swiper {
-    height: 450px;
+  .main__desc_swiperContainer {
     max-width: 1000px;
   }
-  .main__desc_swiper .swiper-slide {
-    max-width: 85%;
-    margin: 0 7.5%;
+  .main__desc_swiperContainer-big {
+    width: 100%;
+    height: 562.5px;
+    margin-bottom: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2666666667);
+  }
+  .main__desc_swiperContainer-thumbs {
+    width: 100%;
+    height: 80.3571428571px;
+  }
+  .main__desc_swiperContainer-thumbs .swiper-slide {
+    border-radius: 10px;
+    padding: 4px;
+  }
+  .main__desc_swiperContainer-thumbs .swiper-slide::before {
+    border-radius: 10px;
+  }
+  .main__desc_swiperContainer-thumbs .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  .main__desc_swiper {
-    height: 325px;
-    max-width: calc(100vw - 20%);
+  .main__desc_swiperContainer {
+    max-width: 80vw;
+    overflow: hidden;
   }
-  .main__desc_swiper .swiper-button-prev {
+  .main__desc_swiperContainer-big {
+    width: 100%;
+    height: 45vw;
+    margin-bottom: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2666666667);
+  }
+  .main__desc_swiperContainer-big .swiper-button-prev {
     display: none;
   }
-  .main__desc_swiper .swiper-button-next {
+  .main__desc_swiperContainer-big .swiper-button-next {
     display: none;
+  }
+  .main__desc_swiperContainer-thumbs {
+    width: 100%;
+    height: 6.4285714286vw;
+  }
+  .main__desc_swiperContainer-thumbs .swiper-slide {
+    border-radius: 10px;
+    padding: 3px;
+  }
+  .main__desc_swiperContainer-thumbs .swiper-slide::before {
+    border-radius: 10px;
+  }
+  .main__desc_swiperContainer-thumbs .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
   }
 }
 @media screen and (max-width: 767px) {
-  .main__desc_swiper {
-    height: 200px;
+  .main__desc_swiperContainer {
     max-width: calc(100vw - 20px);
   }
-  .main__desc_swiper .swiper-button-prev {
+  .main__desc_swiperContainer-big {
+    height: calc((100vw - 20px) / 16 * 9);
+    margin-bottom: 4px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2666666667);
+  }
+  .main__desc_swiperContainer-big .swiper-button-prev {
     display: none;
   }
-  .main__desc_swiper .swiper-button-next {
+  .main__desc_swiperContainer-big .swiper-button-next {
     display: none;
   }
+  .main__desc_swiperContainer-thumbs {
+    width: 100%;
+    height: calc((100vw - 20px) / 7 / 16 * 9);
+  }
+  .main__desc_swiperContainer-thumbs .swiper-slide {
+    border-radius: 4px;
+    padding: 2px;
+  }
+  .main__desc_swiperContainer-thumbs .swiper-slide::before {
+    border-radius: 4px;
+  }
+  .main__desc_swiperContainer-thumbs .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+  }
 }
-.main__desc_swiper {
-  width: 100%;
+.main__desc_swiperContainer-big {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
 }
-.main__desc_swiper .swiper-wrapper {
-  max-height: 95%;
-}
-.main__desc_swiper .swiper-slide {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.main__desc_swiperContainer-big .swiper-slide {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  border-radius: 10px;
   overflow: hidden;
 }
-.main__desc_swiper .swiper-slide img {
-  min-width: -moz-fit-content;
-  min-width: fit-content;
-  min-height: -moz-fit-content;
-  min-height: fit-content;
+.main__desc_swiperContainer-big .swiper-slide img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 50% 50%;
+     object-position: 50% 50%;
   width: 100%;
   height: 100%;
 }
-.main__desc_swiper .swiper-button-prev {
-  height: 70px;
+.main__desc_swiperContainer-big .swiper-button-prev {
+  height: 100px;
   padding: 15px 12px;
   background-color: rgba(0, 0, 0, 0.6274509804);
   -webkit-backdrop-filter: blur(2px);
@@ -1661,15 +1759,18 @@ h3 {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2666666667);
   transition: scale 0.1s ease-in-out;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
-.main__desc_swiper .swiper-button-prev:hover {
-  scale: 1.05;
+.main__desc_swiperContainer-big .swiper-button-prev:hover {
+  scale: 1.025;
 }
-.main__desc_swiper .swiper-button-prev:active {
+.main__desc_swiperContainer-big .swiper-button-prev:active {
   scale: 0.99;
 }
-.main__desc_swiper .swiper-button-next {
-  height: 70px;
+.main__desc_swiperContainer-big .swiper-button-next {
+  height: 100px;
   padding: 15px 12px;
   background-color: rgba(0, 0, 0, 0.6274509804);
   -webkit-backdrop-filter: blur(2px);
@@ -1678,13 +1779,48 @@ h3 {
   border-radius: 10px;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.2666666667);
   transition: scale 0.1s ease-in-out;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
-.main__desc_swiper .swiper-button-next:hover {
-  scale: 1.05;
+.main__desc_swiperContainer-big .swiper-button-next:hover {
+  scale: 1.025;
 }
-.main__desc_swiper .swiper-button-next:active {
+.main__desc_swiperContainer-big .swiper-button-next:active {
   scale: 0.99;
 }
-.main__desc_swiper .swiper-scrollbar-drag {
+.main__desc_swiperContainer-thumbs {
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.main__desc_swiperContainer-thumbs .swiper-slide {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.main__desc_swiperContainer-thumbs .swiper-slide img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+}
+.main__desc_swiperContainer-thumbs .swiper-slide::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 70%;
   background-color: #bf1e2e;
+  z-index: -1;
+  transition: width linear 0.15s, height linear 0.15s;
+}
+.main__desc_swiperContainer-thumbs .swiper-slide-thumb-active::before {
+  content: "";
+  width: 100%;
+  height: 100%;
 }/*# sourceMappingURL=style.css.map */

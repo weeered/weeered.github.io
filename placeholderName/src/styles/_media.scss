@@ -19,82 +19,12 @@
 
   .wrapperScale {
     max-width: 1000px;
+    width: 100%;
   }
 
   .dropdownScale {
     justify-content: center;
     gap: 100px;
-  }
-
-  .cardScale {
-    position: relative;
-    width: 320px;
-    & img {
-      height: 500px;
-    }
-
-    & div {
-      position: absolute;
-      top: calc(100% - 100px);
-      left: 0;
-
-      height: 100px;
-      min-height: 100px;
-
-      transition:
-        width ease-in-out 0.1s,
-        max-height ease-in-out 0.1s,
-        left ease-in-out 0.1s,
-        border-radius ease-in-out 0.1s,
-        background-color ease-in-out 0.1s;
-
-      z-index: 10;
-
-      &:hover {
-        left: -20px;
-
-        width: calc(100% + 40px);
-        height: auto;
-
-        border-radius: 10px;
-
-        padding-bottom: 20px;
-
-        background-color: #000000ee;
-
-        box-shadow: 0 0 8px v.$shadowblack;
-
-        z-index: 11;
-
-        &::before {
-          content: "...";
-          position: absolute;
-          bottom: 5px;
-          right: 10px;
-        }
-
-        & span {
-          &:last-of-type {
-            padding-right: 10px;
-          }
-        }
-      }
-
-      &::before {
-        content: "...";
-        position: absolute;
-        bottom: 5px;
-        right: 10px;
-      }
-    }
-
-    & span {
-      &:last-of-type {
-        line-height: 29px;
-        padding-right: 20px;
-        font-size: calc(1rem - 2px);
-      }
-    }
   }
 }
 
@@ -110,7 +40,7 @@
     text-align: center;
   }
   .textScale {
-    margin: 0 20%;
+    margin: 0 10%;
 
     & br {
       display: none;
@@ -118,83 +48,12 @@
   }
 
   .wrapperScale {
-    margin: 0 20%;
+    margin: 0 10%;
   }
 
   .dropdownScale {
     justify-content: center;
     gap: 80px;
-  }
-  .cardScale {
-    width: 250px;
-
-    & img {
-      height: 380px;
-    }
-
-    & div {
-      position: absolute;
-      top: calc(100% - 90px);
-      left: 0;
-
-      height: 90px;
-      min-height: 90px;
-
-      transition:
-        width ease-in-out 0.1s,
-        left ease-in-out 0.1s,
-        border-radius ease-in-out 0.1s,
-        background-color ease-in-out 0.1s;
-
-      z-index: 10;
-
-      overflow: hidden;
-
-      &:hover {
-        left: -20px;
-
-        width: calc(100% + 40px);
-        height: auto;
-
-        border-radius: 10px;
-
-        padding-bottom: 20px;
-
-        background-color: #000000ee;
-
-        box-shadow: 0 0 8px v.$shadowblack;
-
-        z-index: 11;
-
-        &::before {
-          content: "...";
-          position: absolute;
-          bottom: 5px;
-          right: 10px;
-        }
-
-        & span {
-          &:last-of-type {
-            padding-right: 10px;
-          }
-        }
-      }
-
-      &::before {
-        content: "...";
-        position: absolute;
-        bottom: 5px;
-        right: 10px;
-      }
-    }
-
-    & span {
-      &:last-of-type {
-        line-height: 25px;
-        padding-right: 26px;
-        font-size: calc(1rem - 2px);
-      }
-    }
   }
 }
 
@@ -220,75 +79,5 @@
   .dropdownScale {
     justify-content: center;
     gap: 15px;
-  }
-
-  .cardScale {
-    width: 300px;
-
-    & img {
-      height: 370px;
-    }
-
-    & div {
-      position: absolute;
-      top: calc(100% - 80px);
-      left: 0;
-
-      height: 80px;
-      min-height: 80px;
-
-      transition:
-        width ease-in-out 0.1s,
-        max-height ease-in-out 0.1s,
-        left ease-in-out 0.1s,
-        border-radius ease-in-out 0.1s,
-        background-color ease-in-out 0.1s;
-
-      z-index: 10;
-
-      &:hover {
-        left: -20px;
-
-        width: calc(100% + 40px);
-        height: auto;
-
-        border-radius: 10px;
-
-        padding-bottom: 20px;
-
-        background-color: v.$transblackDark;
-
-        box-shadow: 0 0 8px v.$shadowblack;
-
-        z-index: 11;
-        &::before {
-          content: "...";
-          position: absolute;
-          bottom: 5px;
-          right: 10px;
-        }
-
-        & span {
-          &:last-of-type {
-            padding-right: 10px;
-          }
-        }
-      }
-
-      &::before {
-        content: "...";
-        position: absolute;
-        bottom: 5px;
-        right: 10px;
-      }
-    }
-
-    & span {
-      &:last-of-type {
-        line-height: 22.5px;
-        padding-right: 20px;
-        font-size: calc(1rem - 2px);
-      }
-    }
   }
 }

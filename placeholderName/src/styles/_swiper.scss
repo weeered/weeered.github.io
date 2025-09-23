@@ -1,16 +1,41 @@
 @use "./variables" as v;
 
+$slidesNum: 7;
+
 @media screen and (min-width: 1024px) {
   .main {
     &__desc {
-      &_swiper {
-        height: 450px;
+      &_swiperContainer {
         max-width: 1000px;
+        &-big {
+          width: 100%;
+          height: calc(((1000px) / 16) * 9);
 
-        & .swiper-slide {
-          max-width: 85%;
+          margin-bottom: 8px;
 
-          margin: 0 7.5%;
+          box-shadow: 0 0 8px v.$shadowblack;
+        }
+
+        &-thumbs {
+          width: 100%;
+          height: calc((((1000px) / $slidesNum) / 16) * 9);
+
+          & .swiper-slide {
+            border-radius: 10px;
+
+            padding: 4px;
+
+            &::before {
+              border-radius: 10px;
+            }
+
+            & img {
+              width: 100%;
+              height: 100%;
+
+              border-radius: 6px;
+            }
+          }
         }
       }
     }
@@ -20,16 +45,45 @@
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .main {
     &__desc {
-      &_swiper {
-        height: 325px;
-        max-width: calc(100vw - 20%);
+      &_swiperContainer {
+        max-width: calc(100vw - 20vw);
+        overflow: hidden;
+        &-big {
+          width: 100%;
+          height: calc(((100vw - 20vw) / 16) * 9);
 
-        & .swiper-button-prev {
-          display: none;
+          margin-bottom: 8px;
+
+          box-shadow: 0 0 8px v.$shadowblack;
+
+          & .swiper-button-prev {
+            display: none;
+          }
+
+          & .swiper-button-next {
+            display: none;
+          }
         }
 
-        & .swiper-button-next {
-          display: none;
+        &-thumbs {
+          width: 100%;
+          height: calc((((100vw - 20vw) / $slidesNum) / 16) * 9);
+
+          & .swiper-slide {
+            border-radius: 10px;
+
+            padding: 3px;
+
+            &::before {
+              border-radius: 10px;
+            }
+            & img {
+              width: 100%;
+              height: 100%;
+
+              border-radius: 8px;
+            }
+          }
         }
       }
     }
@@ -39,17 +93,44 @@
 @media screen and (max-width: 767px) {
   .main {
     &__desc {
-      &_swiper {
-        height: 200px;
-
+      &_swiperContainer {
         max-width: calc(100vw - 20px);
 
-        & .swiper-button-prev {
-          display: none;
+        &-big {
+          height: calc(((100vw - 20px) / 16) * 9);
+
+          margin-bottom: 4px;
+
+          box-shadow: 0 0 4px v.$shadowblack;
+
+          & .swiper-button-prev {
+            display: none;
+          }
+
+          & .swiper-button-next {
+            display: none;
+          }
         }
 
-        & .swiper-button-next {
-          display: none;
+        &-thumbs {
+          width: 100%;
+          height: calc((((100vw - 20px) / $slidesNum) / 16) * 9);
+
+          & .swiper-slide {
+            border-radius: 4px;
+
+            padding: 2px;
+
+            &::before {
+              border-radius: 4px;
+            }
+            & img {
+              width: 100%;
+              height: 100%;
+
+              border-radius: 3px;
+            }
+          }
         }
       }
     }
@@ -58,83 +139,128 @@
 
 .main {
   &__desc {
-    &_swiper {
-      width: 100%;
+    &_swiperContainer {
+      &-big {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
 
-      & .swiper-wrapper {
-        max-height: 95%;
+        // & .swiper-wrapper {
+        // }
+
+        & .swiper-slide {
+          user-select: none;
+
+          overflow: hidden;
+
+          & img {
+            object-fit: cover;
+            object-position: 50% 50%;
+
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        & .swiper-button-prev {
+          height: 100px;
+
+          padding: 15px 12px;
+
+          background-color: v.$transblack;
+          backdrop-filter: blur(2px);
+          color: #fff;
+
+          border-radius: 10px;
+
+          box-shadow: 0 0 10px v.$shadowblack;
+
+          transition: scale 0.1s ease-in-out;
+
+          user-select: none;
+
+          &:hover {
+            scale: 1.025;
+          }
+
+          &:active {
+            scale: 0.99;
+          }
+        }
+
+        & .swiper-button-next {
+          height: 100px;
+
+          padding: 15px 12px;
+
+          background-color: v.$transblack;
+          backdrop-filter: blur(2px);
+          color: #fff;
+
+          border-radius: 10px;
+
+          box-shadow: 0 0 6px v.$shadowblack;
+
+          transition: scale 0.1s ease-in-out;
+
+          user-select: none;
+
+          &:hover {
+            scale: 1.025;
+          }
+
+          &:active {
+            scale: 0.99;
+          }
+        }
       }
 
-      & .swiper-slide {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+      &-thumbs {
+        overflow: hidden;
 
         user-select: none;
 
-        border-radius: 10px;
+        & .swiper-slide {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
 
-        overflow: hidden;
+          overflow: hidden;
 
-        & img {
-          min-width: fit-content;
-          min-height: fit-content;
-          width: 100%;
-          height: 100%;
-        }
-      }
+          & img {
+            object-fit: cover;
 
-      & .swiper-button-prev {
-        height: 70px;
+            cursor: pointer;
+          }
 
-        padding: 15px 12px;
+          &::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
 
-        background-color: v.$transblack;
-        backdrop-filter: blur(2px);
-        color: #fff;
+            transform: translate(-50%, -50%);
 
-        border-radius: 10px;
+            width: 70%;
+            height: 70%;
 
-        box-shadow: 0 0 10px v.$shadowblack;
+            background-color: v.$red;
 
-        transition: scale 0.1s ease-in-out;
+            z-index: -1;
 
-        &:hover {
-          scale: 1.05;
-        }
-
-        &:active {
-          scale: 0.99;
-        }
-      }
-
-      & .swiper-button-next {
-        height: 70px;
-
-        padding: 15px 12px;
-
-        background-color: v.$transblack;
-        backdrop-filter: blur(2px);
-        color: #fff;
-
-        border-radius: 10px;
-
-        box-shadow: 0 0 6px v.$shadowblack;
-
-        transition: scale 0.1s ease-in-out;
-
-        &:hover {
-          scale: 1.05;
+            transition:
+              width linear 0.15s,
+              height linear 0.15s;
+          }
         }
 
-        &:active {
-          scale: 0.99;
-        }
-      }
-
-      & .swiper-scrollbar {
-        &-drag {
-          background-color: v.$red;
+        .swiper-slide-thumb-active {
+          &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+          }
         }
       }
     }
