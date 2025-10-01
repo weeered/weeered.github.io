@@ -20,11 +20,13 @@
 
       box-shadow: 0 0 8px v.$shadowblack;
 
-      background: linear-gradient(
-        177deg,
-        v.$transblack 40%,
-        v.$transblackAlt 90%
-      );
+      // background: linear-gradient(
+      //   177deg,
+      //   v.$transblack 40%,
+      //   v.$transblackAlt 90%
+      // );
+
+      background-color: v.$transgraylight;
 
       backdrop-filter: blur(3px);
 
@@ -54,7 +56,7 @@
 
         @media (pointer: fine) {
           &:hover {
-            background-color: v.$transgray;
+            background-color: v.$transgrayverylight;
           }
         }
 
@@ -75,6 +77,8 @@
         align-items: center;
         justify-content: center;
 
+        box-shadow: 0 0 5px v.$shadowgray;
+
         padding: 0 5px;
 
         height: 100%;
@@ -82,12 +86,13 @@
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
 
-        background-color: v.$transblack;
+        background-color: v.$transgraylight;
 
         transition:
           top ease-in-out 0.1s,
           background-color ease-in-out 0.1s,
-          border-radius ease-in-out 0.1s;
+          border-radius ease-in-out 0.1s,
+          box-shadow ease-in-out 0.1s;
 
         cursor: pointer;
 
@@ -103,7 +108,7 @@
 
         @media (pointer: fine) {
           &:hover {
-            background-color: v.$transblackAlt;
+            background-color: v.$transgrayverylight;
           }
         }
       }
@@ -163,21 +168,23 @@
 
       width: 100%;
       max-width: 1000px;
-      height: fit-content;
+      height: 50px;
 
       display: flex;
       justify-content: space-between;
 
-      padding: 10px 100px;
+      padding: 0 100px;
       z-index: 20;
 
       box-shadow: 0 0 8px v.$shadowblack;
 
-      background: linear-gradient(
-        177deg,
-        v.$transblack 40%,
-        v.$transblackAlt 90%
-      );
+      // background: linear-gradient(
+      //   177deg,
+      //   v.$transblack 40%,
+      //   v.$transblackAlt 90%
+      // );
+
+      background-color: v.$transgraylight;
 
       backdrop-filter: blur(3px);
 
@@ -207,7 +214,7 @@
 
         @media (pointer: fine) {
           &:hover {
-            background-color: v.$transgray;
+            background-color: v.$transgrayverylight;
           }
         }
 
@@ -235,7 +242,7 @@
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
 
-        background-color: v.$transblack;
+        background-color: v.$transgraylight;
 
         transition:
           top ease-in-out 0.1s,
@@ -256,16 +263,20 @@
 
         @media (pointer: fine) {
           &:hover {
-            background-color: v.$transblackAlt;
+            background-color: v.$transgrayverylight;
           }
         }
       }
 
       &_elem {
-        color: #fff;
-
+        height: 100%;
         &-link {
           position: relative;
+
+          height: 100%;
+          display: flex;
+          align-items: center;
+
           color: #fff;
           text-decoration: none;
 
@@ -282,7 +293,7 @@
           &::after {
             content: "";
             position: absolute;
-            bottom: -3px;
+            bottom: 10px;
             left: 50%;
             width: 0;
             height: 1px;
@@ -295,6 +306,7 @@
         }
       }
     }
+
     &__burger {
       display: none;
     }
@@ -337,7 +349,8 @@
 
         box-shadow: 0 0 8px v.$shadowblack;
 
-        background: linear-gradient(120deg, v.$transblack, v.$transblackAlt);
+        //background: linear-gradient(120deg, v.$transblack, v.$transblackAlt);
+        background-color: v.$graylight;
         backdrop-filter: blur(2px);
 
         overflow: hidden;
@@ -356,7 +369,7 @@
 
           & a {
             display: flex;
-            
+
             font-size: 24px;
             color: #fff;
             text-decoration: none;
@@ -379,19 +392,20 @@
         justify-content: center;
         align-items: center;
 
-        background: linear-gradient(120deg, v.$transblack, v.$transblackAlt);
+        //background: linear-gradient(120deg, v.$transblack, v.$transblackAlt);
+        background-color: v.$graylight;
         backdrop-filter: blur(2px);
 
         border-bottom-right-radius: 10px;
 
-        box-shadow: 0 0 8px v.$shadowblack;
+        box-shadow: 0 0 5px v.$shadowgray;
 
         padding: 30px 15px;
 
         width: fit-content;
         height: 29px;
 
-        transition: transform ease-in-out 0.3s;
+        transition: transform ease-in-out 0.3s, box-shadow ease-in-out 0.3s;
 
         &-elem {
           position: relative;

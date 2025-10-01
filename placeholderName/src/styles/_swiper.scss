@@ -167,13 +167,13 @@ $slidesNum: 7;
 
           padding: 15px 12px;
 
-          background-color: v.$transblack;
+          background-color: v.$transgraylight;
           backdrop-filter: blur(2px);
           color: #fff;
 
           border-radius: 10px;
 
-          box-shadow: 0 0 10px v.$shadowblack;
+          box-shadow: 0 0 10px v.$shadowgray;
 
           transition: scale 0.1s ease-in-out;
 
@@ -193,13 +193,13 @@ $slidesNum: 7;
 
           padding: 15px 12px;
 
-          background-color: v.$transblack;
+          background-color: v.$transgraylight;
           backdrop-filter: blur(2px);
           color: #fff;
 
           border-radius: 10px;
 
-          box-shadow: 0 0 6px v.$shadowblack;
+          box-shadow: 0 0 6px v.$shadowgray;
 
           transition: scale 0.1s ease-in-out;
 

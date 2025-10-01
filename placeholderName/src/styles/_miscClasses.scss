@@ -18,9 +18,11 @@
 
     border-bottom-right-radius: 0;
 
+    box-shadow: none;
+
     @media (pointer: fine) {
       &:hover {
-        background-color: v.$transgray;
+        background-color: v.$transgrayverylight;
       }
     }
 

@@ -13,9 +13,19 @@
 
     &__programm {
       &_list {
-        &-itemCnt {
-          & div {
-            flex-direction: row;
+        &-item {
+          flex-direction: row;
+          &Icon {
+            width: calc(((1000px - 50px) / 7) * 1);
+            padding: 10px 0 10px 25px;
+          }
+
+          &Cnt {
+            width: calc(((1000px - 15px) / 7) * 6);
+            padding: 40px 25px;
+            & div {
+              flex-direction: row;
+            }
           }
         }
       }
@@ -36,9 +46,19 @@
 
     &__programm {
       &_list {
-        &-itemCnt {
-          & div {
-            flex-direction: row;
+        &-item {
+          flex-direction: row;
+          &Icon {
+            width: calc(((100vw - 20vw - 50px) / 7) * 1);
+            padding: 10px 0 10px 25px;
+          }
+
+          &Cnt {
+            width: calc(((100vw - 20vw - 50px) / 7) * 6);
+            padding: 40px 25px;
+            & div {
+              flex-direction: row;
+            }
           }
         }
       }
@@ -59,9 +79,25 @@
 
     &__programm {
       &_list {
-        &-itemCnt {
-          & div {
-            flex-direction: column;
+        &-item {
+          flex-direction: column;
+          &Icon {
+            max-height: 170px;
+            margin-top: 20px;
+            //width: calc(((100vw - 20px - 50px) / 7) * 1.5);
+          }
+
+          &Cnt {
+            // width: calc(((100vw - 20px - 50px) / 7) * 5.5);
+            padding: 40px 25px;
+            padding-top: 20px;
+            & div {
+              flex-direction: column;
+
+              & a {
+                width: fit-content;
+              }
+            }
           }
         }
       }
@@ -219,34 +255,51 @@
     &_list {
       display: flex;
       flex-direction: column;
+      gap: 40px;
+
+      //padding: 40px 0;
 
       list-style-type: none;
 
-      border-radius: 10px;
+      // border: 10px solid v.$beige;
+      //border-radius: 20px;
 
-      overflow: hidden;
+      // box-shadow: 0 0 8px v.$shadowgray;
 
-      box-shadow: 0 0 8px v.$shadowgray;
+      // background-color: v.$red;
 
       &-item {
         position: relative;
 
-        border-top: 2px solid #000;
+        width: 100%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        background-color: #fafafa;
+
+        border-radius: 20px;
+
+        border: 8px solid v.$transdim;
+
+        box-shadow: 0 0 8px v.$shadowgray;
+
+        // border-top: 10px solid v.$transgrayverylight;
+        // border-bottom: 10px solid v.$transgrayverylight;
+
+        &Icon {
+          height: fit-content;
+        }
 
         &Cnt {
           display: flex;
           flex-direction: column;
-          gap: 5px;
-
-          background-color: v.$transblackDark;
-
-          //backdrop-filter: blur(10px);
-          padding: 30px 25px;
+          gap: 20px;
 
           & h3 {
-            color: v.$redlighter;
-            font-weight: 500;
-            text-shadow: 0 0 1px v.$transblack;
+            color: v.$red;
+            font-weight: 600;
 
             &::before {
               content: "• ";
@@ -255,15 +308,37 @@
           & p {
             color: #fff;
             font-style: italic;
+
+            background-color: v.$graylight;
+
+            border-radius: 20px;
+            border: 5px solid v.$grayverylight;
+
+            box-shadow: 0 0 4px v.$shadowgray;
+
+            padding: 15px;
           }
           & div {
             display: flex;
             flex-wrap: wrap;
-            padding-top: 20px;
+            gap: 10px;
             & a {
-              color: v.$beigeLighter;
-              margin-right: 25px;
-              text-wrap: nowrap;
+              background-color: v.$red;
+
+              padding: 5px 10px;
+
+              border-radius: 15px;
+              border: 5px solid v.$beige;
+
+              box-shadow: 0 0 4px v.$shadowgray;
+
+              color: v.$beige;
+
+              transition: scale ease-in-out 0.1s;
+
+              &:hover {
+                scale: 1.025;
+              }
             }
           }
         }
@@ -279,10 +354,6 @@
           background-position: center center;
 
           z-index: -1;
-        }
-
-        &:first-of-type {
-          border-top: none;
         }
 
         // &:nth-of-type(even) {

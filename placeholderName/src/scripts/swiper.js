@@ -17,7 +17,7 @@ const galleryBig = new Swiper(".galleryBig", {
   grabCursor: true,
   autoplay: {
     delay: 2500,
-    pauseOnMouseEnter: true,
+    disableOnInteraction: true,
   },
   zoom: {
     maxRatio: 3,
