@@ -127,7 +127,6 @@
 
           @media (pointer: fine) {
             &:hover {
-              color: v.$beigeLighter;
               &::after {
                 width: 100%;
                 left: 0;
@@ -143,7 +142,7 @@
             width: 0;
             height: 1px;
 
-            background-color: v.$beigeLighter;
+            background-color: #fff;
             transition:
               width ease-in-out 0.15s,
               left ease-in-out 0.15s;
@@ -282,7 +281,6 @@
 
           @media (pointer: fine) {
             &:hover {
-              color: v.$beigeLighter;
               &::after {
                 width: 100%;
                 left: 0;
@@ -298,7 +296,7 @@
             width: 0;
             height: 1px;
 
-            background-color: v.$beigeLighter;
+            background-color: #fff;
             transition:
               width ease-in-out 0.15s,
               left ease-in-out 0.15s;

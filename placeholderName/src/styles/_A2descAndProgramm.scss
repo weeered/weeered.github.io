@@ -307,6 +307,7 @@
           }
           & p {
             color: #fff;
+            font-weight: 450;
             font-style: italic;
 
             background-color: v.$graylight;
@@ -328,11 +329,12 @@
               padding: 5px 10px;
 
               border-radius: 15px;
-              border: 5px solid v.$beige;
+              border: 4px solid v.$beige;
 
-              box-shadow: 0 0 4px v.$shadowgray;
+              //box-shadow: 0 0 4px v.$shadowgray;
 
-              color: v.$beige;
+              color: v.$beigeLighter;
+              text-decoration: none;
 
               transition: scale ease-in-out 0.1s;
 
