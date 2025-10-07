@@ -1,6 +1,6 @@
 @use "./variables" as v;
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .header {
     &__container {
       position: fixed;
@@ -9,7 +9,7 @@
       transform: translate(-50%, -100%);
 
       width: 100%;
-      max-width: 1000px;
+      max-width: 1100px;
       height: 50px;
 
       display: flex;
@@ -26,7 +26,7 @@
       //   v.$transblackAlt 90%
       // );
 
-      background-color: v.$transgraylight;
+      background-color: v.$transwhite;
 
       backdrop-filter: blur(3px);
 
@@ -48,7 +48,7 @@
 
         height: 100%;
 
-        background-color: v.$transdim;
+        background-color: v.$transgrayverylight;
 
         border-bottom-right-radius: 10px;
 
@@ -61,8 +61,8 @@
         }
 
         & img {
-          height: 30px;
-          width: fit-content;
+          height: 40px;
+          width: 40px;
 
           user-select: none;
         }
@@ -86,7 +86,7 @@
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
 
-        background-color: v.$transgraylight;
+        background-color: v.$transgrayverylight;
 
         transition:
           top ease-in-out 0.1s,
@@ -97,8 +97,8 @@
         cursor: pointer;
 
         & img {
-          width: 30px;
-          height: 30px;
+          width: 40px;
+          height: 40px;
           transform: rotate(180deg);
 
           transition: transform ease-in-out 0.2s;
@@ -122,15 +122,19 @@
           display: flex;
           align-items: center;
 
-          color: #fff;
+          font-weight: 500;
+          color: v.$textBlack;
           text-decoration: none;
+
+          transition: color ease-in-out 0.15s;
 
           @media (pointer: fine) {
             &:hover {
-              &::after {
-                width: 100%;
-                left: 0;
-              }
+              color: v.$red;
+              // &::after {
+              //   width: 100%;
+              //   left: 0;
+              // }
             }
           }
 
@@ -142,161 +146,7 @@
             width: 0;
             height: 1px;
 
-            background-color: #fff;
-            transition:
-              width ease-in-out 0.15s,
-              left ease-in-out 0.15s;
-          }
-        }
-      }
-    }
-
-    &__burger {
-      display: none;
-    }
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .header {
-    &__container {
-      position: fixed;
-      top: 0;
-      left: 50%;
-      transform: translate(-50%, -100%);
-
-      width: 100%;
-      max-width: 1000px;
-      height: 50px;
-
-      display: flex;
-      justify-content: space-between;
-
-      padding: 0 100px;
-      z-index: 20;
-
-      box-shadow: 0 0 8px v.$shadowblack;
-
-      // background: linear-gradient(
-      //   177deg,
-      //   v.$transblack 40%,
-      //   v.$transblackAlt 90%
-      // );
-
-      background-color: v.$transgraylight;
-
-      backdrop-filter: blur(3px);
-
-      border-bottom-right-radius: 10px;
-      border-bottom-left-radius: 10px;
-
-      transition: transform ease-in-out 0.1s;
-
-      &_up {
-        position: absolute;
-        right: 0;
-        top: 0;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        padding: 0 5px;
-
-        height: 100%;
-
-        background-color: v.$transdim;
-
-        border-bottom-right-radius: 10px;
-
-        transition: background-color ease-in-out 0.1s;
-
-        @media (pointer: fine) {
-          &:hover {
-            background-color: v.$transgrayverylight;
-          }
-        }
-
-        & img {
-          height: 30px;
-          width: fit-content;
-
-          user-select: none;
-        }
-      }
-
-      &_toggle {
-        position: absolute;
-        left: 0;
-        top: 100%;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        padding: 0 5px;
-
-        height: 100%;
-
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
-
-        background-color: v.$transgraylight;
-
-        transition:
-          top ease-in-out 0.1s,
-          background-color ease-in-out 0.1s,
-          border-radius ease-in-out 0.1s;
-
-        cursor: pointer;
-
-        & img {
-          width: 30px;
-          height: 30px;
-          transform: rotate(180deg);
-
-          transition: transform ease-in-out 0.2s;
-
-          user-select: none;
-        }
-
-        @media (pointer: fine) {
-          &:hover {
-            background-color: v.$transgrayverylight;
-          }
-        }
-      }
-
-      &_elem {
-        height: 100%;
-        &-link {
-          position: relative;
-
-          height: 100%;
-          display: flex;
-          align-items: center;
-
-          color: #fff;
-          text-decoration: none;
-
-          @media (pointer: fine) {
-            &:hover {
-              &::after {
-                width: 100%;
-                left: 0;
-              }
-            }
-          }
-
-          &::after {
-            content: "";
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            width: 0;
-            height: 1px;
-
-            background-color: #fff;
+            background-color: v.$red;
             transition:
               width ease-in-out 0.15s,
               left ease-in-out 0.15s;
@@ -403,7 +253,9 @@
         width: fit-content;
         height: 29px;
 
-        transition: transform ease-in-out 0.3s, box-shadow ease-in-out 0.3s;
+        transition:
+          transform ease-in-out 0.3s,
+          box-shadow ease-in-out 0.3s;
 
         &-elem {
           position: relative;
@@ -453,3 +305,157 @@
     }
   }
 }
+
+// @media screen and (min-width: 768px) and (max-width: 1023px) {
+//   .header {
+//     &__container {
+//       position: fixed;
+//       top: 0;
+//       left: 50%;
+//       transform: translate(-50%, -100%);
+
+//       width: 100%;
+//       max-width: 1080px;
+//       height: 50px;
+
+//       display: flex;
+//       justify-content: space-between;
+
+//       padding: 0 100px;
+//       z-index: 20;
+
+//       box-shadow: 0 0 8px v.$shadowblack;
+
+//       // background: linear-gradient(
+//       //   177deg,
+//       //   v.$transblack 40%,
+//       //   v.$transblackAlt 90%
+//       // );
+
+//       background-color: v.$transgraylight;
+
+//       backdrop-filter: blur(3px);
+
+//       border-bottom-right-radius: 10px;
+//       border-bottom-left-radius: 10px;
+
+//       transition: transform ease-in-out 0.1s;
+
+//       &_up {
+//         position: absolute;
+//         right: 0;
+//         top: 0;
+
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+
+//         padding: 0 5px;
+
+//         height: 100%;
+
+//         background-color: v.$transdim;
+
+//         border-bottom-right-radius: 10px;
+
+//         transition: background-color ease-in-out 0.1s;
+
+//         @media (pointer: fine) {
+//           &:hover {
+//             background-color: v.$transgrayverylight;
+//           }
+//         }
+
+//         & img {
+//           height: 30px;
+//           width: fit-content;
+
+//           user-select: none;
+//         }
+//       }
+
+//       &_toggle {
+//         position: absolute;
+//         left: 0;
+//         top: 100%;
+
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+
+//         padding: 0 5px;
+
+//         height: 100%;
+
+//         border-bottom-left-radius: 10px;
+//         border-bottom-right-radius: 10px;
+
+//         background-color: v.$transgraylight;
+
+//         transition:
+//           top ease-in-out 0.1s,
+//           background-color ease-in-out 0.1s,
+//           border-radius ease-in-out 0.1s;
+
+//         cursor: pointer;
+
+//         & img {
+//           width: 30px;
+//           height: 30px;
+//           transform: rotate(180deg);
+
+//           transition: transform ease-in-out 0.2s;
+
+//           user-select: none;
+//         }
+
+//         @media (pointer: fine) {
+//           &:hover {
+//             background-color: v.$transgrayverylight;
+//           }
+//         }
+//       }
+
+//       &_elem {
+//         height: 100%;
+//         &-link {
+//           position: relative;
+
+//           height: 100%;
+//           display: flex;
+//           align-items: center;
+
+//           color: #fff;
+//           text-decoration: none;
+
+//           @media (pointer: fine) {
+//             &:hover {
+//               &::after {
+//                 width: 100%;
+//                 left: 0;
+//               }
+//             }
+//           }
+
+//           &::after {
+//             content: "";
+//             position: absolute;
+//             bottom: 10px;
+//             left: 50%;
+//             width: 0;
+//             height: 1px;
+
+//             background-color: #fff;
+//             transition:
+//               width ease-in-out 0.15s,
+//               left ease-in-out 0.15s;
+//           }
+//         }
+//       }
+//     }
+
+//     &__burger {
+//       display: none;
+//     }
+//   }
+// }

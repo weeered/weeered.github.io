@@ -14,7 +14,7 @@
 
   & .header__container_toggle {
     top: 0;
-    background-color: v.$transdim;
+    background-color: v.$transgrayverylight;
 
     border-bottom-right-radius: 0;
 
@@ -67,6 +67,19 @@
           top ease-in 0.08s;
       }
     }
+  }
+}
+
+.button_disabled {
+  filter: grayscale(50%);
+  opacity: 0.5;
+
+  cursor: default;
+
+  user-select: none;
+
+  &:hover {
+    scale: 1 !important;
   }
 }
 

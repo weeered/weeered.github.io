@@ -34,38 +34,60 @@
       <div class="header__burger">
         <div class="header__burger_container">
           <div class="header__burger_container-elem">
-            <a href="#prog">Программа</a>
+            <a
+              onclick="burgerToggle(document.getElementById('burgerToggle'))"
+              href="#prog"
+              >Программа</a
+            >
           </div>
           <div class="header__burger_container-elem">
-            <a href="#judge">Судьи</a>
+            <a
+              onclick="burgerToggle(document.getElementById('burgerToggle'))"
+              href="#judge"
+              >Судьи</a
+            >
           </div>
           <div class="header__burger_container-elem">
-            <a href="#org">Организаторы и партнеры</a>
+            <a
+              onclick="burgerToggle(document.getElementById('burgerToggle'))"
+              href="#org"
+              >Организаторы и партнеры</a
+            >
           </div>
           <div class="header__burger_container-elem">
-            <a href="#form">Контакты</a>
+            <a
+              onclick="burgerToggle(document.getElementById('burgerToggle'))"
+              href="#form"
+              >Связь и Контакты</a
+            >
           </div>
           <div class="header__burger_container-elem">
-            <a href="#hero"
+            <a
+              onclick="burgerToggle(document.getElementById('burgerToggle'))"
+              href="#hero"
               ><img
-                src="./media/icons/double-chevron-up-s-svgrepo-com.svg"
+                src="./media/icons/chevron-up-double-RED.svg"
                 alt="up"
             /></a>
           </div>
         </div>
 
-        <div class="header__burger_button" onclick="burgerToggle(this)">
+        <div
+          class="header__burger_button"
+          id="burgerToggle"
+          onclick="burgerToggle(this)"
+        >
           <div class="header__burger_button-elem"></div>
         </div>
       </div>
 
       <div class="header__container">
         <div onclick="headerToggle(this)" class="header__container_toggle">
-          <img src="./media/icons/chevron-up.svg" alt="toggle" />
+          <img src="./media/icons/chevron-up-RED.svg" alt="toggle" />
         </div>
         <a href="#hero" class="header__container_up">
           <img
-            src="./media/icons/double-chevron-up-s-svgrepo-com.svg"
+            src="./media/icons/chevron-up-double-RED.svg"
             alt="up"
           />
         </a>
@@ -77,11 +99,13 @@
         </div>
         <div class="header__container_elem">
           <a href="#org" class="header__container_elem-link"
-            >Организаторы и партнеры</a
+            >Организаторы и Партнеры</a
           >
         </div>
         <div class="header__container_elem">
-          <a href="#form" class="header__container_elem-link">Контакты</a>
+          <a href="#form" class="header__container_elem-link"
+            >Связь и Контакты</a
+          >
         </div>
       </div>
     </header>
@@ -92,12 +116,17 @@
         src="./media/logos/kul-cup_logo_w1.png"
         alt="logo"
       />
-      <h1 class="hero__title">МЕЖДУНАРОДНЫЙ КУЛИНАРНЫЙ КУБОК 2025</h1>
-      <h3 class="hero__date">Минск 11-13 ноября 2025</h3>
+      <h1 class="hero__title textScale">МЕЖДУНАРОДНЫЙ КУЛИНАРНЫЙ КУБОК 2025</h1>
       <div class="hero__textbox textScale">
         Феерическое шоу, где креативность, мастерство и инновации сливаются
         воедино, создавая неповторимую атмосферу вдохновения!
       </div>
+      <div class="hero__date textScale">11-13 ноября 2025</div>
+      <div class="hero__place textScale">
+        г. Минск, ул. Павлины Меделки, 24 Минский Международный Выставочный
+        Центр
+      </div>
+
       <div class="wave"></div>
       <div class="wave2"></div>
     </hero>
@@ -142,6 +171,21 @@
               кулинара!</span
             >
           </div>
+        </div>
+
+        <div class="main__desc_docs textScale">
+          <a
+            href="./media/documents/participants_joined.pdf"
+            target="_blank"
+            class="main__desc_docs-button"
+            >📄Участникам</a
+          >
+          <a
+            href="./media/documents/partners_joined.pdf"
+            target="_blank"
+            class="main__desc_docs-button"
+            >📄Партнерам</a
+          >
         </div>
 
         <div class="main__desc_swiperContainer">
@@ -331,9 +375,48 @@
           </div>
         </div>
 
-        <div class="main__desc_bottom dropdownScale">
-          <!-- <div class="wave"></div>
-					<div class="wave2"></div> -->
+        <div class="main__desc_runningLine">
+          <div class="main__desc_runningLine-cnt">
+            <div class="main__desc_runningLine-cntItem">11-13 ноября 2025</div>
+            <div class="main__desc_runningLine-cntItem">
+              г. Минск, ул. Павлины Меделки, 24
+            </div>
+            <div class="main__desc_runningLine-cntItem">
+              Минский Международный Выставочный Центр
+            </div>
+            <div class="main__desc_runningLine-cntItem">PRODEXPO — 2025</div>
+
+            <div class="main__desc_runningLine-cntItem">11-13 ноября 2025</div>
+            <div class="main__desc_runningLine-cntItem">
+              г. Минск, ул. Павлины Меделки, 24
+            </div>
+            <div class="main__desc_runningLine-cntItem">
+              Минский Международный Выставочный Центр
+            </div>
+            <div class="main__desc_runningLine-cntItem">PRODEXPO — 2025</div>
+
+            <div class="main__desc_runningLine-cntItem">11-13 ноября 2025</div>
+            <div class="main__desc_runningLine-cntItem">
+              г. Минск, ул. Павлины Меделки, 24
+            </div>
+            <div class="main__desc_runningLine-cntItem">
+              Минский Международный Выставочный Центр
+            </div>
+            <div class="main__desc_runningLine-cntItem">PRODEXPO — 2025</div>
+
+            <div class="main__desc_runningLine-cntItem">11-13 ноября 2025</div>
+            <div class="main__desc_runningLine-cntItem">
+              г. Минск, ул. Павлины Меделки, 24
+            </div>
+            <div class="main__desc_runningLine-cntItem">
+              Минский Международный Выставочный Центр
+            </div>
+            <div class="main__desc_runningLine-cntItem">PRODEXPO — 2025</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="main__desc_bottom dropdownScale">
           <div class="main__desc_dropdown">
             <div
               class="main__desc_dropdown-button"
@@ -364,7 +447,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <h2 class="main__title titleScale" id="prog">В программе Кубка:</h2>
 
@@ -413,7 +496,7 @@
             />
 
             <div class="main__programm_list-itemCnt">
-              <h3>Кулинарный конкурс «БАТЛ ШЕФОВ»</h3>
+              <h3>Кулинарный конкурс «Батл Шефов»</h3>
               <p>
                 Соревнования шефов и су-шефов ведущих ресторанов страны, в том
                 числе заведений, вошедших в топ 50 по версии национальной премии
@@ -474,7 +557,7 @@
 
             <div class="main__programm_list-itemCnt">
               <h3>
-                МАСТЕР-КЛАССЫ от шефов и судей Международного Кулинарного Кубка
+                Мастер-классы от шефов и судей Международного Кулинарного Кубка
               </h3>
               <p>
                 Выступают знаменитые бренд-шефы и шеф-повара страны и зарубежью!
@@ -484,8 +567,11 @@
                 авторских рецептов, познакомят с философией кухни разных стран
               </p>
               <div>
-                <a href="#" target="_blank">Программа мастер-классов</a
-                ><a href="#" target="_blank">Участники</a>
+                <a class="button_disabled" href="#" target="_blank"
+                  >Программа мастер-классов</a
+                ><a class="button_disabled" href="#" target="_blank"
+                  >Участники</a
+                >
               </div>
             </div>
           </li>
@@ -498,14 +584,14 @@
             />
 
             <div class="main__programm_list-itemCnt">
-              <h3>Закрытый круглый стол «ВЕРШИНА КУЛИНАРНОГО ИСКУССТВА»</h3>
+              <h3>Закрытый круглый стол «Вершина Кулинарного Искусства»</h3>
               <p>
                 C участием приглашенных шеф-поваров и рестораторов. <br />Тема
                 заседания: «Развитие региональной гастрономии и авторских
                 методик»
               </p>
               <div>
-                <a href="#" target="_blank">Спикеры</a>
+                <a class="button_disabled" href="#" target="_blank">Спикеры</a>
               </div>
             </div>
           </li>
@@ -616,12 +702,12 @@
 
           <div class="main__judges_judgeBoard-card cardScale">
             <h4>Судья</h4>
-            <img src="./media/judges/IgnazioRosso.jpg" alt="Photo" />
+            <img src="./media/judges/ElenaMikulchic.jpg" alt="Photo" />
             <div>
-              <span>Иньяцио Россо</span>
+              <span>Елена Микульчик</span>
               <span
-                >Знаменитый мировой шеф, совладелец ресторана «La Scala
-                Trattoria Ignazio»</span
+                >Шеф-повар, эксперт белорусской и славянской кухни, историк
+                кулинарии, автор кулинарных книг, теле и радио ведущая</span
               >
             </div>
           </div>
@@ -710,36 +796,69 @@
         <div class="wave3"></div>
         <div class="wave4"></div>
 
-        <div class="main__partners_container">
-          <a class="main__partners_container-card">
+        <div class="main__partners_container descContainer">
+          <a
+            href="https://prodexpo.by/"
+            target="_blank"
+            class="main__partners_container-card descCard"
+          >
             <img src="./media/partners/PRODEXPO.jpg" alt="partner" />
+            <!-- <div>Генеральный Партнер</div> -->
           </a>
 
-          <a class="main__partners_container-card">
+          <a
+            href="https://aromatik.by/"
+            target="_blank"
+            class="main__partners_container-card descCard"
+          >
             <img src="./media/partners/COOO АРОМАТИК.png" alt="partner" />
           </a>
 
-          <a class="main__partners_container-card">
+          <a
+            href="https://anyform.by/"
+            target="_blank"
+            class="main__partners_container-card descCard"
+          >
             <img src="./media/partners/Компания ANYFORM.png" alt="partner" />
           </a>
 
-          <a class="main__partners_container-card">
+          <a
+            href="https://www.barsa.by/"
+            target="_blank"
+            class="main__partners_container-card descCard"
+          >
             <img src="./media/partners/ООО  BARSA.png" alt="partner" />
           </a>
 
-          <a class="main__partners_container-card">
+          <a
+            href="https://entecomaster.by/"
+            target="_blank"
+            class="main__partners_container-card descCard"
+          >
             <img src="./media/partners/ООО ИНТЭКО-МАСТЕР.png" alt="partner" />
           </a>
 
-          <a class="main__partners_container-card">
+          <a
+            href="https://aman.by/"
+            target="_blank"
+            class="main__partners_container-card descCard"
+          >
             <img src="./media/partners/ЧУП АМАН ТРЕЙДИНГ.png" alt="partner" />
           </a>
 
-          <a class="main__partners_container-card">
+          <a
+            href="https://priprava.by/"
+            target="_blank"
+            class="main__partners_container-card descCard"
+          >
             <img src="./media/partners/ЧУП ПРЯНЫЙ ДОМ.png" alt="partner" />
           </a>
 
-          <a class="main__partners_container-card">
+          <a
+            href="https://modecorbel.by/"
+            target="_blank"
+            class="main__partners_container-card descCard"
+          >
             <img src="./media/partners/ЧУП МОДЕКОР БЕЛ.png" alt="partner" />
           </a>
         </div>
