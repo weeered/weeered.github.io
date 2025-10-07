@@ -198,7 +198,7 @@
         box-shadow: 0 0 8px v.$shadowblack;
 
         //background: linear-gradient(120deg, v.$transblack, v.$transblackAlt);
-        background-color: v.$graylight;
+        background-color: v.$transwhite;
         backdrop-filter: blur(2px);
 
         overflow: hidden;
@@ -219,13 +219,13 @@
             display: flex;
 
             font-size: 24px;
-            color: #fff;
+            color: v.$textBlack;
             text-decoration: none;
             width: 100%;
 
             & img {
               margin: 0 auto;
-              width: 30px;
+              width: 35px;
             }
           }
         }
@@ -241,7 +241,7 @@
         align-items: center;
 
         //background: linear-gradient(120deg, v.$transblack, v.$transblackAlt);
-        background-color: v.$graylight;
+        background-color: v.$transwhite;
         backdrop-filter: blur(2px);
 
         border-bottom-right-radius: 10px;
@@ -255,13 +255,15 @@
 
         transition:
           transform ease-in-out 0.3s,
+          box-shadow ease-in-out 0.3s,
+          background-color ease-in-out 0.3s,
           box-shadow ease-in-out 0.3s;
 
         &-elem {
           position: relative;
           width: 50px;
           height: 3px;
-          background-color: #fff;
+          background-color: v.$red;
 
           transition-delay: 0.1s;
 
@@ -274,7 +276,7 @@
 
             width: 50px;
             height: 3px;
-            background-color: #fff;
+            background-color: v.$red;
 
             transition:
               transform ease-in 0.08s,
@@ -290,7 +292,7 @@
 
             width: 50px;
             height: 3px;
-            background-color: #fff;
+            background-color: v.$red;
 
             transition:
               transform ease-in 0.08s,

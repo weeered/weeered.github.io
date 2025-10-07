@@ -299,7 +299,7 @@ h3 {
     width: 100%;
     padding-top: 10px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.2666666667);
-    background-color: #afafaf;
+    background-color: rgba(243, 243, 243, 0.9176470588);
     -webkit-backdrop-filter: blur(2px);
             backdrop-filter: blur(2px);
     overflow: hidden;
@@ -316,13 +316,13 @@ h3 {
   .header__burger_container-elem a {
     display: flex;
     font-size: 24px;
-    color: #fff;
+    color: rgba(0, 0, 0, 0.8784313725);
     text-decoration: none;
     width: 100%;
   }
   .header__burger_container-elem a img {
     margin: 0 auto;
-    width: 30px;
+    width: 35px;
   }
   .header__burger_button {
     position: absolute;
@@ -331,7 +331,7 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #afafaf;
+    background-color: rgba(243, 243, 243, 0.9176470588);
     -webkit-backdrop-filter: blur(2px);
             backdrop-filter: blur(2px);
     border-bottom-right-radius: 10px;
@@ -340,13 +340,13 @@ h3 {
     width: -moz-fit-content;
     width: fit-content;
     height: 29px;
-    transition: transform ease-in-out 0.3s, box-shadow ease-in-out 0.3s;
+    transition: transform ease-in-out 0.3s, box-shadow ease-in-out 0.3s, background-color ease-in-out 0.3s, box-shadow ease-in-out 0.3s;
   }
   .header__burger_button-elem {
     position: relative;
     width: 50px;
     height: 3px;
-    background-color: #fff;
+    background-color: #bf1e2e;
     transition-delay: 0.1s;
   }
   .header__burger_button-elem::before {
@@ -357,7 +357,7 @@ h3 {
     transform: translate(-50%, 0);
     width: 50px;
     height: 3px;
-    background-color: #fff;
+    background-color: #bf1e2e;
     transition: transform ease-in 0.08s, top ease-in-out 0.3s;
   }
   .header__burger_button-elem::after {
@@ -368,7 +368,7 @@ h3 {
     transform: translate(-50%, 0);
     width: 50px;
     height: 3px;
-    background-color: #fff;
+    background-color: #bf1e2e;
     transition: transform ease-in 0.08s, top ease-in-out 0.3s;
   }
   .header__container {
