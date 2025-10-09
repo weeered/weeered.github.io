@@ -1,0 +1,141 @@
+@use "./variables" as v;
+
+.showDropdown {
+  transform: translateY(2.5%);
+  opacity: 1;
+}
+
+.chevronRotate {
+  transform: rotate(180deg);
+}
+
+.headerDown {
+  transform: translate(-50%, 0);
+
+  & .header__container_toggle {
+    top: 0;
+    background-color: v.$orange;
+    box-shadow: none;
+
+    @media (pointer: fine) {
+      &:hover {
+        filter: brightness(102%);
+      }
+    }
+
+    & img {
+      transform: rotate(0);
+    }
+  }
+}
+
+.burgerActive {
+  & .header__burger_container {
+    transform: translate(0, 0);
+  }
+
+  & .header__burger_button {
+    transform: translate(calc(100vw - 100%), 0);
+
+    border-bottom-right-radius: 0;
+
+    background: none;
+    box-shadow: none;
+    backdrop-filter: none;
+
+    &-elem {
+      background-color: transparent;
+
+      &::after {
+        top: 0;
+        transform: translate(-50%, 0) rotate(45deg);
+
+        transition:
+          transform ease-in-out 0.3s,
+          top ease-in 0.08s;
+      }
+
+      &::before {
+        top: 0;
+        transform: translate(-50%, 0) rotate(-45deg);
+
+        transition:
+          transform ease-in-out 0.3s,
+          top ease-in 0.08s;
+      }
+    }
+  }
+}
+
+.button_disabled {
+  filter: grayscale(50%);
+  opacity: 0.5;
+
+  cursor: default;
+
+  user-select: none;
+
+  &:hover {
+    scale: 1 !important;
+  }
+}
+
+.wave {
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: url('data:image/svg+xml;utf8,\
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" preserveAspectRatio="none">\
+      <path d="M0 20 Q15 0 30 20 T60 20 T90 20 T120 20 V0 H0 Z" fill="%23bf1e2e" />\
+    </svg>')
+    repeat-x;
+  background-size: cover;
+
+  z-index: 1;
+}
+
+.wave2 {
+  position: absolute;
+  bottom: -60px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: url('data:image/svg+xml;utf8,\
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" preserveAspectRatio="none">\
+      <path d="M0 20 Q15 0 30 20 T60 20 T90 20 T120 20 V0 H0 Z" fill="%23f2d6a6" />\
+    </svg>')
+    repeat-x;
+  background-size: cover;
+}
+
+.wave3 {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: url('data:image/svg+xml;utf8,\
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" preserveAspectRatio="none">\
+      <path d="M0 20 Q15 0 30 20 T60 20 T90 20 T120 20 V40 H0 Z" fill="%23bf1e2e" />\
+    </svg>')
+    repeat-x;
+  background-size: cover;
+
+  z-index: 1;
+}
+
+.wave4 {
+  position: absolute;
+  top: -60px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: url('data:image/svg+xml;utf8,\
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 40" preserveAspectRatio="none">\
+      <path d="M0 20 Q15 0 30 20 T60 20 T90 20 T120 20 V40 H0 Z" fill="%23f2d6a6" />\
+    </svg>')
+    repeat-x;
+  background-size: cover;
+}

@@ -1,0 +1,459 @@
+@use "./variables" as v;
+
+@media screen and (min-width: 768px) {
+  .header {
+    &__container {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -100%);
+
+      width: 100%;
+      max-width: 1000px;
+      height: 50px;
+
+      display: flex;
+      justify-content: space-between;
+
+      padding: 0 100px;
+      z-index: 20;
+
+      box-shadow: 0 0 8px v.$shadowblack;
+
+      background-color: v.$orange;
+
+      backdrop-filter: blur(3px);
+
+      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 5px;
+
+      transition: transform ease-in-out 0.1s;
+
+      &_up {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 0 5px;
+
+        height: 100%;
+
+        // background-color: v.$transOrange;
+
+        border-bottom-right-radius: 10px;
+
+        transition: filter ease-in-out 0.1s;
+
+        @media (pointer: fine) {
+          &:hover {
+            filter: brightness(105%);
+          }
+        }
+
+        & img {
+          height: 35px;
+          width: 35px;
+
+          user-select: none;
+        }
+      }
+
+      &_toggle {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+
+        transform: translate(-50%, 100%);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        box-shadow: 0 0 5px v.$shadowgray;
+
+        padding: 0 5px;
+
+        height: 100%;
+
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+
+        background-color: v.$beigeDarker;
+
+        transition:
+          top ease-in-out 0.1s,
+          background-color ease-in-out 0.1s,
+          border-radius ease-in-out 0.1s,
+          box-shadow ease-in-out 0.1s,
+          filter ease-in-out 0.1s;
+
+        cursor: pointer;
+
+        & img {
+          width: 40px;
+          height: 40px;
+          transform: rotate(180deg);
+
+          transition: transform ease-in-out 0.2s;
+
+          user-select: none;
+        }
+
+        @media (pointer: fine) {
+          &:hover {
+            filter: brightness(105%);
+          }
+        }
+      }
+
+      &_elem {
+        height: 100%;
+        &-link {
+          position: relative;
+
+          height: 100%;
+          display: flex;
+          align-items: center;
+
+          font-weight: 500;
+          color: v.$beige;
+          text-decoration: none;
+
+          transition: color ease-in-out 0.15s;
+
+          @media (pointer: fine) {
+            &:hover {
+              &::after {
+                width: 100%;
+                left: 0;
+              }
+            }
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            width: 0;
+            height: 1px;
+
+            background-color: v.$beige;
+            transition:
+              width ease-in-out 0.15s,
+              left ease-in-out 0.15s;
+          }
+        }
+      }
+    }
+
+    &__burger {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 30;
+
+    width: 100%;
+
+    &__burger {
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      width: 100%;
+
+      display: flex;
+
+      &_container {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        transform: translate(-100%, 0);
+
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        width: 100%;
+
+        padding-top: 10px;
+
+        box-shadow: 0 0 8px v.$shadowblack;
+
+        //background: linear-gradient(120deg, v.$transblack, v.$transblackAlt);
+        background-color: v.$transwhite;
+        backdrop-filter: blur(2px);
+
+        overflow: hidden;
+
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+
+        transition: transform ease-in-out 0.3s;
+
+        &-elem {
+          padding: 5px 20px;
+
+          &:last-of-type {
+            background-color: v.$transdim;
+          }
+
+          & a {
+            display: flex;
+
+            font-size: 24px;
+            color: v.$textBlack;
+            text-decoration: none;
+            width: 100%;
+
+            & img {
+              margin: 0 auto;
+              width: 35px;
+            }
+          }
+        }
+      }
+
+      &_button {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        //background: linear-gradient(120deg, v.$transblack, v.$transblackAlt);
+        background-color: v.$transwhite;
+        backdrop-filter: blur(2px);
+
+        border-bottom-right-radius: 10px;
+
+        box-shadow: 0 0 5px v.$shadowgray;
+
+        padding: 30px 15px;
+
+        width: fit-content;
+        height: 29px;
+
+        transition:
+          transform ease-in-out 0.3s,
+          box-shadow ease-in-out 0.3s,
+          background-color ease-in-out 0.3s,
+          box-shadow ease-in-out 0.3s;
+
+        &-elem {
+          position: relative;
+          width: 50px;
+          height: 3px;
+          background-color: v.$red;
+
+          transition-delay: 0.1s;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 13px;
+            left: 50%;
+            transform: translate(-50%, 0);
+
+            width: 50px;
+            height: 3px;
+            background-color: v.$red;
+
+            transition:
+              transform ease-in 0.08s,
+              top ease-in-out 0.3s;
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: -13px;
+            left: 50%;
+            transform: translate(-50%, 0);
+
+            width: 50px;
+            height: 3px;
+            background-color: v.$red;
+
+            transition:
+              transform ease-in 0.08s,
+              top ease-in-out 0.3s;
+          }
+        }
+      }
+    }
+
+    &__container {
+      display: none;
+    }
+  }
+}
+
+// @media screen and (min-width: 768px) and (max-width: 1023px) {
+//   .header {
+//     &__container {
+//       position: fixed;
+//       top: 0;
+//       left: 50%;
+//       transform: translate(-50%, -100%);
+
+//       width: 100%;
+//       max-width: 1080px;
+//       height: 50px;
+
+//       display: flex;
+//       justify-content: space-between;
+
+//       padding: 0 100px;
+//       z-index: 20;
+
+//       box-shadow: 0 0 8px v.$shadowblack;
+
+//       // background: linear-gradient(
+//       //   177deg,
+//       //   v.$transblack 40%,
+//       //   v.$transblackAlt 90%
+//       // );
+
+//       background-color: v.$transgraylight;
+
+//       backdrop-filter: blur(3px);
+
+//       border-bottom-right-radius: 10px;
+//       border-bottom-left-radius: 10px;
+
+//       transition: transform ease-in-out 0.1s;
+
+//       &_up {
+//         position: absolute;
+//         right: 0;
+//         top: 0;
+
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+
+//         padding: 0 5px;
+
+//         height: 100%;
+
+//         background-color: v.$transdim;
+
+//         border-bottom-right-radius: 10px;
+
+//         transition: background-color ease-in-out 0.1s;
+
+//         @media (pointer: fine) {
+//           &:hover {
+//             background-color: v.$transgrayverylight;
+//           }
+//         }
+
+//         & img {
+//           height: 30px;
+//           width: fit-content;
+
+//           user-select: none;
+//         }
+//       }
+
+//       &_toggle {
+//         position: absolute;
+//         left: 0;
+//         top: 100%;
+
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+
+//         padding: 0 5px;
+
+//         height: 100%;
+
+//         border-bottom-left-radius: 10px;
+//         border-bottom-right-radius: 10px;
+
+//         background-color: v.$transgraylight;
+
+//         transition:
+//           top ease-in-out 0.1s,
+//           background-color ease-in-out 0.1s,
+//           border-radius ease-in-out 0.1s;
+
+//         cursor: pointer;
+
+//         & img {
+//           width: 30px;
+//           height: 30px;
+//           transform: rotate(180deg);
+
+//           transition: transform ease-in-out 0.2s;
+
+//           user-select: none;
+//         }
+
+//         @media (pointer: fine) {
+//           &:hover {
+//             background-color: v.$transgrayverylight;
+//           }
+//         }
+//       }
+
+//       &_elem {
+//         height: 100%;
+//         &-link {
+//           position: relative;
+
+//           height: 100%;
+//           display: flex;
+//           align-items: center;
+
+//           color: #fff;
+//           text-decoration: none;
+
+//           @media (pointer: fine) {
+//             &:hover {
+//               &::after {
+//                 width: 100%;
+//                 left: 0;
+//               }
+//             }
+//           }
+
+//           &::after {
+//             content: "";
+//             position: absolute;
+//             bottom: 10px;
+//             left: 50%;
+//             width: 0;
+//             height: 1px;
+
+//             background-color: #fff;
+//             transition:
+//               width ease-in-out 0.15s,
+//               left ease-in-out 0.15s;
+//           }
+//         }
+//       }
+//     }
+
+//     &__burger {
+//       display: none;
+//     }
+//   }
+// }

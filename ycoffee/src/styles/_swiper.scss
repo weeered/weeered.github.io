@@ -1,0 +1,268 @@
+@use "./variables" as v;
+
+$slidesNum: 7;
+
+@media screen and (min-width: 1024px) {
+  .main {
+    &__desc {
+      &_swiperContainer {
+        max-width: 1000px;
+        &-big {
+          width: 100%;
+          height: calc(((1000px) / 16) * 9);
+
+          margin-bottom: 8px;
+
+          box-shadow: 0 0 8px v.$shadowblack;
+        }
+
+        &-thumbs {
+          width: 100%;
+          height: calc((((1000px) / $slidesNum) / 16) * 9);
+
+          & .swiper-slide {
+            border-radius: 10px;
+
+            padding: 4px;
+
+            &::before {
+              border-radius: 10px;
+            }
+
+            & img {
+              width: 100%;
+              height: 100%;
+
+              border-radius: 6px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .main {
+    &__desc {
+      &_swiperContainer {
+        max-width: calc(100vw - 20vw);
+        overflow: hidden;
+        &-big {
+          width: 100%;
+          height: calc(((100vw - 20vw) / 16) * 9);
+
+          margin-bottom: 8px;
+
+          box-shadow: 0 0 8px v.$shadowblack;
+
+          & .swiper-button-prev {
+            display: none;
+          }
+
+          & .swiper-button-next {
+            display: none;
+          }
+        }
+
+        &-thumbs {
+          width: 100%;
+          height: calc((((100vw - 20vw) / $slidesNum) / 16) * 9);
+
+          & .swiper-slide {
+            border-radius: 10px;
+
+            padding: 3px;
+
+            &::before {
+              border-radius: 10px;
+            }
+            & img {
+              width: 100%;
+              height: 100%;
+
+              border-radius: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .main {
+    &__desc {
+      &_swiperContainer {
+        max-width: calc(100vw - 20px);
+
+        &-big {
+          height: calc(((100vw - 20px) / 16) * 9);
+
+          margin-bottom: 4px;
+
+          box-shadow: 0 0 4px v.$shadowblack;
+
+          & .swiper-button-prev {
+            display: none;
+          }
+
+          & .swiper-button-next {
+            display: none;
+          }
+        }
+
+        &-thumbs {
+          width: 100%;
+          height: calc((((100vw - 20px) / $slidesNum) / 16) * 9);
+
+          & .swiper-slide {
+            border-radius: 4px;
+
+            padding: 2px;
+
+            &::before {
+              border-radius: 4px;
+            }
+            & img {
+              width: 100%;
+              height: 100%;
+
+              border-radius: 3px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.main {
+  &__desc {
+    &_swiperContainer {
+      &-big {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+
+        // & .swiper-wrapper {
+        // }
+
+        & .swiper-slide {
+          user-select: none;
+
+          overflow: hidden;
+
+          & img {
+            object-fit: cover;
+            object-position: 50% 50%;
+
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        & .swiper-button-prev {
+          height: 100px;
+
+          padding: 15px 12px;
+
+          background-color: v.$transwhite;
+          backdrop-filter: blur(2px);
+          color: v.$red;
+
+          border-radius: 10px;
+
+          box-shadow: 0 0 10px v.$shadowgray;
+
+          transition: scale 0.1s ease-in-out;
+
+          user-select: none;
+
+          &:hover {
+            scale: 1.025;
+          }
+
+          &:active {
+            scale: 0.99;
+          }
+        }
+
+        & .swiper-button-next {
+          height: 100px;
+
+          padding: 15px 12px;
+
+          background-color: v.$transwhite;
+          backdrop-filter: blur(2px);
+          color: v.$red;
+
+          border-radius: 10px;
+
+          box-shadow: 0 0 6px v.$shadowgray;
+
+          transition: scale 0.1s ease-in-out;
+
+          user-select: none;
+
+          &:hover {
+            scale: 1.025;
+          }
+
+          &:active {
+            scale: 0.99;
+          }
+        }
+      }
+
+      &-thumbs {
+        overflow: hidden;
+
+        user-select: none;
+
+        & .swiper-slide {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          overflow: hidden;
+
+          & img {
+            object-fit: cover;
+
+            cursor: pointer;
+          }
+
+          &::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+
+            transform: translate(-50%, -50%);
+
+            width: 70%;
+            height: 70%;
+
+            background-color: v.$red;
+
+            z-index: -1;
+
+            transition:
+              width linear 0.15s,
+              height linear 0.15s;
+          }
+        }
+
+        .swiper-slide-thumb-active {
+          &::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}

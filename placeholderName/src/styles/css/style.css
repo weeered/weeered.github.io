@@ -147,7 +147,7 @@ main {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-family: "Libertinus Sans", sans-serif;
 }
 
@@ -434,7 +434,6 @@ h3 {
   z-index: 10;
 }
 .hero__title {
-  width: 100%;
   font-weight: 500;
 }
 .hero__place {
@@ -1372,6 +1371,9 @@ h3 {
 }
 .main__partners_container-card.victoria img {
   filter: brightness(0) invert(1);
+}
+.main__partners_container-card.robinson {
+  background-color: #442d25;
 }
 .main__partners_container-card.belarus {
   background-color: #10396f;
