@@ -3,8 +3,6 @@
 @media screen and (min-width: 1024px) {
   .main {
     &__organizers {
-      margin: 30px 0;
-
       &_container {
         gap: 33px;
         justify-content: center;
@@ -24,8 +22,6 @@
     }
 
     &__partners {
-      margin: 30px 0;
-
       &_container {
         gap: 33px;
         justify-content: center;
@@ -41,15 +37,6 @@
             object-fit: contain;
           }
         }
-
-        // &-card.descCard {
-        //   height: 100%;
-
-        //   & img {
-        //     width: calc((1000px - 66px) / 3);
-        //     height: calc((((1000px - 66px) / 3) / 16) * 9);
-        //   }
-        // }
 
         &-card.hotelCard {
           height: 100%;
@@ -74,8 +61,6 @@
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .main {
     &__organizers {
-      margin: 30px 0;
-
       &_container {
         gap: 30px;
         justify-content: center;
@@ -95,8 +80,6 @@
     }
 
     &__partners {
-      margin: 40px 0;
-
       &_container {
         gap: 30px;
         justify-content: center;
@@ -139,8 +122,6 @@
 @media screen and (max-width: 767px) {
   .main {
     &__organizers {
-      margin: 30px 0;
-
       &_container {
         gap: 15px;
         justify-content: center;
@@ -159,8 +140,6 @@
     }
 
     &__partners {
-      margin: 30px 0;
-
       &_container {
         gap: 15px;
         justify-content: center;
@@ -206,17 +185,11 @@
   &__organizers {
     position: relative;
     width: 100%;
+    background-color: v.$beige;
     padding: 30px 0;
 
-    // background: linear-gradient(
-    // 	170deg,
-    // 	v.$transblack 40%,
-    // 	v.$transblackAlt 90%
-    // );
 
-    background-color: v.$red;
-
-    box-shadow: 0 0 10px v.$shadowgray;
+    box-shadow: 0 0 5px v.$shadowgray;
 
     &_container {
       display: flex;
@@ -229,33 +202,15 @@
         align-items: center;
         justify-content: center;
 
-        // background: linear-gradient(
-        // 	170deg,
-        // 	v.$transwhite 40%,
-        // 	v.$transwhite 90%
-        // );
-
         background-color: #fff;
 
         border-radius: 10px;
 
-        box-shadow: 0 0 10px v.$shadowblack;
+        box-shadow: 0 0 6px v.$shadowgray;
 
         transition: scale ease-in-out 0.2s;
 
         overflow: hidden;
-
-        // &::before {
-        // 	content: "";
-        // 	position: absolute;
-        // 	top: 0;
-        // 	left: -30px;
-        // 	width: 80px;
-        // 	height: 20px;
-        // 	background-color: v.$beige;
-
-        // 	transform: rotate(-45deg);
-        // }
 
         &::after {
           content: "";
@@ -264,7 +219,7 @@
           right: -40px;
           width: 80px;
           height: 40px;
-          background-color: v.$beige;
+          background-color: v.$beigeDarker;
 
           transform: rotate(-45deg);
 
@@ -275,7 +230,6 @@
 
         &:hover {
           scale: 1.025;
-          box-shadow: 0 0 12px v.$shadowblack;
         }
 
         & img {
@@ -287,27 +241,13 @@
   }
 
   &__partners {
-    position: relative;
     width: 100%;
+    background-color: v.$beige;
     padding: 30px 0;
 
-    // background: linear-gradient(
-    // 	170deg,
-    // 	v.$transblack 40%,
-    // 	v.$transblackAlt 90%
-    // );
-
-    background-color: v.$red;
-
-    box-shadow: 0 0 10px v.$shadowgray;
-
-    // &_container.hotelContainer {
-
-    // }
+    box-shadow: 0 0 5px v.$shadowgray;
 
     &_container {
-      position: relative;
-
       display: flex;
       flex-wrap: wrap;
 
@@ -318,37 +258,15 @@
         align-items: center;
         justify-content: center;
 
-        text-decoration: none;
-
-        // background: linear-gradient(
-        // 	170deg,
-        // 	v.$transwhite 40%,
-        // 	v.$transwhite 90%
-        // );
-
         background-color: #fff;
 
         border-radius: 10px;
 
-        box-shadow: 0 0 10px v.$shadowblack;
+        box-shadow: 0 0 6px v.$shadowgray;
 
         transition: scale ease-in-out 0.2s;
 
         overflow: hidden;
-
-        cursor: pointer;
-
-        // &::before {
-        // 	content: "";
-        // 	position: absolute;
-        // 	top: 0;
-        // 	left: -30px;
-        // 	width: 80px;
-        // 	height: 20px;
-        // 	background-color: v.$beige;
-
-        // 	transform: rotate(-45deg);
-        // }
 
         &::after {
           content: "";
@@ -357,7 +275,7 @@
           right: -40px;
           width: 80px;
           height: 40px;
-          background-color: v.$beige;
+          background-color: v.$beigeDarker;
 
           transform: rotate(-45deg);
 
@@ -368,11 +286,11 @@
 
         &:hover {
           scale: 1.025;
-          box-shadow: 0 0 12px v.$shadowblack;
         }
 
         & img {
-          transition: scale ease-in-out 0.2s;
+          width: 100%;
+          height: 100%;
         }
       }
 
@@ -399,8 +317,6 @@
         flex-direction: column;
         justify-content: space-between;
 
-        //border: 5px solid #fff;
-
         padding: 0;
 
         & .hotelDesc {
@@ -416,12 +332,6 @@
           color: v.$textBlack;
           text-align: center;
           padding: 10px;
-
-          // background: linear-gradient(
-          //   50deg,
-          //   v.$transblack 40%,
-          //   v.$transgray 90%
-          // );
 
           background-color: v.$transwhite;
         }

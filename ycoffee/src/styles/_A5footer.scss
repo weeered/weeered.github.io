@@ -2,7 +2,7 @@
 
 @media screen and (min-width: 1024px) {
 	.footer {
-		margin-top: 150px;
+		margin-top: 100px;
 		&__container {
 			flex-direction: row;
 			gap: 60px;
@@ -13,7 +13,7 @@
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
 	.footer {
-		margin-top: 150px;
+		margin-top: 100px;
 		&__container {
 			flex-direction: column;
 			gap: 15px;
@@ -23,7 +23,7 @@
 
 @media screen and (max-width: 767px) {
 	.footer {
-		margin-top: 150px;
+		margin-top: 100px;
 		&__container {
 			flex-direction: column;
 			gap: 15px;
@@ -50,9 +50,15 @@
 	padding-top: 30px;
 	padding-bottom: 40px;
 
-	color: #fff;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	border-top: 10px solid v.$brownDarker;
 
-	background-color: v.$red;
+	color: v.$orange;
+
+	background-color: v.$beige;
+	
+	box-shadow:  0 0 6px v.$shadowgray;
 
 	&__container {
 		display: flex;
@@ -102,11 +108,11 @@
 				height: 25px;
 			}
 			& a {
-				color: #fff;
+				color: v.$orange;
 				text-decoration: none;
 
 				&:hover {
-					color: v.$beige;
+					color: v.$orangeBrighter;
 				}
 			}
 		}
@@ -115,8 +121,9 @@
 	&__timer {
 		&_elem {
 			font-size: 30px;
+			color: v.$orangeBrighter;
 			&-span {
-				color: v.$beige;
+				color: v.$orange;
 				font-size: 25px;
 			}
 		}

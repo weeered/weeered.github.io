@@ -57,11 +57,11 @@
           overflow: hidden;
 
           &:nth-of-type(odd) {
-            border-left: 8px solid v.$brown;
+            border-left: 8px solid v.$brownDarker;
           }
 
           &:nth-of-type(even) {
-            border-right: 8px solid v.$brown;
+            border-right: 8px solid v.$brownDarker;
           }
 
           &Pic {
@@ -91,8 +91,11 @@
               color: v.$brownDarker;
               font-weight: 600;
 
-              &::before {
-                content: "• ";
+              & span {
+                font-size: inherit;
+                font-weight: inherit;
+
+                color: v.$orangeBrighter;
               }
             }
             & p {
@@ -109,7 +112,7 @@
               gap: 10px;
 
               & a {
-                background-color: v.$brown;
+                background-color: v.$brownDarker;
 
                 padding: 5px 10px;
 
@@ -191,15 +194,7 @@
 
           overflow: hidden;
 
-          border-bottom: 8px solid v.$brown;
-
-          // &:nth-of-type(odd) {
-          //   border-top: 8px solid v.$brown;
-          // }
-
-          // &:nth-of-type(even) {
-          //   border-bottom: 8px solid v.$brown;
-          // }
+          border-bottom: 8px solid v.$brownDarker;
 
           &Pic {
             width: 100%;
@@ -230,8 +225,11 @@
               color: v.$brownDarker;
               font-weight: 600;
 
-              &::before {
-                content: "• ";
+              & span {
+                font-size: inherit;
+                font-weight: inherit;
+
+                color: v.$orangeBrighter;
               }
             }
             & p {
@@ -248,7 +246,7 @@
               gap: 10px;
 
               & a {
-                background-color: v.$brown;
+                background-color: v.$brownDarker;
 
                 padding: 5px 10px;
 
@@ -323,14 +321,14 @@
 
       & .main__desc_textbox-large {
         color: #fff;
-        font-size: 1.8rem;
+        font-size: 2.5rem;
 
         text-shadow: 0 0 4px v.$shadowblack;
       }
 
       & .main__desc_textbox-regular {
         color: #fff;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
 
         text-shadow: 0 0 4px v.$shadowblack;
       }
@@ -342,7 +340,7 @@
       &-button {
         padding: 5px 10px;
 
-        background-color: v.$brown;
+        background-color: v.$brownDarker;
 
         font-size: 1.1rem;
 
