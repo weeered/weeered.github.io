@@ -21,6 +21,14 @@
         }
       }
 
+      &_textbox.coffeeBG {
+        & .main__desc_textbox-large {
+          & br {
+            display: none;
+          }
+        }
+      }
+
       &_docs {
         justify-content: center;
         gap: 10%;
@@ -97,7 +105,7 @@
 
                 color: v.$orangeBrighter;
 
-                &::after{
+                &::after {
                   content: " – ";
                   color: v.$brownDarker;
                 }

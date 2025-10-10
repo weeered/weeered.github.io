@@ -38,6 +38,9 @@
   .textScale br {
     display: none;
   }
+  .wrapperScale {
+    margin: 0 2%;
+  }
   .dropdownScale {
     justify-content: center;
     gap: 80px;
@@ -465,6 +468,9 @@ h3 {
   .main__desc_textbox-bold {
     font-size: 1.1rem;
     font-weight: 600;
+  }
+  .main__desc_textbox.coffeeBG .main__desc_textbox-large br {
+    display: none;
   }
   .main__desc_docs {
     justify-content: center;
