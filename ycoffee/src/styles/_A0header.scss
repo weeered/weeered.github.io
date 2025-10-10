@@ -194,7 +194,7 @@
         box-shadow: 0 0 8px v.$shadowblack;
 
         //background: linear-gradient(120deg, v.$transblack, v.$transblackAlt);
-        background-color: v.$transwhite;
+        background-color: v.$orange;
         backdrop-filter: blur(2px);
 
         overflow: hidden;
@@ -215,7 +215,7 @@
             display: flex;
 
             font-size: 24px;
-            color: v.$textBlack;
+            color: v.$beige;
             text-decoration: none;
             width: 100%;
 
@@ -237,7 +237,7 @@
         align-items: center;
 
         //background: linear-gradient(120deg, v.$transblack, v.$transblackAlt);
-        background-color: v.$transwhite;
+        background-color: v.$beigeDarker;
         backdrop-filter: blur(2px);
 
         border-bottom-right-radius: 10px;
@@ -259,7 +259,7 @@
           position: relative;
           width: 50px;
           height: 3px;
-          background-color: v.$red;
+          background-color: v.$beige;
 
           transition-delay: 0.1s;
 
@@ -272,7 +272,7 @@
 
             width: 50px;
             height: 3px;
-            background-color: v.$red;
+            background-color: v.$beige;
 
             transition:
               transform ease-in 0.08s,
@@ -288,7 +288,7 @@
 
             width: 50px;
             height: 3px;
-            background-color: v.$red;
+            background-color: v.$beige;
 
             transition:
               transform ease-in 0.08s,

@@ -13,7 +13,6 @@
 main {
   display: flex;
   flex-direction: column;
-  background-color: v.$beige;
 }
 
 h1 {
@@ -22,6 +21,8 @@ h1 {
 
 h2 {
   font-size: 1.8rem;
+
+  color: v.$brownDarker;
 }
 
 h3 {

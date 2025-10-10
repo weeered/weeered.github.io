@@ -4,7 +4,9 @@
   .hero {
     gap: 10px;
     &__img {
-      padding-top: 30px;
+      background-color: #fff;
+      
+      padding-top: 50px;
       padding-bottom: 30px;
       margin-bottom: 20px;
 
@@ -22,7 +24,7 @@
     &__img {
       background-color: #fff;
 
-      padding-top: 30px;
+      padding-top: 50px;
       padding-bottom: 30px;
       margin-bottom: 20px;
 
@@ -60,14 +62,14 @@
 
   height: fit-content;
   position: relative;
-  background: v.$beigeDarker;
+  background: v.$beige;
   color: v.$brownDarker;
 
   padding-bottom: 40px;
 
   text-align: center;
 
-  box-shadow: 0 0 10px v.$shadowblack;
+  box-shadow: 0 0 20px #000;
 
   z-index: 10;
 
