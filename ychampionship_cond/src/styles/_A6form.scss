@@ -1,0 +1,172 @@
+@use "./variables" as v;
+
+@media screen and (min-width: 1024px) {
+  .main {
+    &__form {
+      margin: 0 auto;
+    }
+  }
+}
+
+// @media screen and (min-width: 768px) and (max-width: 1023px) {
+//   .main {
+//   }
+// }
+
+// @media screen and (max-width: 767px) {
+//   .main {
+//   }
+// }
+
+.main {
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0 0 8px v.$shadowblack;
+
+    border-radius: 20px;
+
+    //background-image: url("../../media/icons/1_2_ikonka_kul-cup_logo.png");
+    //background-repeat: no-repeat;
+    //background-position: 90% 72%;
+    //background-attachment: local;
+    //background-size: 110% auto;
+
+    &_clue {
+      font-size: 1.2rem;
+
+      color: #fff;
+
+      background-color: v.$red;
+
+      padding: 15px 15px;
+
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+
+      width: 100%;
+
+      text-align: center;
+    }
+
+    &_elem {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      width: 100%;
+
+      padding-top: 20px;
+
+      border-top: none;
+
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+
+      // background: linear-gradient(
+      //   170deg,
+      //   v.$transgraylight 40%,
+      //   v.$transgray 90%
+      // );
+
+      background-color: v.$transwhite;
+
+      backdrop-filter: blur(5px);
+
+      &-inputFrame {
+        display: flex;
+        flex-direction: column;
+
+        padding: 0 20px;
+
+        & label {
+          color: v.$textBlack;
+        }
+
+        & input {
+          padding: 10px;
+
+          border: none;
+          border-radius: 10px;
+
+          background-color: #fff;
+
+          box-shadow: 0 0 2px v.$shadowgray;
+
+          &::placeholder {
+            overflow: visible;
+          }
+        }
+      }
+
+      &-submit {
+        margin: 20px;
+
+        background-color: v.$red;
+
+        color: v.$beigeLighter;
+
+        padding: 5px;
+
+        border: none;
+
+        cursor: pointer;
+
+        border: 3px solid v.$beige;
+
+        border-radius: 10px;
+
+        transition: scale ease-in-out 0.1s;
+
+        &:hover{
+          scale: 1.008;
+        }
+      }
+
+      &-legend {
+        font-size: 0.8rem;
+        color: v.$textBlack;
+        margin: 10px 20px;
+        margin-top: -25px;
+      }
+
+      &-textareaFrame {
+        display: flex;
+        flex-direction: column;
+
+        padding: 0 20px;
+
+        & label {
+          color: v.$textBlack;
+        }
+
+        &Container {
+          padding: 10px;
+          box-shadow: 0 0 2px v.$shadowgray;
+          border-radius: 10px;
+
+          background-color: #fff;
+          & textarea {
+            width: 100%;
+            max-width: 100%;
+            min-height: 6rem;
+
+            field-sizing: content;
+            resize: none;
+
+            border: none;
+            outline: none;
+
+            background-color: transparent;
+
+            scrollbar-color: v.$transblack transparent;
+          }
+        }
+      }
+    }
+  }
+}

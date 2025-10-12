@@ -1,0 +1,1200 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Захватывающие мастер-классы, дегустации, интерактивные презентации и, конечно же, напряженная борьба за звание лучшего кулинара! Событие проходит 11-13 ноября 2025 года в городе Минск Беларусь в рамках международной выставки-ярмарки PRODEXPO — 2025"
+    />
+    <meta name="Author" content="Dennis Sviryda" />
+    <title>
+      International Culinary Cup 2025 | Международный Кулинарный Кубок 2025
+    </title>
+    <link rel="icon" href="./media/icons/favicon_cup-96x96.png" />
+    <link rel="apple-touch-icon" href="./media/icons/apple-touch-icon.png" />
+    <link
+      rel="stylesheet"
+      fetchpriority="high"
+      href="./styles/css/style.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chiron+Hei+HK:ital,wght@0,200..900;1,200..900&family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header__burger">
+        <div class="header__burger_container">
+          <div class="header__burger_container-elem">
+            <a
+              onclick="burgerToggle(document.getElementById('burgerToggle'))"
+              href="#prog"
+              >Программа</a
+            >
+          </div>
+          <div class="header__burger_container-elem">
+            <a
+              onclick="burgerToggle(document.getElementById('burgerToggle'))"
+              href="#judge"
+              >Судьи</a
+            >
+          </div>
+          <div class="header__burger_container-elem">
+            <a
+              onclick="burgerToggle(document.getElementById('burgerToggle'))"
+              href="#org"
+              >Организаторы и партнеры</a
+            >
+          </div>
+          <div class="header__burger_container-elem">
+            <a
+              onclick="burgerToggle(document.getElementById('burgerToggle'))"
+              href="#form"
+              >Связь и Контакты</a
+            >
+          </div>
+          <div class="header__burger_container-elem">
+            <a
+              onclick="burgerToggle(document.getElementById('burgerToggle'))"
+              href="#hero"
+              ><img src="./media/icons/chevron-up-double-RED.svg" alt="up"
+            /></a>
+          </div>
+        </div>
+
+        <div
+          class="header__burger_button"
+          id="burgerToggle"
+          onclick="burgerToggle(this)"
+        >
+          <div class="header__burger_button-elem"></div>
+        </div>
+      </div>
+
+      <div class="header__container">
+        <div onclick="headerToggle(this)" class="header__container_toggle">
+          <img src="./media/icons/chevron-up-RED.svg" alt="toggle" />
+        </div>
+        <a href="#hero" class="header__container_up">
+          <img src="./media/icons/chevron-up-double-RED.svg" alt="up" />
+        </a>
+        <div class="header__container_elem">
+          <a href="#prog" class="header__container_elem-link">Программа</a>
+        </div>
+        <div class="header__container_elem">
+          <a href="#judge" class="header__container_elem-link">Судьи</a>
+        </div>
+        <div class="header__container_elem">
+          <a href="#org" class="header__container_elem-link"
+            >Организаторы и Партнеры</a
+          >
+        </div>
+        <div class="header__container_elem">
+          <a href="#form" class="header__container_elem-link"
+            >Связь и Контакты</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <hero class="hero" id="hero">
+      <img
+        class="hero__img"
+        src="./media/logos/kul-cup_logo_w1.png"
+        alt="logo"
+      />
+      <h1 class="hero__title textScale">МЕЖДУНАРОДНЫЙ КУЛИНАРНЫЙ КУБОК 2025</h1>
+      <div class="hero__textbox textScale">
+        Феерическое шоу, где креативность, мастерство и инновации сливаются
+        воедино, создавая неповторимую атмосферу вдохновения!
+      </div>
+      <div class="hero__date textScale">11-13 ноября 2025</div>
+      <div class="hero__place textScale">
+        г. Минск, ул. Павлины Меделки, 24 Минский Международный Выставочный
+        Центр
+      </div>
+
+      <div class="wave"></div>
+      <div class="wave2"></div>
+    </hero>
+
+    <main class="main">
+      <div class="main__desc" id="desc">
+        <!-- <div class="main__desc_video textScale">
+          <video width="100%" height="100%" controls autoplay muted loop>
+            <source src="./media/video/0831.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div> -->
+
+        <div class="main__desc_textbox textScale">
+          <div class="main__desc_textbox-wrapper">
+            <span class="main__desc_textbox-large"
+              >Международный Кулинарный Кубок</span
+            >
+            - ежегодное событие, признанное на мировой гастрономической арене,
+            проводится в Минске на площадке Международной специализированной
+            оптовой выставки-ярмарки
+            <span class="main__desc_textbox-large">«PRODEXPO»</span> и собирает
+            лучших кулинаров Беларуси и зарубежья.
+          </div>
+
+          <div class="main__desc_textbox-wrapper">
+            Формат Кубка сочетает в себе
+            <span class="main__desc_textbox-bold"
+              >конкурсную программу для кулинаров, шеф-поваров и экспертов, а
+              также деловую и образовательную части.</span
+            >
+            Мероприятие служит ведущей платформой в стране для профессионального
+            диалога и местом для установления деловых контактов между лидерами
+            международного кулинарного сообщества.
+          </div>
+
+          <div class="main__desc_textbox-wrapper">
+            В рамках Кубка проходят
+            <span class="main__desc_textbox-bold"
+              >захватывающие мастер-классы, дегустации, интерактивные
+              презентации и, конечно же, напряженная борьба за звание лучшего
+              кулинара!</span
+            >
+          </div>
+        </div>
+
+        <div class="main__desc_docs textScale">
+          <a
+            href="./media/documents/participants_joined.pdf"
+            target="_blank"
+            class="main__desc_docs-button"
+            >📄Участникам</a
+          >
+          <a
+            href="./media/documents/partners_joined.pdf"
+            target="_blank"
+            class="main__desc_docs-button"
+            >📄Партнерам</a
+          >
+        </div>
+
+        <div class="main__desc_swiperContainer">
+          <div class="galleryBig main__desc_swiperContainer-big">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                  <img src="./media/desc_gallery/1.jpg" alt="photo" />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                  <img src="./media/desc_gallery/2.png" alt="photo" />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                  <img src="./media/desc_gallery/3.png" alt="photo" />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                  <img src="./media/desc_gallery/4.jpg" alt="photo" />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                  <img src="./media/desc_gallery/5.png" alt="photo" />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                  <img src="./media/desc_gallery/6.jpg" alt="photo" />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                  <img src="./media/desc_gallery/7.png" alt="photo" />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                  <img src="./media/desc_gallery/8.jpg" alt="photo" />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                  <img src="./media/desc_gallery/9.jpg" alt="photo" />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                  <img src="./media/desc_gallery/10.png" alt="photo" />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                  <img src="./media/desc_gallery/11.jpg" alt="photo" />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                  <img src="./media/desc_gallery/13.jpg" alt="photo" />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                  <img src="./media/desc_gallery/14.jpg" alt="photo" />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                  <img src="./media/desc_gallery/15.png" alt="photo" />
+                </div>
+              </div>
+            </div>
+
+            <!-- <div class="swiper-pagination"></div> -->
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+
+          <div
+            thumbsSwiper
+            class="galleryThumbs main__desc_swiperContainer-thumbs"
+          >
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                  <div class="swiper-zoom-container"></div>
+                  <img src="./media/desc_gallery/1.jpg" alt="photo" />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                  <img src="./media/desc_gallery/2.png" alt="photo" />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                  <img src="./media/desc_gallery/3.png" alt="photo" />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                  <img src="./media/desc_gallery/4.jpg" alt="photo" />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                  <img src="./media/desc_gallery/5.png" alt="photo" />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                  <img src="./media/desc_gallery/6.jpg" alt="photo" />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                  <img src="./media/desc_gallery/7.png" alt="photo" />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                  <img src="./media/desc_gallery/8.jpg" alt="photo" />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                  <img src="./media/desc_gallery/9.jpg" alt="photo" />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                  <img src="./media/desc_gallery/10.png" alt="photo" />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                  <img src="./media/desc_gallery/11.jpg" alt="photo" />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                  <img src="./media/desc_gallery/13.jpg" alt="photo" />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                  <img src="./media/desc_gallery/14.jpg" alt="photo" />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                  <img src="./media/desc_gallery/15.png" alt="photo" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="main__desc_runningLine">
+          <div class="main__desc_runningLine-cnt">
+            <div class="main__desc_runningLine-cntItem">11-13 ноября 2025</div>
+            <div class="main__desc_runningLine-cntItem">
+              г. Минск, ул. Павлины Меделки, 24
+            </div>
+            <div class="main__desc_runningLine-cntItem">
+              Минский Международный Выставочный Центр
+            </div>
+            <div class="main__desc_runningLine-cntItem">PRODEXPO — 2025</div>
+
+            <div class="main__desc_runningLine-cntItem">11-13 ноября 2025</div>
+            <div class="main__desc_runningLine-cntItem">
+              г. Минск, ул. Павлины Меделки, 24
+            </div>
+            <div class="main__desc_runningLine-cntItem">
+              Минский Международный Выставочный Центр
+            </div>
+            <div class="main__desc_runningLine-cntItem">PRODEXPO — 2025</div>
+
+            <div class="main__desc_runningLine-cntItem">11-13 ноября 2025</div>
+            <div class="main__desc_runningLine-cntItem">
+              г. Минск, ул. Павлины Меделки, 24
+            </div>
+            <div class="main__desc_runningLine-cntItem">
+              Минский Международный Выставочный Центр
+            </div>
+            <div class="main__desc_runningLine-cntItem">PRODEXPO — 2025</div>
+
+            <div class="main__desc_runningLine-cntItem">11-13 ноября 2025</div>
+            <div class="main__desc_runningLine-cntItem">
+              г. Минск, ул. Павлины Меделки, 24
+            </div>
+            <div class="main__desc_runningLine-cntItem">
+              Минский Международный Выставочный Центр
+            </div>
+            <div class="main__desc_runningLine-cntItem">PRODEXPO — 2025</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="main__desc_bottom dropdownScale">
+          <div class="main__desc_dropdown">
+            <div
+              class="main__desc_dropdown-button"
+              id="choomButton"
+              onclick="dropdownToggle(this)"
+            >
+              Участникам
+              <img
+                src="./media/icons/chevron-up.svg"
+                name="dropdownChevron"
+                alt="chevron"
+              />
+            </div>
+          </div>
+
+          <div class="main__desc_dropdown">
+            <div
+              class="main__desc_dropdown-button"
+              id="corpoButton"
+              onclick="dropdownToggle(this)"
+            >
+              Партнерам
+              <img
+                src="./media/icons/chevron-up.svg"
+                name="dropdownChevron"
+                alt="chevron"
+              />
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <h2 class="main__title titleScale" id="prog">В программе Кубка:</h2>
+
+      <div class="main__programm">
+        <ul class="main__programm_list wrapperScale">
+          <li class="main__programm_list-item">
+            <img
+              class="main__programm_list-itemIcon"
+              src="./media/icons/1_2_ikonka_kul-cup_logo.png"
+              alt="icon"
+            />
+
+            <div class="main__programm_list-itemCnt">
+              <h3>
+                Индивидуальные и командные СОСТЯЗАНИЯ в боксах для
+                профессионалов и юниоров
+              </h3>
+              <p>
+                Приглашаем к участию талантливых и амбициозных мастеров
+                кулинарного дела!
+              </p>
+              <div>
+                <a
+                  href="./media/documents/ПОЛОЖЕНИЕ_КУЛИНАРНЫЙ КУБОК_cup_ 2025.pdf"
+                  target="_blank"
+                  >Положение</a
+                ><a
+                  href="./media/documents/CUP_ДОГОВОР_ЗАЯВКА_Кулинарный_Кубок_2025_РБ_RB.doc"
+                  target="_blank"
+                  >Договор-заявка на участие РБ</a
+                >
+                <a
+                  href="./media/documents/CUP_ДОГОВОР_ЗАЯВКА_Кулинарный_Кубок_2025_РФ_RF.doc"
+                  target="_blank"
+                  >Договор-заявка на участие РФ</a
+                >
+              </div>
+            </div>
+          </li>
+
+          <li class="main__programm_list-item">
+            <img
+              class="main__programm_list-itemIcon"
+              src="./media/icons/2_ikonka_batl_shefov_3_notfon.png"
+              alt="icon"
+            />
+
+            <div class="main__programm_list-itemCnt">
+              <h3>Кулинарный конкурс «Батл Шефов»</h3>
+              <p>
+                Соревнования шефов и су-шефов ведущих ресторанов страны, в том
+                числе заведений, вошедших в топ-50 по версии национальной премии
+                WHERETOEAT и шефов и су-шефов 4-5 звездочных отелей с
+                присуждением звания «ГРАНД-ШЕФ» и «ГРАНД-ШЕФ ОТЕЛЯ»
+              </p>
+              <div>
+                <a
+                  href="./media/documents/ПОЛОЖЕНИЕ_КУЛИНАРНЫЙ КУБОК_cup_ 2025.pdf"
+                  target="_blank"
+                  >Положение</a
+                ><a
+                  href="./media/documents/CUP_ДОГОВОР_ЗАЯВКА_Кулинарный_Кубок_2025_РБ_RB.doc"
+                  target="_blank"
+                  >Договор-заявка на участие РБ</a
+                >
+                <a
+                  href="./media/documents/CUP_ДОГОВОР_ЗАЯВКА_Кулинарный_Кубок_2025_РФ_RF.doc"
+                  target="_blank"
+                  >Договор-заявка на участие РФ</a
+                >
+              </div>
+            </div>
+          </li>
+
+          <li class="main__programm_list-item">
+            <img
+              class="main__programm_list-itemIcon"
+              src="./media/icons/2_ikonka_belarus_vkusnaia_2.png"
+              alt="icon"
+            />
+
+            <div class="main__programm_list-itemCnt">
+              <h3>Шоу-презентация «Беларусь Вкусная»</h3>
+              <p>
+                Коллаборация поваров и официантов лучших ресторанов страны.
+                Презентация национальных блюд Беларуси с сервировкой стола на
+                тему «Рождество и Новый год»
+              </p>
+              <div>
+                <a href="./media/documents/Belarus_vkusnaia.pdf" target="_blank"
+                  >О шоу-презентации</a
+                >
+                <a
+                  href="./media/documents/Приглашение_к_участию_в_БЕЛАРУСЬ_ВКУСНАЯ.pdf"
+                  target="_blank"
+                  >Приглашение к участию</a
+                >
+                <a
+                  href="./media/documents/ДОГОВОР_ЗАЯВКА_Беларусь_Вкусная_2_.doc"
+                  target="_blank"
+                  >Договор-заявка</a
+                >
+                <a
+                  href="./media/documents/БЕЛАРУСЬ ВКУСНАЯ_УЧАСТНИКИ.pdf"
+                  target="_blank"
+                  >Участники</a
+                >
+              </div>
+            </div>
+          </li>
+
+          <li class="main__programm_list-item">
+            <img
+              class="main__programm_list-itemIcon"
+              src="./media/icons/1_2_ikonka_master_klass_notfon.png"
+              alt="icon"
+            />
+
+            <div class="main__programm_list-itemCnt">
+              <h3>
+                Мастер-классы от шефов и судей Международного Кулинарного Кубка
+              </h3>
+              <p>
+                Выступают знаменитые бренд-шефы и шеф-повара страны и зарубежья!
+                Путешествие в мир вкусов и ароматов под руководством лучших из
+                лучших в своей профессии. Уникальный шанс увидеть виртуозную
+                работу профессионалов, которые раскроют секреты сложных техник и
+                авторских рецептов, познакомят с философией кухни разных стран
+              </p>
+              <div>
+                <a class="button_disabled" href="#" target="_blank"
+                  >Программа мастер-классов</a
+                ><a class="button_disabled" href="#" target="_blank"
+                  >Участники</a
+                >
+              </div>
+            </div>
+          </li>
+
+          <li class="main__programm_list-item">
+            <img
+              class="main__programm_list-itemIcon"
+              src="./media/icons/1_ikonka_kruglyi_stol_2.png"
+              alt="icon"
+            />
+
+            <div class="main__programm_list-itemCnt">
+              <h3>Закрытый круглый стол «Вершина Кулинарного Искусства»</h3>
+              <p>C участием приглашенных шеф-поваров и рестораторов</p>
+              <div>
+                <a class="button_disabled" href="#" target="_blank">Спикеры</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- <div class="main__results"></div> -->
+
+      <h2 class="main__title titleScale" id="judge">
+        Судейская коллегия Кубка:
+      </h2>
+
+      <div class="main__judges">
+        <div class="main__judges_juryBoard boardScale">
+          <div class="main__judges_juryBoard-card cardScale">
+            <h4>Председатель жюри</h4>
+            <img src="./media/judges/ViktorBeley.jpg" alt="Photo" />
+            <div>
+              <span>Виктор Белей</span>
+              <span
+                >Шеф-повар с мировым именем, один самых ярких и титулованных
+                шеф-поваров современной России. Его имя стало символом
+                инновационного подхода к традиционной кухне и бескомпромиссного
+                качества. Золотой призер национального отбора международного
+                кулинарного конкурса «Bocuse d’Or Russia 2019» и финалист
+                европейского и мирового этапов (Лионе, 2021 год), обладатель
+                титула «Шеф года» в номинации «Русская кухня» по версии премии
+                «Пальмовая ветвь ресторанного бизнеса», активный участник
+                телешоу и гастрономических фестивалей. В разное время Виктор
+                являлся бренд-шефом ресторана «Uhvat» (Москва) (ресторан
+                получил рекомендацию Michelin), ресторана «Rodina» в
+                Дубае (ОАЭ), ресторана «The Forest» (Казахстан), ресторана «Печи
+                и истории» (Ростов-на-Дону)
+              </span>
+            </div>
+          </div>
+
+          <div class="main__judges_juryBoard-card cardScale">
+            <h4>Сопредседатель жюри</h4>
+            <img src="./media/judges/OlgaMacikova.jpg" alt="Photo" />
+            <div>
+              <span>Ольга Мацикова</span>
+              <span
+                >Главный эксперт ProfSkills International компетенции
+                «Кулинарное искусство», проректор УО «Белорусский
+                государственный университет пищевых и химических
+                технологий»</span
+              >
+            </div>
+          </div>
+
+          <div class="main__judges_juryBoard-card cardScale">
+            <h4>Сопредседатель жюри</h4>
+            <img src="./media/judges/PavelMakovka.jpg" alt="Photo" />
+            <div>
+              <span>Павел Маковка</span>
+              <span
+                >Эксперт международной категории по кулинарному искусству,
+                победитель и призер международных кулинарных конкурсов, судья
+                международной категории WACS, экс-председатель Федерации
+                шеф-поваров и кондитеров Беларуси
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="main__judges_judgeBoard boardScale">
+          <div class="main__judges_judgeBoard-card cardScale">
+            <h4>Судья</h4>
+            <img src="./media/judges/AleksandrChikilevskiy.jpg" alt="Photo" />
+            <div>
+              <span>Александр Чикилевский</span>
+              <span
+                >Бренд-шеф ресторана «Друзья», шеф-повар с 30-летним стажем
+                работы, судья международной категории WACS, победитель и призер
+                многочисленных международных и национальных конкурсов, автор
+                6-ти кулинарных книг, постоянный участник кулинарных теле и
+                радио- передач, преподаватель профессиональных и любительских
+                программ по кулинарии
+              </span>
+            </div>
+          </div>
+
+          <div class="main__judges_judgeBoard-card cardScale">
+            <h4>Судья</h4>
+            <img src="./media/judges/DenisSvetov.jpg" alt="Photo" />
+            <div>
+              <span>Денис Светов</span>
+              <span
+                >Шеф-повар с более чем 20-летним стажем, победитель и призёр
+                международных и отечественных кулинарных соревнований, НПОГ
+                «Президент-Отель»</span
+              >
+            </div>
+          </div>
+
+          <div class="main__judges_judgeBoard-card cardScale">
+            <h4>Судья</h4>
+            <img src="./media/judges/ElenaMikulchic.jpg" alt="Photo" />
+            <div>
+              <span>Елена Микульчик</span>
+              <span
+                >Шеф-повар, эксперт белорусской и славянской кухни, историк
+                кулинарии, автор кулинарных книг, теле- и радио ведущая</span
+              >
+            </div>
+          </div>
+
+          <!-- <div class="main__judges_judgeBoard-card cardScale">
+						<h4>Судья</h4>
+						<img src="./media/judges/EvgeniyEreshkin.jpg" alt="Photo" />
+						<div>
+							<span>Евгений Иришкин</span>
+							<span
+								>Международный эксперт компетенции «Поварское дело» World Skills
+								Russia</span
+							>
+						</div>
+					</div> -->
+
+          <div class="main__judges_judgeBoard-card cardScale">
+            <h4>Технический Судья</h4>
+            <img src="./media/judges/AlenaPolesova.jpg" alt="Photo" />
+            <div>
+              <span>Алена Полесова</span>
+              <span
+                >Победитель и призер многочисленных международных конкурсов
+                профессионального мастерства</span
+              >
+            </div>
+          </div>
+
+          <div class="main__judges_judgeBoard-card cardScale">
+            <h4>Технический Судья</h4>
+            <img src="./media/judges/AntonVolkov.jpg" alt="Photo" />
+            <div>
+              <span>Антон Волков</span>
+              <span
+                >Шеф-повар, многократный победитель международных кулинарных
+                соревнований</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="main_title titleScale" id="org">Организаторы:</h2>
+
+      <div class="main__organizers">
+        <div class="wave"></div>
+        <div class="wave2"></div>
+        <div class="wave3"></div>
+        <div class="wave4"></div>
+
+        <div class="main__organizers_container">
+          <a
+            href="https://mshp.gov.by/ru"
+            target="_blank"
+            class="main__organizers_container-card"
+          >
+            <img
+              src="./media/logos/minselhozprod-removebg-preview.png"
+              alt="minselhoz"
+            />
+          </a>
+
+          <a
+            href="https://www.belexpo.by/"
+            target="_blank"
+            class="main__organizers_container-card"
+          >
+            <img src="./media/logos/belekspo_6_1x.png" alt="belexpo" />
+          </a>
+
+          <a
+            href="https://www.bcmagazine.by/"
+            target="_blank"
+            class="main__organizers_container-card"
+          >
+            <img src="./media/logos/pekar-konditer.png" alt="pekarkonditer" />
+          </a>
+        </div>
+      </div>
+
+      <h2 class="main__title titleScale">Партнеры:</h2>
+
+      <div class="main__partners">
+        <div class="wave"></div>
+        <div class="wave2"></div>
+        <div class="wave3"></div>
+        <div class="wave4"></div>
+
+        <div class="main__partners_container descContainer">
+          <a
+            href="https://prodexpo.by/"
+            target="_blank"
+            class="main__partners_container-card descCard"
+          >
+            <img src="./media/partners/PRODEXPO.jpg" alt="partner" />
+            <!-- <div>Генеральный Партнер</div> -->
+          </a>
+
+          <a
+            href="https://aromatik.by/"
+            target="_blank"
+            class="main__partners_container-card descCard"
+          >
+            <img src="./media/partners/COOO АРОМАТИК.png" alt="partner" />
+          </a>
+
+          <!-- <a
+            href="https://anyform.by/"
+            target="_blank"
+            class="main__partners_container-card descCard"
+          >
+            <img src="./media/partners/Компания ANYFORM.png" alt="partner" />
+          </a> -->
+
+          <a
+            href="https://www.barsa.by/"
+            target="_blank"
+            class="main__partners_container-card descCard"
+          >
+            <img src="./media/partners/ООО  BARSA.png" alt="partner" />
+          </a>
+
+          <!-- <a
+            href="https://entecomaster.by/"
+            target="_blank"
+            class="main__partners_container-card descCard"
+          >
+            <img src="./media/partners/ООО ИНТЭКО-МАСТЕР.png" alt="partner" />
+          </a> -->
+
+          <a
+            href="https://aman.by/"
+            target="_blank"
+            class="main__partners_container-card descCard"
+          >
+            <img src="./media/partners/ЧУП АМАН ТРЕЙДИНГ.png" alt="partner" />
+          </a>
+
+          <a
+            href="https://priprava.by/"
+            target="_blank"
+            class="main__partners_container-card descCard"
+          >
+            <img src="./media/partners/ЧУП ПРЯНЫЙ ДОМ.png" alt="partner" />
+          </a>
+
+          <a
+            href="https://modecorbel.by/"
+            target="_blank"
+            class="main__partners_container-card descCard"
+          >
+            <img src="./media/partners/ЧУП МОДЕКОР БЕЛ.png" alt="partner" />
+          </a>
+        </div>
+      </div>
+
+      <h2 class="main__title titleScale">Информационные партнеры:</h2>
+
+      <div class="main__partners">
+        <div class="wave"></div>
+        <div class="wave2"></div>
+        <div class="wave3"></div>
+        <div class="wave4"></div>
+
+        <div class="main__partners_container">
+          <a
+            href="https://1foodexpo.com/"
+            class="main__partners_container-card"
+            target="_blank"
+          >
+            <img src="./media/logos/1foodexpo-logo.svg" alt="partner" />
+          </a>
+
+          <a
+            href="https://sfera.fm/"
+            class="main__partners_container-card"
+            target="_blank"
+          >
+            <img src="./media/logos/sferafm.svg" alt="partner" />
+          </a>
+
+          <a
+            href="http://bfi-online.ru/journal/index.html?kk=20799fd188"
+            class="main__partners_container-card"
+            target="_blank"
+          >
+            <img src="./media/logos/bfi_magazine_560.gif" alt="partner" />
+          </a>
+
+          <a
+            href="https://www.foodprom.ru/"
+            class="main__partners_container-card"
+            target="_blank"
+          >
+            <img src="./media/logos/ppitrans.png" alt="partner" />
+          </a>
+
+          <a
+            href="https://foodexpo.kz/en/"
+            class="main__partners_container-card"
+            target="_blank"
+          >
+            <img src="./media/logos/FoodExpo_QZ-1.png" alt="partner" />
+          </a>
+        </div>
+      </div>
+
+      <h2 class="main__title titleScale">Отели партнеры:</h2>
+
+      <div class="main__partners">
+        <div class="wave"></div>
+        <div class="wave2"></div>
+        <div class="wave3"></div>
+        <div class="wave4"></div>
+
+        <div class="main__partners_container hotelContainer">
+          <div class="main__partners_container-hotelDesc">
+            Участникам кубка предоставляются скидки на проживание по промокоду
+            <span style="white-space: nowrap; font-size: 1.3rem"
+              >«FOOD2025»:</span
+            >
+          </div>
+          <a
+            href="https://www.cpminsk.com/en/"
+            target="_blank"
+            class="main__partners_container-card crowne hotelCard"
+          >
+            <img src="./media/hotels/crowne.png" alt="partner" />
+            <div class="hotelDesc">
+              <div>
+                Отель «Сrowne Plaza»<br />
+                5★
+              </div>
+              <p>80$ без завтрака</p>
+            </div>
+          </a>
+
+          <a
+            href="https://zhotel.by/"
+            target="_blank"
+            class="main__partners_container-card zalkind hotelCard"
+          >
+            <div class="zalkindLogo">ZALKIND</div>
+            <!-- <img src="./media/hotels/zalkind.png" alt="partner" /> -->
+            <div class="hotelDesc">
+              <div>Бутик-отель «Zalkind Hotel»<br /> 4★</div>
+              <p>Скидка 20%</p>
+            </div>
+          </a>
+
+          <a
+            href="https://hotelminsk.by/en/"
+            target="_blank"
+            class="main__partners_container-card minsk hotelCard"
+          >
+            <img src="./media/hotels/minsk1.png" alt="partner" />
+            <div class="hotelDesc">
+              <div>
+                Гостиница «Минск»<br />
+                4★
+              </div>
+              <p>Скидка 15%</p>
+            </div>
+          </a>
+
+          <a
+            href="https://victoria1.hotel-victoria.by/"
+            target="_blank"
+            class="main__partners_container-card victoria hotelCard"
+          >
+            <img src="./media/hotels/victoria.png" alt="partner" />
+            <div class="hotelDesc">
+              <div>
+                Гостиница «Виктория»<br />
+                4★
+              </div>
+              <p>Скидка 40-45%</p>
+            </div>
+          </a>
+
+          <a
+            href="https://robins.by/hotel/"
+            target="_blank"
+            class="main__partners_container-card robinson hotelCard"
+          >
+            <img src="./media/hotels/robinsonClub.png" alt="partner" />
+            <div class="hotelDesc">
+              <div>
+                Отель «Robinson Сlub»<br />
+                4★
+              </div>
+              <p>Скидка 20%</p>
+            </div>
+          </a>
+
+          <a
+            href="https://robinson-city.by/hotel/"
+            target="_blank"
+            class="main__partners_container-card robinson hotelCard"
+          >
+            <img src="./media/hotels/robinsonCity.png" alt="partner" />
+            <div class="hotelDesc">
+              <div>
+                Отель «Robinson-City»<br />
+                4★
+              </div>
+              <p>Скидка 10%</p>
+            </div>
+          </a>
+
+          <a
+            href="https://www.hotel-belarus.com/"
+            target="_blank"
+            class="main__partners_container-card belarus hotelCard"
+          >
+            <img src="./media/hotels/belarus.svg" alt="partner" />
+            <div class="hotelDesc">
+              <div>
+                Гостиница «Беларусь»<br />
+                3★
+              </div>
+              <p>Скидка 15%</p>
+            </div>
+          </a>
+
+          <a
+            href="https://hotel-garni.by/"
+            target="_blank"
+            class="main__partners_container-card garni hotelCard"
+          >
+            <img src="./media/hotels/garni.png" alt="partner" />
+            <div class="hotelDesc">
+              <div>
+                Гостиница «Гарни» <br />
+                3★
+              </div>
+              <p>Скидка 10%</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <h2 class="main__title titleScale" id="form">Свяжитесь с нами:</h2>
+
+      <div class="main__form wrapperScale">
+        <div class="main__form_clue">
+          Заполните эту форму и мы ответим вам в ближайшее время
+        </div>
+
+        <form class="main__form_elem" action="mailInfo.php" method="POST">
+          <div class="main__form_elem-inputFrame">
+            <label for="">Ваше имя*:</label>
+            <input type="text" placeholder="Иван Иванов" name="name" required />
+          </div>
+
+          <div class="main__form_elem-inputFrame">
+            <label for="">Email*:</label>
+            <input
+              type="text"
+              placeholder="GoodTimesWith@hotguy.com"
+              name="email"
+              required
+            />
+          </div>
+
+          <div class="main__form_elem-inputFrame">
+            <label for="">Контактный телефон:</label>
+            <input type="tel" placeholder="+375 (29) 123-45-67" name="tel" />
+          </div>
+
+          <div class="main__form_elem-textareaFrame">
+            <label for="">Ваше сообщение*:</label>
+            <div class="main__form_elem-textareaFrameContainer">
+              <textarea
+                type="text"
+                placeholder="Сообщение"
+                name="message"
+                spellcheck="false"
+                required
+              ></textarea>
+            </div>
+          </div>
+
+          <input
+            type="submit"
+            name="submit"
+            class="main__form_elem-submit"
+            value="Отправить"
+          />
+
+          <div class="main__form_elem-legend">*Oбязательное поле</div>
+        </form>
+      </div>
+    </main>
+
+    <footer class="footer" id="foot">
+      <div class="wave3"></div>
+      <div class="wave4"></div>
+
+      <div class="footer__container">
+        <div class="footer__wrapper">
+          <h2 class="footer__title">Место проведения:</h2>
+
+          <div class="footer__location">
+            <div class="footer__location_elem">11-13 Ноября 2025</div>
+            <div class="footer__location_elem">
+              г.Минск, ул. Павлины Медёлки, 24
+            </div>
+            <div class="footer__location_elem">
+              Минский международный выставочный центр BELEXPO
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__wrapper">
+          <h2 class="footer__title">Контакты организатора:</h2>
+
+          <div class="footer__contacts">
+            <div class="footer__contacts_elem">
+              <img
+                src="./media/icons/phone-intercom-svgrepo-com.svg"
+                alt="Stat"
+              /><a href="tel:+375173024459">+375 (17) 302-44-59</a>
+            </div>
+            <div class="footer__contacts_elem">
+              <img src="./media/icons/a1.png" alt="A1" />
+              <a href="tel:+375296864129">+375 (29) 686-41-29</a
+              ><img
+                class="footer__contacts_elem-socialIcon"
+                src="./media/icons/telegram.svg"
+                alt="telegram"
+              /><img
+                class="footer__contacts_elem-socialIcon"
+                src="./media/icons/Share_Viber_icon.png"
+                alt="viber"
+              />
+            </div>
+            <div class="footer__contacts_elem">
+              <img src="./media/icons/a1.png" alt="A1" />
+              <a href="tel:+375296864129">+375 (44) 771-79-50</a
+              ><img
+                class="footer__contacts_elem-socialIcon"
+                src="./media/icons/whatsapp.svg"
+                alt="whatsapp"
+              />
+            </div>
+            <div class="footer__contacts_elem">
+              <img src="./media/icons/email-svgrepo-com.svg" alt="email" /><a
+                href="mailto:cakes_school@list.ru"
+                >cakes_school@list.ru</a
+              >
+            </div>
+            <div class="footer__contacts_elem">
+              <img src="./media/icons/web.svg" alt="email" /><a
+                href="https://www.bcmagazine.by/"
+                target="_blank"
+                >www.bcmagazine.by</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__wrapper">
+          <h2 class="footer__title">До начала кубка:</h2>
+
+          <div class="footer__timer">
+            <div class="footer__timer_elem ctdwn"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__mapouter">
+        <div class="footer__gmap_canvas">
+          <iframe
+            width="100%"
+            height="100%"
+            id="gmap_canvas"
+            src="https://maps.google.com/maps?q=vulica%20Pa%C5%ADliny%20Miadziolki%2024,%20Minsk,%20Minskaja%20voblas%C4%87&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            frameborder="0"
+            scrolling="no"
+            marginheight="0"
+            marginwidth="0"
+          ></iframe>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="./scripts/countdown.js"></script>
+    <script src="./scripts/dropdown.js"></script>
+    <script src="./scripts/header.js"></script>
+    <script src="./scripts/swiper.js"></script>
+  </body>
+</html>

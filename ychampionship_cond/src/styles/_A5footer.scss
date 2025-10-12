@@ -1,0 +1,124 @@
+@use "./variables" as v;
+
+@media screen and (min-width: 1024px) {
+	.footer {
+		margin-top: 150px;
+		&__container {
+			flex-direction: row;
+			gap: 60px;
+			justify-content: center;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.footer {
+		margin-top: 150px;
+		&__container {
+			flex-direction: column;
+			gap: 15px;
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.footer {
+		margin-top: 150px;
+		&__container {
+			flex-direction: column;
+			gap: 15px;
+		}
+
+		&__contacts {
+			&_elem {
+				a {
+					font-size: 18px;
+				}
+			}
+		}
+	}
+}
+
+.footer {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+
+	position: relative;
+
+	padding: 0px 20px;
+	padding-top: 30px;
+	padding-bottom: 40px;
+
+	color: #fff;
+
+	background-color: v.$red;
+
+	&__container {
+		display: flex;
+	}
+
+	&__mapouter {
+		overflow: hidden;
+		border-radius: 10px;
+		//border: 5px solid v.$beige;
+		box-shadow: 0 0 8px v.$shadowgray;
+	}
+
+	&__gmap_canvas {
+		height: 300px;
+		width: 100%;
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	&__title {
+		padding-top: 20px;
+		&:first-of-type {
+			padding-top: 0;
+		}
+	}
+
+	&__location {
+		&_elem {
+			font-size: 1.1rem;
+		}
+	}
+
+	&__contacts {
+		display: flex;
+		flex-direction: column;
+		gap: 2px;
+		&_elem {
+			display: flex;
+			align-items: center;
+			gap: 5px;
+			& img {
+				width: fit-content;
+				height: 25px;
+			}
+			& a {
+				color: #fff;
+				text-decoration: none;
+
+				&:hover {
+					color: v.$beige;
+				}
+			}
+		}
+	}
+
+	&__timer {
+		&_elem {
+			font-size: 30px;
+			&-span {
+				color: v.$beige;
+				font-size: 25px;
+			}
+		}
+	}
+}
