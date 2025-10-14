@@ -132,6 +132,12 @@ h6 {
   isolation: isolate;
 }
 
+@font-face {
+  font-family: Gabriola, sans-serif;
+  src: url(../../media/fonts/gabriola.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   font-family: "Arimo", sans-serif;
   font-optical-sizing: auto;
@@ -705,13 +711,15 @@ h3 {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2352941176);
 }
 .main__desc_textbox.coffeeBG .main__desc_textbox-large {
+  font-family: Gabriola;
   color: #fff;
-  font-size: 2.5rem;
-  text-shadow: 0 0 4px rgba(0, 0, 0, 0.2666666667);
+  font-size: 4rem;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.2666666667);
 }
 .main__desc_textbox.coffeeBG .main__desc_textbox-regular {
+  font-family: Gabriola;
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   text-shadow: 0 0 4px rgba(0, 0, 0, 0.2666666667);
 }
 .main__desc_docs {

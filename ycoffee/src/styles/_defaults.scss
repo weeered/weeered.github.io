@@ -1,5 +1,12 @@
 @use "./variables" as v;
 
+@font-face {
+  font-family: Gabriola, sans-serif;
+  src: url(../../media/fonts/gabriola.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   font-family: "Arimo", sans-serif;
   font-optical-sizing: auto;
