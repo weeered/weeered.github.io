@@ -6,20 +6,19 @@
       gap: 20px;
       &_textbox {
         &-wrapper {
+          display: flex;
+          justify-content: center;
+
           font-size: 1.1rem;
           text-align: justify;
         }
 
         &-large {
           font-size: 1.2rem;
-          font-weight: 600;
-          color: v.$red;
         }
 
         &-bold {
           font-size: 1.1rem;
-          font-weight: 600;
-          color: v.$textBlack;
         }
       }
 
@@ -59,20 +58,19 @@
       gap: 20px;
       &_textbox {
         &-wrapper {
+          display: flex;
+          justify-content: center;
+
           font-size: 1rem;
           text-align: left;
         }
 
         &-large {
           font-size: 1.2rem;
-          font-weight: 600;
-          color: v.$red;
         }
 
         &-bold {
           font-size: 1rem;
-          font-weight: 600;
-          color: v.$textBlack;
         }
       }
 
@@ -114,18 +112,17 @@
         &-wrapper {
           font-size: 1rem;
           text-align: left;
+
+          display: flex;
+          justify-content: center;
         }
 
         &-large {
           font-size: 1.2rem;
-          font-weight: 600;
-          color: v.$red;
         }
 
         &-bold {
           font-size: 1rem;
-          font-weight: 600;
-          color: v.$textBlack;
         }
       }
 
@@ -143,11 +140,9 @@
           &Icon {
             max-height: 170px;
             margin-top: 20px;
-            //width: calc(((100vw - 20px - 50px) / 7) * 1.5);
           }
 
           &Cnt {
-            // width: calc(((100vw - 20px - 50px) / 7) * 5.5);
             padding: 40px 25px;
             padding-top: 20px;
             & div {
@@ -183,36 +178,74 @@
 
       color: v.$textBlack;
 
-      // background: linear-gradient(45deg, v.$transblack 40%, v.$transblackAlt 90%);
+      &-wrapper {
+        font-weight: 450;
+      }
 
-      // padding: 20px;
+      &-large {
+        font-weight: 600;
+        color: v.$purpur;
+      }
 
-      // border-top-left-radius: 10px;
-      // border-top-right-radius: 10px;
-
-      // margin-top: 30px;
-      // padding-bottom: 30px;
+      &-bold {
+        font-weight: 600;
+        color: v.$textBlack;
+      }
     }
 
     &_docs {
       display: flex;
 
       &-button {
-        padding: 5px 10px;
-
-        background-color: v.$red;
-
-        font-size: 1.1rem;
-        color: v.$beigeLighter;
-        text-decoration: none;
-
-        border-radius: 15px;
-        border: 3px solid v.$beige;
+        position: relative;
 
         transition: scale linear 0.1s;
 
+        &Lnk {
+          position: relative;
+          
+          display: block;
+
+          padding: 5px 10px;
+
+          background-color: #fff;
+
+          border-radius: 15px;
+
+          font-size: 1.1rem;
+          font-weight: 700;
+          color: v.$pink;
+          text-decoration: none;
+
+          z-index: 10;
+        }
+
         &:hover {
           scale: 1.025;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+
+          transform: translate(-50%, -50%);
+
+          width: calc(100% + 10px);
+          height: calc(100% + 10px);
+
+          box-shadow: 0 0 4px v.$shadowblack;
+
+          border-radius: 19px;
+
+          background: linear-gradient(
+            310deg,
+            v.$metallicDark,
+            v.$metallicLight
+          );
+
+          z-index: 0;
         }
       }
     }
@@ -262,104 +295,6 @@
         }
       }
     }
-
-    &_bottom {
-      position: relative;
-      display: flex;
-
-      width: 100%;
-
-      background-color: v.$red;
-
-      //box-shadow: 0 0 10px v.$shadowblack;
-
-      border-bottom: 6px solid v.$beige;
-      border-top: 6px solid v.$beige;
-
-      margin-bottom: 0;
-    }
-
-    &_dropdown {
-      position: relative;
-
-      display: flex;
-
-      &-button {
-        cursor: pointer;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 3px;
-
-        padding: 5px 10px;
-
-        color: #fff;
-        font-size: 22px;
-        font-weight: 600;
-
-        //background-color: v.$red;
-
-        border: 5px solid transparent;
-        border-radius: 15px;
-
-        //box-shadow: 0 0 8px v.$shadowgray;
-
-        user-select: none;
-
-        outline: none;
-
-        & img {
-          width: 1rem;
-
-          transition: transform ease-in-out 0.2s;
-        }
-      }
-
-      &-menu {
-        position: absolute;
-        top: 100%;
-        width: 100%;
-        height: fit-content;
-
-        display: flex;
-        flex-direction: column;
-        z-index: 1;
-
-        opacity: 0;
-
-        overflow: hidden;
-
-        border-radius: 10px;
-        //border: 1px solid v.$linkgray;
-        box-shadow: 0 0 8px v.$shadowgray;
-        backdrop-filter: blur(2px);
-
-        transition:
-          opacity ease-in-out 0.4s,
-          transform ease-in-out 0.3s;
-
-        & a {
-          background-color: v.$transwhite;
-
-          //background: linear-gradient(120deg, v.$transblack, v.$transblackAlt);
-
-          padding: 15px 10px;
-          display: block;
-
-          text-decoration: none;
-          color: v.$textBlack;
-
-          //color: #fff;
-
-          border-bottom: 1px solid v.$textBlack;
-
-          &:last-of-type {
-            border-bottom: none;
-          }
-        }
-      }
-    }
   }
 
   &__programm {
@@ -372,16 +307,7 @@
       flex-direction: column;
       gap: 40px;
 
-      //padding: 40px 0;
-
       list-style-type: none;
-
-      // border: 10px solid v.$beige;
-      //border-radius: 20px;
-
-      // box-shadow: 0 0 8px v.$shadowgray;
-
-      // background-color: v.$red;
 
       &-item {
         position: relative;
@@ -396,12 +322,7 @@
 
         border-radius: 20px;
 
-        //border: 6px solid v.$transdim;
-
         box-shadow: 0 0 8px v.$shadowgray;
-
-        // border-top: 10px solid v.$transgrayverylight;
-        // border-bottom: 10px solid v.$transgrayverylight;
 
         &Icon {
           height: fit-content;
@@ -425,14 +346,7 @@
             font-weight: 450;
             font-style: italic;
 
-            // background-color: v.$graylight;
-
             border-radius: 20px;
-            //border: 5px solid v.$grayverylight;
-
-            //box-shadow: 0 0 4px v.$shadowgray;
-
-            //padding: 15px;
           }
           & div {
             display: flex;
@@ -445,8 +359,6 @@
 
               border-radius: 15px;
               border: 3px solid v.$beige;
-
-              //box-shadow: 0 0 4px v.$shadowgray;
 
               color: v.$beigeLighter;
               text-decoration: none;
@@ -472,10 +384,6 @@
 
           z-index: -1;
         }
-
-        // &:nth-of-type(even) {
-        // 	background-color: v.$beige;
-        // }
       }
     }
   }

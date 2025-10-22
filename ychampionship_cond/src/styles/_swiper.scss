@@ -21,19 +21,19 @@ $slidesNum: 7;
           height: calc((((1000px) / $slidesNum) / 16) * 9);
 
           & .swiper-slide {
-            border-radius: 10px;
+            border-radius: 15px;
 
             padding: 4px;
 
             &::before {
-              border-radius: 10px;
+              border-radius: 15px;
             }
 
             & img {
               width: 100%;
               height: 100%;
 
-              border-radius: 6px;
+              border-radius: 10px;
             }
           }
         }
@@ -143,7 +143,7 @@ $slidesNum: 7;
       &-big {
         position: relative;
         overflow: hidden;
-        border-radius: 10px;
+        border-radius: 20px;
 
         // & .swiper-wrapper {
         // }
@@ -167,11 +167,11 @@ $slidesNum: 7;
 
           padding: 15px 12px;
 
-          background-color: v.$transwhite;
+          background-color: v.$pinkTrans;
           backdrop-filter: blur(2px);
-          color: v.$red;
+          color: #fff;
 
-          border-radius: 10px;
+          border-radius: 20px;
 
           box-shadow: 0 0 10px v.$shadowgray;
 
@@ -193,11 +193,11 @@ $slidesNum: 7;
 
           padding: 15px 12px;
 
-          background-color: v.$transwhite;
+          background-color: v.$pinkTrans;
           backdrop-filter: blur(2px);
-          color: v.$red;
+          color: #fff;
 
-          border-radius: 10px;
+          border-radius: 20px;
 
           box-shadow: 0 0 6px v.$shadowgray;
 
@@ -245,7 +245,7 @@ $slidesNum: 7;
             width: 70%;
             height: 70%;
 
-            background-color: v.$red;
+            background-color: v.$purpur;
 
             z-index: -1;
 

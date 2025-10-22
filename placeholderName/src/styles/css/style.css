@@ -780,6 +780,9 @@ h3 {
     margin: 0 auto;
     max-width: 1000px;
   }
+  .main__judges .boardScale p span {
+    white-space: nowrap;
+  }
   .main__judges .cardScale {
     position: relative;
     width: 320px;
@@ -1050,6 +1053,71 @@ h3 {
   font-size: 1.1rem;
 }
 .main__judges_judgeBoard-card div span:last-of-type {
+  height: 100%;
+  padding-left: 10px;
+  scrollbar-color: #fff transparent;
+}
+.main__judges_judgeMessage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main__judges_judgeMessage p {
+  margin-top: 0px;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 450;
+  color: rgba(0, 0, 0, 0.8784313725);
+}
+.main__judges_judgeMessage p span {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #bf1e2e;
+}
+.main__judges_judgeMessage-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2352941176);
+  border-radius: 20px;
+}
+.main__judges_judgeMessage-card h4 {
+  padding: 5px 10px;
+  text-wrap: nowrap;
+  text-align: center;
+  font-weight: 600;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: #bf1e2e;
+  color: #bf1e2e;
+}
+.main__judges_judgeMessage-card img {
+  min-height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+.main__judges_judgeMessage-card div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  width: 100%;
+  padding-top: 2px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(50deg, #f3f3f3 40%, rgba(243, 243, 243, 0.9176470588) 90%);
+  color: rgba(0, 0, 0, 0.8784313725);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+}
+.main__judges_judgeMessage-card div span:first-of-type {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+.main__judges_judgeMessage-card div span:last-of-type {
   height: 100%;
   padding-left: 10px;
   scrollbar-color: #fff transparent;
