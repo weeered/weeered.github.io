@@ -3,6 +3,38 @@
 @media screen and (min-width: 1024px) {
   .hero {
     gap: 20px;
+    &__decoration {
+      &_elem {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        transform: rotate(0deg) translate(43%, -20%);
+
+        width: 1200px;
+        height: fit-content;
+
+        opacity: 0.08;
+
+        z-index: 11;
+      }
+
+      &_elem-mirror {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        transform: rotate(0deg) translate(-43%, -20%) scaleX(-1);
+
+        width: 1200px;
+        height: fit-content;
+
+        opacity: 0.08;
+
+        z-index: 11;
+      }
+    }
+
     &__img {
       padding-top: 30px;
       padding-bottom: 30px;
@@ -19,6 +51,38 @@
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .hero {
     gap: 20px;
+    &__decoration {
+      &_elem {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        transform: rotate(0deg) translate(43%, -20%);
+
+        width: 1200px;
+        height: fit-content;
+
+        opacity: 0.08;
+
+        z-index: 11;
+      }
+
+      &_elem-mirror {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        transform: rotate(0deg) translate(-43%, -20%) scaleX(-1);
+
+        width: 1200px;
+        height: fit-content;
+
+        opacity: 0.08;
+
+        z-index: 11;
+      }
+    }
+
     &__img {
       padding-top: 30px;
       padding-bottom: 30px;
@@ -35,6 +99,28 @@
 @media screen and (max-width: 767px) {
   .hero {
     gap: 15px;
+
+    &__decoration {
+      &_elem {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        transform: rotate(0deg);
+
+        object-position: 50% 50%;
+
+        height: 100%;
+        width: 100%;
+
+        opacity: 0.08;
+
+        z-index: 11;
+
+        object-fit: cover;
+      }
+    }
+
     &__img {
       padding-top: 30px;
       padding-bottom: 30px;
@@ -116,17 +202,9 @@
 
   &__decoration {
     position: absolute;
-    top: -100px;
-    right: -130px;
-
-    transform: rotate(0deg);
-
-    width: 400px;
-    height: fit-content;
-
-    opacity: 0.1;
-
-    z-index: 11;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
   }
 
   &__img {
