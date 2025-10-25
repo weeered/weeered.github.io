@@ -70,7 +70,9 @@
             <a
               onclick="burgerToggle(document.getElementById('burgerToggle'))"
               href="#hero"
-              ><img src="./media/icons/chevron-up-double-RED.svg" alt="up"
+              ><img
+                src="./media/icons/double-chevron-up-s-svgrepo-com.svg"
+                alt="up"
             /></a>
           </div>
         </div>
@@ -86,10 +88,10 @@
 
       <div class="header__container">
         <div onclick="headerToggle(this)" class="header__container_toggle">
-          <img src="./media/icons/chevron-up-RED.svg" alt="toggle" />
+          <img src="./media/icons/chevron-up-PINK.svg" alt="toggle" />
         </div>
         <a href="#hero" class="header__container_up">
-          <img src="./media/icons/chevron-up-double-RED.svg" alt="up" />
+          <img src="./media/icons/chevron-up-double-PINK.svg" alt="up" />
         </a>
         <div class="header__container_elem">
           <a href="#prog" class="header__container_elem-link">Программа</a>
@@ -111,6 +113,7 @@
     </header>
 
     <hero class="hero" id="hero">
+      <img class="hero__decoration" src="./media/icons/hexagons-svgrepo-com.svg" alt="hex">
       <img class="hero__img" src="./media/logos/champ-logo.png" alt="logo" />
       <h1 class="hero__title textScale">
         МЕЖДУНАРОДНЫЙ ЧЕМПИОНАТ КОНДИТЕРСКОГО ИСКУССТВА
@@ -127,7 +130,7 @@
         <div class="main__desc_textbox textScale">
           <div class="main__desc_textbox-wrapper">
             <span class="main__desc_textbox-large"
-              >Событие, создающее кондитерские шедевры!</span
+              >Событие, создающее кондитерские шедевры</span
             >
           </div>
 
@@ -254,6 +257,26 @@
                   />
                 </div>
               </div>
+
+              <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                  <img
+                    style="object-position: 50% 50%"
+                    src="./media/desc_gallery/16.jpg"
+                    alt="photo"
+                  />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                  <img
+                    style="object-position: 50% 50%"
+                    src="./media/desc_gallery/17.jpg"
+                    alt="photo"
+                  />
+                </div>
+              </div>
             </div>
 
             <!-- <div class="swiper-pagination"></div> -->
@@ -360,6 +383,26 @@
                   />
                 </div>
               </div>
+
+              <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                  <img
+                    style="object-position: 50% 5%"
+                    src="./media/desc_gallery/16.jpg"
+                    alt="photo"
+                  />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                  <img
+                    style="object-position: 50% 5%"
+                    src="./media/desc_gallery/17.jpg"
+                    alt="photo"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -405,46 +448,51 @@
         </div> -->
       </div>
 
-      <h2 class="main__title titleScale" id="prog">В программе Кубка:</h2>
+      <h2 class="main__title titleScale" id="prog">
+        Номинации арт-класса Чемпионата:
+      </h2>
 
       <div class="main__programm">
         <ul class="main__programm_list wrapperScale">
-          <li class="main__programm_list-item">
-            <img
-              class="main__programm_list-itemIcon"
-              src="./media/icons/1_2_ikonka_kul-cup_logo.png"
-              alt="icon"
-            />
-
-            <div class="main__programm_list-itemCnt">
-              <h3>
-                Индивидуальные и командные СОСТЯЗАНИЯ в боксах для
-                профессионалов и юниоров
-              </h3>
+          <li class="main__programm_list-nominations">
+            <div><h4>D1. Сахарные цветы.</h4></div>
+            <div><h4>D2. Работа из карамели.</h4></div>
+            <div><h4>D3. Работа из шоколада.</h4></div>
+            <div><h4>D4. Скульптура из пастилажа.</h4></div>
+            <div><h4>D5. Работа из марципана.</h4></div>
+            <div>
+              <h4>D6. Праздничный торт на любую тему.</h4>
               <p>
-                Приглашаем к участию талантливых и амбициозных мастеров
-                кулинарного дела!
+                Отдельно выставляется торт весом 1 кг для дегустации членами
+                жюри.
               </p>
-              <div>
-                <a
-                  href="./media/documents/ПОЛОЖЕНИЕ_КУЛИНАРНЫЙ КУБОК_cup_ 2025.pdf"
-                  target="_blank"
-                  >Положение</a
-                ><a
-                  href="./media/documents/CUP_ДОГОВОР_ЗАЯВКА_Кулинарный_Кубок_2025_РБ_RB.doc"
-                  target="_blank"
-                  >Договор-заявка на участие РБ</a
-                >
-                <a
-                  href="./media/documents/CUP_ДОГОВОР_ЗАЯВКА_Кулинарный_Кубок_2025_РФ_RF.doc"
-                  target="_blank"
-                  >Договор-заявка на участие РФ</a
-                >
-              </div>
             </div>
+            <div>
+              <h4>D7. Эксклюзивный свадебный торт.</h4>
+              <p>
+                Отдельно выставляется торт весом 1 кг для дегустации членами
+                жюри.
+              </p>
+            </div>
+            <div><h4>D8. Торт-скульптура 3D на любую тему.</h4></div>
+            <div><h4>D9. Художественная работа из теста.</h4></div>
+            <div><h4>D10. Пряники 2D, 3D.</h4></div>
+            <div>
+              <h4>D11. Художественная работа из холодных пищевых продуктов</h4>
+              <p>(сыра, маргарина, крупы, семян и других).</p>
+            </div>
+            <div>
+              <h4>D12. Художественная работа из овощей и фруктов</h4>
+              <p>
+                (скульптура, картина, панно, композиция, выполненная из овощей и
+                фруктов без термической и химической обработки).
+              </p>
+            </div>
+            <div><h4>D13. Работа из мастики.</h4></div>
+            <div><h4>D14. Цветы из зефира.</h4></div>
           </li>
 
-          <li class="main__programm_list-item">
+          <!-- <li class="main__programm_list-item">
             <img
               class="main__programm_list-itemIcon"
               src="./media/icons/2_ikonka_batl_shefov_3_notfon.png"
@@ -460,248 +508,144 @@
                 присуждением звания «ГРАНД-ШЕФ» и «ГРАНД-ШЕФ ОТЕЛЯ»
               </p>
               <div>
-                <a
-                  href="./media/documents/ПОЛОЖЕНИЕ_КУЛИНАРНЫЙ КУБОК_cup_ 2025.pdf"
-                  target="_blank"
-                  >Положение</a
-                ><a
-                  href="./media/documents/CUP_ДОГОВОР_ЗАЯВКА_Кулинарный_Кубок_2025_РБ_RB.doc"
-                  target="_blank"
-                  >Договор-заявка на участие РБ</a
-                >
-                <a
-                  href="./media/documents/CUP_ДОГОВОР_ЗАЯВКА_Кулинарный_Кубок_2025_РФ_RF.doc"
-                  target="_blank"
-                  >Договор-заявка на участие РФ</a
-                >
+                <div class="pLink">
+                  <a
+                    href="./media/documents/ПОЛОЖЕНИЕ_КУЛИНАРНЫЙ КУБОК_cup_ 2025.pdf"
+                    target="_blank"
+                    >Положение</a
+                  >
+                </div>
+
+                <div class="pLink">
+                  <a
+                    href="./media/documents/CUP_ДОГОВОР_ЗАЯВКА_Кулинарный_Кубок_2025_РБ_RB.doc"
+                    target="_blank"
+                    >Договор-заявка на участие РБ</a
+                  >
+                </div>
+
+                <div class="pLink">
+                  <a
+                    href="./media/documents/CUP_ДОГОВОР_ЗАЯВКА_Кулинарный_Кубок_2025_РФ_RF.doc"
+                    target="_blank"
+                    >Договор-заявка на участие РФ</a
+                  >
+                </div>
               </div>
             </div>
-          </li>
-
-          <li class="main__programm_list-item">
-            <img
-              class="main__programm_list-itemIcon"
-              src="./media/icons/2_ikonka_belarus_vkusnaia_2.png"
-              alt="icon"
-            />
-
-            <div class="main__programm_list-itemCnt">
-              <h3>Шоу-презентация «Беларусь Вкусная»</h3>
-              <p>
-                Коллаборация поваров и официантов лучших ресторанов страны.
-                Презентация национальных блюд Беларуси с сервировкой стола на
-                тему «Рождество и Новый год»
-              </p>
-              <div>
-                <a href="./media/documents/Belarus_vkusnaia.pdf" target="_blank"
-                  >О шоу-презентации</a
-                >
-                <a
-                  href="./media/documents/Приглашение_к_участию_в_БЕЛАРУСЬ_ВКУСНАЯ.pdf"
-                  target="_blank"
-                  >Приглашение к участию</a
-                >
-                <a
-                  href="./media/documents/ДОГОВОР_ЗАЯВКА_Беларусь_Вкусная_2_.doc"
-                  target="_blank"
-                  >Договор-заявка</a
-                >
-                <a
-                  href="./media/documents/БЕЛАРУСЬ ВКУСНАЯ_УЧАСТНИКИ.pdf"
-                  target="_blank"
-                  >Участники</a
-                >
-              </div>
-            </div>
-          </li>
-
-          <li class="main__programm_list-item">
-            <img
-              class="main__programm_list-itemIcon"
-              src="./media/icons/1_2_ikonka_master_klass_notfon.png"
-              alt="icon"
-            />
-
-            <div class="main__programm_list-itemCnt">
-              <h3>
-                Мастер-классы от шефов и судей Международного Кулинарного Кубка
-              </h3>
-              <p>
-                Выступают знаменитые бренд-шефы и шеф-повара страны и зарубежья!
-                Путешествие в мир вкусов и ароматов под руководством лучших из
-                лучших в своей профессии. Уникальный шанс увидеть виртуозную
-                работу профессионалов, которые раскроют секреты сложных техник и
-                авторских рецептов, познакомят с философией кухни разных стран
-              </p>
-              <div>
-                <a class="button_disabled" href="#" target="_blank"
-                  >Программа мастер-классов</a
-                ><a class="button_disabled" href="#" target="_blank"
-                  >Участники</a
-                >
-              </div>
-            </div>
-          </li>
-
-          <li class="main__programm_list-item">
-            <img
-              class="main__programm_list-itemIcon"
-              src="./media/icons/1_ikonka_kruglyi_stol_2.png"
-              alt="icon"
-            />
-
-            <div class="main__programm_list-itemCnt">
-              <h3>Закрытый круглый стол «Вершина Кулинарного Искусства»</h3>
-              <p>C участием приглашенных шеф-поваров и рестораторов</p>
-              <div>
-                <a class="button_disabled" href="#" target="_blank">Спикеры</a>
-              </div>
-            </div>
-          </li>
+          </li> -->
         </ul>
       </div>
 
       <!-- <div class="main__results"></div> -->
 
       <h2 class="main__title titleScale" id="judge">
-        Судейская коллегия Кубка:
+        Судейская коллегия Чемпионата:
       </h2>
 
       <div class="main__judges">
+        <!-- <div class="main__judges_juryBoard boardScale">
+          <div class="main__judges_juryBoard-card cardScale">
+            <h4>Председатель</h4>
+            <img src="./media/judges/Елена Сучкова 1.jpg" alt="Photo" />
+            <div>
+              <span>Елена Сучкова</span>
+              <span
+                >Член правления МАК России; независимый эксперт МАК; Олимпийская
+                чемпионка, основатель и старший преподаватель «Школы шоколада»
+                Центра кулинарного искусства РФ; автор 12 книг по кондитерскому
+                делу; почетный член Ассоциации кулинаров России, Италии, Сербии
+                АОЭ, Азербайджана, Молдовы, Греции; судья международной
+                категории WACS.</span
+              >
+            </div>
+          </div>
+        </div> -->
+
         <div class="main__judges_juryBoard boardScale">
           <div class="main__judges_juryBoard-card cardScale">
-            <h4>Председатель жюри</h4>
-            <img src="./media/judges/ViktorBeley.jpg" alt="Photo" />
+            <h4>Председатель</h4>
+            <img src="./media/judges/Елена Сучкова 1.jpg" alt="Photo" />
             <div>
-              <span>Виктор Белей</span>
+              <span>Елена Сучкова</span>
               <span
-                >Шеф-повар с мировым именем, один самых ярких и титулованных
-                шеф-поваров современной России. Его имя стало символом
-                инновационного подхода к традиционной кухне и бескомпромиссного
-                качества. Золотой призер национального отбора международного
-                кулинарного конкурса «Bocuse d’Or Russia 2019» и финалист
-                европейского и мирового этапов (Лионе, 2021 год), обладатель
-                титула «Шеф года» в номинации «Русская кухня» по версии премии
-                «Пальмовая ветвь ресторанного бизнеса», активный участник
-                телешоу и гастрономических фестивалей. В разное время Виктор
-                являлся бренд-шефом ресторана «Uhvat» (Москва) (ресторан
-                получил рекомендацию Michelin), ресторана «Rodina» в
-                Дубае (ОАЭ), ресторана «The Forest» (Казахстан), ресторана «Печи
-                и истории» (Ростов-на-Дону)
-              </span>
-            </div>
-          </div>
-
-          <div class="main__judges_juryBoard-card cardScale">
-            <h4>Сопредседатель жюри</h4>
-            <img src="./media/judges/OlgaMacikova.jpg" alt="Photo" />
-            <div>
-              <span>Ольга Мацикова</span>
-              <span
-                >Главный эксперт ProfSkills International компетенции
-                «Кулинарное искусство», проректор УО «Белорусский
-                государственный университет пищевых и химических
-                технологий»</span
+                >Член правления МАК России; независимый эксперт МАК; Олимпийская
+                чемпионка, основатель и старший преподаватель «Школы шоколада»
+                Центра кулинарного искусства РФ; автор 12 книг по кондитерскому
+                делу; почетный член Ассоциации кулинаров России, Италии, Сербии
+                АОЭ, Азербайджана, Молдовы, Греции; судья международной
+                категории WACS.</span
               >
             </div>
           </div>
 
           <div class="main__judges_juryBoard-card cardScale">
-            <h4>Сопредседатель жюри</h4>
-            <img src="./media/judges/PavelMakovka.jpg" alt="Photo" />
-            <div>
-              <span>Павел Маковка</span>
-              <span
-                >Эксперт международной категории по кулинарному искусству,
-                победитель и призер международных кулинарных конкурсов, судья
-                международной категории WACS, экс-председатель Федерации
-                шеф-поваров и кондитеров Беларуси
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <div class="main__judges_judgeBoard boardScale">
-          <div class="main__judges_judgeBoard-card cardScale">
             <h4>Судья</h4>
-            <img src="./media/judges/AleksandrChikilevskiy.jpg" alt="Photo" />
+            <img src="./media/judges/Натали Ви 2.jpg" alt="Photo" />
             <div>
-              <span>Александр Чикилевский</span>
+              <span>Натали Ви</span>
               <span
-                >Бренд-шеф ресторана «Друзья», шеф-повар с 30-летним стажем
-                работы, судья международной категории WACS, победитель и призер
-                многочисленных международных и национальных конкурсов, автор
-                6-ти кулинарных книг, постоянный участник кулинарных теле и
-                радио- передач, преподаватель профессиональных и любительских
-                программ по кулинарии
+                >Шеф-кондитер, ‌профессиональный шоколатье, практик с опытом
+                работы более 8 лет; основатель онлайн-школы ‌«Школа Шоколатье»;
+                эксперт на федеральных каналах — Первый канал, РенТВ, ТВЦ,
+                Волга24; призер многих международных конкурсов в том числе
+                ‌ГРАН-ПРИ на Международном кондитерском Чемпионате Sous Gastro
+                Agadir, Марокко; судья международных кондитерских Чемпионатов в
+                том числе Южная Корея - Сеул, Марокко - Агадир, Египет – Каир;
+                конфетный кондитер №1 в России ‌премии «Женщина года» по версии
+                журнала Expert.RF; ‌«Лучший конфетный проект года» ‌по версии
+                журнала Special_magazine; автор более 700 рецептов конфет, ‌в
+                том числе 15 сборников рецептов; амбассадор брендов Implast
+                Russia, Fresh Harvest; ‌‌приглашенный редактор издания ‌«Гид по
+                Москве».
               </span>
             </div>
           </div>
 
-          <div class="main__judges_judgeBoard-card cardScale">
+          <div class="main__judges_juryBoard-card cardScale">
             <h4>Судья</h4>
-            <img src="./media/judges/DenisSvetov.jpg" alt="Photo" />
+            <img src="./media/judges/Ольга Готовко 3.jpg" alt="Photo" />
             <div>
-              <span>Денис Светов</span>
+              <span>Ольга Готовко</span>
               <span
-                >Шеф-повар с более чем 20-летним стажем, победитель и призёр
-                международных и отечественных кулинарных соревнований, НПОГ
-                «Президент-Отель»</span
-              >
+                >Мировая чемпионка; многократная победительница международных
+                соревнований; Кондитер года 2019; судья международной категории
+                WACS.
+              </span>
             </div>
           </div>
 
-          <div class="main__judges_judgeBoard-card cardScale">
+          <div class="main__judges_juryBoard-card cardScale">
             <h4>Судья</h4>
-            <img src="./media/judges/ElenaMikulchic.jpg" alt="Photo" />
+            <img src="./media/judges/Евгения Волошина 4.jpg" alt="Photo" />
             <div>
-              <span>Елена Микульчик</span>
+              <span>Евгения Волошина</span>
               <span
-                >Шеф-повар, эксперт белорусской и славянской кухни, историк
-                кулинарии, автор кулинарных книг, теле- и радио ведущая</span
-              >
+                >Основательница Международной онлайн-школы по антигравитационным
+                тортам и учредитель Ассоциации кондитеров- антигравитаторов
+                России.
+              </span>
             </div>
           </div>
 
-          <!-- <div class="main__judges_judgeBoard-card cardScale">
-						<h4>Судья</h4>
-						<img src="./media/judges/EvgeniyEreshkin.jpg" alt="Photo" />
-						<div>
-							<span>Евгений Иришкин</span>
-							<span
-								>Международный эксперт компетенции «Поварское дело» World Skills
-								Russia</span
-							>
-						</div>
-					</div> -->
-
-          <div class="main__judges_judgeBoard-card cardScale">
-            <h4>Технический Судья</h4>
-            <img src="./media/judges/AlenaPolesova.jpg" alt="Photo" />
+          <div class="main__judges_juryBoard-card cardScale">
+            <h4>Судья</h4>
+            <img src="./media/judges/Анастасия Кашляк 5.jpg" alt="Photo" />
             <div>
-              <span>Алена Полесова</span>
+              <span>Анастасия Кашляк</span>
               <span
-                >Победитель и призер многочисленных международных конкурсов
-                профессионального мастерства</span
-              >
-            </div>
-          </div>
-
-          <div class="main__judges_judgeBoard-card cardScale">
-            <h4>Технический Судья</h4>
-            <img src="./media/judges/AntonVolkov.jpg" alt="Photo" />
-            <div>
-              <span>Антон Волков</span>
-              <span
-                >Шеф-повар, многократный победитель международных кулинарных
-                соревнований</span
-              >
+                >Золотой призер международных чемпионатов в категории
+                «Изомальт»; суперфиналист телешоу Рената Агзамова «Король
+                Десертов 3»; официальный представитель МККД «Cake Artist World”
+                в Республике Беларусь; ведущий технолог компании «Аман
+                Трейдинг».
+              </span>
             </div>
           </div>
         </div>
       </div>
 
-      <h2 class="main_title titleScale" id="org">Организаторы:</h2>
+      <h2 class="main__title titleScale" id="org">Организаторы:</h2>
 
       <div class="main__organizers">
         <div class="main__organizers_container">
@@ -748,59 +692,11 @@
           </a>
 
           <a
-            href="https://aromatik.by/"
-            target="_blank"
-            class="main__partners_container-card descCard"
-          >
-            <img src="./media/partners/COOO АРОМАТИК.png" alt="partner" />
-          </a>
-
-          <!-- <a
-            href="https://anyform.by/"
-            target="_blank"
-            class="main__partners_container-card descCard"
-          >
-            <img src="./media/partners/Компания ANYFORM.png" alt="partner" />
-          </a> -->
-
-          <a
-            href="https://www.barsa.by/"
-            target="_blank"
-            class="main__partners_container-card descCard"
-          >
-            <img src="./media/partners/ООО  BARSA.png" alt="partner" />
-          </a>
-
-          <!-- <a
-            href="https://entecomaster.by/"
-            target="_blank"
-            class="main__partners_container-card descCard"
-          >
-            <img src="./media/partners/ООО ИНТЭКО-МАСТЕР.png" alt="partner" />
-          </a> -->
-
-          <a
-            href="https://aman.by/"
-            target="_blank"
-            class="main__partners_container-card descCard"
-          >
-            <img src="./media/partners/ЧУП АМАН ТРЕЙДИНГ.png" alt="partner" />
-          </a>
-
-          <a
             href="https://priprava.by/"
             target="_blank"
             class="main__partners_container-card descCard"
           >
             <img src="./media/partners/ЧУП ПРЯНЫЙ ДОМ.png" alt="partner" />
-          </a>
-
-          <a
-            href="https://modecorbel.by/"
-            target="_blank"
-            class="main__partners_container-card descCard"
-          >
-            <img src="./media/partners/ЧУП МОДЕКОР БЕЛ.png" alt="partner" />
           </a>
         </div>
       </div>
@@ -857,7 +753,12 @@
         <div class="main__partners_container hotelContainer">
           <div class="main__partners_container-hotelDesc">
             Участникам кубка предоставляются скидки на проживание по промокоду
-            <span style="white-space: nowrap; font-size: 1.3rem"
+            <span
+              style="
+                white-space: nowrap;
+                font-size: 1.3rem;
+                font-weight: inherit;
+              "
               >«FOOD2025»:</span
             >
           </div>
@@ -1022,12 +923,16 @@
             </div>
           </div>
 
-          <input
-            type="submit"
-            name="submit"
-            class="main__form_elem-submit"
-            value="Отправить"
-          />
+          <div class="main__form_elem-submit">
+            <button
+              type="submit"
+              name="submit"
+              class="main__form_elem-submitBtn"
+              value="Отправить"
+            >
+              Отправить
+            </button>
+          </div>
 
           <div class="main__form_elem-legend">*Oбязательное поле</div>
         </form>

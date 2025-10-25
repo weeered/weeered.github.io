@@ -8,16 +8,6 @@
   }
 }
 
-// @media screen and (min-width: 768px) and (max-width: 1023px) {
-//   .main {
-//   }
-// }
-
-// @media screen and (max-width: 767px) {
-//   .main {
-//   }
-// }
-
 .main {
   &__form {
     display: flex;
@@ -29,18 +19,18 @@
 
     border-radius: 20px;
 
-    //background-image: url("../../media/icons/1_2_ikonka_kul-cup_logo.png");
-    //background-repeat: no-repeat;
-    //background-position: 90% 72%;
-    //background-attachment: local;
-    //background-size: 110% auto;
-
     &_clue {
       font-size: 1.2rem;
+      color: v.$purpur;
+      font-weight: 600;
+      text-shadow: 0 0 10px v.$shadowgray;
 
-      color: #fff;
-
-      background-color: v.$red;
+      background: linear-gradient(
+        140deg,
+        v.$metallicLight,
+        #fff,
+        v.$metallicDark
+      );
 
       padding: 15px 15px;
 
@@ -73,7 +63,7 @@
       //   v.$transgray 90%
       // );
 
-      background-color: v.$transwhite;
+      background: linear-gradient(140deg, v.$purpur 40%, v.$pink);
 
       backdrop-filter: blur(5px);
 
@@ -84,7 +74,7 @@
         padding: 0 20px;
 
         & label {
-          color: v.$textBlack;
+          color: #fff;
         }
 
         & input {
@@ -104,32 +94,63 @@
       }
 
       &-submit {
+        position: relative;
         margin: 20px;
-
-        background-color: v.$red;
-
-        color: v.$beigeLighter;
-
-        padding: 5px;
-
-        border: none;
-
-        cursor: pointer;
-
-        border: 3px solid v.$beige;
-
-        border-radius: 10px;
 
         transition: scale ease-in-out 0.1s;
 
-        &:hover{
+        &Btn {
+          position: relative;
+
+          width: 100%;
+          height: 100%;
+
+          font-size: 1.1rem;
+          color: v.$pink;
+          font-weight: 600;
+
+          padding: 5px;
+
+          background-color: #fff;
+
+          border: none;
+          border-radius: 10px;
+
+          cursor: pointer;
+        }
+
+        &::before {
+          content: "";
+
+          position: absolute;
+          top: 50%;
+          left: 50%;
+
+          transform: translate(-50%, -50%);
+
+          width: calc(100% + 10px);
+          height: calc(100% + 10px);
+
+          border-radius: 13px;
+
+          background: linear-gradient(
+            140deg,
+            v.$metallicLight,
+            v.$transwhite,
+            v.$metallicDark
+          );
+
+          z-index: -1;
+        }
+
+        &:hover {
           scale: 1.008;
         }
       }
 
       &-legend {
         font-size: 0.8rem;
-        color: v.$textBlack;
+        color: v.$yellow;
         margin: 10px 20px;
         margin-top: -25px;
       }
@@ -141,7 +162,7 @@
         padding: 0 20px;
 
         & label {
-          color: v.$textBlack;
+          color: #fff;
         }
 
         &Container {

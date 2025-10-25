@@ -49,18 +49,18 @@
 }
 
 .hero {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
   height: fit-content;
-  position: relative;
-  background: linear-gradient(0deg, v.$purpur, v.$pink);
+
   color: #fff;
 
   padding-bottom: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 
   text-align: center;
 
@@ -68,16 +68,85 @@
 
   z-index: 10;
 
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: calc(100% + 15px);
+
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+
+    background: linear-gradient(
+      90deg,
+      v.$metallicLight 20%,
+      #fff,
+      v.$metallicDark
+    );
+
+    box-shadow: 0 0 10px v.$shadowblack;
+
+    z-index: -1;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+    background: linear-gradient(0deg, v.$purpur, v.$pink);
+
+    z-index: 1;
+  }
+
+  &__decoration {
+    position: absolute;
+    top: -100px;
+    right: -130px;
+
+    transform: rotate(0deg);
+
+    width: 400px;
+    height: fit-content;
+
+    opacity: 0.1;
+
+    z-index: 11;
+  }
+
+  &__img {
+    z-index: 11;
+  }
+
   &__title {
     font-weight: 500;
+
+    z-index: 11;
   }
 
   &__place {
     font-size: 1.1rem;
+    z-index: 11;
   }
 
   &__date {
     font-size: 1.1rem;
+    z-index: 11;
   }
 
   &__textbox {
@@ -85,5 +154,6 @@
     font-size: 1.4rem;
     font-weight: 500;
     flex-direction: column;
+    z-index: 11;
   }
 }

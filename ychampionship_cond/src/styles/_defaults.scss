@@ -1,28 +1,40 @@
-* {
-	font-family: "Noto sans", sans-serif;
-	font-optical-sizing: auto;
-	font-weight: 400;
-	font-style: normal;
+@use "./variables" as v;
 
-	scroll-behavior: smooth;
-	scroll-padding-top: 50px;
+* {
+  font-family: "Noto sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+
+  scroll-behavior: smooth;
+  scroll-padding-top: 50px;
 }
 
 main {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
+}
 
+.main__title {
+  background: linear-gradient(140deg, v.$purpurTrans 40%, v.$pinkTrans);
+  border-radius: 20px;
+	color: #fff;
+	
 	
 }
 
+body {
+  background-color: #fff;
+}
+
 h1 {
-	font-size: 2.2rem;
+  font-size: 2.2rem;
 }
 
 h2 {
-	font-size: 1.8rem;
+  font-size: 1.8rem;
 }
 
 h3 {
-	font-size: 1.3rem;
+  font-size: 1.3rem;
 }

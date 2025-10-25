@@ -26,7 +26,7 @@
       //   v.$transblackAlt 90%
       // );
 
-      background-color: v.$transwhite;
+      background: linear-gradient(140deg, v.$purpurTrans, v.$pinkTrans);
 
       backdrop-filter: blur(3px);
 
@@ -48,15 +48,24 @@
 
         height: 100%;
 
-        background-color: v.$transgrayverylight;
+        background: linear-gradient(
+          130deg,
+          v.$metallicLight 0%,
+          #fff,
+          v.$metallicDark
+        );
 
         border-bottom-right-radius: 10px;
 
-        transition: background-color ease-in-out 0.1s;
+        transition: filter ease-in-out 0.15s;
 
         @media (pointer: fine) {
           &:hover {
-            background-color: v.$transgrayverylight;
+            filter: brightness(103%);
+
+            & img {
+              filter: brightness(103%);
+            }
           }
         }
 
@@ -86,11 +95,16 @@
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
 
-        background-color: v.$transgrayverylight;
+        background: linear-gradient(
+          130deg,
+          v.$metallicLight 0%,
+          #fff,
+          v.$metallicDark
+        );
 
         transition:
           top ease-in-out 0.1s,
-          background-color ease-in-out 0.1s,
+          filter ease-in-out 0.15s,
           border-radius ease-in-out 0.1s,
           box-shadow ease-in-out 0.1s;
 
@@ -108,7 +122,11 @@
 
         @media (pointer: fine) {
           &:hover {
-            background-color: v.$transgrayverylight;
+            filter: brightness(103%);
+
+            & img {
+              filter: brightness(103%);
+            }
           }
         }
       }
@@ -123,14 +141,14 @@
           align-items: center;
 
           font-weight: 500;
-          color: v.$textBlack;
+          color: #fff;
           text-decoration: none;
 
           transition: color ease-in-out 0.15s;
 
           @media (pointer: fine) {
             &:hover {
-              color: v.$red;
+              color: v.$yellow;
               // &::after {
               //   width: 100%;
               //   left: 0;
@@ -197,8 +215,7 @@
 
         box-shadow: 0 0 8px v.$shadowblack;
 
-        //background: linear-gradient(120deg, v.$transblack, v.$transblackAlt);
-        background-color: v.$transwhite;
+        background: linear-gradient(140deg, v.$purpurTrans, v.$pinkTrans);
         backdrop-filter: blur(2px);
 
         overflow: hidden;
@@ -219,7 +236,7 @@
             display: flex;
 
             font-size: 24px;
-            color: v.$textBlack;
+            color: #fff;
             text-decoration: none;
             width: 100%;
 
@@ -240,11 +257,15 @@
         justify-content: center;
         align-items: center;
 
-        //background: linear-gradient(120deg, v.$transblack, v.$transblackAlt);
-        background-color: v.$transwhite;
+        background: linear-gradient(
+          130deg,
+          v.$metallicLight 0%,
+          #fff,
+          v.$metallicDark
+        );
         backdrop-filter: blur(2px);
 
-        border-bottom-right-radius: 10px;
+        border-bottom-right-radius: 20px;
 
         box-shadow: 0 0 5px v.$shadowgray;
 
@@ -256,14 +277,14 @@
         transition:
           transform ease-in-out 0.3s,
           box-shadow ease-in-out 0.3s,
-          background-color ease-in-out 0.3s,
+          border-radius ease-in-out 0.3s,
           box-shadow ease-in-out 0.3s;
 
         &-elem {
           position: relative;
           width: 50px;
           height: 3px;
-          background-color: v.$red;
+          background-color: v.$pink;
 
           transition-delay: 0.1s;
 
@@ -276,7 +297,7 @@
 
             width: 50px;
             height: 3px;
-            background-color: v.$red;
+            background-color: v.$pink;
 
             transition:
               transform ease-in 0.08s,
@@ -292,7 +313,7 @@
 
             width: 50px;
             height: 3px;
-            background-color: v.$red;
+            background-color: v.$pink;
 
             transition:
               transform ease-in 0.08s,

@@ -41,9 +41,8 @@
     transform: translate(calc(100vw - 100%), 0);
 
     border-bottom-right-radius: 0;
+    border-bottom-left-radius: 20px;
 
-    background: none;
-    box-shadow: none;
     backdrop-filter: none;
 
     &-elem {
