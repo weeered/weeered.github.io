@@ -200,6 +200,156 @@
     &_docs {
       display: flex;
 
+      &-dropdown {
+        position: relative;
+
+        display: flex;
+
+        margin: 5px;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+
+          transform: translate(-50%, -50%);
+
+          width: calc(100% + 10px);
+          height: calc(100% + 10px);
+
+          box-shadow: 0 0 4px v.$shadowblack;
+
+          border-radius: 19px;
+
+          background: linear-gradient(
+            140deg,
+            v.$metallicLight 10%,
+            #fff,
+            v.$metallicDark
+          );
+
+          z-index: 0;
+        }
+
+        &Btn {
+          cursor: pointer;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          padding: 5px 10px;
+          background-color: #fff;
+
+          color: v.$pink;
+          font-size: 1.1rem;
+          font-weight: 700;
+
+          border-radius: 15px;
+
+          user-select: none;
+
+          outline: none;
+
+          & img {
+            width: 1.5rem;
+
+            transition: transform ease-in-out 0.2s;
+          }
+
+          z-index: 10;
+        }
+
+        &Mnu {
+          position: absolute;
+          top: 100%;
+          width: calc(100% + 10px);
+          height: fit-content;
+
+          transform: translateX(-5px);
+
+          display: flex;
+          flex-direction: column;
+          gap: 0px;
+
+          opacity: 0;
+
+          border-radius: 20px;
+          //border: 1px solid v.$linkgray;
+          box-shadow: 0 0 8px v.$shadowgray;
+          backdrop-filter: blur(2px);
+
+          transition:
+            opacity ease-in-out 0.4s,
+            transform ease-in-out 0.3s;
+
+          z-index: 10;
+
+          & a {
+            position: relative;
+            background-color: v.$pinkTrans;
+
+            padding: 15px 10px;
+            display: block;
+
+            text-decoration: none;
+            font-weight: 500;
+            color: #fff;
+
+            &:first-of-type {
+              border-top-left-radius: 20px;
+              border-top-right-radius: 20px;
+
+              &::before {
+                display: none;
+              }
+            }
+
+            &:last-of-type {
+              border-bottom-left-radius: 20px;
+              border-bottom-right-radius: 20px;
+
+              &::after {
+                display: none;
+              }
+            }
+
+            &::before {
+              content: "";
+              position: absolute;
+              top: -1px;
+              left: 0;
+
+              width: 100%;
+              height: 2px;
+
+              background-color: #fff;
+            }
+
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: -1px;
+              left: 0;
+
+              width: 100%;
+              height: 2px;
+
+              background-color: #fff;
+            }
+
+            transition: scale linear 0.1s;
+
+            &:hover {
+              scale: 1.025;
+
+              z-index: 11;
+            }
+          }
+        }
+      }
+
       &-button {
         position: relative;
 

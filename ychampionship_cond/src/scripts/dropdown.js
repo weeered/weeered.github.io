@@ -7,14 +7,15 @@ function dropdownToggle(e) {
 
   if (dropdownElem.children.length == 1) {
     const menu = dropdownElem.appendChild(document.createElement("div"));
-    menu.classList.add("main__desc_dropdown-menu");
+    menu.classList.add("main__desc_docs-dropdownMnu");
     if (e.id == "choomButton") {
       menu.innerHTML =
-        "<a href='./media/documents/participants_CC.pdf' target='blank'>📄O Кубке</a><a href='./media/documents/participants_CC_2.pdf' target='blank'>📄Регистрация на Кубок</a>";
-    } else if (e.id == "corpoButton") {
-      menu.innerHTML =
-        "<a href='./media/documents/partners_CC.pdf' target='blank'>📄Партнерская программа</a><a href='./media/documents/partners_CC_2.pdf' target='blank'>📄Контакты Организатора</a>";
+        "<a href='./media/documents/participants_CC.pdf' target='blank'>📄Положение</a><a href='./media/documents/dogovor_champ_RB.doc' target='blank'>📄РФ Приглашение к участию</a><a href='./media/documents/dogovor_champ_RF.doc' target='blank'>📄РБ Приглашение к участию</a>";
     }
+    //  else if (e.id == "corpoButton") {
+    //   menu.innerHTML =
+    //     "<a href='./media/documents/partners_CC.pdf' target='blank'>📄Партнерская программа</a><a href='./media/documents/partners_CC_2.pdf' target='blank'>📄Контакты Организатора</a>";
+    // }
     setTimeout(() => {
       playFadeInAnimation(menu);
     }, 1);
@@ -29,17 +30,16 @@ function dropdownToggle(e) {
 
 window.onclick = function (event) {
   if (
-    !event.target.matches(".main__desc_dropdown-button") &&
-    !event.target.matches(".main__desc_dropdown-menuLink") &&
-    !event.target.matches(".header__container_elem-link")
+    !event.target.matches(".main__desc_docs-dropdownBtn") &&
+    !event.target.matches(".main__desc_docs-dropdownMnulnk") 
   ) {
-    const menuList = document.querySelectorAll(".main__desc_dropdown-menu");
+    const menuList = document.querySelectorAll(".main__desc_docs-dropdownMnu");
     for (i = 0; i < menuList.length; i++) {
       for (ii = 0; ii < menuList.children; ii++) {
         menuList.children[ii].remove;
       }
-      chevronList[0].classList.remove("chevronRotate");
       chevronList[1].classList.remove("chevronRotate");
+
       menuList[i].remove();
     }
   }

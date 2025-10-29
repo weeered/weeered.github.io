@@ -1,7 +1,7 @@
 @use "./variables" as v;
 
 .showDropdown {
-  transform: translateY(2.5%);
+  transform: translateY(2.5%) translateX(-5px);
   opacity: 1;
 }
 

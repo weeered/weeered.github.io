@@ -148,24 +148,31 @@
 
           <div class="main__desc_textbox-wrapper">
             МЕЖДУНАРОДНЫЙ ЧЕМПИОНАТ КОНДИТЕРСКОГО ИСКУССТВА проводится ежегодно
-            в Минске на площадке Международной специализированной оптовой
+            в Минске в рамках Международной специализированной оптовой
             выставки-ярмарки «PRODEXPO» и собирает лучших кондитеров Беларуси и
             зарубежья.
           </div>
         </div>
 
         <div class="main__desc_docs textScale">
-          <div class="main__desc_docs-button">
-            <a
-              href="./media/documents/participants_joined.pdf"
-              target="_blank"
-              class="main__desc_docs-buttonLnk"
-              >📄Участникам</a
+          <div class="main__desc_docs-dropdown">
+            <div
+              onclick="dropdownToggle(this)"
+              class="main__desc_docs-dropdownBtn"
+              id="choomButton"
             >
+              <img
+                src="./media/icons/chevron-up-PINK.svg"
+                name="dropdownChevron"
+                alt="chevron"
+              />
+              Участникам
+            </div>
           </div>
+
           <div class="main__desc_docs-button">
             <a
-              href="./media/documents/partners_joined.pdf"
+              href="./media/documents/Приглашение_к_партнерству_Продэкспо_2025.pdf"
               target="_blank"
               class="main__desc_docs-buttonLnk"
               >📄Партнерам</a
@@ -889,6 +896,21 @@
                 3★
               </div>
               <p>Скидка 10%</p>
+            </div>
+          </a>
+
+          <a
+            href="https://hotel-vojage.by/"
+            target="_blank"
+            class="main__partners_container-card voyage hotelCard"
+          >
+            <img src="./media/hotels/voyage.jpg" alt="partner" />
+            <div class="hotelDesc">
+              <div>
+                Гостиница «Вояж» <br />
+                2★
+              </div>
+              <p>Скидка 15%</p>
             </div>
           </a>
         </div>
