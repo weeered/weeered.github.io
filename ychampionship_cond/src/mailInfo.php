@@ -31,7 +31,7 @@ if (isset($_POST["submit"])) {
     if (
         mail(
             "info@culinarycup.bcmagazine.by",
-            "Формы cofecart.bcmagazine.by",
+            "Формы confecart.bcmagazine.by",
             $messageHTML,
             $headers,
         )
