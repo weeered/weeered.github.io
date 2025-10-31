@@ -38,7 +38,7 @@ window.onclick = function (event) {
       for (ii = 0; ii < menuList.children; ii++) {
         menuList.children[ii].remove;
       }
-      chevronList[1].classList.remove("chevronRotate");
+      chevronList[0].classList.remove("chevronRotate");
 
       menuList[i].remove();
     }

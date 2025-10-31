@@ -77,6 +77,7 @@
   cursor: default;
 
   user-select: none;
+  pointer-events: none;
 
   &:hover {
     scale: 1 !important;

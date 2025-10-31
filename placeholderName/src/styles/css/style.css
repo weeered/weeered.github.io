@@ -1745,6 +1745,7 @@ h3 {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  pointer-events: none;
 }
 .button_disabled:hover {
   scale: 1 !important;
