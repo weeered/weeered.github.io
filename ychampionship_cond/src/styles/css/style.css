@@ -580,9 +580,12 @@ h3 {
     font-size: 1.1rem;
   }
   .main__desc_docs {
-    justify-content: center;
-    gap: 10%;
+    justify-content: space-between;
+    width: 450px;
+  }
+  .main__desc_docs.results .main__desc_docs-button {
     width: 100%;
+    text-align: center;
   }
   .main__programm_list-item {
     flex-direction: row;
@@ -617,9 +620,12 @@ h3 {
     font-size: 1rem;
   }
   .main__desc_docs {
-    justify-content: center;
-    gap: 10%;
+    justify-content: space-between;
+    width: 400px;
+  }
+  .main__desc_docs.results .main__desc_docs-button {
     width: 100%;
+    text-align: center;
   }
   .main__programm_list-item {
     flex-direction: row;
@@ -656,6 +662,10 @@ h3 {
   .main__desc_docs {
     width: calc(100% - 20px);
     justify-content: space-between;
+  }
+  .main__desc_docs.results .main__desc_docs-button {
+    width: 100%;
+    text-align: center;
   }
   .main__programm_list-item {
     flex-direction: column;
@@ -766,7 +776,7 @@ h3 {
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
   transition: opacity ease-in-out 0.4s, transform ease-in-out 0.3s;
-  z-index: 10;
+  z-index: 11;
 }
 .main__desc_docs-dropdownMnu a {
   position: relative;
@@ -1645,11 +1655,11 @@ h3 {
   color: #f3c13e;
 }
 .footer__timer_elem {
-  color: #f3c13e;
+  color: #fff;
   font-size: 30px;
 }
 .footer__timer_elem-span {
-  color: #fff;
+  color: #f3c13e;
   font-size: 25px;
 }
 

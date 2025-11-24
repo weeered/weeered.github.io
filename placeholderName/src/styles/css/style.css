@@ -469,9 +469,12 @@ h3 {
     color: rgba(0, 0, 0, 0.8784313725);
   }
   .main__desc_docs {
-    justify-content: center;
-    gap: 10%;
+    justify-content: space-between;
+    width: 450px;
+  }
+  .main__desc_docs.results .main__desc_docs-button {
     width: 100%;
+    text-align: center;
   }
   .main__programm_list-item {
     flex-direction: row;
@@ -508,9 +511,12 @@ h3 {
     color: rgba(0, 0, 0, 0.8784313725);
   }
   .main__desc_docs {
-    justify-content: center;
-    gap: 10%;
+    justify-content: space-between;
+    width: 400px;
+  }
+  .main__desc_docs.results .main__desc_docs-button {
     width: 100%;
+    text-align: center;
   }
   .main__programm_list-item {
     flex-direction: row;
@@ -549,6 +555,10 @@ h3 {
   .main__desc_docs {
     width: calc(100% - 20px);
     justify-content: space-between;
+  }
+  .main__desc_docs.results .main__desc_docs-button {
+    width: 100%;
+    text-align: center;
   }
   .main__programm_list-item {
     flex-direction: column;

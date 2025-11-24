@@ -158,10 +158,10 @@
 
   &__timer {
     &_elem {
-      color: v.$yellow;
+      color: #fff;
       font-size: 30px;
       &-span {
-        color: #fff;
+        color: v.$yellow;
         font-size: 25px;
       }
     }

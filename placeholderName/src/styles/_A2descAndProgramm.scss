@@ -24,9 +24,15 @@
       }
 
       &_docs {
-        justify-content: center;
-        gap: 10%;
-        width: 100%;
+        justify-content: space-between;
+        width: 450px;
+
+        &.results {
+          & .main__desc_docs-button {
+            width: 100%;
+            text-align: center;
+          }
+        }
       }
     }
 
@@ -77,9 +83,15 @@
       }
 
       &_docs {
-        justify-content: center;
-        gap: 10%;
-        width: 100%;
+        justify-content: space-between;
+        width: 400px;
+
+        &.results {
+          & .main__desc_docs-button {
+            width: 100%;
+            text-align: center;
+          }
+        }
       }
     }
 
@@ -132,6 +144,13 @@
       &_docs {
         width: calc(100% - 20px);
         justify-content: space-between;
+
+        &.results {
+          & .main__desc_docs-button {
+            width: 100%;
+            text-align: center;
+          }
+        }
       }
     }
 
