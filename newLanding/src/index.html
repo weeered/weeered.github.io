@@ -59,29 +59,58 @@
 			</div>
 			<div class="header__nav">
 				<div class="header__nav_item text-shine">
-					<a class="header__nav_item-link" href="#themes">О симпозиуме</a>
+					<a
+						class="header__nav_item-link"
+						href="#themes"
+						onclick="setHighlightNavActive(0)"
+						>О симпозиуме</a
+					>
 				</div>
 				<div class="header__nav_item text-shine">
-					<a class="header__nav_item-link" href="#KO"
+					<a
+						class="header__nav_item-link"
+						href="#KO"
+						onclick="setHighlightNavActive(1)"
 						>Конкурс кондитесрких изделий</a
 					>
 				</div>
 				<div class="header__nav_item text-shine">
-					<a class="header__nav_item-link" href="#speakers">Спикеры</a>
+					<a
+						class="header__nav_item-link"
+						href="#speakers"
+						onclick="setHighlightNavActive(2)"
+						>Спикеры</a
+					>
 				</div>
 				<div class="header__nav_item text-shine">
-					<a class="header__nav_item-link" href="#programm">Программа</a>
+					<a
+						class="header__nav_item-link"
+						href="#programm"
+						onclick="setHighlightNavActive(3)"
+						>Программа</a
+					>
 				</div>
 				<div class="header__nav_item text-shine">
-					<a class="header__nav_item-link" href="#album">Фотогалерея</a>
+					<a
+						class="header__nav_item-link"
+						href="#album"
+						onclick="setHighlightNavActive(4)"
+						>Фотогалерея</a
+					>
 				</div>
 				<div class="header__nav_item text-shine">
-					<a class="header__nav_item-link" href="#organizers">Организаторы</a>
+					<a
+						class="header__nav_item-link"
+						href="#organizers"
+						onclick="setHighlightNavActive(5)"
+						>Организаторы</a
+					>
 				</div>
 				<div class="header__nav_item text-shine">
 					<a
 						class="header__nav_item-link"
 						href="javascript: document.body.scrollIntoView(false);"
+						onclick="setHighlightNavActive(6)"
 						>Контакты</a
 					>
 				</div>
@@ -1137,7 +1166,7 @@
 							<span class="section__programm_event-location"></span>
 						</div>
 
-						<div class="section__programm_event-topic">
+						<div class="section__programm_event-topic" id="masterclass">
 							<span class="section__programm_event-topic-dot">■</span>
 							Интерактивный шоу-мастер-класс для технологов
 						</div>
@@ -1203,7 +1232,7 @@
 				<div class="section__album_text-block">
 					<h3 class="section__album_title">Фотогалерея. Как это было:</h3>
 					<h4 class="section__album_info">
-						Международный симпозиум кондитеров 2024
+						Международный симпозиум кондитеров 2025
 					</h4>
 				</div>
 
@@ -1872,19 +1901,19 @@
 		</footer>
 
 		<div class="burgerMenu">
-			<div class="burgerMenu__list-container">
+			<div class="burgerMenu__list_container">
 				<div class="burgerMenu__list">
-					<a href="#themes" class="burgerMenu__list-item">О симпозиуме</a>
-					<a href="#KO" class="burgerMenu__list-item"
+					<a href="#themes" class="burgerMenu__list_item">О симпозиуме</a>
+					<a href="#KO" class="burgerMenu__list_item"
 						>Конкурс кондитесрких изделий</a
 					>
-					<a href="#speakers" class="burgerMenu__list-item">Спикеры</a>
-					<a href="#programm" class="burgerMenu__list-item">Программа</a>
-					<a href="#album" class="burgerMenu__list-item">Фотогалерея</a>
-					<a href="#organizers" class="burgerMenu__list-item">Организаторы</a>
+					<a href="#speakers" class="burgerMenu__list_item">Спикеры</a>
+					<a href="#programm" class="burgerMenu__list_item">Программа</a>
+					<a href="#album" class="burgerMenu__list_item">Фотогалерея</a>
+					<a href="#organizers" class="burgerMenu__list_item">Организаторы</a>
 					<a
 						href="javascript: document.body.scrollIntoView(false);"
-						class="burgerMenu__list-item"
+						class="burgerMenu__list_item"
 						>Контакты</a
 					>
 				</div>

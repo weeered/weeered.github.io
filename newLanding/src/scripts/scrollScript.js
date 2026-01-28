@@ -186,3 +186,12 @@ function setHighlightNav() {
 		}
 	}
 }
+
+function setHighlightNavActive(b) {
+	for (let i = 0; i < sections.length; i++) {
+		if (i != b) {
+			navElems[i + 7].style.backgroundPosition = "";
+			navElems[i + 7].style.textShadow = "";
+		}
+	}
+}

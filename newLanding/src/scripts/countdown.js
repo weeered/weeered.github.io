@@ -1,6 +1,6 @@
 // Set the date we're counting down to
 const countdownElems = document.getElementsByClassName("ctdwn");
-var countDownDate = new Date("April 24, 2025 9:00:00").getTime();
+var countDownDate = new Date("April 16, 2026 9:00:00").getTime();
 
 timer();
 

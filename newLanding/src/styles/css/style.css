@@ -316,14 +316,16 @@ a {
 .hover-brighten {
   transition: filter 0.3s;
 }
-.hover-brighten:hover {
-  filter: contrast(75%) brightness(1.1);
+@media (hover: hover) {
+  .hover-brighten:hover {
+    filter: contrast(75%) brightness(1.1);
+  }
 }
 
 .hover-scale {
   transition: scale 0.3s;
 }
-@media screen and (min-width: 1000px) {
+@media (hover: hover) {
   .hover-scale:hover {
     scale: 1.03;
   }
@@ -383,9 +385,11 @@ a {
   background-position: 100% 100%;
   transition: background 0.3s linear, text-shadow 0.1s 0.1s linear;
 }
-.text-shine:hover {
-  transition: background 0.3s linear, text-shadow 0.1s 0s linear;
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.7490196078);
+@media (hover: hover) {
+  .text-shine:hover {
+    transition: background 0.3s linear, text-shadow 0.1s 0s linear;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7490196078);
+  }
 }
 @keyframes textShine {
   from {
@@ -841,7 +845,7 @@ a {
   margin-bottom: 0;
 }
 
-.list-item_active {
+.list_item_active {
   animation-play-state: running;
 }
 
@@ -1195,7 +1199,7 @@ a {
 }
 @media screen and (max-width: 750px) {
   .section__KO_banner-logo {
-    width: 70%;
+    width: 90%;
   }
 }
 .section__KO_banner-results {

@@ -173,14 +173,16 @@
 
 .hover-brighten {
 	transition: filter 0.3s;
-	&:hover {
-		filter: contrast(75%) brightness(1.1);
+	@media (hover: hover) {
+		&:hover {
+			filter: contrast(75%) brightness(1.1);
+		}
 	}
 }
 
 .hover-scale {
 	transition: scale 0.3s;
-	@media screen and (min-width: 1000px) {
+	@media (hover: hover) {
 		&:hover {
 			scale: 1.03;
 		}
@@ -272,12 +274,17 @@
 	background-size: 300% 100%;
 	background-repeat: no-repeat;
 	background-position: 100% 100%;
-	transition: background 0.3s linear, text-shadow 0.1s 0.1s linear;
+	transition:
+		background 0.3s linear,
+		text-shadow 0.1s 0.1s linear;
 
-	&:hover {
-		//background-position: 0% 100%;
-		transition: background 0.3s linear, text-shadow 0.1s 0s linear;
-		text-shadow: 0 0 5px #ffffffbf;
+	@media (hover: hover) {
+		&:hover {
+			transition:
+				background 0.3s linear,
+				text-shadow 0.1s 0s linear;
+			text-shadow: 0 0 5px #ffffffbf;
+		}
 	}
 
 	@keyframes textShine {
