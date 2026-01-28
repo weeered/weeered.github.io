@@ -1,4 +1,4 @@
-const swiper = new Swiper(".section-programm__swiper", {
+const swiper = new Swiper(".section__programm_swiper", {
 	// Optional parameters
 	direction: "horizontal",
 	spaceBetween: 30,
@@ -11,27 +11,27 @@ const swiper = new Swiper(".section-programm__swiper", {
 
 	// If we need pagination
 	pagination: {
-		el: ".section-programm__swiper-pagination",
+		el: ".section__programm_swiper-pagination",
 		type: "bullets",
 		clickable: true,
 	},
 
 	// Navigation arrows
 	navigation: {
-		nextEl: ".section-programm__swiper-button-next",
-		prevEl: ".section-programm__swiper-button-prev",
+		nextEl: ".section__programm_swiper-button-next",
+		prevEl: ".section__programm_swiper-button-prev",
 	},
 
 	// And if we need scrollbar
 	scrollbar: {
-		el: ".section-programm__swiper-scrollbar",
+		el: ".section__programm_swiper-scrollbar",
 		draggable: true,
 	},
 });
 
 //!WAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKA
 
-const swiperThumbs = new Swiper(".section-album__thumbs", {
+const swiperThumbs = new Swiper(".section__album_thumbs", {
 	// Optional parameters
 	direction: "horizontal",
 	spaceBetween: 0,
@@ -40,7 +40,7 @@ const swiperThumbs = new Swiper(".section-album__thumbs", {
 	watchSlidesProgress: true,
 });
 
-const swiperAlbum = new Swiper(".section-album__swiper", {
+const swiperAlbum = new Swiper(".section__album_swiper", {
 	// Optional parameters
 	direction: "horizontal",
 
@@ -78,7 +78,7 @@ const swiperAlbum = new Swiper(".section-album__swiper", {
 
 	// If we need pagination
 	pagination: {
-		el: ".section-album__swiper-pagination",
+		el: ".section__album_swiper-pagination",
 		clickable: true,
 		dynamicBullets: true,
 		dynamicMainBullets: 1,
@@ -92,13 +92,13 @@ const swiperAlbum = new Swiper(".section-album__swiper", {
 
 	//And if we need scrollbar
 	// scrollbar: {
-	// 	el: ".section-album__swiper-scrollbar",
+	// 	el: ".section__album_swiper-scrollbar",
 	// 	draggable: true,
 	// },
 });
 
 themesLinks = document.getElementsByClassName(
-	"section-themes__in-programm-title"
+	"section__themes_in-programm-title",
 );
 
 const targetElem = document.getElementById("programm-swiper");
@@ -108,7 +108,7 @@ for (let i = 0; i < themesLinks.length; i++) {
 		let position = targetElem.getBoundingClientRect();
 		window.scrollTo(
 			position.left,
-			position.top + window.scrollY - header.offsetHeight
+			position.top + window.scrollY - header.offsetHeight,
 		);
 	});
 }

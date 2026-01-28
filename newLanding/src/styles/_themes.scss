@@ -1,4 +1,4 @@
-.section-themes {
+.section__themes {
 	@media screen and (max-aspect-ratio: 30/23) {
 		flex-direction: column;
 		gap: 2.5rem;
@@ -13,7 +13,7 @@
 	justify-content: space-between;
 	gap: 2.5rem;
 
-	&__div-container {
+	&_div-container {
 		@media screen and (max-aspect-ratio: 30/23) {
 			width: 100%;
 		}
@@ -23,7 +23,7 @@
 		width: 50%;
 	}
 
-	&__documents {
+	&_documents {
 		display: flex;
 		flex-direction: column;
 		gap: 1.2rem;
@@ -49,7 +49,7 @@
 		}
 	}
 
-	&__in-programm {
+	&_inprogramm {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
@@ -89,31 +89,8 @@
 			font-size: 1.6rem;
 			font-weight: 550;
 			text-align: left;
-
-			// &.title-yellow {
-			// 	color: $yellow;
-
-			// 	&::after {
-			// 		background-color: $yellow;
-			// 	}
-			// }
-
-			// &.title-red {
-			// 	color: $red;
-
-			// 	&::after {
-			// 		background-color: $red;
-			// 	}
-			// }
-
-			// &.title-blue {
-			// 	color: $blue;
-
-			// 	&::after {
-			// 		background-color: $blue;
-			// 	}
-			// }
 			color: transparent;
+
 			background: linear-gradient(
 				90deg,
 				$blue,
@@ -127,7 +104,9 @@
 			background-size: 200% 100%;
 			background-clip: text;
 
-			transition: transform 0.1s linear, box-shadow 0.1s linear;
+			transition:
+				transform 0.1s linear,
+				box-shadow 0.1s linear;
 
 			background-repeat: repeat;
 
@@ -168,7 +147,7 @@
 		}
 	}
 
-	&__list {
+	&_list {
 		width: fit-content;
 		position: relative;
 		display: flex;

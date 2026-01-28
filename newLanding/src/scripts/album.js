@@ -22,12 +22,12 @@ function createSlides() {
 		thumbPhoto.src = `./media/album/${i}.jpg`;
 
 		newSlide.classList.add("swiper-slide");
-		newSlide.classList.add("section-album__swiper-slide");
+		newSlide.classList.add("section__album_swiper-slide");
 
 		newPhotoContainer.classList.add("swiper-zoom-container");
 
 		newPhoto.src = `./media/album/${i}.jpg`;
-		newPhoto.classList.add("section-album__swiper-slide-photo");
+		newPhoto.classList.add("section__album_swiper-slide-photo");
 		newPhoto.loading = "lazy";
 
 		albumWrapper.appendChild(newSlide);

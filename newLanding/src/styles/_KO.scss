@@ -1,4 +1,4 @@
-.section-KO25 {
+.section__KO {
 	@media screen and (max-aspect-ratio: 4/3) {
 		flex-direction: column;
 		text-align: center;
@@ -9,37 +9,49 @@
 	}
 	width: 100%;
 	display: flex;
-	gap: 3vh;
+	gap: 1.5rem;
 	justify-content: space-between;
 	text-align: center;
 
-	&__banner {
-		@media screen and (max-aspect-ratio: 4/3) {
+	@media screen and (max-aspect-ratio: 4/3) {
+		&_banner {
 			width: 100%;
 
-			&_top {
-				display: none;
+			&-top {
+				display: none !important;
 			}
 
-			&_bottom {
+			&-bottom {
+				display: flex !important;
+			}
+		}
+		&_description-botTitle {
+			display: none !important;
+		}
+	}
+
+	@media screen and (max-width: 750px) {
+		&_banner {
+			width: 100%;
+
+			&-top {
+				display: none !important;
+			}
+
+			&-bottom {
 				display: flex !important;
 			}
 		}
 
-		@media screen and (max-width: 750px) {
-			width: 100%;
-
-			&_top {
-				display: none;
-			}
-
-			&_bottom {
-				display: flex !important;
-			}
+		&_description-botTitle {
+			display: none !important;
 		}
+	}
 
-		&_bottom {
+	&_banner {
+		&-bottom {
 			display: none;
+			width: 100%;
 		}
 
 		width: 20%;
@@ -51,10 +63,10 @@
 
 		&-logo {
 			@media screen and (max-aspect-ratio: 4/3) {
-				width: 40%;
+				width: 70%;
 			}
 			@media screen and (max-width: 750px) {
-				width: 40%;
+				width: 70%;
 			}
 
 			height: fit-content;
@@ -106,7 +118,9 @@
 				background-size: 200% 100%;
 				animation: XmoveRYB200 7s linear infinite;
 
-				box-shadow: 2.5px 5px 5px #00000015, 0px 0px 5px #00000015;
+				box-shadow:
+					2.5px 5px 5px #00000015,
+					0px 0px 5px #00000015;
 
 				z-index: -1;
 			}
@@ -128,20 +142,15 @@
 				background-size: 200% 100%;
 				animation: XmoveRYB200 7s linear infinite;
 				background-clip: text;
-
-				&.KO-link {
-					position: relative;
-					font-style: italic;
-
-					&::before {
-						content: "• ";
-					}
+				font-style: italic;
+				&::before {
+					content: "• ";
 				}
 			}
 		}
 	}
 
-	&__description {
+	&_description {
 		@media screen and (max-aspect-ratio: 4/3) {
 			width: 100%;
 			text-align: inherit;
@@ -156,11 +165,16 @@
 		gap: 1.5rem;
 		text-align: center;
 
-		&-top-title {
+		&-topTitle {
 			text-align: inherit;
+
+			& span {
+				font: inherit;
+				white-space: nowrap;
+			}
 		}
 
-		&-bot-title {
+		&-botTitle {
 			text-align: inherit;
 			color: $indigo;
 			word-wrap: normal;
@@ -193,7 +207,9 @@
 
 			border-radius: 1rem;
 			padding: 1rem;
-			box-shadow: 2.5px 5px 5px #00000015, 0px 0px 5px #00000015;
+			box-shadow:
+				2.5px 5px 5px #00000015,
+				0px 0px 5px #00000015;
 			background: linear-gradient(
 				60deg,
 				$goldDim,
@@ -217,20 +233,6 @@
 				font-size: 1.4rem;
 				font-weight: 600;
 				color: $textBlack;
-				// color: transparent;
-				// width: fit-content;
-				// background: linear-gradient(
-				// 	90deg,
-				// 	$goldBright,
-				// 	$goldBright,
-				// 	$goldDim,
-				// 	$goldDim,
-				// 	$goldBright,
-				// 	$goldBright
-				// );
-				// background-size: 200% 100%;
-				// animation: XmoveRYB200 6.1s linear infinite;
-				// background-clip: text;
 			}
 		}
 
@@ -243,17 +245,16 @@
 				flex-direction: column;
 			}
 
-			margin: 0.5rem auto 0 auto;
 			height: fit-content;
-			min-height: 40rem;
+
 			display: flex;
 			justify-items: center;
 			align-items: center;
 			gap: 1.5rem;
 
-			max-width: fit-content;
+			max-width: 100%;
 
-			&-1 {
+			&-list {
 				@media screen and (max-aspect-ratio: 4/3) {
 					width: 100%;
 					max-height: fit-content;
@@ -264,23 +265,20 @@
 					max-height: fit-content;
 				}
 
-				width: calc(100% / 3);
+				width: 100%;
 				height: 100%;
-
-				border-radius: 1rem;
 
 				display: flex;
 				flex-direction: column;
-				align-items: center;
+				align-items: left;
+
 				gap: 0.8rem;
 
-				overflow: hidden;
-
-				padding: 1rem 1.5rem 1.5rem 1.5rem;
+				text-align: left;
 
 				&-title {
 					position: relative;
-					text-align: center;
+					text-align: left;
 					width: 100%;
 					font-weight: 600;
 					color: transparent;
@@ -298,26 +296,13 @@
 					background-clip: text;
 					margin-bottom: 1.2rem;
 
-					&::after {
-						content: "";
-						position: absolute;
-						bottom: calc(-1rem + 1px);
-						left: -10%;
-						width: 120%;
-						height: 1000%;
-						background-color: $indigo;
-						z-index: -1;
-
-						box-shadow: 0 5px 5px #00000020;
-					}
-
 					&::before {
 						content: "";
 						position: absolute;
 						bottom: -1rem;
-						left: -10%;
-						width: 120%;
-						height: 4px;
+						left: 0;
+						width: 100%;
+						height: 0.25rem;
 						background: linear-gradient(
 							90deg,
 							$goldBright,
@@ -333,15 +318,48 @@
 				}
 
 				&-item {
+					display: flex;
 					width: 100%;
-					text-align: left;
-					font-size: 1.2rem;
-					font-weight: 500;
-					color: #fff;
+
+					padding: 1rem;
+					border-radius: 1rem;
+					overflow: hidden;
+
+					& .NomInfo {
+						display: flex;
+						flex-direction: column;
+
+						text-align: left;
+						font-size: 1.4rem;
+						font-weight: 500;
+
+						color: #fff;
+					}
+
+					& ul {
+						list-style-type: none;
+						& li {
+							display: flex;
+
+							font-size: 1.4rem;
+							font-weight: 400;
+							color: #fff;
+
+							margin: 1rem 0;
+
+							& div {
+								font-size: 1.4rem;
+								font-weight: 500;
+								color: #fff;
+
+								margin-right: 0.4rem;
+							}
+						}
+					}
 				}
 			}
 
-			&-2 {
+			&-text {
 				@media screen and (max-aspect-ratio: 4/3) {
 					width: 100%;
 					max-height: fit-content;
@@ -352,125 +370,17 @@
 					max-height: fit-content;
 				}
 
-				width: calc(100% / 3);
+				width: calc(100% / 1);
 				height: 100%;
 
-				border-radius: 1rem;
 				display: flex;
 				flex-direction: column;
 				align-items: center;
 				gap: 0.8rem;
 
-				overflow: hidden;
-
-				padding: 1rem 1.5rem 1.5rem 1.5rem;
-
-				& span {
-					font-size: inherit;
-					font-weight: inherit;
-					color: inherit;
-					white-space: nowrap;
-				}
-				// &::after {
-				// 	content: "";
-				// 	position: absolute;
-				// 	bottom: calc(-1rem + 2px);
-				// 	left: -50%;
-				// 	width: 1000%;
-				// 	height: 1000%;
-				// 	background-color: $indigo;
-				// 	z-index: -1;
-				// }
 				&-title {
 					position: relative;
-					text-align: center;
-					width: 100%;
-					font-weight: 600;
-					font-size: 1.38rem;
-					color: transparent;
-					background: linear-gradient(
-						90deg,
-						$goldBright,
-						$goldBright,
-						$goldDim,
-						$goldDim,
-						$goldBright,
-						$goldBright
-					);
-					background-size: 200% 100%;
-					animation: XmoveRYB200 6.5s linear infinite;
-					background-clip: text;
-					margin-bottom: 1.2rem;
-
-					&::after {
-						content: "";
-						position: absolute;
-						bottom: calc(-1rem + 1px);
-						left: -10%;
-						width: 120%;
-						height: 1000%;
-						background-color: $indigo;
-						z-index: -1;
-
-						box-shadow: 0 5px 5px #00000020;
-					}
-
-					&::before {
-						content: "";
-						position: absolute;
-						bottom: -1rem;
-						left: -10%;
-						width: 120%;
-						height: 4px;
-						background: linear-gradient(
-							90deg,
-							$goldBright,
-							$goldBright,
-							$goldDim,
-							$goldDim,
-							$goldBright,
-							$goldBright
-						);
-						background-size: 200% 100%;
-						animation: XmoveRYB200 6.5s linear infinite;
-					}
-				}
-
-				&-item {
-					width: 100%;
 					text-align: left;
-					font-size: 1.2rem;
-					font-weight: 450;
-					color: #fff;
-				}
-			}
-			&-3 {
-				@media screen and (max-aspect-ratio: 4/3) {
-					width: 100%;
-					max-height: fit-content;
-				}
-
-				@media screen and (max-width: 750px) {
-					width: 100%;
-					max-height: fit-content;
-				}
-
-				width: calc(100% / 3);
-				height: 100%;
-
-				border-radius: 1rem;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 0.8rem;
-
-				overflow: hidden;
-
-				padding: 1rem 1.5rem 1.5rem 1.5rem;
-
-				&-title {
-					position: relative;
-					text-align: center;
 					width: 100%;
 					font-weight: 600;
 					color: transparent;
@@ -484,30 +394,17 @@
 						$goldBright
 					);
 					background-size: 200% 100%;
-					animation: XmoveRYB200 7s linear infinite;
+					animation: XmoveRYB200 6s linear infinite;
 					background-clip: text;
 					margin-bottom: 1.2rem;
-
-					&::after {
-						content: "";
-						position: absolute;
-						bottom: calc(-1rem + 1px);
-						left: -10%;
-						width: 120%;
-						height: 1000%;
-						background-color: $indigo;
-						z-index: -1;
-
-						box-shadow: 0 5px 5px #00000020;
-					}
 
 					&::before {
 						content: "";
 						position: absolute;
 						bottom: -1rem;
-						left: -10%;
-						width: 120%;
-						height: 4px;
+						left: 0;
+						width: 100%;
+						height: 0.25rem;
 						background: linear-gradient(
 							90deg,
 							$goldBright,
@@ -518,16 +415,15 @@
 							$goldBright
 						);
 						background-size: 200% 100%;
-						animation: XmoveRYB200 7s linear infinite;
+						animation: XmoveRYB200 6s linear infinite;
 					}
 				}
 
-				&-item {
+				&-text {
 					width: 100%;
-					text-align: left;
-					font-size: 1.2rem;
-					font-weight: 450;
-					color: #fff;
+					text-align: justify;
+					font-size: 1.6rem;
+					font-weight: 400;
 				}
 			}
 		}

@@ -1,8 +1,8 @@
 const header = document.querySelector(".header");
 const title = document.querySelector(".title");
-const burgerMenu = document.querySelector(".burger-menu");
+const burgerMenu = document.querySelector(".burgerMenu");
 const burgerButtons = document.body.getElementsByClassName(
-	"header__burger-button"
+	"header__burger_button",
 );
 const countdown = document.body.getElementsByClassName("countdown");
 const countdownBurger = document.getElementById("demo");
@@ -10,23 +10,23 @@ const underline1 = document.getElementsByClassName("title__underline")[0];
 const underline2 = document.getElementsByClassName("title__underline")[1];
 const textShineEelems = document.getElementsByClassName("text-shine");
 const themesDotGradRunElems = document.getElementsByClassName(
-	"section-themes__list-dot"
+	"section__themes_list-dot",
 );
 const programmDotGradRunElems = document.getElementsByClassName(
-	"section-programm__event-topic-dot"
+	"section__programm_event-topic-dot",
 );
-const KO25Cards = document.getElementsByClassName("glass-effect");
+const KOCards = document.getElementsByClassName("glass-effect");
 const themesSection = document.getElementById("themes");
-const KO25Section = document.getElementById("KO25");
+const KOSection = document.getElementById("KO");
 const speakersSection = document.getElementById("speakers");
 const programmSection = document.getElementById("programm");
 const albumSection = document.getElementById("album");
 const organizersSection = document.getElementById("organizers");
 const footer = document.getElementById("footer");
 const titleButton = document.getElementById("titleButton");
-const navElems = document.getElementsByClassName("header__nav-item");
+const navElems = document.getElementsByClassName("header__nav_item");
 const burgerMenuElems = document.getElementsByClassName(
-	"burger-menu__list-item"
+	"burgerMenu__list_item",
 );
 
 const headerDynamic = header.cloneNode(true);
@@ -62,7 +62,7 @@ headerDynamic.style.zIndex = "13";
 
 const sections = [
 	themesSection,
-	KO25Section,
+	KOSection,
 	speakersSection,
 	programmSection,
 	albumSection,

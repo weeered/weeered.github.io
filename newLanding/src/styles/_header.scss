@@ -42,7 +42,7 @@
 		width: 4.55rem;
 		z-index: 11;
 
-		&-img {
+		&_img {
 			@media screen and (max-width: 900px) {
 				height: 5.05rem;
 				width: 5.05rem;
@@ -57,7 +57,7 @@
 		}
 	}
 
-	&__burger-button {
+	&__burger_button {
 		@media screen and (max-width: 900px) {
 			display: flex;
 		}
@@ -138,7 +138,7 @@
 
 		z-index: 11;
 
-		&-item {
+		&_item {
 			width: fit-content;
 			height: fit-content;
 
@@ -157,12 +157,12 @@
 		@media screen and (max-width: 900px) {
 			padding-right: 0.8rem;
 
-			&-link {
+			&_link {
 				font-size: 1.2rem !important;
 				line-height: 1.3rem !important;
 				text-decoration: none !important;
 			}
-			&-title {
+			&_title {
 				font-size: 1.4rem !important;
 				line-height: 1.7rem !important;
 			}
@@ -171,12 +171,12 @@
 		@media screen and (max-aspect-ratio: 30/23) {
 			padding-right: 0.8rem;
 
-			&-link {
+			&_link {
 				font-size: 1.2rem !important;
 				line-height: 1.3rem !important;
 				text-decoration: none !important;
 			}
-			&-title {
+			&_title {
 				font-size: 1.4rem !important;
 				line-height: 1.7rem !important;
 			}
@@ -204,13 +204,13 @@
 
 		z-index: 11;
 
-		&-link {
+		&_link {
 			font-size: 0.9rem;
 			line-height: 1.1rem;
 			text-decoration: underline;
 		}
 
-		&-title {
+		&_title {
 			font-size: 1.2rem;
 			color: inherit;
 			line-height: 1.4rem;

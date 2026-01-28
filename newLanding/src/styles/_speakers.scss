@@ -1,15 +1,15 @@
-.section-speakers {
+.section__speakers {
 	display: flex;
 	gap: 2rem;
 	flex-direction: column;
 
-	&__container {
+	&_container {
 		display: flex;
 		gap: 2rem;
 		flex-wrap: wrap;
 	}
 
-	&__card {
+	&_card {
 		@media screen and (max-aspect-ratio: 4/3) {
 			width: calc(100% / 4 - 1.5rem);
 		}

@@ -21,7 +21,7 @@ function theBurgering(isItTop) {
 	headerDynamic.classList.toggle("header_burgered");
 	countdownBurger.classList.toggle("countdown_active");
 
-	burgerMenu.classList.toggle("burger-menu_active");
+	burgerMenu.classList.toggle("burgerMenu_active");
 	burgerAnimationLayer1.classList.toggle("burgerAnimLayer1_active");
 	burgerAnimationLayer2.classList.toggle("burgerAnimLayer2_active");
 	burgerAnimationLayer3.classList.toggle("burgerAnimLayer3_active");

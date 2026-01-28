@@ -1,4 +1,4 @@
-.burger-menu {
+.burgerMenu {
 	position: fixed;
 	left: 0;
 	top: 5rem;
@@ -41,15 +41,13 @@
 			background-color 0.5s 0.37s ease-in-out;
 	}
 
-	&__logo-container {
+	&__logo_container {
 		width: calc(1vw + 20vh);
 		max-width: 70%;
 	}
 
-	// &__logo {
-	// }
 
-	&__list-container {
+	&__list_container {
 		width: 100%;
 	}
 
@@ -64,7 +62,7 @@
 		font-weight: 350;
 		color: $textBlackish;
 
-		&-item {
+		&_item {
 			&:last-child {
 				margin-bottom: 0;
 			}
