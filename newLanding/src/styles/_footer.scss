@@ -1,10 +1,10 @@
 .footer {
-	@media screen and (max-aspect-ratio: 4/3) {
+	@media screen and (max-aspect-ratio: 10/9) {
 		padding: 2rem 0;
 	}
 
 	&__container {
-		@media screen and (max-aspect-ratio: 4/3) {
+		@media screen and (max-aspect-ratio: 10/9) {
 			flex-direction: column;
 			align-items: center;
 			gap: 3rem;
@@ -66,7 +66,7 @@
 	}
 
 	&__left-block {
-		@media screen and (max-aspect-ratio: 4/3) {
+		@media screen and (max-aspect-ratio: 10/9) {
 			width: 100%;
 			min-width: none;
 			max-width: none;
@@ -79,14 +79,14 @@
 		max-width: 35rem;
 
 		&-title {
-			@media screen and (max-aspect-ratio: 4/3) {
+			@media screen and (max-aspect-ratio: 10/9) {
 				text-align: center;
 				font-size: calc(2vh + 2vw);
 			}
 		}
 
 		&-location {
-			@media screen and (max-aspect-ratio: 4/3) {
+			@media screen and (max-aspect-ratio: 10/9) {
 				text-align: center;
 				padding: 0 1rem;
 
@@ -125,7 +125,7 @@
 	}
 
 	&__map-container {
-		@media screen and (max-aspect-ratio: 4/3) {
+		@media screen and (max-aspect-ratio: 10/9) {
 			border-radius: 0;
 			width: 100%;
 			height: 35rem;
@@ -137,7 +137,7 @@
 	}
 
 	&__countdown {
-		@media screen and (max-aspect-ratio: 4/3) {
+		@media screen and (max-aspect-ratio: 10/9) {
 			display: none;
 		}
 		width: 100% !important;
@@ -151,7 +151,7 @@
 		gap: 1.5rem;
 
 		& .countdown__box {
-			@media screen and (max-aspect-ratio: 4/3) {
+			@media screen and (max-aspect-ratio: 10/9) {
 				font-size: calc(2vh + 2vw);
 				width: calc(18vw);
 				line-height: calc(2vh + 2vw);
@@ -175,7 +175,7 @@
 		}
 
 		& .countdown__time {
-			@media screen and (max-aspect-ratio: 4/3) {
+			@media screen and (max-aspect-ratio: 10/9) {
 				font-size: calc(2vh + 2vw);
 			}
 			width: 100%;
@@ -187,7 +187,7 @@
 		}
 
 		& .countdown__time-name {
-			@media screen and (max-aspect-ratio: 4/3) {
+			@media screen and (max-aspect-ratio: 10/9) {
 				font-size: calc(2vh + 2vw);
 			}
 			font-size: 1.5rem;
@@ -195,7 +195,7 @@
 		}
 
 		& .countdown__text {
-			@media screen and (max-aspect-ratio: 4/3) {
+			@media screen and (max-aspect-ratio: 10/9) {
 				font-size: calc(2vh + 2vw);
 			}
 			font-size: 2rem;
@@ -207,7 +207,7 @@
 	}
 
 	&__center-block {
-		@media screen and (max-aspect-ratio: 4/3) {
+		@media screen and (max-aspect-ratio: 10/9) {
 			align-items: center;
 			width: 100%;
 			gap: calc(1.7vh + 1.6vw);
@@ -220,13 +220,13 @@
 		min-width: fit-content;
 
 		&-title {
-			@media screen and (max-aspect-ratio: 4/3) {
+			@media screen and (max-aspect-ratio: 10/9) {
 				font-size: calc(2vh + 2vw);
 			}
 		}
 
 		&-item-container {
-			@media screen and (max-aspect-ratio: 4/3) {
+			@media screen and (max-aspect-ratio: 10/9) {
 				gap: calc(1.7vh + 1.6vw);
 			}
 			display: flex;
@@ -242,7 +242,7 @@
 			gap: 0.5rem;
 			font-size: 1.6rem;
 			&-icon {
-				@media screen and (max-aspect-ratio: 4/3) {
+				@media screen and (max-aspect-ratio: 10/9) {
 					width: calc(1.7vh + 1.6vw);
 				}
 				width: 1.8rem;
@@ -251,7 +251,7 @@
 			&-text {
 				color: -webkit-link;
 				cursor: pointer;
-				@media screen and (max-aspect-ratio: 4/3) {
+				@media screen and (max-aspect-ratio: 10/9) {
 					font-size: calc(1.7vh + 1.6vw);
 				}
 			}
@@ -269,14 +269,14 @@
 		gap: 1rem;
 
 		&-title {
-			@media screen and (max-aspect-ratio: 4/3) {
+			@media screen and (max-aspect-ratio: 10/9) {
 				font-size: calc(2vh + 2vw);
 				text-align: center;
 			}
 		}
 
 		&-info {
-			@media screen and (max-aspect-ratio: 4/3) {
+			@media screen and (max-aspect-ratio: 10/9) {
 				//font-size: calc(2vh + 2vw);
 				padding: 0 1rem;
 				text-align: center;
@@ -340,7 +340,7 @@
 		// }
 
 		&-container {
-			@media screen and (max-aspect-ratio: 4/3) {
+			@media screen and (max-aspect-ratio: 10/9) {
 				padding: 0 1rem;
 			}
 

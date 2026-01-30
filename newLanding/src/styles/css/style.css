@@ -95,24 +95,24 @@ html {
     font-size: 10px;
   }
 }
-@media screen and (min-width: 500) and (max-width: 1024px) {
+@media screen and (min-width: 500px) and (max-width: 1024px) {
   * {
     font-size: 10px;
   }
 }
-@media screen and (min-width: 1024) and (max-width: 1440px) {
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
   * {
     font-size: 12px;
   }
 }
-@media screen and (min-width: 1440) and (max-width: 1920px) {
+@media screen and (min-width: 1440px) and (max-width: 1925px) {
   * {
     font-size: 14px;
   }
 }
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1925px) {
   * {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
@@ -1544,11 +1544,11 @@ a {
 .section__speakers_card-textContainer {
   position: absolute;
   top: 23rem;
-  height: 6.5rem;
+  height: 7rem;
   width: 100%;
   overflow: hidden;
   padding-top: 0.5rem;
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
   background-color: #fbfbfe;
   border: 2px solid #f0f0f3;
   border-bottom-left-radius: 1rem;
@@ -1563,6 +1563,8 @@ a {
   width: 105%;
   height: -moz-fit-content;
   height: fit-content;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
   max-height: 40rem;
   transition: 0.3s;
   z-index: 11;
@@ -1583,8 +1585,8 @@ a {
   height: -moz-fit-content;
   height: fit-content;
   text-align: left;
-  line-height: 1.2rem;
-  font-size: 1.1rem;
+  line-height: 1.6rem;
+  font-size: 1.2rem;
   font-weight: 350;
   color: #475569;
   padding: 0 0.5rem;
@@ -2323,7 +2325,7 @@ a {
   display: flex;
   justify-content: center;
 }
-@media screen and (max-aspect-ratio: 4/3) {
+@media screen and (max-aspect-ratio: 10/9) {
   .footer {
     padding: 2rem 0;
   }
@@ -2335,7 +2337,7 @@ a {
   justify-content: space-between;
   gap: 6rem;
 }
-@media screen and (max-aspect-ratio: 4/3) {
+@media screen and (max-aspect-ratio: 10/9) {
   .footer__container {
     flex-direction: column;
     align-items: center;
@@ -2369,14 +2371,14 @@ a {
   min-width: 35rem;
   max-width: 35rem;
 }
-@media screen and (max-aspect-ratio: 4/3) {
+@media screen and (max-aspect-ratio: 10/9) {
   .footer__left-block {
     width: 100%;
     min-width: none;
     max-width: none;
   }
 }
-@media screen and (max-aspect-ratio: 4/3) {
+@media screen and (max-aspect-ratio: 10/9) {
   .footer__left-block-title {
     text-align: center;
     font-size: calc(2vh + 2vw);
@@ -2386,7 +2388,7 @@ a {
   font-size: 1.6rem;
   font-weight: 350;
 }
-@media screen and (max-aspect-ratio: 4/3) {
+@media screen and (max-aspect-ratio: 10/9) {
   .footer__left-block-location {
     text-align: center;
     padding: 0 1rem;
@@ -2412,7 +2414,7 @@ a {
   border-radius: 1rem;
   overflow: hidden;
 }
-@media screen and (max-aspect-ratio: 4/3) {
+@media screen and (max-aspect-ratio: 10/9) {
   .footer__map-container {
     border-radius: 0;
     width: 100%;
@@ -2427,7 +2429,7 @@ a {
   align-items: center;
   gap: 1.5rem;
 }
-@media screen and (max-aspect-ratio: 4/3) {
+@media screen and (max-aspect-ratio: 10/9) {
   .footer__countdown {
     display: none;
   }
@@ -2445,7 +2447,7 @@ a {
   width: 25%;
   line-height: 1.5rem;
 }
-@media screen and (max-aspect-ratio: 4/3) {
+@media screen and (max-aspect-ratio: 10/9) {
   .footer__countdown .countdown__box {
     font-size: calc(2vh + 2vw);
     width: 18vw;
@@ -2460,7 +2462,7 @@ a {
   flex-direction: row;
   gap: 0.3rem;
 }
-@media screen and (max-aspect-ratio: 4/3) {
+@media screen and (max-aspect-ratio: 10/9) {
   .footer__countdown .countdown__time {
     font-size: calc(2vh + 2vw);
   }
@@ -2469,7 +2471,7 @@ a {
   font-size: 1.5rem;
   color: #fff;
 }
-@media screen and (max-aspect-ratio: 4/3) {
+@media screen and (max-aspect-ratio: 10/9) {
   .footer__countdown .countdown__time-name {
     font-size: calc(2vh + 2vw);
   }
@@ -2481,7 +2483,7 @@ a {
   width: 100%;
   text-align: left;
 }
-@media screen and (max-aspect-ratio: 4/3) {
+@media screen and (max-aspect-ratio: 10/9) {
   .footer__countdown .countdown__text {
     font-size: calc(2vh + 2vw);
   }
@@ -2494,14 +2496,14 @@ a {
   min-width: -moz-fit-content;
   min-width: fit-content;
 }
-@media screen and (max-aspect-ratio: 4/3) {
+@media screen and (max-aspect-ratio: 10/9) {
   .footer__center-block {
     align-items: center;
     width: 100%;
     gap: calc(1.7vh + 1.6vw);
   }
 }
-@media screen and (max-aspect-ratio: 4/3) {
+@media screen and (max-aspect-ratio: 10/9) {
   .footer__center-block-title {
     font-size: calc(2vh + 2vw);
   }
@@ -2514,7 +2516,7 @@ a {
   width: fit-content;
   align-items: start;
 }
-@media screen and (max-aspect-ratio: 4/3) {
+@media screen and (max-aspect-ratio: 10/9) {
   .footer__center-block-item-container {
     gap: calc(1.7vh + 1.6vw);
   }
@@ -2528,7 +2530,7 @@ a {
 .footer__center-block-item-icon {
   width: 1.8rem;
 }
-@media screen and (max-aspect-ratio: 4/3) {
+@media screen and (max-aspect-ratio: 10/9) {
   .footer__center-block-item-icon {
     width: calc(1.7vh + 1.6vw);
   }
@@ -2537,7 +2539,7 @@ a {
   color: -webkit-link;
   cursor: pointer;
 }
-@media screen and (max-aspect-ratio: 4/3) {
+@media screen and (max-aspect-ratio: 10/9) {
   .footer__center-block-item-text {
     font-size: calc(1.7vh + 1.6vw);
   }
@@ -2550,7 +2552,7 @@ a {
   flex-direction: column;
   gap: 1rem;
 }
-@media screen and (max-aspect-ratio: 4/3) {
+@media screen and (max-aspect-ratio: 10/9) {
   .footer__right-block-title {
     font-size: calc(2vh + 2vw);
     text-align: center;
@@ -2561,7 +2563,7 @@ a {
   font-size: 1.6rem;
   text-align: left;
 }
-@media screen and (max-aspect-ratio: 4/3) {
+@media screen and (max-aspect-ratio: 10/9) {
   .footer__right-block-info {
     padding: 0 1rem;
     text-align: center;
@@ -2584,7 +2586,7 @@ a {
   flex-direction: column;
   gap: 1rem;
 }
-@media screen and (max-aspect-ratio: 4/3) {
+@media screen and (max-aspect-ratio: 10/9) {
   .footer__right-block-container {
     padding: 0 1rem;
   }
@@ -2704,8 +2706,12 @@ a {
 }
 
 .section__participants {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   text-align: left;
   font-weight: 400;
   margin-top: -1.5rem;
+}
+.section__participants_bold {
+  font-weight: 600;
+  font-size: 2rem;
 }/*# sourceMappingURL=style.css.map */
