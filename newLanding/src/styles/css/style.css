@@ -1458,7 +1458,7 @@ a {
 }
 .section__KO_description-nominations-text-text {
   width: 100%;
-  text-align: justify;
+  text-align: left;
   font-size: 1.6rem;
   font-weight: 400;
 }
@@ -2675,7 +2675,7 @@ a {
 
 .section__participants {
   font-size: 1.6rem;
-  text-align: justify;
+  text-align: left;
   font-weight: 400;
   margin-top: -1.5rem;
 }/*# sourceMappingURL=style.css.map */

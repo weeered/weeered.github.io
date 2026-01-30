@@ -4,7 +4,8 @@ const thumbsWrapeer = document.getElementById("thumbs-wrapper");
 createSlides();
 
 function createSlides() {
-	const b = 29;
+	//set b to equal the number of photos in "album" folder
+	const b = 53;
 
 	for (let i = 1; i <= b; i++) {
 		let newSlide = document.createElement("div");
