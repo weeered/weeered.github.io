@@ -59,7 +59,7 @@
 		flex-direction: column;
 		justify-content: start;
 		align-items: center;
-		gap: 2.5vh;
+		gap: 1.5rem;
 
 		&-logo {
 			@media screen and (max-aspect-ratio: 4/3) {
@@ -85,11 +85,11 @@
 			justify-content: center;
 			align-items: center;
 			flex-direction: column;
-			gap: 1rem;
+			gap: 2rem;
 
 			height: 100%;
 
-			padding: 1rem;
+			padding: 1.5rem 2rem;
 			margin: 0.5rem;
 
 			background-color: $indigo;
@@ -127,6 +127,8 @@
 
 			&-text {
 				font-size: 1.4rem;
+				text-decoration: underline;
+
 				text-align: center;
 				font-weight: 500;
 				color: transparent;
@@ -142,9 +144,11 @@
 				background-size: 200% 100%;
 				animation: XmoveRYB200 7s linear infinite;
 				background-clip: text;
-				font-style: italic;
+
 				&::before {
 					content: "• ";
+
+					text-decoration: none;
 				}
 			}
 		}
@@ -422,8 +426,9 @@
 				&-text {
 					width: 100%;
 					text-align: left;
-					font-size: 1.6rem;
-					font-weight: 400;
+					font-size: 1.4rem;
+					font-weight: 450;
+					color: $textBlackish;
 				}
 			}
 		}
