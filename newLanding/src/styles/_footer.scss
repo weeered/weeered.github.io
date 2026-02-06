@@ -1,10 +1,10 @@
 .footer {
-	@media screen and (max-aspect-ratio: 10/9) {
+	@media screen and (max-width: 1400px) {
 		padding: 2rem 0;
 	}
 
 	&__container {
-		@media screen and (max-aspect-ratio: 10/9) {
+		@media screen and (max-width: 1400px) {
 			flex-direction: column;
 			align-items: center;
 			gap: 3rem;
@@ -65,8 +65,8 @@
 		box-shadow: 0px 0px 10px #00000020;
 	}
 
-	&__left-block {
-		@media screen and (max-aspect-ratio: 10/9) {
+	&__left_block {
+		@media screen and (max-width: 1400px) {
 			width: 100%;
 			min-width: none;
 			max-width: none;
@@ -79,19 +79,19 @@
 		max-width: 35rem;
 
 		&-title {
-			@media screen and (max-aspect-ratio: 10/9) {
+			@media screen and (max-width: 1400px) {
 				text-align: center;
-				font-size: calc(2vh + 2vw);
+				font-size: 2rem;
 			}
 		}
 
 		&-location {
-			@media screen and (max-aspect-ratio: 10/9) {
+			@media screen and (max-width: 1400px) {
 				text-align: center;
 				padding: 0 1rem;
 
 				& h3 {
-					font-size: calc(2vh + 2vw);
+					font-size: 2rem;
 				}
 			}
 			font-size: 1.6rem;
@@ -125,19 +125,21 @@
 	}
 
 	&__map-container {
-		@media screen and (max-aspect-ratio: 10/9) {
+		@media screen and (max-width: 1400px) {
 			border-radius: 0;
 			width: 100%;
 			height: 35rem;
 		}
 		height: 100%;
-		box-shadow: 2.5px 5px 5px #00000015, 0px 0px 5px #00000015;
+		box-shadow:
+			2.5px 5px 5px #00000015,
+			0px 0px 5px #00000015;
 		border-radius: 1rem;
 		overflow: hidden;
 	}
 
 	&__countdown {
-		@media screen and (max-aspect-ratio: 10/9) {
+		@media screen and (max-width: 1400px) {
 			display: none;
 		}
 		width: 100% !important;
@@ -151,10 +153,10 @@
 		gap: 1.5rem;
 
 		& .countdown__box {
-			@media screen and (max-aspect-ratio: 10/9) {
-				font-size: calc(2vh + 2vw);
+			@media screen and (max-width: 1400px) {
+				font-size: 2rem;
 				width: calc(18vw);
-				line-height: calc(2vh + 2vw);
+				line-height: 2rem;
 			}
 			font-size: 1.5rem;
 
@@ -175,8 +177,8 @@
 		}
 
 		& .countdown__time {
-			@media screen and (max-aspect-ratio: 10/9) {
-				font-size: calc(2vh + 2vw);
+			@media screen and (max-width: 1400px) {
+				font-size: 2rem;
 			}
 			width: 100%;
 			font-size: 1.5rem;
@@ -187,16 +189,16 @@
 		}
 
 		& .countdown__time-name {
-			@media screen and (max-aspect-ratio: 10/9) {
-				font-size: calc(2vh + 2vw);
+			@media screen and (max-width: 1400px) {
+				font-size: 2rem;
 			}
 			font-size: 1.5rem;
 			color: #fff;
 		}
 
 		& .countdown__text {
-			@media screen and (max-aspect-ratio: 10/9) {
-				font-size: calc(2vh + 2vw);
+			@media screen and (max-width: 1400px) {
+				font-size: 2rem;
 			}
 			font-size: 2rem;
 			font-weight: 600;
@@ -206,8 +208,8 @@
 		}
 	}
 
-	&__center-block {
-		@media screen and (max-aspect-ratio: 10/9) {
+	&__center_block {
+		@media screen and (max-width: 1400px) {
 			align-items: center;
 			width: 100%;
 			gap: calc(1.7vh + 1.6vw);
@@ -220,14 +222,14 @@
 		min-width: fit-content;
 
 		&-title {
-			@media screen and (max-aspect-ratio: 10/9) {
-				font-size: calc(2vh + 2vw);
+			@media screen and (max-width: 1400px) {
+				font-size: 2rem;
 			}
 		}
 
 		&-item-container {
-			@media screen and (max-aspect-ratio: 10/9) {
-				gap: calc(1.7vh + 1.6vw);
+			@media screen and (max-width: 1400px) {
+				gap: calc(2rem);
 			}
 			display: flex;
 			flex-direction: column;
@@ -242,7 +244,7 @@
 			gap: 0.5rem;
 			font-size: 1.6rem;
 			&-icon {
-				@media screen and (max-aspect-ratio: 10/9) {
+				@media screen and (max-width: 1400px) {
 					width: calc(1.7vh + 1.6vw);
 				}
 				width: 1.8rem;
@@ -251,14 +253,14 @@
 			&-text {
 				color: -webkit-link;
 				cursor: pointer;
-				@media screen and (max-aspect-ratio: 10/9) {
-					font-size: calc(1.7vh + 1.6vw);
+				@media screen and (max-width: 1400px) {
+					font-size: 2rem;
 				}
 			}
 		}
 	}
 
-	&__right-block {
+	&__right_block {
 		height: fit-content;
 
 		flex-grow: 1;
@@ -269,15 +271,15 @@
 		gap: 1rem;
 
 		&-title {
-			@media screen and (max-aspect-ratio: 10/9) {
-				font-size: calc(2vh + 2vw);
+			@media screen and (max-width: 1400px) {
+				font-size: 2rem;
 				text-align: center;
 			}
 		}
 
 		&-info {
-			@media screen and (max-aspect-ratio: 10/9) {
-				//font-size: calc(2vh + 2vw);
+			@media screen and (max-width: 1400px) {
+				//font-size: 2rem;
 				padding: 0 1rem;
 				text-align: center;
 			}
@@ -340,7 +342,7 @@
 		// }
 
 		&-container {
-			@media screen and (max-aspect-ratio: 10/9) {
+			@media screen and (max-width: 1400px) {
 				padding: 0 1rem;
 			}
 
@@ -354,21 +356,31 @@
 		}
 
 		&-item {
+			@media screen and (max-width: 440px) {
+				flex-direction: column;
+			}
+
 			display: flex;
 			align-items: center;
 			justify-content: left;
 			gap: 1rem;
 			padding: 1rem;
 			border-radius: 1rem;
-			box-shadow: 2.5px 5px 5px #00000015, 0px 0px 5px #00000015;
+			box-shadow:
+				2.5px 5px 5px #00000015,
+				0px 0px 5px #00000015;
 
-			transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+			transition:
+				transform 0.2s ease-in-out,
+				box-shadow 0.2s ease-in-out;
 			font-size: 2rem;
 			font-weight: 350;
 
 			&:hover {
 				transform: scale(1.01);
-				box-shadow: 4px 8px 8px #00000015, 0px 0px 8px #00000015;
+				box-shadow:
+					4px 8px 8px #00000015,
+					0px 0px 8px #00000015;
 			}
 
 			&.robinson {
@@ -380,6 +392,10 @@
 			&.victoria {
 				background-color: #456175;
 				color: #fff;
+
+				& img {
+					filter: brightness(0) invert(1);
+				}
 			}
 
 			&.belarus {
@@ -422,6 +438,8 @@
 
 			&.voyage {
 				background-color: #fff;
+
+				color: #010540;
 			}
 
 			&.minsk {
@@ -458,7 +476,7 @@
 				}
 			}
 
-			&-img-block {
+			&-img {
 				height: 5rem;
 				width: fit-content;
 				min-width: fit-content;
@@ -472,7 +490,7 @@
 				}
 			}
 
-			&-text-block {
+			&-text {
 				width: 100%;
 				text-align: center;
 				color: inherit;
@@ -481,6 +499,13 @@
 
 				display: flex;
 				flex-direction: column;
+			}
+
+			&-discount {
+				min-width: max-content;
+				font-size: inherit;
+				font-weight: inherit;
+				color: inherit;
 			}
 		}
 	}
