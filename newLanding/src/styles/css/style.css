@@ -120,7 +120,7 @@ h1 {
   font-weight: 800;
   font-size: 4.5rem;
 }
-h1.page__title {
+h1.page-title {
   position: fixed;
   left: 0;
   top: 100%;
@@ -1348,7 +1348,7 @@ a {
     max-height: fit-content;
   }
 }
-.ko__nominations-list-title {
+.ko__nominations-title {
   position: relative;
   text-align: left;
   width: 100%;
@@ -1361,7 +1361,7 @@ a {
           background-clip: text;
   margin-bottom: 1.2rem;
 }
-.ko__nominations-list-title::before {
+.ko__nominations-title::before {
   content: "";
   position: absolute;
   bottom: -1rem;
@@ -2567,6 +2567,7 @@ a {
   background-size: 300% 100%;
   background-repeat: repeat;
   animation: XmoveRYB300 33s infinite linear;
+  white-space: nowrap;
   color: transparent;
   font-size: 1.8rem;
   font-weight: 450;
