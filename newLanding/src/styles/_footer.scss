@@ -65,7 +65,14 @@
 		box-shadow: 0px 0px 10px #00000020;
 	}
 
-	&__left_block {
+	&__title {
+		@media screen and (max-width: 1400px) {
+			text-align: center;
+			font-size: 2rem;
+		}
+	}
+
+	&__left-block {
 		@media screen and (max-width: 1400px) {
 			width: 100%;
 			min-width: none;
@@ -77,54 +84,47 @@
 		gap: 1rem;
 		min-width: 35rem;
 		max-width: 35rem;
+	}
 
-		&-title {
-			@media screen and (max-width: 1400px) {
-				text-align: center;
+	&__location {
+		@media screen and (max-width: 1400px) {
+			text-align: center;
+			padding: 0 1rem;
+
+			& h3 {
 				font-size: 2rem;
 			}
 		}
+		font-size: 1.6rem;
+		font-weight: 350;
 
-		&-location {
-			@media screen and (max-width: 1400px) {
-				text-align: center;
-				padding: 0 1rem;
+		& span {
+			background: linear-gradient(
+				90deg,
+				$blue,
+				$blue 15%,
+				$red,
+				$red,
+				$yellow,
+				$yellow,
+				$blue
+			);
+			background-clip: text;
 
-				& h3 {
-					font-size: 2rem;
-				}
-			}
-			font-size: 1.6rem;
-			font-weight: 350;
+			background-size: 300% 100%;
 
-			& span {
-				background: linear-gradient(
-					90deg,
-					$blue,
-					$blue 15%,
-					$red,
-					$red,
-					$yellow,
-					$yellow,
-					$blue
-				);
-				background-clip: text;
+			background-repeat: repeat;
 
-				background-size: 300% 100%;
+			animation: XmoveRYB300 33s infinite linear;
 
-				background-repeat: repeat;
+			color: transparent;
 
-				animation: XmoveRYB300 33s infinite linear;
-
-				color: transparent;
-
-				font-size: 1.8rem;
-				font-weight: 450;
-			}
+			font-size: 1.8rem;
+			font-weight: 450;
 		}
 	}
 
-	&__map-container {
+	&__map {
 		@media screen and (max-width: 1400px) {
 			border-radius: 0;
 			width: 100%;
@@ -208,7 +208,7 @@
 		}
 	}
 
-	&__center_block {
+	&__center-block {
 		@media screen and (max-width: 1400px) {
 			align-items: center;
 			width: 100%;
@@ -220,47 +220,42 @@
 		align-items: start;
 		gap: 1.5rem;
 		min-width: fit-content;
+	}
 
-		&-title {
+	&__contacts {
+		@media screen and (max-width: 1400px) {
+			gap: calc(2rem);
+		}
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+		width: fit-content;
+		align-items: start;
+	}
+
+	&__contact {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		font-size: 1.6rem;
+
+		&-icon {
+			@media screen and (max-width: 1400px) {
+				width: calc(1.7vh + 1.6vw);
+			}
+			width: 1.8rem;
+		}
+
+		&-link {
+			color: -webkit-link;
+			cursor: pointer;
 			@media screen and (max-width: 1400px) {
 				font-size: 2rem;
 			}
 		}
-
-		&-item-container {
-			@media screen and (max-width: 1400px) {
-				gap: calc(2rem);
-			}
-			display: flex;
-			flex-direction: column;
-			gap: 1.5rem;
-			width: fit-content;
-			align-items: start;
-		}
-
-		&-item {
-			display: flex;
-			align-items: center;
-			gap: 0.5rem;
-			font-size: 1.6rem;
-			&-icon {
-				@media screen and (max-width: 1400px) {
-					width: calc(1.7vh + 1.6vw);
-				}
-				width: 1.8rem;
-			}
-
-			&-text {
-				color: -webkit-link;
-				cursor: pointer;
-				@media screen and (max-width: 1400px) {
-					font-size: 2rem;
-				}
-			}
-		}
 	}
 
-	&__right_block {
+	&__right-block {
 		height: fit-content;
 
 		flex-grow: 1;
@@ -269,244 +264,214 @@
 		flex-direction: column;
 
 		gap: 1rem;
+	}
 
-		&-title {
-			@media screen and (max-width: 1400px) {
-				font-size: 2rem;
-				text-align: center;
-			}
+	&__info {
+		@media screen and (max-width: 1400px) {
+			padding: 0 1rem;
+			text-align: center;
+		}
+		font-weight: 350;
+		font-size: 1.6rem;
+		text-align: left;
+
+		& span {
+			background: linear-gradient(
+				90deg,
+				$blue,
+				$blue 15%,
+				$red,
+				$red,
+				$yellow,
+				$yellow,
+				$blue
+			);
+			background-clip: text;
+
+			background-size: 300% 100%;
+
+			background-repeat: repeat;
+
+			animation: XmoveRYB300 33s infinite linear;
+
+			color: transparent;
+
+			font-size: 1.8rem;
+			font-weight: 450;
+		}
+	}
+
+	&__hotels-wrapper {
+		position: relative;
+	}
+
+	&__hotels {
+		@media screen and (max-width: 1400px) {
+			padding: 0 1rem;
 		}
 
-		&-info {
-			@media screen and (max-width: 1400px) {
-				//font-size: 2rem;
-				padding: 0 1rem;
-				text-align: center;
-			}
-			font-weight: 350;
-			font-size: 1.6rem;
-			text-align: left;
-			//color: $textBlackish;
-			& span {
-				background: linear-gradient(
-					90deg,
-					$blue,
-					$blue 15%,
-					$red,
-					$red,
-					$yellow,
-					$yellow,
-					$blue
-				);
-				background-clip: text;
+		position: relative;
 
-				background-size: 300% 100%;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
 
-				background-repeat: repeat;
-
-				animation: XmoveRYB300 33s infinite linear;
-
-				color: transparent;
-
-				font-size: 1.8rem;
-				font-weight: 450;
-			}
-		}
-
-		// &-wrapper {
-		// 	position: relative;
-
-		// 	&-shadow-top {
-		// 		position: absolute;
-		// 		top: 0;
-		// 		left: 0;
-
-		// 		width: 100%;
-		// 		height: 1rem;
-
-		// 		background: linear-gradient(0deg, transparent, #00000050);
-		// 		z-index: 10;
-		// 	}
-
-		// 	&-shadow-bot {
-		// 		position: absolute;
-		// 		bottom: 0;
-		// 		left: 0;
-
-		// 		width: 100%;
-		// 		height: 1rem;
-
-		// 		background: linear-gradient(transparent, #00000050);
-		// 		z-index: 10;
-		// 	}
-		// }
-
-		&-container {
-			@media screen and (max-width: 1400px) {
-				padding: 0 1rem;
-			}
-
-			position: relative;
-
-			display: flex;
+	&__hotel {
+		@media screen and (max-width: 440px) {
 			flex-direction: column;
-			gap: 1rem;
-
-			//max-height: 31rem;
 		}
 
-		&-item {
-			@media screen and (max-width: 440px) {
-				flex-direction: column;
-			}
+		display: flex;
+		align-items: center;
+		justify-content: left;
+		gap: 1rem;
+		padding: 1rem;
+		border-radius: 1rem;
+		box-shadow:
+			2.5px 5px 5px #00000015,
+			0px 0px 5px #00000015;
 
-			display: flex;
-			align-items: center;
-			justify-content: left;
-			gap: 1rem;
-			padding: 1rem;
-			border-radius: 1rem;
+		transition:
+			transform 0.2s ease-in-out,
+			box-shadow 0.2s ease-in-out;
+		font-size: 2rem;
+		font-weight: 350;
+
+		&:hover {
+			transform: scale(1.01);
 			box-shadow:
-				2.5px 5px 5px #00000015,
-				0px 0px 5px #00000015;
+				4px 8px 8px #00000015,
+				0px 0px 8px #00000015;
+		}
 
-			transition:
-				transform 0.2s ease-in-out,
-				box-shadow 0.2s ease-in-out;
-			font-size: 2rem;
-			font-weight: 350;
+		&--robinson {
+			background-color: #442d25;
+			color: #fff;
+			font-size: 1.9rem;
+		}
 
-			&:hover {
-				transform: scale(1.01);
-				box-shadow:
-					4px 8px 8px #00000015,
-					0px 0px 8px #00000015;
+		&--robinson-city {
+			background-color: #442d25;
+			color: #fff;
+			font-size: 1.9rem;
+		}
+
+		&--victoria {
+			background-color: #456175;
+			color: #fff;
+
+			& img {
+				filter: brightness(0) invert(1);
 			}
+		}
 
-			&.robinson {
-				background-color: #442d25;
-				color: #fff;
-				font-size: 1.9rem;
-			}
+		&--belarus {
+			background-color: #10396f;
+			color: #fff;
+		}
 
-			&.victoria {
-				background-color: #456175;
-				color: #fff;
+		&--zalkind {
+			background-color: #000;
+			color: #fff;
 
-				& img {
-					filter: brightness(0) invert(1);
-				}
-			}
-
-			&.belarus {
-				background-color: #10396f;
-				color: #fff;
-			}
-
-			&.zalkind {
-				background-color: #000;
-				color: #fff;
-
-				& .footer__right-block-item-img-block {
-					white-space: nowrap;
-					user-select: none;
-					font-family: "DIN Condensed";
-					font-size: 2.5rem !important;
-					display: flex;
-					align-items: center;
-					color: #fff;
-				}
-			}
-
-			&.europe {
-				background-color: #4e1720;
+			& .footer__hotel-img {
+				white-space: nowrap;
+				user-select: none;
+				font-family: "DIN Condensed";
+				font-size: 2.5rem !important;
+				display: flex;
+				align-items: center;
 				color: #fff;
 			}
+		}
 
-			&.garni {
-				background-color: #480505;
+		&--europe {
+			background-color: #4e1720;
+			color: #fff;
+		}
+
+		&--garni {
+			background-color: #480505;
+			color: #fff;
+			& img {
+				filter: brightness(0) invert(1);
+			}
+		}
+
+		&--sputnik {
+			background-color: #11396f;
+			color: #fff;
+		}
+
+		&--voyage {
+			background-color: #fff;
+			color: #010540;
+		}
+
+		&--minsk {
+			background-color: #d62434;
+			color: #fff;
+			& img {
+				filter: brightness(0) invert(1);
+			}
+		}
+
+		&--crowne {
+			background-color: #9e1d70;
+			color: #fff;
+		}
+
+		&--discounts {
+			padding: 1.2rem;
+			color: #fff;
+			font-weight: 500;
+			text-shadow: 0px 0px 5px #00000015;
+			background: linear-gradient(
+				-45deg,
+				$blue 0% 33%,
+				$red 33% 67%,
+				$yellow 67%
+			);
+
+			& span {
+				font-size: 1.5rem;
 				color: #fff;
-				& img {
-					filter: brightness(0) invert(1);
-				}
+				text-decoration: underline;
+				font-weight: 350;
 			}
+		}
 
-			&.sputnik {
-				background-color: #11396f;
-				color: #fff;
-			}
+		&-img {
+			height: 5rem;
+			width: fit-content;
+			min-width: fit-content;
+			max-width: fit-content;
 
-			&.voyage {
-				background-color: #fff;
-
-				color: #010540;
-			}
-
-			&.minsk {
-				background-color: #d62434;
-				color: #fff;
-				& img {
-					filter: brightness(0) invert(1);
-				}
-			}
-
-			&.crowne {
-				background-color: #9e1d70;
-				color: #fff;
-			}
-
-			&.discounts {
-				padding: 1.2rem;
-				color: #fff;
-				font-weight: 500;
-				text-shadow: 0px 0px 5px #00000015;
-				background: linear-gradient(
-					-45deg,
-					$blue 0% 33%,
-					$red 33% 67%,
-					$yellow 67%
-				);
-				//background-color: $textBlackLessTrans;
-
-				& span {
-					font-size: 1.5rem;
-					color: #fff;
-					text-decoration: underline;
-					font-weight: 350;
-				}
-			}
-
-			&-img {
-				height: 5rem;
+			& img {
 				width: fit-content;
 				min-width: fit-content;
 				max-width: fit-content;
-
-				& img {
-					width: fit-content;
-					min-width: fit-content;
-					max-width: fit-content;
-					height: 100%;
-				}
+				height: 100%;
 			}
+		}
 
-			&-text {
-				width: 100%;
-				text-align: center;
-				color: inherit;
-				font-size: inherit;
-				font-weight: inherit;
+		&-text {
+			width: 100%;
+			text-align: center;
+			color: inherit;
+			font-size: inherit;
+			font-weight: inherit;
 
-				display: flex;
-				flex-direction: column;
-			}
+			display: flex;
+			flex-direction: column;
+		}
 
-			&-discount {
-				min-width: max-content;
-				font-size: inherit;
-				font-weight: inherit;
-				color: inherit;
-			}
+		&-discount {
+			min-width: max-content;
+			font-size: inherit;
+			font-weight: inherit;
+			color: inherit;
 		}
 	}
 }

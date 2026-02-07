@@ -29,9 +29,7 @@ const swiper = new Swiper(".section__programm_swiper", {
 	},
 });
 
-//!WAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKAWAKA
-
-const swiperThumbs = new Swiper(".section__album_thumbs", {
+const swiperThumbs = new Swiper(".album__thumbs", {
 	// Optional parameters
 	direction: "horizontal",
 	spaceBetween: 0,
@@ -40,7 +38,7 @@ const swiperThumbs = new Swiper(".section__album_thumbs", {
 	watchSlidesProgress: true,
 });
 
-const swiperAlbum = new Swiper(".section__album_swiper", {
+const swiperAlbum = new Swiper(".album__swiper", {
 	// Optional parameters
 	direction: "horizontal",
 
@@ -78,7 +76,7 @@ const swiperAlbum = new Swiper(".section__album_swiper", {
 
 	// If we need pagination
 	pagination: {
-		el: ".section__album_swiper-pagination",
+		el: ".album__swiper-pagination",
 		clickable: true,
 		dynamicBullets: true,
 		dynamicMainBullets: 1,
@@ -92,7 +90,7 @@ const swiperAlbum = new Swiper(".section__album_swiper", {
 
 	//And if we need scrollbar
 	// scrollbar: {
-	// 	el: ".section__album_swiper-scrollbar",
+	// 	el: ".album__swiper-scrollbar",
 	// 	draggable: true,
 	// },
 });

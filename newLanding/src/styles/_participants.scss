@@ -1,10 +1,10 @@
-.section__participants {
+.participants {
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
 	margin-top: -1.5rem;
 
-	&_paragraph {
+	&__paragraph {
 		font-size: 1.4rem;
 		text-align: left;
 		font-weight: 450;

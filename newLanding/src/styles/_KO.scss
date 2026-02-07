@@ -1,4 +1,4 @@
-.section__KO {
+.ko {
 	@media screen and (max-aspect-ratio: 4/3) {
 		flex-direction: column;
 		text-align: center;
@@ -13,43 +13,53 @@
 	justify-content: space-between;
 	text-align: center;
 
+	&__dot {
+		color: transparent;
+
+		background-clip: text;
+
+		font-size: 1.6rem;
+
+		background-color: $textBlackLessTrans;
+	}
+
 	@media screen and (max-aspect-ratio: 4/3) {
-		&_banner {
+		&__banner {
 			width: 100%;
 
-			&-top {
+			&--top {
 				display: none !important;
 			}
 
-			&-bottom {
+			&--bottom {
 				display: flex !important;
 			}
 		}
-		&_description-botTitle {
+		&__description-botTitle {
 			display: none !important;
 		}
 	}
 
 	@media screen and (max-width: 750px) {
-		&_banner {
+		&__banner {
 			width: 100%;
 
-			&-top {
+			&--top {
 				display: none !important;
 			}
 
-			&-bottom {
+			&--bottom {
 				display: flex !important;
 			}
 		}
 
-		&_description-botTitle {
+		&__title-bottom {
 			display: none !important;
 		}
 	}
 
-	&_banner {
-		&-bottom {
+	&__banner {
+		&--bottom {
 			display: none;
 			width: 100%;
 		}
@@ -124,37 +134,70 @@
 
 				z-index: -1;
 			}
+		}
 
-			&-text {
-				font-size: 1.4rem;
-				text-decoration: underline;
+		&-link {
+			font-size: 1.4rem;
+			text-decoration: underline;
 
-				text-align: center;
-				font-weight: 500;
-				color: transparent;
-				background: linear-gradient(
-					90deg,
-					$goldBright,
-					$goldBright,
-					$goldDim,
-					$goldDim,
-					$goldBright,
-					$goldBright
-				);
-				background-size: 200% 100%;
-				animation: XmoveRYB200 7s linear infinite;
-				background-clip: text;
+			text-align: center;
+			font-weight: 500;
+			color: transparent;
+			background: linear-gradient(
+				90deg,
+				$goldBright,
+				$goldBright,
+				$goldDim,
+				$goldDim,
+				$goldBright,
+				$goldBright
+			);
+			background-size: 200% 100%;
+			animation: XmoveRYB200 7s linear infinite;
+			background-clip: text;
 
-				&::before {
-					content: "• ";
+			&::before {
+				content: "• ";
 
-					text-decoration: none;
-				}
+				text-decoration: none;
 			}
 		}
 	}
 
-	&_description {
+	&__title-top {
+		text-align: inherit;
+
+		& span {
+			font: inherit;
+			white-space: nowrap;
+		}
+	}
+
+	&__title-bottom {
+		text-align: inherit;
+		color: $indigo;
+		word-wrap: normal;
+
+		& span {
+			font-size: inherit;
+			font-weight: 700;
+			color: transparent;
+			background: linear-gradient(
+				90deg,
+				$goldBright,
+				$goldBright,
+				$goldDim,
+				$goldDim,
+				$goldBright,
+				$goldBright
+			);
+			background-size: 200% 100%;
+			animation: XmoveRYB200 7s linear infinite;
+			background-clip: text;
+		}
+	}
+
+	&__description {
 		@media screen and (max-aspect-ratio: 4/3) {
 			width: 100%;
 			text-align: inherit;
@@ -168,24 +211,53 @@
 		flex-direction: column;
 		gap: 1.5rem;
 		text-align: center;
+	}
 
-		&-topTitle {
-			text-align: inherit;
-
-			& span {
-				font: inherit;
-				white-space: nowrap;
-			}
+	&__nominations {
+		@media screen and (max-aspect-ratio: 4/3) {
+			flex-direction: column;
 		}
 
-		&-botTitle {
-			text-align: inherit;
-			color: $indigo;
-			word-wrap: normal;
+		@media screen and (max-width: 750px) {
+			flex-direction: column;
+		}
 
-			& span {
-				font-size: inherit;
-				font-weight: 700;
+		height: fit-content;
+
+		display: flex;
+		justify-items: center;
+		align-items: center;
+		gap: 1.5rem;
+
+		max-width: 100%;
+
+		&-list {
+			@media screen and (max-aspect-ratio: 4/3) {
+				width: 100%;
+				max-height: fit-content;
+			}
+
+			@media screen and (max-width: 750px) {
+				width: 100%;
+				max-height: fit-content;
+			}
+
+			width: 100%;
+			height: 100%;
+
+			display: flex;
+			flex-direction: column;
+			align-items: left;
+
+			gap: 0.8rem;
+
+			text-align: left;
+
+			&-title {
+				position: relative;
+				text-align: left;
+				width: 100%;
+				font-weight: 600;
 				color: transparent;
 				background: linear-gradient(
 					90deg,
@@ -197,240 +269,178 @@
 					$goldBright
 				);
 				background-size: 200% 100%;
-				animation: XmoveRYB200 7s linear infinite;
+				animation: XmoveRYB200 6s linear infinite;
 				background-clip: text;
+				margin-bottom: 1.2rem;
+
+				&::before {
+					content: "";
+					position: absolute;
+					bottom: -1rem;
+					left: 0;
+					width: 100%;
+					height: 0.25rem;
+					background: linear-gradient(
+						90deg,
+						$goldBright,
+						$goldBright,
+						$goldDim,
+						$goldDim,
+						$goldBright,
+						$goldBright
+					);
+					background-size: 200% 100%;
+					animation: XmoveRYB200 6s linear infinite;
+				}
 			}
 		}
+	}
+
+	&__nomination {
+		display: flex;
+		width: 100%;
+
+		padding: 1rem;
+		border-radius: 1rem;
+		overflow: hidden;
 
 		&-info {
-			position: relative;
-			text-align: center;
+			display: flex;
+			flex-direction: column;
 
-			width: 100%;
-			height: max-content;
+			text-align: left;
+			font-size: 1.4rem;
+			font-weight: 500;
 
-			border-radius: 1rem;
-			padding: 1rem;
-			box-shadow:
-				2.5px 5px 5px #00000015,
-				0px 0px 5px #00000015;
-			background: linear-gradient(
-				60deg,
-				$goldDim,
-				$goldDim,
-				$goldBright,
-				$goldBright,
-				$goldDim,
-				$goldDim
-			);
-			&-span {
+			color: #fff;
+		}
+
+		& ul {
+			list-style-type: none;
+			& li {
 				display: flex;
-				flex-direction: column;
-				align-items: center;
 
-				font-size: 1.2rem;
-				font-weight: 450;
-				color: $textBlack;
-			}
-
-			&-bolden {
 				font-size: 1.4rem;
-				font-weight: 600;
-				color: $textBlack;
+				font-weight: 400;
+				color: #fff;
+
+				margin: 1rem 0;
+
+				& div {
+					font-size: 1.4rem;
+					font-weight: 500;
+					color: #fff;
+
+					margin-right: 0.4rem;
+				}
+			}
+		}
+	}
+
+	&__goals {
+		@media screen and (max-aspect-ratio: 4/3) {
+			width: 100%;
+			max-height: fit-content;
+		}
+
+		@media screen and (max-width: 750px) {
+			width: 100%;
+			max-height: fit-content;
+		}
+
+		width: calc(100% / 1);
+		height: 100%;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.8rem;
+
+		&-title {
+			position: relative;
+			text-align: left;
+			width: 100%;
+			font-weight: 600;
+			color: transparent;
+			background: linear-gradient(
+				90deg,
+				$goldBright,
+				$goldBright,
+				$goldDim,
+				$goldDim,
+				$goldBright,
+				$goldBright
+			);
+			background-size: 200% 100%;
+			animation: XmoveRYB200 6s linear infinite;
+			background-clip: text;
+			margin-bottom: 1.2rem;
+
+			&::before {
+				content: "";
+				position: absolute;
+				bottom: -1rem;
+				left: 0;
+				width: 100%;
+				height: 0.25rem;
+				background: linear-gradient(
+					90deg,
+					$goldBright,
+					$goldBright,
+					$goldDim,
+					$goldDim,
+					$goldBright,
+					$goldBright
+				);
+				background-size: 200% 100%;
+				animation: XmoveRYB200 6s linear infinite;
 			}
 		}
 
-		&-nominations {
-			@media screen and (max-aspect-ratio: 4/3) {
-				flex-direction: column;
-			}
+		&-text {
+			width: 100%;
+			text-align: left;
+			font-size: 1.4rem;
+			font-weight: 450;
+			color: $textBlackish;
+		}
+	}
 
-			@media screen and (max-width: 750px) {
-				flex-direction: column;
-			}
+	&__info {
+		position: relative;
+		text-align: center;
 
-			height: fit-content;
+		width: 100%;
+		height: max-content;
 
+		border-radius: 1rem;
+		padding: 1rem;
+		box-shadow:
+			2.5px 5px 5px #00000015,
+			0px 0px 5px #00000015;
+		background: linear-gradient(
+			60deg,
+			$goldDim,
+			$goldDim,
+			$goldBright,
+			$goldBright,
+			$goldDim,
+			$goldDim
+		);
+		&-text {
 			display: flex;
-			justify-items: center;
+			flex-direction: column;
 			align-items: center;
-			gap: 1.5rem;
 
-			max-width: 100%;
+			font-size: 1.2rem;
+			font-weight: 450;
+			color: $textBlack;
+		}
 
-			&-list {
-				@media screen and (max-aspect-ratio: 4/3) {
-					width: 100%;
-					max-height: fit-content;
-				}
-
-				@media screen and (max-width: 750px) {
-					width: 100%;
-					max-height: fit-content;
-				}
-
-				width: 100%;
-				height: 100%;
-
-				display: flex;
-				flex-direction: column;
-				align-items: left;
-
-				gap: 0.8rem;
-
-				text-align: left;
-
-				&-title {
-					position: relative;
-					text-align: left;
-					width: 100%;
-					font-weight: 600;
-					color: transparent;
-					background: linear-gradient(
-						90deg,
-						$goldBright,
-						$goldBright,
-						$goldDim,
-						$goldDim,
-						$goldBright,
-						$goldBright
-					);
-					background-size: 200% 100%;
-					animation: XmoveRYB200 6s linear infinite;
-					background-clip: text;
-					margin-bottom: 1.2rem;
-
-					&::before {
-						content: "";
-						position: absolute;
-						bottom: -1rem;
-						left: 0;
-						width: 100%;
-						height: 0.25rem;
-						background: linear-gradient(
-							90deg,
-							$goldBright,
-							$goldBright,
-							$goldDim,
-							$goldDim,
-							$goldBright,
-							$goldBright
-						);
-						background-size: 200% 100%;
-						animation: XmoveRYB200 6s linear infinite;
-					}
-				}
-
-				&-item {
-					display: flex;
-					width: 100%;
-
-					padding: 1rem;
-					border-radius: 1rem;
-					overflow: hidden;
-
-					& .NomInfo {
-						display: flex;
-						flex-direction: column;
-
-						text-align: left;
-						font-size: 1.4rem;
-						font-weight: 500;
-
-						color: #fff;
-					}
-
-					& ul {
-						list-style-type: none;
-						& li {
-							display: flex;
-
-							font-size: 1.4rem;
-							font-weight: 400;
-							color: #fff;
-
-							margin: 1rem 0;
-
-							& div {
-								font-size: 1.4rem;
-								font-weight: 500;
-								color: #fff;
-
-								margin-right: 0.4rem;
-							}
-						}
-					}
-				}
-			}
-
-			&-text {
-				@media screen and (max-aspect-ratio: 4/3) {
-					width: 100%;
-					max-height: fit-content;
-				}
-
-				@media screen and (max-width: 750px) {
-					width: 100%;
-					max-height: fit-content;
-				}
-
-				width: calc(100% / 1);
-				height: 100%;
-
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				gap: 0.8rem;
-
-				&-title {
-					position: relative;
-					text-align: left;
-					width: 100%;
-					font-weight: 600;
-					color: transparent;
-					background: linear-gradient(
-						90deg,
-						$goldBright,
-						$goldBright,
-						$goldDim,
-						$goldDim,
-						$goldBright,
-						$goldBright
-					);
-					background-size: 200% 100%;
-					animation: XmoveRYB200 6s linear infinite;
-					background-clip: text;
-					margin-bottom: 1.2rem;
-
-					&::before {
-						content: "";
-						position: absolute;
-						bottom: -1rem;
-						left: 0;
-						width: 100%;
-						height: 0.25rem;
-						background: linear-gradient(
-							90deg,
-							$goldBright,
-							$goldBright,
-							$goldDim,
-							$goldDim,
-							$goldBright,
-							$goldBright
-						);
-						background-size: 200% 100%;
-						animation: XmoveRYB200 6s linear infinite;
-					}
-				}
-
-				&-text {
-					width: 100%;
-					text-align: left;
-					font-size: 1.4rem;
-					font-weight: 450;
-					color: $textBlackish;
-				}
-			}
+		&-label {
+			font-size: 1.4rem;
+			font-weight: 600;
+			color: $textBlack;
 		}
 	}
 }

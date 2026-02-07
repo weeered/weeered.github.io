@@ -8,25 +8,25 @@ burgerButtons[1].addEventListener("click", () => {
 
 function theBurgering(isItTop) {
 	if (isItTop && header.classList.length > 2) {
-		header.classList.toggle("header_fixed");
+		header.classList.toggle("header-fixed");
 	}
 
 	setHighlight(scrollY);
 
 	headerDynamic.style.transition =
 		"top 0.25s ease-in-out, border-radius 0.25s ease-in-out, background-color 1s 0s ease-in-out, box-shadow 0.125s 0s ease-in-out";
-	burgerButtons[0].classList.toggle("burger-button_active");
-	burgerButtons[1].classList.toggle("burger-button_active");
-	header.classList.toggle("header_burgered");
-	headerDynamic.classList.toggle("header_burgered");
-	countdownBurger.classList.toggle("countdown_active");
+	burgerButtons[0].classList.toggle("burger-button-active");
+	burgerButtons[1].classList.toggle("burger-button-active");
+	header.classList.toggle("header-burgered");
+	headerDynamic.classList.toggle("header-burgered");
+	countdownBurger.classList.toggle("countdown-active");
 
-	burgerMenu.classList.toggle("burgerMenu_active");
-	burgerAnimationLayer1.classList.toggle("burgerAnimLayer1_active");
-	burgerAnimationLayer2.classList.toggle("burgerAnimLayer2_active");
-	burgerAnimationLayer3.classList.toggle("burgerAnimLayer3_active");
+	burgerMenu.classList.toggle("burgerMenu-active");
+	burgerAnimationLayer1.classList.toggle("burgerAnimLayer1-active");
+	burgerAnimationLayer2.classList.toggle("burgerAnimLayer2-active");
+	burgerAnimationLayer3.classList.toggle("burgerAnimLayer3-active");
 	for (let i = 0; i < burgerMenuElems.length; i++) {
-		burgerMenuElems[i].classList.toggle("list-item_active");
+		burgerMenuElems[i].classList.toggle("list-item-active");
 	}
 }
 

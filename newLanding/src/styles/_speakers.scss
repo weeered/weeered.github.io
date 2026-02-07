@@ -1,15 +1,19 @@
-.section__speakers {
+.speakers {
 	display: flex;
 	gap: 2rem;
 	flex-direction: column;
 
-	&_container {
+	&.overflowing {
+		background-color: red;
+	}
+
+	&__container {
 		display: flex;
 		gap: 1rem;
 		flex-wrap: wrap;
 	}
 
-	&_card {
+	&__card {
 		@media screen and (max-aspect-ratio: 4/3) {
 			width: calc(100% / 4 - 0.75rem);
 		}
@@ -65,7 +69,7 @@
 			top: 26rem;
 			height: 8.65rem;
 			width: 100%;
-			overflow-x: hidden;
+			overflow: hidden;
 			padding-top: 0.5rem;
 			padding-bottom: 0.5rem;
 
