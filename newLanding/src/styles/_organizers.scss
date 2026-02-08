@@ -94,43 +94,6 @@
 			border: 2px solid $boxBorder;
 
 			overflow: hidden;
-
-			// &::before {
-			// 	content: "";
-			// 	left: 0.8rem;
-			// 	top: 0.8rem;
-			// 	position: absolute;
-			// 	width: 1.6rem;
-			// 	height: 10rem;
-
-			// 	background: linear-gradient(
-			// 		90deg,
-			// 		$blueTrans 0% 33%,
-			// 		$redTrans 33% 66%,
-			// 		$yellowTrans 66% 100%
-			// 	);
-
-			// 	transform: translate(-50%, -50%) rotate(45deg);
-			// }
-
-			// &::after {
-			// 	content: "";
-			// 	right: -0.8rem;
-			// 	top: 0.8rem;
-			// 	position: absolute;
-			// 	width: 1.6rem;
-			// 	height: 10rem;
-
-			// 	background: linear-gradient(
-			// 		90deg,
-			// 		$blueTrans 0% 33%,
-			// 		$redTrans 33% 66%,
-			// 		$yellowTrans 66% 100%
-			// 	);
-
-			// 	transform: translate(-50%, -50%) rotate(-225deg);
-			// }
-			// transition: transform 0.2s ease-in-out, box-shadow 0.1s ease-in-out;
 		}
 
 		transition:
@@ -171,7 +134,6 @@
 
 			animation: XmoveRYB300 5s infinite linear;
 
-			//animation: box-shadow-grad 3s infinite ease-in-out;
 			overflow-x: hidden;
 
 			opacity: 0;
@@ -206,10 +168,6 @@
 
 		&:hover {
 			transform: translateY(-1rem);
-
-			// .organizers__card-bg {
-			// 	box-shadow: 0 5px 1px -1px #00000020;
-			// }
 		}
 
 		&:active {

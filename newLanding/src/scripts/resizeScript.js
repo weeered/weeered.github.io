@@ -13,6 +13,9 @@ function addOverflows() {
 const debouncedAddOverflows = debounce(addOverflows, 300);
 
 addOverflows();
+setTimeout(() => {
+	addOverflows();
+}, 1000);
 
 window.addEventListener("resize", () => {
 	debouncedAddOverflows();

@@ -1576,7 +1576,7 @@ a {
   max-width: 108%;
   height: -moz-fit-content;
   height: fit-content;
-  padding-bottom: calc(2.24rem - 2px);
+  padding-bottom: calc(2.24rem - 1px);
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
   max-height: 40rem;
