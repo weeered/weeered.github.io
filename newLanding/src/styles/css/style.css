@@ -1635,6 +1635,28 @@ a {
   gap: 1rem;
   flex-direction: column;
 }
+.programm__date {
+  position: relative;
+  font-size: 2rem;
+  width: 100%;
+  margin-bottom: 1rem;
+  background: linear-gradient(-45deg, #342e8c 0% 33%, #d3281d 33% 67%, #f19001 67%);
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  box-shadow: 2.5px 5px 5px rgba(0, 0, 0, 0.0823529412), 0px 0px 5px rgba(0, 0, 0, 0.0823529412);
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.0823529412);
+  color: #fff;
+}
+@media screen and (max-aspect-ratio: 2/3) {
+  .programm__date {
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 1.9rem;
+  }
+}
+.programm__date::before {
+  content: "• ";
+}
 .programm__event {
   position: relative;
   display: flex;

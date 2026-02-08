@@ -5,17 +5,7 @@ const headerAnimationLayer1 = document.createElement("div");
 headerAnimationLayer1.className = "headerAnimLayer1";
 const headerAnimationLayer2 = document.createElement("div");
 headerAnimationLayer2.className = "headerAnimLayer2";
-const burgerAnimationLayer1 = document.createElement("div");
-burgerAnimationLayer1.className = "burgerAnimLayer1";
-const burgerAnimationLayer2 = document.createElement("div");
-burgerAnimationLayer2.className = "burgerAnimLayer2";
-const burgerAnimationLayer3 = document.createElement("div");
-burgerAnimationLayer3.className = "burgerAnimLayer3";
 
-document.body.appendChild(burgerAnimationLayer1);
-document.body.appendChild(burgerAnimationLayer2);
-document.body.appendChild(burgerAnimationLayer3);
-document.body.appendChild(burgerMenu);
 
 document.body.appendChild(headerAnimationLayer1);
 document.body.appendChild(headerAnimationLayer2);
@@ -49,13 +39,11 @@ function setHighlightNav() {
 			navElems[i + 7].style.backgroundPosition = "0% 100%";
 			navElems[i + 7].style.textShadow = "0 0 4px #ffffffff";
 
-			if (typeof navElems[i - 1] != "undefined") {
-				navElems[i + 7 - 1].style.backgroundPosition = "";
-				navElems[i + 7 - 1].style.textShadow = "";
-			}
-			if (typeof navElems[i + 7 + 1] != "undefined") {
-				navElems[i + 7 + 1].style.backgroundPosition = "";
-				navElems[i + 7 + 1].style.textShadow = "";
+			for (let b = 0; b < sections.length; b++) {
+				if (b != i) {
+					navElems[b + 7].style.backgroundPosition = "";
+					navElems[b + 7].style.textShadow = "";
+				}
 			}
 			return;
 		}
@@ -71,7 +59,7 @@ function setHighlightNavActive(b) {
 	}
 }
 
-const scrollAnim = throttle(() => {
+function scrollAnim() {
 	if (window.getComputedStyle(burgerButtons[0], null).display != "none") {
 		if (burgerMenu.classList.length > 1) {
 			theBurgering(false);
@@ -161,6 +149,12 @@ const scrollAnim = throttle(() => {
 			headerAnimationLayer1.style.backgroundColor = "#f19001";
 		}
 	}
-}, 100);
+}
 
-document.addEventListener("scroll", scrollAnim);
+const debounceScrollAnim = debounce(scrollAnim, 300);
+
+const throttleScrollAnim = throttle(scrollAnim, 100);
+
+document.addEventListener("scroll", () => {
+	(throttleScrollAnim(), debounceScrollAnim());
+});

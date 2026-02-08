@@ -1,3 +1,15 @@
+const burgerAnimationLayer1 = document.createElement("div");
+burgerAnimationLayer1.className = "burgerAnimLayer1";
+const burgerAnimationLayer2 = document.createElement("div");
+burgerAnimationLayer2.className = "burgerAnimLayer2";
+const burgerAnimationLayer3 = document.createElement("div");
+burgerAnimationLayer3.className = "burgerAnimLayer3";
+
+document.body.appendChild(burgerAnimationLayer1);
+document.body.appendChild(burgerAnimationLayer2);
+document.body.appendChild(burgerAnimationLayer3);
+document.body.appendChild(burgerMenu);
+
 burgerButtons[0].addEventListener("click", () => {
 	theBurgering(true);
 });
