@@ -28,4 +28,6 @@ const navElems = document.getElementsByClassName("header__nav-item");
 const burgerMenuElems = document.getElementsByClassName(
 	"burgerMenu__list-item",
 );
-const speakerCards = document.getElementsByClassName("speakers__card");
+const speakerCardTextElems = document.getElementsByClassName(
+	"speakers__card-textContainer",
+);

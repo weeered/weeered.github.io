@@ -39,8 +39,40 @@ const sections = [
 	footer,
 ];
 
-if (window.getComputedStyle(burgerButtons[0], null).display != "none") {
-	document.addEventListener("scroll", () => {
+function setHighlightNav() {
+	for (let i = 0; i < sections.length; i++) {
+		if (
+			(scrollY + window.innerHeight / 2 > sections[i].offsetTop) &
+			(scrollY + window.innerHeight / 2 <
+				sections[i].offsetHeight + sections[i].offsetTop)
+		) {
+			navElems[i + 7].style.backgroundPosition = "0% 100%";
+			navElems[i + 7].style.textShadow = "0 0 4px #ffffffff";
+
+			if (typeof navElems[i - 1] != "undefined") {
+				navElems[i + 7 - 1].style.backgroundPosition = "";
+				navElems[i + 7 - 1].style.textShadow = "";
+			}
+			if (typeof navElems[i + 7 + 1] != "undefined") {
+				navElems[i + 7 + 1].style.backgroundPosition = "";
+				navElems[i + 7 + 1].style.textShadow = "";
+			}
+			return;
+		}
+	}
+}
+
+function setHighlightNavActive(b) {
+	for (let i = 0; i < sections.length; i++) {
+		if (i != b) {
+			navElems[i + 7].style.backgroundPosition = "";
+			navElems[i + 7].style.textShadow = "";
+		}
+	}
+}
+
+const scrollAnim = throttle(() => {
+	if (window.getComputedStyle(burgerButtons[0], null).display != "none") {
 		if (burgerMenu.classList.length > 1) {
 			theBurgering(false);
 		}
@@ -83,9 +115,7 @@ if (window.getComputedStyle(burgerButtons[0], null).display != "none") {
 			//headerAnimationLayer1.style.borderRadius = "0 0 100% 100%";
 			headerAnimationLayer1.style.backgroundColor = "#f19001";
 		}
-	});
-} else {
-	document.addEventListener("scroll", () => {
+	} else {
 		if (burgerMenu.classList.length > 1) {
 			theBurgering(false);
 		}
@@ -130,37 +160,7 @@ if (window.getComputedStyle(burgerButtons[0], null).display != "none") {
 			//headerAnimationLayer1.style.borderRadius = "0 0 100% 100%";
 			headerAnimationLayer1.style.backgroundColor = "#f19001";
 		}
-	});
-}
-
-function setHighlightNav() {
-	for (let i = 0; i < sections.length; i++) {
-		if (
-			(scrollY + window.innerHeight / 2 > sections[i].offsetTop) &
-			(scrollY + window.innerHeight / 2 <
-				sections[i].offsetHeight + sections[i].offsetTop)
-		) {
-			navElems[i + 7].style.backgroundPosition = "0% 100%";
-			navElems[i + 7].style.textShadow = "0 0 4px #ffffffff";
-
-			if (typeof navElems[i - 1] != "undefined") {
-				navElems[i + 7 - 1].style.backgroundPosition = "";
-				navElems[i + 7 - 1].style.textShadow = "";
-			}
-			if (typeof navElems[i + 7 + 1] != "undefined") {
-				navElems[i + 7 + 1].style.backgroundPosition = "";
-				navElems[i + 7 + 1].style.textShadow = "";
-			}
-			return;
-		}
 	}
-}
+}, 100);
 
-function setHighlightNavActive(b) {
-	for (let i = 0; i < sections.length; i++) {
-		if (i != b) {
-			navElems[i + 7].style.backgroundPosition = "";
-			navElems[i + 7].style.textShadow = "";
-		}
-	}
-}
+document.addEventListener("scroll", scrollAnim);
