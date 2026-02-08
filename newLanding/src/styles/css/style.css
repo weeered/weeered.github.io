@@ -1576,7 +1576,7 @@ a {
   max-width: 108%;
   height: -moz-fit-content;
   height: fit-content;
-  padding-bottom: calc(2.24rem - 1px);
+  padding-bottom: calc(1.92rem - 1px);
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
   max-height: 40rem;
@@ -1599,14 +1599,14 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: translate(-20%, -0.32rem);
+  transform: translate(-10%, -0.16rem);
   border-radius: 0.5rem;
-  box-shadow: -1px 0 2px rgba(0, 0, 0, 0.0823529412);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.0823529412);
   font-size: 1rem;
   font-weight: 600;
   color: #fff;
   line-height: 1.6rem;
-  background: linear-gradient(45deg, rgba(52, 46, 140, 0.6274509804) 20%, rgba(52, 46, 140, 0.7490196078) 50%, rgba(52, 46, 140, 0.8784313725));
+  background-color: rgba(100, 116, 139, 0.6666666667);
   transition: 0.3s;
 }
 .speakers__card-title {

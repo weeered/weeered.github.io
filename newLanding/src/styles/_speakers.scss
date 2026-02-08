@@ -89,7 +89,7 @@
 					max-width: 108%;
 					height: fit-content;
 
-					padding-bottom: calc(1.6rem + 0.64rem - 1px);
+					padding-bottom: calc(1.6rem + 0.32rem - 1px);
 
 					border-top-left-radius: 1rem;
 					border-top-right-radius: 1rem;
@@ -125,23 +125,19 @@
 					justify-content: center;
 					align-items: center;
 
-					transform: translate(-20%, -0.32rem);
+					transform: translate(-10%, -0.16rem);
 
 					border-radius: 0.5rem;
 
-					box-shadow: -1px 0 2px #00000015;
+					box-shadow: 0 0 5px #00000015;
 
 					font-size: 1rem;
 					font-weight: 600;
 					color: #fff;
 					line-height: 1.6rem;
 
-					background: linear-gradient(
-						45deg,
-						$blueTransPlus 20%,
-						$blueTrans 50%,
-						$blueTransLite
-					);
+					background-color: $textBlackLessTrans;
+
 
 					transition: 0.3s;
 				}
