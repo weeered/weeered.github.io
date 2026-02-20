@@ -71,6 +71,13 @@
 		align-items: center;
 		gap: 1.5rem;
 
+		&-date{
+			font-size: 2rem;
+			font-weight: 500;
+		
+			color: $indigo;
+		}
+
 		&-logo {
 			@media screen and (max-aspect-ratio: 4/3) {
 				width: 70%;

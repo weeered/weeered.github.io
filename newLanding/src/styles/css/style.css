@@ -691,6 +691,9 @@ a {
   }
 }
 .title__over-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   font-size: calc(0.2vw + 2vh);
   font-weight: 500;
   text-transform: uppercase;
@@ -712,6 +715,11 @@ a {
   .title__over-text {
     margin-top: 4.7rem;
   }
+}
+.title__over-text span {
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
 }
 .title__button {
   min-height: -moz-max-content;
@@ -1202,6 +1210,11 @@ a {
 .ko__banner--bottom {
   display: none;
   width: 100%;
+}
+.ko__banner-date {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #284067;
 }
 .ko__banner-logo {
   height: -moz-fit-content;
