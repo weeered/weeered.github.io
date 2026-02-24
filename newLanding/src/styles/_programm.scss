@@ -4,11 +4,6 @@
 	flex-direction: column;
 
 	&__date {
-		@media screen and (max-aspect-ratio: 2/3) {
-			padding: 0.5rem;
-			text-align: center;
-			font-size: 1.9rem;
-		}
 		position: relative;
 		font-size: 2rem;
 		width: 100%;
@@ -31,6 +26,12 @@
 
 		&::before {
 			content: "• ";
+		}
+
+		@media screen and (max-aspect-ratio: 2/3) {
+			padding: 0.5rem;
+			text-align: center;
+			font-size: 1.9rem;
 		}
 	}
 
@@ -139,9 +140,7 @@
 	left: 0;
 	margin-top: 10%;
 	margin-bottom: 5%;
-	@media screen and (max-aspect-ratio: 1/1) {
-		display: none;
-	}
+
 	color: transparent;
 	background: linear-gradient(
 		90deg,
@@ -163,6 +162,10 @@
 	animation: XmoveRYB200 5s infinite linear reverse;
 
 	text-shadow: 1px 1px 3px #00000020;
+
+	@media screen and (max-aspect-ratio: 1/1) {
+		display: none;
+	}
 }
 
 #programm-swiper-prev {
@@ -171,9 +174,7 @@
 	left: 0;
 	margin-top: 10%;
 	margin-bottom: 5%;
-	@media screen and (max-aspect-ratio: 1/1) {
-		display: none;
-	}
+
 	color: transparent;
 	background: linear-gradient(
 		90deg,
@@ -195,6 +196,10 @@
 	animation: XmoveRYB200 5s infinite linear;
 
 	text-shadow: 1px 1px 3px #00000020;
+
+	@media screen and (max-aspect-ratio: 1/1) {
+		display: none;
+	}
 }
 
 #programm-pagination {

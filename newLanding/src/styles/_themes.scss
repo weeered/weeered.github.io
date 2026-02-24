@@ -1,8 +1,4 @@
 .themes {
-	@media screen and (max-aspect-ratio: 30/23) {
-		flex-direction: column;
-		gap: 2.5rem;
-	}
 	// @media screen and (max-aspect-ratio: 30/23) and (max-width: 900px) {
 	// 	flex-direction: column;
 	// }
@@ -14,13 +10,14 @@
 	gap: 2.5rem;
 
 	&__div-container {
-		@media screen and (max-aspect-ratio: 30/23) {
-			width: 100%;
-		}
 		display: flex;
 		flex-direction: column;
 		gap: 2rem;
 		width: 50%;
+
+		@media screen and (max-aspect-ratio: 30/23) {
+			width: 100%;
+		}
 	}
 
 	&__documents {
@@ -252,5 +249,10 @@
 		// 	z-index: -1;
 		// }
 		//!Side Element Gradient Flow
+	}
+
+	@media screen and (max-aspect-ratio: 30/23) {
+		flex-direction: column;
+		gap: 2.5rem;
 	}
 }

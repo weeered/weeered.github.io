@@ -4,7 +4,7 @@
 	gap: 2rem;
 
 	&__title {
-		// Add styles for title if needed
+		color: inherit;
 	}
 
 	&__container {
@@ -23,13 +23,6 @@
 	}
 
 	&__card {
-		@media screen and (max-aspect-ratio: 3/2) {
-			width: calc(100% / 3 - 1.34rem);
-		}
-		@media screen and (max-aspect-ratio: 1/1) {
-			width: calc(100% / 2 - 1rem);
-		}
-
 		position: relative;
 
 		display: flex;
@@ -146,7 +139,7 @@
 				transform 0.2s ease-in-out,
 				width 0.1s linear,
 				height 0.1s linear;
-			 transform: translate(-50%, calc(-50% + 1rem));
+			transform: translate(-50%, calc(-50% + 1rem));
 			width: calc(100% - 1px);
 			height: 100%;
 
@@ -154,9 +147,6 @@
 		}
 
 		&:active::before {
-			@media screen and (max-aspect-ratio: 3/4) {
-				transform: translate(-50%, calc(-50% + 1rem));
-			}
 			transition:
 				transform 0.2s ease-in-out,
 				width 0.1s linear,
@@ -166,17 +156,29 @@
 			height: 100%;
 
 			opacity: 1;
+
+			@media screen and (max-aspect-ratio: 3/4) {
+				transform: translate(-50%, calc(-50% + 1rem));
+			}
 		}
 
 		&:hover {
-			 transform: translateY(-1rem);
+			transform: translateY(-1rem);
 		}
 
 		&:active {
+			transform: translateY(-0.7rem);
+
 			@media screen and (max-aspect-ratio: 3/4) {
 				transform: translateY(-1rem);
 			}
-			transform: translateY(-0.7rem);
+		}
+
+		@media screen and (max-aspect-ratio: 3/2) {
+			width: calc(100% / 3 - 1.34rem);
+		}
+		@media screen and (max-aspect-ratio: 1/1) {
+			width: calc(100% / 2 - 1rem);
 		}
 	}
 }

@@ -19,15 +19,16 @@
 	}
 
 	&__swiper-group {
-		@media screen and (max-aspect-ratio: 1/1) {
-			gap: 0.5rem;
-		}
 		display: flex;
 		flex-direction: row;
 		width: 100%;
 		justify-content: center;
 		gap: 5rem;
 		align-items: center;
+
+		@media screen and (max-aspect-ratio: 1/1) {
+			gap: 0.5rem;
+		}
 	}
 
 	&__button {
@@ -122,18 +123,11 @@
 	}
 
 	&__thumbs {
-		@media screen and (max-aspect-ratio: 3/4) {
-			background-color: transparent;
-		}
 		width: 100%;
 		border-bottom: 0.5rem solid $blueTrans;
 		border-radius: 1rem;
 
 		& .album__thumbs-wrapper {
-			@media screen and (max-aspect-ratio: 4/3) {
-				height: 6rem;
-			}
-
 			display: flex;
 			align-items: center;
 			justify-content: start;
@@ -144,6 +138,10 @@
 			height: 7rem;
 
 			width: calc(100% + 2rem) !important;
+
+			@media screen and (max-aspect-ratio: 4/3) {
+				height: 6rem;
+			}
 		}
 
 		& .swiper-slide-thumb-active {
@@ -154,9 +152,6 @@
 		}
 
 		& .swiper-slide {
-			@media screen and (max-aspect-ratio: 4/3) {
-				width: 8rem;
-			}
 			position: relative;
 			border-radius: 1rem;
 			height: 100%;
@@ -213,10 +208,18 @@
 
 				opacity: 0;
 			}
+
+			@media screen and (max-aspect-ratio: 4/3) {
+				width: 8rem;
+			}
 		}
 
 		&-wrapper {
 			// Wrapper-specific styles if needed
+		}
+
+		@media screen and (max-aspect-ratio: 3/4) {
+			background-color: transparent;
 		}
 	}
 
@@ -286,6 +289,7 @@
 
 #album-swiper-prev {
 	text-shadow: 1px 1px 3px #00000020;
+
 	@media screen and (max-aspect-ratio: 1) {
 		display: none;
 	}
@@ -293,6 +297,7 @@
 
 #album-swiper-next {
 	text-shadow: 1px 1px 3px #00000020;
+
 	@media screen and (max-aspect-ratio: 1) {
 		display: none;
 	}

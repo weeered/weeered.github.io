@@ -1,12 +1,4 @@
 .header {
-	@media screen and (max-width: 900px) {
-		height: 5rem;
-	}
-
-	@media screen and (max-aspect-ratio: 30/23) {
-		height: 5rem;
-	}
-
 	width: 100%;
 	max-width: 100%;
 	height: 4.5rem;
@@ -25,7 +17,9 @@
 
 	overflow-y: hidden;
 
-	transition: transform 0.25s ease-in-out, border-radius 0.25s ease-in-out,
+	transition:
+		transform 0.25s ease-in-out,
+		border-radius 0.25s ease-in-out,
 		background-color 0.5s ease-in-out;
 
 	&__logo {
@@ -58,19 +52,6 @@
 	}
 
 	&__burger-button {
-		@media screen and (max-width: 900px) {
-			display: flex;
-		}
-
-		@media screen and (max-aspect-ratio: 30/23) {
-			display: flex;
-		}
-
-		@media screen and (max-width: 500px) {
-			left: auto;
-			right: 5%;
-		}
-
 		position: absolute;
 		left: 6.5rem;
 		display: none;
@@ -115,16 +96,22 @@
 				transition: inherit;
 			}
 		}
-	}
 
-	&__nav {
 		@media screen and (max-width: 900px) {
-			display: none;
+			display: flex;
 		}
 
 		@media screen and (max-aspect-ratio: 30/23) {
-			display: none;
+			display: flex;
 		}
+
+		@media screen and (max-width: 500px) {
+			left: auto;
+			right: 5%;
+		}
+	}
+
+	&__nav {
 		width: fit-content;
 		height: 100%;
 
@@ -151,9 +138,43 @@
 			font-size: inherit;
 			font-weight: inherit;
 		}
+		@media screen and (max-width: 900px) {
+			display: none;
+		}
+
+		@media screen and (max-aspect-ratio: 30/23) {
+			display: none;
+		}
 	}
 
 	&__info {
+		width: fit-content;
+		height: fit-content;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: start;
+
+		padding-right: calc(1.5vw - 1vh);
+
+		white-space: nowrap;
+		color: #fff;
+
+		z-index: 11;
+
+		&-link {
+			font-size: 0.9rem;
+			line-height: 1.1rem;
+			text-decoration: underline;
+		}
+
+		&-title {
+			font-size: 1.2rem;
+			color: inherit;
+			line-height: 1.4rem;
+		}
+
 		@media screen and (max-width: 900px) {
 			padding-right: 0.8rem;
 
@@ -188,33 +209,6 @@
 
 			left: 5.5rem;
 		}
-
-		width: fit-content;
-		height: fit-content;
-
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		align-items: start;
-
-		padding-right: calc(1.5vw - 1vh);
-
-		white-space: nowrap;
-		color: #fff;
-
-		z-index: 11;
-
-		&-link {
-			font-size: 0.9rem;
-			line-height: 1.1rem;
-			text-decoration: underline;
-		}
-
-		&-title {
-			font-size: 1.2rem;
-			color: inherit;
-			line-height: 1.4rem;
-		}
 	}
 
 	&::before {
@@ -232,9 +226,7 @@
 
 		animation-play-state: paused;
 	}
-}
 
-.headerAnimLayer1 {
 	@media screen and (max-width: 900px) {
 		height: 5rem;
 	}
@@ -242,6 +234,9 @@
 	@media screen and (max-aspect-ratio: 30/23) {
 		height: 5rem;
 	}
+}
+
+.headerAnimLayer1 {
 	width: 100%;
 	height: 4.5rem;
 
@@ -253,12 +248,12 @@
 
 	transform: translate(0, calc(-100% - 3px));
 
-	transition: transform 0.25s ease-in-out, border-radius 0.25s ease-in-out;
+	transition:
+		transform 0.25s ease-in-out,
+		border-radius 0.25s ease-in-out;
 
 	z-index: 12;
-}
 
-.headerAnimLayer2 {
 	@media screen and (max-width: 900px) {
 		height: 5rem;
 	}
@@ -266,6 +261,9 @@
 	@media screen and (max-aspect-ratio: 30/23) {
 		height: 5rem;
 	}
+}
+
+.headerAnimLayer2 {
 	width: 100%;
 	height: 4.5rem;
 
@@ -277,7 +275,17 @@
 
 	transform: translate(0, calc(-100% - 3px));
 
-	transition: top 0.25s ease-in-out, border-radius 0.25s ease-in-out;
+	transition:
+		top 0.25s ease-in-out,
+		border-radius 0.25s ease-in-out;
 
 	z-index: 12;
+
+	@media screen and (max-width: 900px) {
+		height: 5rem;
+	}
+
+	@media screen and (max-aspect-ratio: 30/23) {
+		height: 5rem;
+	}
 }

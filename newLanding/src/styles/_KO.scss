@@ -1,12 +1,4 @@
 .ko {
-	@media screen and (max-aspect-ratio: 4/3) {
-		flex-direction: column;
-		text-align: center;
-	}
-	@media screen and (max-width: 750px) {
-		flex-direction: column;
-		text-align: center;
-	}
 	width: 100%;
 	display: flex;
 	gap: 1.5rem;
@@ -23,47 +15,7 @@
 		background-color: $textBlackLessTrans;
 	}
 
-	@media screen and (max-aspect-ratio: 4/3) {
-		&__banner {
-			width: 100%;
-
-			&--top {
-				display: none !important;
-			}
-
-			&--bottom {
-				display: flex !important;
-			}
-		}
-		&__description-botTitle {
-			display: none !important;
-		}
-	}
-
-	@media screen and (max-width: 750px) {
-		&__banner {
-			width: 100%;
-
-			&--top {
-				display: none !important;
-			}
-
-			&--bottom {
-				display: flex !important;
-			}
-		}
-
-		&__title-bottom {
-			display: none !important;
-		}
-	}
-
 	&__banner {
-		&--bottom {
-			display: none;
-			width: 100%;
-		}
-
 		width: 20%;
 		display: flex;
 		flex-direction: column;
@@ -71,24 +23,29 @@
 		align-items: center;
 		gap: 1.5rem;
 
-		&-date{
+		&--bottom {
+			display: none;
+			width: 100%;
+		}
+
+		&-date {
 			font-size: 2rem;
 			font-weight: 500;
-		
+
 			color: $indigo;
 		}
 
 		&-logo {
+			height: fit-content;
+
+			width: 100%;
+
 			@media screen and (max-aspect-ratio: 4/3) {
 				width: 70%;
 			}
 			@media screen and (max-width: 750px) {
 				width: 90%;
 			}
-
-			height: fit-content;
-
-			width: 100%;
 		}
 
 		&-results {
@@ -205,30 +162,23 @@
 	}
 
 	&__description {
-		@media screen and (max-aspect-ratio: 4/3) {
-			width: 100%;
-			text-align: inherit;
-		}
-		@media screen and (max-width: 750px) {
-			width: 100%;
-			text-align: inherit;
-		}
 		width: 80%;
 		display: flex;
 		flex-direction: column;
 		gap: 1.5rem;
 		text-align: center;
+
+		@media screen and (max-aspect-ratio: 4/3) {
+			width: 100%;
+			text-align: inherit;
+		}
+		@media screen and (max-width: 750px) {
+			width: 100%;
+			text-align: inherit;
+		}
 	}
 
 	&__nominations {
-		@media screen and (max-aspect-ratio: 4/3) {
-			flex-direction: column;
-		}
-
-		@media screen and (max-width: 750px) {
-			flex-direction: column;
-		}
-
 		height: fit-content;
 
 		display: flex;
@@ -239,16 +189,6 @@
 		max-width: 100%;
 
 		&-list {
-			@media screen and (max-aspect-ratio: 4/3) {
-				width: 100%;
-				max-height: fit-content;
-			}
-
-			@media screen and (max-width: 750px) {
-				width: 100%;
-				max-height: fit-content;
-			}
-
 			width: 100%;
 			height: 100%;
 
@@ -259,6 +199,16 @@
 			gap: 0.8rem;
 
 			text-align: left;
+
+			@media screen and (max-aspect-ratio: 4/3) {
+				width: 100%;
+				max-height: fit-content;
+			}
+
+			@media screen and (max-width: 750px) {
+				width: 100%;
+				max-height: fit-content;
+			}
 		}
 
 		&-title {
@@ -300,6 +250,14 @@
 				background-size: 200% 100%;
 				animation: XmoveRYB200 6s linear infinite;
 			}
+		}
+
+		@media screen and (max-aspect-ratio: 4/3) {
+			flex-direction: column;
+		}
+
+		@media screen and (max-width: 750px) {
+			flex-direction: column;
 		}
 	}
 
@@ -345,16 +303,6 @@
 	}
 
 	&__goals {
-		@media screen and (max-aspect-ratio: 4/3) {
-			width: 100%;
-			max-height: fit-content;
-		}
-
-		@media screen and (max-width: 750px) {
-			width: 100%;
-			max-height: fit-content;
-		}
-
 		width: calc(100% / 1);
 		height: 100%;
 
@@ -411,6 +359,16 @@
 			font-weight: 450;
 			color: $textBlackish;
 		}
+
+		@media screen and (max-aspect-ratio: 4/3) {
+			width: 100%;
+			max-height: fit-content;
+		}
+
+		@media screen and (max-width: 750px) {
+			width: 100%;
+			max-height: fit-content;
+		}
 	}
 
 	&__info {
@@ -448,6 +406,48 @@
 			font-size: 1.4rem;
 			font-weight: 600;
 			color: $textBlack;
+		}
+	}
+	@media screen and (max-aspect-ratio: 4/3) {
+		flex-direction: column;
+		text-align: center;
+	}
+	@media screen and (max-width: 750px) {
+		flex-direction: column;
+		text-align: center;
+	}
+	@media screen and (max-aspect-ratio: 4/3) {
+		&__banner {
+			width: 100% !important;
+
+			&--top {
+				display: none;
+			}
+
+			&--bottom {
+				display: flex;
+			}
+		}
+		&__title-bottom {
+			display: none;
+		}
+	}
+
+	@media screen and (max-width: 750px) {
+		&__banner {
+			width: 100%;
+
+			&--top {
+				display: none;
+			}
+
+			&--bottom {
+				display: flex;
+			}
+		}
+
+		&__title-bottom {
+			display: none;
 		}
 	}
 }

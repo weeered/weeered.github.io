@@ -1,9 +1,11 @@
 .footer {
-	@media screen and (max-width: 1400px) {
-		padding: 2rem 0;
-	}
-
 	&__container {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		gap: 6rem;
+
 		@media screen and (max-width: 1400px) {
 			flex-direction: column;
 			align-items: center;
@@ -13,12 +15,6 @@
 		@media screen and (min-aspect-ratio: 20/9) {
 			max-width: 70vw;
 		}
-
-		width: 100%;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		gap: 6rem;
 	}
 
 	position: relative;
@@ -73,28 +69,20 @@
 	}
 
 	&__left-block {
-		@media screen and (max-width: 1400px) {
-			width: 100%;
-			min-width: none;
-			max-width: none;
-		}
-
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
 		min-width: 35rem;
 		max-width: 35rem;
+
+		@media screen and (max-width: 1400px) {
+			width: 100%;
+			min-width: none;
+			max-width: none;
+		}
 	}
 
 	&__location {
-		@media screen and (max-width: 1400px) {
-			text-align: center;
-			padding: 0 1rem;
-
-			& h3 {
-				font-size: 2rem;
-			}
-		}
 		font-size: 1.6rem;
 		font-weight: 350;
 
@@ -122,26 +110,33 @@
 			font-size: 1.8rem;
 			font-weight: 450;
 		}
+
+		@media screen and (max-width: 1400px) {
+			text-align: center;
+			padding: 0 1rem;
+
+			& h3 {
+				font-size: 2rem;
+			}
+		}
 	}
 
 	&__map {
-		@media screen and (max-width: 1400px) {
-			border-radius: 0;
-			width: 100%;
-			height: 35rem;
-		}
 		height: 100%;
 		box-shadow:
 			2.5px 5px 5px #00000015,
 			0px 0px 5px #00000015;
 		border-radius: 1rem;
 		overflow: hidden;
+
+		@media screen and (max-width: 1400px) {
+			border-radius: 0;
+			width: 100%;
+			height: 35rem;
+		}
 	}
 
 	&__countdown {
-		@media screen and (max-width: 1400px) {
-			display: none;
-		}
 		width: 100% !important;
 
 		margin-top: 1.5rem;
@@ -153,11 +148,6 @@
 		gap: 1.5rem;
 
 		& .countdown__box {
-			@media screen and (max-width: 1400px) {
-				font-size: 2rem;
-				width: calc(18vw);
-				line-height: 2rem;
-			}
 			font-size: 1.5rem;
 
 			color: #fff;
@@ -174,63 +164,77 @@
 			width: calc(100% / 4);
 
 			line-height: 1.5rem;
+
+			@media screen and (max-width: 1400px) {
+				font-size: 2rem;
+				width: calc(18vw);
+				line-height: 2rem;
+			}
 		}
 
 		& .countdown__time {
-			@media screen and (max-width: 1400px) {
-				font-size: 2rem;
-			}
 			width: 100%;
 			font-size: 1.5rem;
 			color: #fff;
 			display: flex;
 			flex-direction: row;
 			gap: 0.3rem;
+
+			@media screen and (max-width: 1400px) {
+				font-size: 2rem;
+			}
 		}
 
 		& .countdown__time-name {
+			font-size: 1.5rem;
+			color: #fff;
+
 			@media screen and (max-width: 1400px) {
 				font-size: 2rem;
 			}
-			font-size: 1.5rem;
-			color: #fff;
 		}
 
 		& .countdown__text {
-			@media screen and (max-width: 1400px) {
-				font-size: 2rem;
-			}
 			font-size: 2rem;
 			font-weight: 600;
 			color: inherit;
 			width: 100%;
 			text-align: left;
+
+			@media screen and (max-width: 1400px) {
+				font-size: 2rem;
+			}
+		}
+
+		@media screen and (max-width: 1400px) {
+			display: none;
 		}
 	}
 
 	&__center-block {
-		@media screen and (max-width: 1400px) {
-			align-items: center;
-			width: 100%;
-			gap: calc(1.7vh + 1.6vw);
-		}
-
 		display: flex;
 		flex-direction: column;
 		align-items: start;
 		gap: 1.5rem;
 		min-width: fit-content;
+
+		@media screen and (max-width: 1400px) {
+			align-items: center;
+			width: 100%;
+			gap: calc(1.7vh + 1.6vw);
+		}
 	}
 
 	&__contacts {
-		@media screen and (max-width: 1400px) {
-			gap: calc(2rem);
-		}
 		display: flex;
 		flex-direction: column;
 		gap: 1.5rem;
 		width: fit-content;
 		align-items: start;
+
+		@media screen and (max-width: 1400px) {
+			gap: calc(2rem);
+		}
 	}
 
 	&__contact {
@@ -240,15 +244,17 @@
 		font-size: 1.6rem;
 
 		&-icon {
+			width: 1.8rem;
+
 			@media screen and (max-width: 1400px) {
 				width: calc(1.7vh + 1.6vw);
 			}
-			width: 1.8rem;
 		}
 
 		&-link {
 			color: -webkit-link;
 			cursor: pointer;
+
 			@media screen and (max-width: 1400px) {
 				font-size: 2rem;
 			}
@@ -267,10 +273,6 @@
 	}
 
 	&__info {
-		@media screen and (max-width: 1400px) {
-			padding: 0 1rem;
-			text-align: center;
-		}
 		font-weight: 350;
 		font-size: 1.6rem;
 		text-align: left;
@@ -301,6 +303,11 @@
 			font-size: 1.8rem;
 			font-weight: 450;
 		}
+
+		@media screen and (max-width: 1400px) {
+			padding: 0 1rem;
+			text-align: center;
+		}
 	}
 
 	&__hotels-wrapper {
@@ -308,22 +315,18 @@
 	}
 
 	&__hotels {
-		@media screen and (max-width: 1400px) {
-			padding: 0 1rem;
-		}
-
 		position: relative;
 
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
+
+		@media screen and (max-width: 1400px) {
+			padding: 0 1rem;
+		}
 	}
 
 	&__hotel {
-		@media screen and (max-width: 440px) {
-			flex-direction: column;
-		}
-
 		display: flex;
 		align-items: center;
 		justify-content: left;
@@ -475,5 +478,13 @@
 			font-weight: inherit;
 			color: inherit;
 		}
+
+		@media screen and (max-width: 440px) {
+			flex-direction: column;
+		}
+	}
+
+	@media screen and (max-width: 1400px) {
+		padding: 2rem 0;
 	}
 }

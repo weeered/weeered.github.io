@@ -1,8 +1,4 @@
 .title {
-	@media screen and (max-aspect-ratio: 1) {
-		height: 100vh;
-	}
-
 	box-shadow: 0px 0px 10px #00000020;
 	min-height: fit-content;
 	width: 100%;
@@ -19,18 +15,6 @@
 	color: #fff;
 
 	&__over-text {
-		@media screen and (max-width: 900px) {
-			font-size: calc(10px + 0.2vw + 0.6vh);
-		}
-
-		@media screen and (max-aspect-ratio: 30/23) {
-			font-size: calc(10px + 0.2vw + 0.6vh);
-		}
-
-		@media screen and (max-height: 600px) {
-			margin-top: 4.7rem;
-		}
-
 		display: flex;
 		flex-direction: column;
 		gap: 2rem;
@@ -45,21 +29,26 @@
 		text-align: center;
 		color: #fff;
 
-		& span{
+		& span {
 			color: inherit;
 			font-size: inherit;
 			font-weight: inherit;
 		}
+
+		@media screen and (max-width: 900px) {
+			font-size: calc(10px + 0.2vw + 0.6vh);
+		}
+
+		@media screen and (max-aspect-ratio: 30/23) {
+			font-size: calc(10px + 0.2vw + 0.6vh);
+		}
+
+		@media screen and (max-height: 600px) {
+			margin-top: 4.7rem;
+		}
 	}
 
 	&__button {
-		@media screen and (max-height: 600px) {
-			margin-bottom: 4.7rem;
-		}
-
-		@media screen and (max-aspect-ratio: 1) {
-			padding: 0.5rem 1rem 0.5rem 0.6rem;
-		}
 		min-height: max-content;
 
 		position: relative;
@@ -78,7 +67,9 @@
 
 		overflow: hidden;
 
-		box-shadow: 2.5px 5px 5px #00000015, 0px 0px 5px #00000015;
+		box-shadow:
+			2.5px 5px 5px #00000015,
+			0px 0px 5px #00000015;
 		text-shadow: 0px 0px 5px #00000015;
 
 		color: #fff;
@@ -108,6 +99,14 @@
 
 		&-arrow {
 			height: calc(0.9vw + 2.7vh);
+		}
+
+		@media screen and (max-height: 600px) {
+			margin-bottom: 4.7rem;
+		}
+
+		@media screen and (max-aspect-ratio: 1) {
+			padding: 0.5rem 1rem 0.5rem 0.6rem;
 		}
 	}
 
@@ -161,5 +160,9 @@
 		object-position: 50% 50%;
 
 		z-index: -2;
+	}
+
+	@media screen and (max-aspect-ratio: 1) {
+		height: 100vh;
 	}
 }
