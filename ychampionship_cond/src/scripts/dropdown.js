@@ -10,7 +10,7 @@ function dropdownToggle(e) {
     menu.classList.add("main__desc_docs-dropdownMnu");
     if (e.id == "choomButton") {
       menu.innerHTML =
-        "<a href='./media/documents/participants_CC.pdf' target='blank'>📄Положение</a><a href='./media/documents/dogovor_champ_RB.doc' target='blank'>📄РФ Приглашение к участию</a><a href='./media/documents/dogovor_champ_RF.doc' target='blank'>📄РБ Приглашение к участию</a>";
+        "<a href='./media/documents/participants_CC.pdf' target='blank'>📄Положение</a><a href='./media/documents/dogovor_champ_RF.doc' target='blank'>📄РФ Приглашение к участию</a><a href='./media/documents/dogovor_champ_RB.doc' target='blank'>📄РБ Приглашение к участию</a>";
     }
     //  else if (e.id == "corpoButton") {
     //   menu.innerHTML =
