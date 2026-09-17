@@ -1,5 +1,5 @@
 const countdownElems = document.getElementsByClassName("ctdwn");
-var countDownDate = new Date("November 11, 2025 9:00:00").getTime();
+var countDownDate = new Date("November 17, 2026 9:00:00").getTime();
 
 var ticker = 0;
 

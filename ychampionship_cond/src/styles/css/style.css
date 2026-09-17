@@ -188,8 +188,7 @@ h3 {
     z-index: 20;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.2666666667);
     background: linear-gradient(140deg, rgba(98, 28, 144, 0.8156862745), rgba(204, 25, 149, 0.8156862745));
-    -webkit-backdrop-filter: blur(3px);
-            backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
     transition: transform ease-in-out 0.1s;
@@ -320,8 +319,7 @@ h3 {
     padding-top: 10px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.2666666667);
     background: linear-gradient(140deg, rgba(98, 28, 144, 0.8156862745), rgba(204, 25, 149, 0.8156862745));
-    -webkit-backdrop-filter: blur(2px);
-            backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
     overflow: hidden;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -352,8 +350,7 @@ h3 {
     justify-content: center;
     align-items: center;
     background: linear-gradient(130deg, #d8d7d9 0%, #fff, #939192);
-    -webkit-backdrop-filter: blur(2px);
-            backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
     border-bottom-right-radius: 20px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2352941176);
     padding: 30px 15px;
@@ -754,11 +751,13 @@ h3 {
      -moz-user-select: none;
           user-select: none;
   outline: none;
-  z-index: 10;
 }
 .main__desc_docs-dropdownBtn img {
   width: 1.5rem;
   transition: transform ease-in-out 0.2s;
+}
+.main__desc_docs-dropdownBtn {
+  z-index: 10;
 }
 .main__desc_docs-dropdownMnu {
   position: absolute;
@@ -773,8 +772,7 @@ h3 {
   opacity: 0;
   border-radius: 20px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.2352941176);
-  -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
   transition: opacity ease-in-out 0.4s, transform ease-in-out 0.3s;
   z-index: 11;
 }
@@ -786,7 +784,6 @@ h3 {
   text-decoration: none;
   font-weight: 500;
   color: #fff;
-  transition: scale linear 0.1s;
 }
 .main__desc_docs-dropdownMnu a:first-of-type {
   border-top-left-radius: 20px;
@@ -819,6 +816,9 @@ h3 {
   width: 100%;
   height: 2px;
   background-color: #fff;
+}
+.main__desc_docs-dropdownMnu a {
+  transition: scale linear 0.1s;
 }
 .main__desc_docs-dropdownMnu a:hover {
   scale: 1.025;
@@ -1211,8 +1211,7 @@ h3 {
   overflow: hidden;
   background: linear-gradient(140deg, rgba(98, 28, 144, 0.8156862745) 40%, rgba(204, 25, 149, 0.8156862745));
   color: #fff;
-  -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
 }
 .main__judges_juryBoard-card div span:first-of-type {
   font-weight: 500;
@@ -1537,6 +1536,9 @@ h3 {
 .main__partners_container-card.garni img {
   filter: brightness(0) invert(1);
 }
+.main__partners_container-card.sputnik {
+  background-color: #11396F;
+}
 
 @media screen and (min-width: 1024px) {
   .footer {
@@ -1699,8 +1701,7 @@ h3 {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   background: linear-gradient(140deg, #621c90 40%, #cc1995);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
 }
 .main__form_elem-inputFrame {
   display: flex;
@@ -1853,8 +1854,7 @@ h3 {
   transform: translate(calc(100vw - 100%), 0);
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 20px;
-  -webkit-backdrop-filter: none;
-          backdrop-filter: none;
+  backdrop-filter: none;
 }
 .burgerActive .header__burger_button-elem {
   background-color: transparent;
@@ -2040,8 +2040,7 @@ h3 {
   height: 100px;
   padding: 15px 12px;
   background-color: rgba(204, 25, 149, 0.8156862745);
-  -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
   color: #fff;
   border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2352941176);
@@ -2060,8 +2059,7 @@ h3 {
   height: 100px;
   padding: 15px 12px;
   background-color: rgba(204, 25, 149, 0.8156862745);
-  -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
   color: #fff;
   border-radius: 20px;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.2352941176);

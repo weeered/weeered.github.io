@@ -3,7 +3,6 @@
 @media screen and (min-width: 1024px) {
   .main {
     &__organizers {
-
       &_container {
         gap: 33px;
         justify-content: center;
@@ -23,7 +22,6 @@
     }
 
     &__partners {
-
       &_container {
         gap: 33px;
         justify-content: center;
@@ -72,7 +70,6 @@
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .main {
     &__organizers {
-
       &_container {
         gap: 30px;
         justify-content: center;
@@ -92,7 +89,6 @@
     }
 
     &__partners {
-
       &_container {
         gap: 30px;
         justify-content: center;
@@ -135,8 +131,6 @@
 @media screen and (max-width: 767px) {
   .main {
     &__organizers {
-
-
       &_container {
         gap: 15px;
         justify-content: center;
@@ -155,7 +149,6 @@
     }
 
     &__partners {
-
       &_container {
         gap: 15px;
         justify-content: center;
@@ -203,7 +196,12 @@
     width: 100%;
     padding: 30px 0;
 
-    background: linear-gradient(140deg, v.$metallicLight, #fff, v.$metallicDark);
+    background: linear-gradient(
+      140deg,
+      v.$metallicLight,
+      #fff,
+      v.$metallicDark
+    );
 
     box-shadow: 0 0 10px v.$shadowgray;
 
@@ -262,7 +260,12 @@
     width: 100%;
     padding: 30px 0;
 
-    background: linear-gradient(140deg, v.$metallicLight, #fff, v.$metallicDark);
+    background: linear-gradient(
+      140deg,
+      v.$metallicLight,
+      #fff,
+      v.$metallicDark
+    );
 
     box-shadow: 0 0 10px v.$shadowgray;
 
@@ -426,6 +429,10 @@
         & img {
           filter: brightness(0) invert(1);
         }
+      }
+
+      &-card.sputnik {
+        background-color: #11396F;
       }
     }
   }
