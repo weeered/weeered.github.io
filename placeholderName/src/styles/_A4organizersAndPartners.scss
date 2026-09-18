@@ -487,6 +487,10 @@
           filter: brightness(0) invert(1);
         }
       }
+
+      &-card.sputnik {
+        background-color: #11396f;
+      }
     }
   }
 }
