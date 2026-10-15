@@ -450,10 +450,11 @@ h3 {
   font-size: 1.4rem;
 }
 .hero__place {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 .hero__date {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  font-weight: 600;
 }
 
 @media screen and (min-width: 768px) {
