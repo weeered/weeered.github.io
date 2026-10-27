@@ -1,0 +1,66 @@
+.opacity95 {
+	opacity: 0.95;
+}
+.bolden {
+	font-size: inherit;
+	font-weight: 500;
+}
+.glass-effect {
+	position: relative;
+	box-shadow: 2.5px 5px 5px #00000015, 0px 0px 5px #00000015;
+
+	&-yellow {
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(
+				-45deg,
+				$yellowTransPlus 20%,
+				$yellowTrans 50%,
+				$yellowTransLite
+			);
+
+			z-index: -1;
+		}
+	}
+	&-red {
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(
+				-45deg,
+				$redTransPlus 20%,
+				$redTrans 50%,
+				$redTransLite
+			);
+
+			z-index: -1;
+		}
+	}
+	&-blue {
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(
+				-45deg,
+				$blueTransPlus 20%,
+				$blueTrans 50%,
+				$blueTransLite
+			);
+
+			z-index: -1;
+		}
+	}
+}
