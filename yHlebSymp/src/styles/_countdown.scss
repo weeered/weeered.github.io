@@ -10,8 +10,8 @@
 	gap: 1rem;
 	background-clip: text;
 
-	animation: background-color-shift 10s ease-in-out infinite;
-	animation-play-state: paused;
+	
+	background-color: $horng;
 
 	// &::before {
 	// 	content: "";

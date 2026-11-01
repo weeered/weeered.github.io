@@ -274,7 +274,7 @@ a {
   position: relative;
   font-weight: 500 !important;
   color: transparent !important;
-  background: linear-gradient(90deg, #342e8c, #342e8c 15%, #d3281d, #d3281d, #f19001, #f19001, #342e8c);
+  background: linear-gradient(90deg, #F39E44, #F39E44 15%, #712814, #712814, #712814, #712814, #F39E44);
   background-size: 300% 100%;
   -webkit-background-clip: text;
           background-clip: text;
@@ -314,13 +314,13 @@ a {
 }
 @keyframes background-color-shift-no-text-change-trans {
   0%, 100% {
-    background-color: rgba(241, 144, 1, 0.7490196078);
+    background-color: rgba(113, 40, 20, 0.7490196078);
   }
   33% {
-    background-color: rgba(211, 40, 29, 0.7490196078);
+    background-color: rgba(243, 158, 68, 0.7490196078);
   }
   66% {
-    background-color: rgba(52, 46, 140, 0.7490196078);
+    background-color: rgba(255, 231, 166, 0.7490196078);
   }
 }
 .hover-brighten {
@@ -437,8 +437,8 @@ a {
   }
 }
 .header__logo {
-  height: 4.55rem;
-  width: 4.55rem;
+  height: 5rem;
+  width: 5rem;
   z-index: 11;
 }
 @media screen and (max-width: 900px) {
@@ -454,8 +454,8 @@ a {
   }
 }
 .header__logo-img {
-  height: 4.55rem;
-  width: 4.55rem;
+  height: 5rem;
+  width: 5rem;
 }
 .header__burger-button {
   position: absolute;
@@ -957,8 +957,7 @@ a {
   gap: 1rem;
   -webkit-background-clip: text;
           background-clip: text;
-  animation: background-color-shift 10s ease-in-out infinite;
-  animation-play-state: paused;
+  background-color: #F39E44;
 }
 .countdown_active {
   animation-play-state: running;
@@ -1650,8 +1649,9 @@ a {
 @media screen and (max-aspect-ratio: 2/3) {
   .programm__date {
     padding: 0.5rem;
-    text-align: center;
+    text-align: left;
     font-size: 1.9rem;
+    background: linear-gradient(-60deg, #FFE7A6 0% 10%, #F39E44 68%, #712814 70.5%);
   }
 }
 .programm__event {

@@ -5,7 +5,7 @@ createSlides();
 
 function createSlides() {
 	//set b to equal the number of photos in "album" folder
-	const b = 23;
+	const b = 10;
 
 	for (let i = 1; i <= b; i++) {
 		let newSlide = document.createElement("div");

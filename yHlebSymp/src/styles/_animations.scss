@@ -101,13 +101,13 @@
 	color: transparent !important;
 	background: linear-gradient(
 		90deg,
-		$blue,
-		$blue 15%,
-		$red,
-		$red,
-		$yellow,
-		$yellow,
-		$blue
+		$horng,
+		$horng 15%,
+		$hbrwn,
+		$hbrwn,
+		$hbrwn,
+		$hbrwn,
+		$horng
 	);
 	background-size: 300% 100%;
 	background-clip: text;
@@ -159,15 +159,15 @@
 @keyframes background-color-shift-no-text-change-trans {
 	0%,
 	100% {
-		background-color: $yellowTrans;
+		background-color: $hbrwntrans;
 	}
 
 	33% {
-		background-color: $redTrans;
+		background-color: $horngtrans;
 	}
 
 	66% {
-		background-color: $blueTrans;
+		background-color: $hylwtrans;
 	}
 }
 
