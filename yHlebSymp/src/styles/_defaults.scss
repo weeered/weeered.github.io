@@ -58,6 +58,11 @@ h1 {
 	font-weight: 800;
 	font-size: 6rem;
 
+	@media (max-width: 700px) {
+		//font-size: calc(8px + 0.1vw + 0.2vh);
+		font-size: 3.4rem;
+	}
+
 	&.page-title {
 		position: fixed;
 		left: 0;
